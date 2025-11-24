@@ -446,7 +446,7 @@ export default function HomePage() {
       {/* Populations Served */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
+          <h2 className="font-serif text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-foreground via-accent to-accent-green bg-clip-text text-transparent">
             Populations We Serve
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -455,19 +455,29 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              "Adults (18+)",
-              "Working Professionals",
-              "Families",
-              "Seniors (65+)",
-              "Active Lifestyle Enthusiasts",
-              "Wellness-Focused Individuals",
+              { label: "Adults (18+)", color: "accent" },
+              { label: "Working Professionals", color: "accent-green" },
+              { label: "Families", color: "accent" },
+              { label: "Seniors (65+)", color: "accent-green" },
+              { label: "Active Lifestyle Enthusiasts", color: "accent" },
+              { label: "Wellness-Focused Individuals", color: "accent-green" },
             ].map((pop, idx) => (
               <Card
                 key={idx}
-                className="p-8 bg-gradient-to-br from-accent/10 to-primary/5 border-2 border-accent/30 text-center hover:shadow-lg hover:border-accent transition-all glass-card group"
+                className={`p-8 bg-gradient-to-br border-2 text-center hover:shadow-lg transition-all glass-card group ${
+                  pop.color === "accent-green"
+                    ? "from-accent-green/10 to-primary/5 border-accent-green/30 hover:border-accent-green"
+                    : "from-accent/10 to-primary/5 border-accent/30 hover:border-accent"
+                }`}
               >
-                <h3 className="font-serif font-bold text-lg text-primary-foreground group-hover:text-accent transition-colors">
-                  {pop}
+                <h3
+                  className={`font-serif font-bold text-lg text-primary-foreground group-hover:transition-colors ${
+                    pop.color === "accent-green"
+                      ? "group-hover:text-accent-green"
+                      : "group-hover:text-accent"
+                  }`}
+                >
+                  {pop.label}
                 </h3>
               </Card>
             ))}
