@@ -658,7 +658,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <section id="testimonials" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
+          <h2 className="font-serif text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-foreground via-accent to-accent-green bg-clip-text text-transparent">
             What Our Patients Say
           </h2>
           <p className="text-center text-muted-foreground mb-16">Real experiences from individuals who found healing and hope</p>
@@ -670,24 +670,39 @@ export default function HomePage() {
                   "Dr. Nwiloh provided exceptional care during my health challenges. Her compassionate approach and expertise helped me develop a sustainable wellness plan. I finally feel like myself again!",
                 author: "Sarah M.",
                 condition: "Preventive Care",
+                color: "accent",
               },
               {
                 quote:
                   "Professional, knowledgeable, and truly caring. I felt heard and supported throughout my treatment journey. The personalized approach was life-changing for my chronic condition management.",
                 author: "Michael R.",
                 condition: "Chronic Condition Management",
+                color: "accent-green",
               },
               {
                 quote:
                   "After years of searching for the right physician, I found everything I needed at Trinity Heritage. Dr. Nwiloh's holistic approach to healthcare is exactly what I was looking for.",
                 author: "Jennifer L.",
                 condition: "Holistic Wellness",
+                color: "accent",
               },
             ].map((testimonial, idx) => (
-              <Card key={idx} className="p-8 bg-gradient-to-br from-primary/5 to-transparent border border-accent/20 hover:border-accent hover:shadow-lg transition-all glass-card group">
+              <Card
+                key={idx}
+                className={`p-8 bg-gradient-to-br border hover:shadow-lg transition-all glass-card group ${
+                  testimonial.color === "accent-green"
+                    ? "from-accent-green/5 to-transparent border-accent-green/20 hover:border-accent-green"
+                    : "from-primary/5 to-transparent border-accent/20 hover:border-accent"
+                }`}
+              >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-accent text-lg animate-pulse-glow">
+                    <span
+                      key={i}
+                      className={`text-lg animate-pulse-glow ${
+                        testimonial.color === "accent-green" ? "text-accent-green" : "text-accent"
+                      }`}
+                    >
                       ★
                     </span>
                   ))}
