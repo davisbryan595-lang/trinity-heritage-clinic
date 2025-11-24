@@ -387,7 +387,7 @@ export default function HomePage() {
       </section>
 
       {/* Treatment Services */}
-      <section className="py-20 gradient-lavender">
+      <section className="py-20 bg-gradient-to-r from-primary/30 via-transparent to-accent-green/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">Treatment Services</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
