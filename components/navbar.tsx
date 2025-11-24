@@ -17,76 +17,75 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact" },
+  ]
+
   return (
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
+        isScrolled ? "bg-white/95 glass-card shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/images/colored-logo.png" alt="Trinity Heritage Clinic Logo" className="h-12 w-auto" />
+        <div className="flex justify-between items-center h-auto py-3 sm:py-4">
+          <Link href="#home" className="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
+            <img src="/images/colored-logo.png" alt="Trinity Heritage Clinic Logo" className="h-16 sm:h-20 w-auto" />
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center">
-            <Link href="/" className="text-sm font-medium hover:text-accent transition-colors">
-              Home
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-accent transition-colors">
-              About
-            </Link>
-            <Link href="/services" className="text-sm font-medium hover:text-accent transition-colors">
-              Services
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-accent transition-colors">
-              Pricing
-            </Link>
-            <Link href="/resources" className="text-sm font-medium hover:text-accent transition-colors">
-              Resources
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-accent transition-colors">
-              Contact
-            </Link>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-primary-foreground hover:text-accent transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           <div className="hidden md:block">
-            <Link href="/contact">
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Book Free Consult</Button>
-            </Link>
+            <a href="#contact">
+              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg hover:shadow-xl transition-shadow">
+                Book Free Consult
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-primary-foreground hover:text-accent transition-colors"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
-            <Link href="/" className="block px-4 py-2 hover:bg-primary/20 rounded-lg">
-              Home
-            </Link>
-            <Link href="/about" className="block px-4 py-2 hover:bg-primary/20 rounded-lg">
-              About
-            </Link>
-            <Link href="/services" className="block px-4 py-2 hover:bg-primary/20 rounded-lg">
-              Services
-            </Link>
-            <Link href="/pricing" className="block px-4 py-2 hover:bg-primary/20 rounded-lg">
-              Pricing
-            </Link>
-            <Link href="/resources" className="block px-4 py-2 hover:bg-primary/20 rounded-lg">
-              Resources
-            </Link>
-            <Link href="/contact" className="block px-4 py-2 hover:bg-primary/20 rounded-lg">
-              Contact
-            </Link>
-            <Link href="/contact" className="block w-full">
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Book Free Consult</Button>
-            </Link>
+          <div className="md:hidden pb-4 space-y-2 bg-white/95 glass-card rounded-lg p-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="block px-4 py-2 text-primary-foreground hover:bg-accent/10 rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <a href="#contact" className="block w-full" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                Book Free Consult
+              </Button>
+            </a>
           </div>
         )}
       </div>
