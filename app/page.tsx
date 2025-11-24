@@ -582,13 +582,13 @@ export default function HomePage() {
                   "Preventive guidance",
                 ].map((feature, idx) => (
                   <li key={idx} className="flex gap-3 items-start text-sm">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-accent-green flex-shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
               <a href="#contact" className="block">
-                <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Schedule Now</Button>
+                <Button className="w-full bg-accent-green text-accent-green-foreground hover:bg-accent-green/90">Schedule Now</Button>
               </a>
             </Card>
 
