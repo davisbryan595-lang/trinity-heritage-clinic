@@ -182,7 +182,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 gradient-lavender">
+      <section id="about" className="py-20 bg-gradient-to-r from-primary/30 via-transparent to-accent-green/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="glass-card rounded-2xl overflow-hidden shadow-lg">
