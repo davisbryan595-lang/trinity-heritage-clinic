@@ -739,7 +739,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 gradient-lavender">
+      <section id="contact" className="py-20 bg-gradient-to-r from-primary/30 via-accent-green/20 to-primary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">Get in Touch</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
