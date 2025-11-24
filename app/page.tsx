@@ -534,7 +534,7 @@ export default function HomePage() {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
+          <h2 className="font-serif text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary-foreground via-accent to-accent-green bg-clip-text text-transparent">
             Transparent Pricing
           </h2>
 
