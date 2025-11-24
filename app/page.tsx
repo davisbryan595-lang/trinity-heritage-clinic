@@ -124,7 +124,7 @@ export default function HomePage() {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold mb-4 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
+            <h2 className="font-serif text-4xl font-bold mb-4 bg-gradient-to-r from-primary-foreground via-accent to-accent-green bg-clip-text text-transparent">
               Our Core Services
             </h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto">
@@ -138,26 +138,41 @@ export default function HomePage() {
                 icon: Heart,
                 title: "Preventive Care",
                 desc: "Routine check-ups, vaccinations, and health screenings to keep you thriving.",
+                color: "accent",
               },
               {
                 icon: Pill,
                 title: "Chronic Management",
                 desc: "Expert care for diabetes, hypertension, and long-term health conditions.",
+                color: "accent-green",
               },
               {
                 icon: Clock,
                 title: "Acute Visits",
                 desc: "Prompt treatment for sudden illnesses and immediate medical concerns.",
+                color: "accent",
               },
             ].map((service, idx) => (
               <Card
                 key={idx}
-                className="p-8 border-2 border-accent/20 hover:border-accent hover:shadow-lg transition-all cursor-pointer h-full bg-gradient-to-br from-primary/5 to-transparent group"
+                className={`p-8 border-2 hover:shadow-lg transition-all cursor-pointer h-full bg-gradient-to-br group ${
+                  service.color === "accent-green"
+                    ? "border-accent-green/20 hover:border-accent-green from-accent-green/5 to-transparent"
+                    : "border-accent/20 hover:border-accent from-primary/5 to-transparent"
+                }`}
               >
-                <service.icon className="w-12 h-12 text-accent mb-4 group-hover:scale-110 transition-transform" />
+                <service.icon
+                  className={`w-12 h-12 mb-4 group-hover:scale-110 transition-transform ${
+                    service.color === "accent-green" ? "text-accent-green" : "text-accent"
+                  }`}
+                />
                 <h3 className="font-serif text-xl font-semibold mb-3 text-primary-foreground">{service.title}</h3>
                 <p className="text-muted-foreground">{service.desc}</p>
-                <div className="mt-4 text-accent font-semibold group-hover:translate-x-2 transition-transform">
+                <div
+                  className={`mt-4 font-semibold group-hover:translate-x-2 transition-transform ${
+                    service.color === "accent-green" ? "text-accent-green" : "text-accent"
+                  }`}
+                >
                   Learn More →
                 </div>
               </Card>
