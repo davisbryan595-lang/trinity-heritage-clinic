@@ -36,11 +36,11 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[100vh] flex items-center pt-20 gradient-lavender overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-float-up"></div>
+      <section id="home" className="relative min-h-[100vh] flex items-center pt-20 bg-gradient-to-br from-primary via-primary/20 to-accent-green/20 overflow-hidden">
+        <div className="absolute inset-0 opacity-50">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/40 rounded-full blur-3xl animate-float-up"></div>
           <div
-            className="absolute bottom-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float-up"
+            className="absolute bottom-20 left-10 w-96 h-96 bg-accent-green/30 rounded-full blur-3xl animate-float-up"
             style={{ animationDelay: "1s" }}
           ></div>
         </div>
