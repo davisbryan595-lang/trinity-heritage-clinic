@@ -315,7 +315,7 @@ export default function HomePage() {
       {/* Conditions We Treat */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
+          <h2 className="font-serif text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-foreground via-accent to-accent-green bg-clip-text text-transparent">
             Conditions We Treat
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -328,39 +328,53 @@ export default function HomePage() {
                 icon: TrendingUp,
                 title: "Diabetes Management",
                 desc: "Comprehensive care for Type 1 & Type 2 diabetes including nutrition guidance, blood sugar monitoring, and medication optimization.",
+                color: "accent",
               },
               {
                 icon: Heart,
                 title: "Hypertension Control",
                 desc: "Blood pressure management strategies combining medication, lifestyle modifications, and regular monitoring.",
+                color: "accent-green",
               },
               {
                 icon: Pill,
                 title: "Hyperlipidemia",
                 desc: "Cholesterol and lipid management through dietary counseling and evidence-based pharmaceutical interventions.",
+                color: "accent",
               },
               {
                 icon: Activity,
                 title: "Thyroid Disease",
                 desc: "Complete thyroid management including hormone optimization and symptom relief for hypothyroidism and hyperthyroidism.",
+                color: "accent-green",
               },
               {
                 icon: AlertCircle,
                 title: "Asthma & COPD",
                 desc: "Respiratory condition management with personalized treatment plans and emergency preparedness.",
+                color: "accent",
               },
               {
                 icon: Users,
                 title: "Smoking Cessation",
                 desc: "Comprehensive programs combining counseling, medications, and support to help you quit for good.",
+                color: "accent-green",
               },
             ].map((condition, idx) => (
               <Card
                 key={idx}
-                className="p-6 bg-gradient-to-br from-primary/5 to-transparent border-2 border-accent/20 hover:border-accent hover:shadow-lg transition-all group"
+                className={`p-6 bg-gradient-to-br border-2 hover:shadow-lg transition-all group ${
+                  condition.color === "accent-green"
+                    ? "from-accent-green/5 to-transparent border-accent-green/20 hover:border-accent-green"
+                    : "from-primary/5 to-transparent border-accent/20 hover:border-accent"
+                }`}
               >
                 <div className="flex gap-4">
-                  <condition.icon className="w-10 h-10 text-accent flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                  <condition.icon
+                    className={`w-10 h-10 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform ${
+                      condition.color === "accent-green" ? "text-accent-green" : "text-accent"
+                    }`}
+                  />
                   <div>
                     <h3 className="font-serif font-bold text-lg text-primary-foreground mb-2">{condition.title}</h3>
                     <p className="text-sm text-muted-foreground">{condition.desc}</p>
