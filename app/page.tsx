@@ -517,7 +517,13 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div key={idx} className="flex gap-6 items-start group">
                 <div className="flex-shrink-0">
-                  <span className="inline-block bg-gradient-to-r from-accent to-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-serif font-bold text-lg group-hover:scale-110 transition-transform">
+                  <span
+                    className={`inline-block text-white rounded-full w-12 h-12 flex items-center justify-center font-serif font-bold text-lg group-hover:scale-110 transition-transform ${
+                      parseInt(item.step) % 2 === 0
+                        ? "bg-gradient-to-r from-accent to-accent-green"
+                        : "bg-gradient-to-r from-accent-green to-accent"
+                    }`}
+                  >
                     {item.step}
                   </span>
                 </div>
