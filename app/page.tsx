@@ -627,7 +627,7 @@ export default function HomePage() {
       </section>
 
       {/* Insurance & Payment */}
-      <section className="py-20 gradient-lavender">
+      <section className="py-20 bg-gradient-to-l from-primary/30 via-transparent to-accent-green/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-center mb-12 text-primary-foreground">Payment & Insurance Options</h2>
 
