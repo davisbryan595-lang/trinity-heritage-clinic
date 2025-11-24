@@ -870,7 +870,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary via-accent to-primary text-center text-white">
+      <section className="py-20 bg-gradient-to-r from-primary via-accent to-accent-green text-center text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold mb-6">Start Your Wellness Journey Today</h2>
           <p className="text-xl text-white/90 mb-8">Join over 1,000 patients who trust Trinity Heritage Clinic with their health</p>
