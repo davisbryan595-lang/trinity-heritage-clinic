@@ -564,14 +564,14 @@ export default function HomePage() {
               </a>
             </Card>
 
-            <Card className="p-8 border-4 border-accent bg-gradient-to-br from-accent/10 to-primary/5 shadow-lg relative group glass-card">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold">
+            <Card className="p-8 border-4 border-accent-green bg-gradient-to-br from-accent-green/10 to-primary/5 shadow-lg relative group glass-card">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-green text-accent-green-foreground px-4 py-1 rounded-full text-sm font-semibold">
                 Most Popular
               </div>
-              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-2 group-hover:text-accent transition-colors">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-2 group-hover:text-accent-green transition-colors">
                 Follow-Up Visit
               </h3>
-              <p className="text-accent text-3xl font-bold mb-1">$100</p>
+              <p className="text-accent-green text-3xl font-bold mb-1">$100</p>
               <p className="text-sm text-muted-foreground mb-6">30-60 minute check-up</p>
               <ul className="space-y-3 mb-8">
                 {[
