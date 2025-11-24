@@ -709,10 +709,22 @@ export default function HomePage() {
                 </div>
                 <p className="text-muted-foreground italic mb-6">"{testimonial.quote}"</p>
                 <div>
-                  <p className="font-semibold text-primary-foreground group-hover:text-accent transition-colors">
+                  <p
+                    className={`font-semibold text-primary-foreground transition-colors ${
+                      testimonial.color === "accent-green"
+                        ? "group-hover:text-accent-green"
+                        : "group-hover:text-accent"
+                    }`}
+                  >
                     {testimonial.author}
                   </p>
-                  <p className="text-sm text-accent font-semibold">{testimonial.condition}</p>
+                  <p
+                    className={`text-sm font-semibold ${
+                      testimonial.color === "accent-green" ? "text-accent-green" : "text-accent"
+                    }`}
+                  >
+                    {testimonial.condition}
+                  </p>
                 </div>
               </Card>
             ))}
