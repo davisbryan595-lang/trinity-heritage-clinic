@@ -34,10 +34,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="font-serif text-xl font-bold bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
-              Trinity Heritage
-            </div>
+          <Link href="#home" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="/images/colored-logo.png" alt="Trinity Heritage Clinic Logo" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Menu */}
