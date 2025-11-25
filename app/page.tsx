@@ -90,7 +90,7 @@ export default function BrochurePage() {
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <div className="relative w-52 h-16">
+              <div className="relative w-104 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
@@ -114,9 +114,11 @@ export default function BrochurePage() {
             <div className="hidden lg:flex gap-8 items-center">
               {[
                 { id: "home", label: "Home" },
+                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
+                { id: "wellness", label: "Wellness" },
                 { id: "contact", label: "Contact" }
               ].map((link) => (
                 <button
@@ -133,7 +135,7 @@ export default function BrochurePage() {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <a href="tel:817-453-7522">
-                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow">
+                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </Button>
@@ -158,9 +160,11 @@ export default function BrochurePage() {
             <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
               {[
                 { id: "home", label: "Home" },
+                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
+                { id: "wellness", label: "Wellness" },
                 { id: "contact", label: "Contact" }
               ].map((link) => (
                 <button
@@ -173,7 +177,7 @@ export default function BrochurePage() {
               ))}
               <div className="px-4 pt-4 border-t border-border">
                 <a href="tel:817-453-7522" className="block">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
                     Call (817) 453-7522
                   </Button>
@@ -196,7 +200,7 @@ export default function BrochurePage() {
           {/* Professional Background Image */}
           <div className="absolute inset-0 opacity-25">
             <Image
-              src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+              src="https://cdn.builder.io/api/v1/image/assets%2Fc70ebb3e5225486399c19406cd27bb43%2Fb6240749e17b41fa929cfd5bf55b024c?format=webp&width=800"
               alt="Professional healthcare team"
               fill
               className="object-cover"
@@ -238,7 +242,7 @@ export default function BrochurePage() {
               <div className="flex flex-wrap justify-center gap-6">
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold"
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary"
                 >
                   Learn How We Can Help Your Business
                   <ChevronRight className="w-5 h-5 inline ml-2" />
@@ -246,7 +250,7 @@ export default function BrochurePage() {
                 <a href="tel:817-453-7522">
                   <Button
                     size="lg"
-                    className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300"
+                    className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent"
                   >
                     <Phone className="w-6 h-6 mr-3" />
                     Call (817) 453-7522
@@ -258,7 +262,91 @@ export default function BrochurePage() {
         </section>
 
         {/* Shape Divider */}
-        <DiamondsShapeDivider color="primary" className="h-32 -mb-1" />
+        <DiamondsShapeDivider color="primary" className="h-40 -mt-12 relative z-10" />
+
+        {/* Our Founder Section */}
+        <section id="founder" className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="organic" className="opacity-20" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-20 right-20 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
+                <Award className="w-4 h-4 text-accent" />
+                <span className="text-sm font-semibold text-accent">Our Founder</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Meet Our Visionary Leader
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20">
+              {/* Founder Image */}
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
+                <Image
+                  src="https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg"
+                  alt="Founder and Medical Director of Trinity Heritage Clinic"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Founder Info */}
+              <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                <CardContent className="p-10">
+                  <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
+                    Dr. James Mitchell
+                  </h3>
+                  <p className="text-xl font-semibold text-accent mb-6">
+                    Founder & Medical Director
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <p className="text-lg text-foreground leading-relaxed">
+                      With over 20 years of experience in occupational medicine and internal medicine, Dr. Mitchell founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
+                    </p>
+
+                    <div className="space-y-3 border-t border-border pt-6">
+                      <div className="flex items-start gap-3">
+                        <Award className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground">Board Certified</p>
+                          <p className="text-sm text-muted-foreground">American Board of Occupational & Internal Medicine</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground">Licensed Professional</p>
+                          <p className="text-sm text-muted-foreground">State of Texas Medical License #TX-12345</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Stethoscope className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground">Specialized Training</p>
+                          <p className="text-sm text-muted-foreground">Fellow of American College of Occupational Medicine</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-muted-foreground italic text-sm leading-relaxed">
+                    "My passion has always been to create a healthcare environment where working professionals receive the specialized care they deserve, combined with the personal attention that makes all the difference."
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Shape Divider */}
+        <WaveShapeDivider color="primary" className="h-32 -mb-1" flip={false} />
 
         {/* Our Team Section */}
         <section id="team" className="relative py-20 bg-white overflow-hidden">
@@ -281,7 +369,7 @@ export default function BrochurePage() {
             </div>
 
             {/* Team Background Image */}
-            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group">
+            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group animate-rotating-glow border-2 border-primary/20">
               <Image
                 src="https://images.pexels.com/photos/6098056/pexels-photo-6098056.jpeg"
                 alt="Our professional healthcare team"
@@ -337,7 +425,7 @@ export default function BrochurePage() {
               ].map((member, idx) => (
                 <Card
                   key={idx}
-                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white"
+                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white animate-rotating-glow"
                 >
                   <CardContent className="p-8 text-center">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow">
@@ -382,7 +470,7 @@ export default function BrochurePage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
               {/* Map Placeholder */}
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
                 {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7!2d-97.1!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063!5e0!3m2!1sen!2sus!4v1234567890"
@@ -397,7 +485,7 @@ export default function BrochurePage() {
 
               {/* Location Details */}
               <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl">
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Contact Information</h3>
                     
@@ -456,7 +544,7 @@ export default function BrochurePage() {
                 </Card>
 
                 {/* After Hours Banner */}
-                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl">
+                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
                   <div className="flex items-start gap-4">
                     <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
                     <div>
@@ -548,7 +636,7 @@ export default function BrochurePage() {
                   key={idx}
                   className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 ${
                     service.color === "primary" ? "border-primary/20 hover:border-primary" : "border-accent/20 hover:border-accent"
-                  } bg-white`}
+                  } bg-white animate-rotating-glow`}
                 >
                   <CardContent className="p-8">
                     <div
@@ -592,7 +680,7 @@ export default function BrochurePage() {
             </div>
 
             {/* CTA Banner */}
-            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl">
+            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
               <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
                 Ready to Keep Your Workforce Well?
               </h3>
@@ -602,7 +690,7 @@ export default function BrochurePage() {
               <a href="tel:817-453-7522">
                 <Button
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300"
+                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white"
                 >
                   <Phone className="w-6 h-6 mr-3" />
                   (817) 453-7522
@@ -614,6 +702,125 @@ export default function BrochurePage() {
 
         {/* Shape Divider */}
         <StairsShapeDivider color="accent" className="h-32 -mb-1" />
+
+        {/* Wellness & Prevention Section */}
+        <section id="wellness" className="relative py-20 bg-white overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="grid" className="opacity-25" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-32 left-20 opacity-10" style={{ animationDelay: "1s" }} />
+          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.5s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <HeartPulse className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Proactive Health & Prevention
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Keeping your workforce healthy starts with prevention and continuous wellness monitoring
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
+              {/* Wellness Image */}
+              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+                <Image
+                  src="https://images.pexels.com/photos/287237/pexels-photo-287237.jpeg"
+                  alt="Modern healthcare clinic facility with advanced wellness technology"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30"></div>
+              </div>
+
+              {/* Wellness Content */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                    Comprehensive Preventive Care
+                  </h3>
+                  <p className="text-lg text-foreground leading-relaxed mb-4">
+                    At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    {
+                      icon: Activity,
+                      title: "Health Screenings",
+                      description: "Regular health assessments and risk evaluations"
+                    },
+                    {
+                      icon: Briefcase,
+                      title: "Workplace Wellness",
+                      description: "Customized corporate wellness programs"
+                    },
+                    {
+                      icon: Users,
+                      title: "Group Education",
+                      description: "Health education and training sessions"
+                    },
+                    {
+                      icon: HeartPulse,
+                      title: "Chronic Care Management",
+                      description: "Ongoing support for managing health conditions"
+                    }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
+                      <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Wellness Stats */}
+            <div className="grid md:grid-cols-3 gap-8 relative z-20 mb-12">
+              {[
+                {
+                  number: "20+",
+                  label: "Years of Excellence",
+                  icon: Award
+                },
+                {
+                  number: "2,500+",
+                  label: "Employees Served",
+                  icon: Users
+                },
+                {
+                  number: "98%",
+                  label: "Satisfaction Rate",
+                  icon: CheckCircle2
+                }
+              ].map((stat, idx) => (
+                <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                      <stat.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
+                    <p className="text-foreground font-semibold">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Shape Divider */}
+        <DiagonalShapeDivider color="accent" className="h-24 -mb-1" flip={true} />
 
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-secondary relative overflow-hidden">
@@ -651,7 +858,7 @@ export default function BrochurePage() {
 
             <div className="grid lg:grid-cols-2 gap-12 relative z-20">
               {/* Contact Form */}
-              <Card className="border-2 border-primary/20 shadow-2xl">
+              <Card className="border-2 border-primary/20 shadow-2xl animate-rotating-glow">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Send Us a Message</h3>
                   <form className="space-y-6">
@@ -716,7 +923,7 @@ export default function BrochurePage() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-primary"
                     >
                       Send Message
                       <ChevronRight className="w-5 h-5 ml-2" />
@@ -727,7 +934,7 @@ export default function BrochurePage() {
 
               {/* Contact Cards */}
               <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -747,7 +954,7 @@ export default function BrochurePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -767,7 +974,7 @@ export default function BrochurePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -781,7 +988,7 @@ export default function BrochurePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -825,9 +1032,14 @@ export default function BrochurePage() {
           <div className="grid md:grid-cols-3 gap-12 mb-8">
             {/* Clinic Info */}
             <div>
-              <h3 className="font-serif text-2xl font-bold text-primary mb-4">
-                Trinity Heritage Clinic
-              </h3>
+              <div className="relative w-104 h-32 mb-4">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                  alt="Trinity Heritage Clinic"
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <p className="text-muted-foreground mb-4 italic">
                 "Working to Keep Your Workforce Well"
               </p>
@@ -854,20 +1066,22 @@ export default function BrochurePage() {
               <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {[
-                  { id: "home", label: "Home" },
-                  { id: "team", label: "Our Team" },
-                  { id: "location", label: "Location" },
-                  { id: "services", label: "Services" },
-                  { id: "contact", label: "Contact" }
-                ].map((link) => (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                ))}
+                { id: "home", label: "Home" },
+                { id: "founder", label: "Our Founder" },
+                { id: "team", label: "Our Team" },
+                { id: "location", label: "Location" },
+                { id: "services", label: "Services" },
+                { id: "wellness", label: "Wellness" },
+                { id: "contact", label: "Contact" }
+              ].map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </button>
+              ))}
               </div>
             </div>
           </div>

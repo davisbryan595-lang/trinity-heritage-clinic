@@ -304,6 +304,29 @@ html {
   }
 }
 
+@keyframes rotating-border-glow {
+  0% {
+    box-shadow: 0 0 25px rgba(0, 109, 91, 0.4), inset 0 0 25px rgba(0, 109, 91, 0.1);
+    border-color: rgba(0, 109, 91, 0.6);
+  }
+  25% {
+    box-shadow: 0 0 30px rgba(107, 76, 154, 0.3), inset 0 0 30px rgba(107, 76, 154, 0.1);
+    border-color: rgba(107, 76, 154, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 109, 91, 0.4), inset 0 0 25px rgba(0, 109, 91, 0.1);
+    border-color: rgba(0, 109, 91, 0.6);
+  }
+  75% {
+    box-shadow: 0 0 30px rgba(107, 76, 154, 0.3), inset 0 0 30px rgba(107, 76, 154, 0.1);
+    border-color: rgba(107, 76, 154, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 109, 91, 0.4), inset 0 0 25px rgba(0, 109, 91, 0.1);
+    border-color: rgba(0, 109, 91, 0.6);
+  }
+}
+
 @keyframes slide-up {
   from {
     opacity: 0;
@@ -348,6 +371,10 @@ html {
   animation: slide-up 0.8s ease-out;
 }
 
+.animate-rotating-glow {
+  animation: rotating-border-glow 4s ease-in-out infinite;
+}
+
 /* Opacity utilities */
 .opacity-08 {
   opacity: 0.08;
@@ -376,6 +403,15 @@ html {
 
 .scale-125 {
   transform: scale(1.25);
+}
+
+/* Custom sizing for enlarged logos */
+.w-104 {
+  width: 26rem; /* 416px - 2x of 208px (w-52) */
+}
+
+.h-32 {
+  height: 8rem; /* 128px - 2x of 64px (h-16) */
 }
 
 /* Position utilities for floating elements */
