@@ -225,16 +225,16 @@ export default function BrochurePage() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-2xl md:text-3xl lg:text-4xl text-accent font-bold mb-8">
+              <p className="text-2xl md:text-3xl lg:text-4xl text-primary font-bold mb-8">
                 Working to Keep Your Workforce Well
               </p>
 
               {/* Tagline */}
-              <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed">
+              <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed font-medium">
                 Always Friendly. Always Knowledgeable.
               </p>
 
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
                 Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
               </p>
 
@@ -242,10 +242,10 @@ export default function BrochurePage() {
               <div className="flex flex-wrap justify-center gap-6">
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary"
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary flex items-center justify-center"
                 >
                   Learn How We Can Help Your Business
-                  <ChevronRight className="w-5 h-5 inline ml-2" />
+                  <ChevronRight className="w-5 h-5 ml-2" />
                 </button>
                 <a href="tel:817-453-7522">
                   <Button
