@@ -811,7 +811,7 @@ export default function BrochurePage() {
                       <stat.icon className="w-8 h-8 text-primary" />
                     </div>
                     <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
-                    <p className="text-slate-800 font-semibold">{stat.label}</p>
+                    <p className="text-foreground font-semibold">{stat.label}</p>
                   </CardContent>
                 </Card>
               ))}
