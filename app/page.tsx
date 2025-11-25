@@ -16,6 +16,8 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import DiamondPreloader from "@/components/diamond-preloader"
+import { DiamondsShapeDivider, DiagonalShapeDivider, WaveShapeDivider, StairsShapeDivider } from "@/components/shape-dividers"
+import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import {
   Phone,
   MapPin,
@@ -186,13 +188,26 @@ export default function BrochurePage() {
         {/* Hero Section */}
         <section
           id="home"
-          className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10"
+          className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
         >
-          {/* Background Image Placeholder */}
-          <div className="absolute inset-0 opacity-20">
-            {/* ← REPLACE WITH BROCHURE SCREENSHOT #1: /images/brochure-hero.jpg */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
+          {/* Geometric Background */}
+          <GeometricBackground variant="diamonds" className="opacity-30" opacity={1} animated={true} />
+
+          {/* Professional Background Image */}
+          <div className="absolute inset-0 opacity-25">
+            <Image
+              src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+              alt="Professional healthcare team"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-accent/40"></div>
           </div>
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
+          <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div
@@ -242,9 +257,16 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <DiamondsShapeDivider color="primary" className="h-32 -mb-1" />
+
         {/* Our Team Section */}
-        <section id="team" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="team" className="relative py-20 bg-white overflow-hidden">
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-10 left-10 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-32 right-20 opacity-10" style={{ animationDelay: "1.5s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
                 <Users className="w-4 h-4 text-primary" />
@@ -258,18 +280,23 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            {/* Team Background Image Placeholder */}
-            <div className="relative mb-12 h-64 rounded-2xl overflow-hidden shadow-xl">
-              {/* ← REPLACE WITH BROCHURE TEAM IMAGE #2: /images/team-brochure.jpg */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
+            {/* Team Background Image */}
+            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group">
+              <Image
+                src="https://images.pexels.com/photos/6098056/pexels-photo-6098056.jpeg"
+                alt="Our professional healthcare team"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-transparent to-accent/40"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-2xl font-bold text-white text-center px-4">
+                <p className="text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
                   Our Dedicated Healthcare Team
                 </p>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-20">
               {[
                 {
                   icon: Award,
@@ -330,9 +357,19 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <WaveShapeDivider color="accent" className="h-40 -mb-1" flip={true} />
+
         {/* Location Section */}
-        <section id="location" className="py-20 bg-secondary">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="location" className="relative py-20 bg-secondary overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-32 left-20 opacity-12" style={{ animationDelay: "0.8s" }} />
+          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
                 <MapPin className="w-4 h-4 text-primary" />
@@ -343,7 +380,7 @@ export default function BrochurePage() {
               </h2>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
               {/* Map Placeholder */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
@@ -439,9 +476,19 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <DiagonalShapeDivider color="primary" className="h-20 -mb-1" flip={true} />
+
         {/* Services Section */}
-        <section id="services" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="services" className="relative py-20 bg-white overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
                 <Briefcase className="w-4 h-4 text-accent" />
@@ -455,7 +502,7 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20">
               {[
                 {
                   icon: Briefcase,
@@ -565,13 +612,28 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <StairsShapeDivider color="accent" className="h-32 -mb-1" />
+
         {/* Contact Section */}
-        <section id="contact" className="py-20 bg-secondary relative">
-          {/* Background Image Placeholder */}
-          <div className="absolute inset-0 opacity-10">
-            {/* ← REPLACE WITH BROCHURE FRONT #4: /images/contact-brochure.jpg */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
+        <section id="contact" className="py-20 bg-secondary relative overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="organic" className="opacity-40" opacity={1} />
+
+          {/* Professional Background Image */}
+          <div className="absolute inset-0 opacity-08">
+            <Image
+              src="https://images.pexels.com/photos/8376177/pexels-photo-8376177.jpeg"
+              alt="Healthcare consultation"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-accent/50"></div>
           </div>
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="top-40 right-32 opacity-20" style={{ animationDelay: "0.3s" }} />
+          <GeometricAccent className="bottom-20 left-20 opacity-15 scale-125" style={{ animationDelay: "1s" }} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
@@ -587,7 +649,7 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 relative z-20">
               {/* Contact Form */}
               <Card className="border-2 border-primary/20 shadow-2xl">
                 <CardContent className="p-8">
