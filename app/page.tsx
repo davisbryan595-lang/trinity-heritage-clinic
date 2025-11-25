@@ -158,9 +158,11 @@ export default function BrochurePage() {
             <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
               {[
                 { id: "home", label: "Home" },
+                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
+                { id: "wellness", label: "Wellness" },
                 { id: "contact", label: "Contact" }
               ].map((link) => (
                 <button
@@ -1062,20 +1064,22 @@ export default function BrochurePage() {
               <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {[
-                  { id: "home", label: "Home" },
-                  { id: "team", label: "Our Team" },
-                  { id: "location", label: "Location" },
-                  { id: "services", label: "Services" },
-                  { id: "contact", label: "Contact" }
-                ].map((link) => (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                ))}
+                { id: "home", label: "Home" },
+                { id: "founder", label: "Our Founder" },
+                { id: "team", label: "Our Team" },
+                { id: "location", label: "Location" },
+                { id: "services", label: "Services" },
+                { id: "wellness", label: "Wellness" },
+                { id: "contact", label: "Contact" }
+              ].map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </button>
+              ))}
               </div>
             </div>
           </div>
