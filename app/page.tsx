@@ -420,7 +420,7 @@ export default function BrochurePage() {
               {/* Founder Info */}
               <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                 <CardContent className="p-10">
-                  <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
+                  <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
                     Dr. Victor Nwiloh
                   </h3>
                   <p className="text-xl font-semibold text-primary mb-6">
