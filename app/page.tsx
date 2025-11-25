@@ -195,7 +195,7 @@ export default function BrochurePage() {
           className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
         >
           {/* Geometric Background */}
-          <GeometricBackground variant="diamonds" className="opacity-30" opacity={1} animated={true} />
+          <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
 
           {/* Professional Background Image */}
           <div className="absolute inset-0 opacity-30">
