@@ -598,12 +598,23 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <StairsShapeDivider color="accent" className="h-32 -mb-1" />
+
         {/* Contact Section */}
-        <section id="contact" className="py-20 bg-secondary relative">
-          {/* Background Image Placeholder */}
-          <div className="absolute inset-0 opacity-10">
-            {/* ← REPLACE WITH BROCHURE FRONT #4: /images/contact-brochure.jpg */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
+        <section id="contact" className="py-20 bg-secondary relative overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="organic" className="opacity-40" opacity={1} />
+
+          {/* Professional Background Image */}
+          <div className="absolute inset-0 opacity-08">
+            <Image
+              src="https://images.pexels.com/photos/8376177/pexels-photo-8376177.jpeg"
+              alt="Healthcare consultation"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-accent/50"></div>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
