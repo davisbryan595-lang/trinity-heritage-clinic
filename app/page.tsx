@@ -220,7 +220,7 @@ export default function BrochurePage() {
               }`}
             >
               {/* Main Heading */}
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg underline-offset-2" style={{ textDecorationLine: 'underline', textDecorationColor: '#8cc73f', textDecorationThickness: '3px', textUnderlineOffset: '8px' }}>
                 OCCUPATIONAL MEDICINE SERVICES
               </h1>
 
