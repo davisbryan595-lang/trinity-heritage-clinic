@@ -1201,6 +1201,7 @@ export default function BrochurePage() {
               <div className="space-y-2">
                 {[
                 { id: "home", label: "Home" },
+                { id: "about", label: "About Us" },
                 { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
