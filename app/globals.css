@@ -387,3 +387,41 @@ html {
 .drop-shadow-lg {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Enhanced card hover effects */
+.card-hover {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 109, 91, 0.2);
+}
+
+/* Hero section animations */
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Smooth transitions for geometric backgrounds */
+.geometric-bg {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Enhanced gradient backgrounds */
+.gradient-primary-accent {
+  background: linear-gradient(135deg, #006D5B 0%, #6B4C9A 100%);
+}
+
+.gradient-accent-primary {
+  background: linear-gradient(135deg, #6B4C9A 0%, #006D5B 100%);
+}
+
+/* Image hover effects */
+.image-hover {
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
