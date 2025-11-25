@@ -292,7 +292,7 @@ export default function BrochurePage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-20">
               {[
                 {
                   icon: Award,
