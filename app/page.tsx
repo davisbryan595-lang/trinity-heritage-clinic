@@ -1077,7 +1077,7 @@ export default function BrochurePage() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
                 >
                   {link.label}
                 </button>
@@ -1086,7 +1086,7 @@ export default function BrochurePage() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Trinity Heritage Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary">
               To learn more, call us today: (817) 453-7522
