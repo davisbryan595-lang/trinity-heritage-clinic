@@ -434,8 +434,8 @@ export default function BrochurePage() {
                     <h3 className="text-xl font-bold text-foreground mb-2 font-serif">
                       {member.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-3">{member.specialty}</p>
-                    <p className="text-xs text-muted-foreground italic leading-relaxed">
+                    <p className="text-foreground text-sm mb-3 font-medium">{member.specialty}</p>
+                    <p className="text-sm text-foreground italic leading-relaxed font-medium">
                       Experienced, well-trained professional certified in specialty and licensed without restrictions
                     </p>
                   </CardContent>
