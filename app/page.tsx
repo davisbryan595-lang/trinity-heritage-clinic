@@ -328,10 +328,10 @@ export default function BrochurePage() {
                     <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-primary mb-2 font-serif">
+                  <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
                     Immigration Medical Services
                   </h3>
-                  <p className="text-accent font-semibold mb-6">
+                  <p className="font-semibold mb-6" style={{ color: '#8cc73f' }}>
                     USCIS Certified Civil Surgeon
                   </p>
 
