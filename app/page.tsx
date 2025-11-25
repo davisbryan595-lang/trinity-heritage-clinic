@@ -649,7 +649,7 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 relative z-20">
               {/* Contact Form */}
               <Card className="border-2 border-primary/20 shadow-2xl">
                 <CardContent className="p-8">
