@@ -275,9 +275,9 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
-                <Award className="w-4 h-4 text-accent" />
-                <span className="text-sm font-semibold text-accent">Our Founder</span>
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
+                <Award className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Our Founder</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Meet Our Visionary Leader
@@ -302,7 +302,7 @@ export default function BrochurePage() {
                   <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
                     Dr. Victor Nwiloh
                   </h3>
-                  <p className="text-xl font-semibold text-accent mb-6">
+                  <p className="text-xl font-semibold text-primary mb-6">
                     Founder & Medical Director
                   </p>
 
@@ -356,14 +356,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <Users className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Our Team</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Experienced, Well-Trained Professionals
               </h2>
-              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-xl text-foreground max-w-4xl mx-auto font-medium">
                 Certified in specialties and licensed without restrictions
               </p>
             </div>
@@ -459,7 +459,7 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Our Location</span>
               </div>
@@ -578,14 +578,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-accent/20 px-4 py-2 rounded-full mb-4">
                 <Briefcase className="w-4 h-4 text-accent" />
                 <span className="text-sm font-semibold text-accent">Our Services</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Comprehensive Occupational Health Services
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Keeping your workforce healthy, safe, and productive
               </p>
             </div>
@@ -714,14 +714,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/15 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <HeartPulse className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Proactive Health & Prevention
               </h2>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-medium">
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Keeping your workforce healthy starts with prevention and continuous wellness monitoring
               </p>
             </div>
@@ -844,14 +844,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <Phone className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Contact Us</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Get Started with Trinity Heritage Clinic
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Reach out today to learn how we can serve your business
               </p>
             </div>
