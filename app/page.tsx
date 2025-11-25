@@ -225,7 +225,7 @@ export default function BrochurePage() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-2xl md:text-3xl lg:text-4xl text-primary font-bold mb-8">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: '#8cc73f' }}>
                 Working to Keep Your Workforce Well
               </p>
 
@@ -286,7 +286,7 @@ export default function BrochurePage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20">
               {/* Founder Image */}
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
+              <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fdf7e75028bff4b959bd5bdef48ded5a3%2F3709d0ee57784a74997779b550c93804?format=webp&width=800"
                   alt="Founder and Medical Director of Trinity Heritage Clinic"
@@ -582,7 +582,7 @@ export default function BrochurePage() {
                 <Briefcase className="w-4 h-4 text-accent" />
                 <span className="text-sm font-semibold text-accent">Our Services</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
                 Comprehensive Occupational Health Services
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
@@ -718,7 +718,7 @@ export default function BrochurePage() {
                 <HeartPulse className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
                 Proactive Health & Prevention
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
@@ -741,7 +741,7 @@ export default function BrochurePage() {
               {/* Wellness Content */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                  <h3 className="text-2xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
                     Comprehensive Preventive Care
                   </h3>
                   <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
