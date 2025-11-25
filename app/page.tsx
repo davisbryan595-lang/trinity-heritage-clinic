@@ -592,7 +592,7 @@ export default function BrochurePage() {
             </div>
 
             {/* CTA Banner */}
-            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl">
+            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
               <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
                 Ready to Keep Your Workforce Well?
               </h3>
@@ -602,7 +602,7 @@ export default function BrochurePage() {
               <a href="tel:817-453-7522">
                 <Button
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300"
+                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white"
                 >
                   <Phone className="w-6 h-6 mr-3" />
                   (817) 453-7522
@@ -651,7 +651,7 @@ export default function BrochurePage() {
 
             <div className="grid lg:grid-cols-2 gap-12 relative z-20">
               {/* Contact Form */}
-              <Card className="border-2 border-primary/20 shadow-2xl">
+              <Card className="border-2 border-primary/20 shadow-2xl animate-rotating-glow">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Send Us a Message</h3>
                   <form className="space-y-6">
@@ -716,7 +716,7 @@ export default function BrochurePage() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-primary"
                     >
                       Send Message
                       <ChevronRight className="w-5 h-5 ml-2" />
@@ -727,7 +727,7 @@ export default function BrochurePage() {
 
               {/* Contact Cards */}
               <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -747,7 +747,7 @@ export default function BrochurePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -767,7 +767,7 @@ export default function BrochurePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -781,7 +781,7 @@ export default function BrochurePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
