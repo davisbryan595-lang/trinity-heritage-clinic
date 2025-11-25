@@ -84,13 +84,13 @@ export default function BrochurePage() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-24 py-3">
             {/* Logo */}
             <button
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <div className="relative w-104 h-32">
+              <div className="relative w-40 h-16">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
