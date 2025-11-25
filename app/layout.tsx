@@ -1,26 +1,29 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-})
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Trinity Heritage Clinic | Internal Medicine El Paso TX",
+  title: 'Trinity Heritage Clinic | Occupational Medicine in Mansfield TX',
   description:
-    "Compassionate internal medicine care by Dr. Victor Nwiloh in El Paso. Preventive care, chronic management, and holistic wellness.",
-  keywords: ["internal medicine", "El Paso", "preventive care", "chronic disease management"],
-    generator: 'v0.app'
+    'Professional occupational health services for businesses in Dallas Fort Worth. Pre-employment exams, diagnostic testing, wellness programs. Working to keep your workforce well.',
+  keywords: [
+    'occupational medicine',
+    'occupational health',
+    'Mansfield TX',
+    'Dallas Fort Worth',
+    'employee health',
+    'workplace wellness',
+    'pre-employment exam',
+    'drug screening',
+    'diagnostic testing',
+  ],
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Trinity Heritage Clinic - Occupational Medicine Services',
+    description: 'Professional occupational health services for businesses in DFW',
+    type: 'website',
+    locale: 'en_US',
+  },
 }
 
 export default function RootLayout({
@@ -29,13 +32,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased">
-        <Navbar />
-        {children}
-        <Footer />
-        <Analytics />
-      </body>
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90'>💚</text></svg>" />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }
