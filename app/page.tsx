@@ -220,21 +220,21 @@ export default function BrochurePage() {
               }`}
             >
               {/* Main Heading */}
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg underline-offset-2" style={{ textDecorationLine: 'underline', textDecorationColor: '#8cc73f', textDecorationThickness: '3px', textUnderlineOffset: '8px' }}>
                 OCCUPATIONAL MEDICINE SERVICES
               </h1>
 
               {/* Subtitle */}
-              <p className="text-2xl md:text-3xl lg:text-4xl text-accent font-bold mb-8">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: '#8cc73f' }}>
                 Working to Keep Your Workforce Well
               </p>
 
               {/* Tagline */}
-              <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed">
+              <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed font-medium">
                 Always Friendly. Always Knowledgeable.
               </p>
 
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
                 Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
               </p>
 
@@ -242,10 +242,10 @@ export default function BrochurePage() {
               <div className="flex flex-wrap justify-center gap-6">
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary"
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary flex items-center justify-center"
                 >
                   Learn How We Can Help Your Business
-                  <ChevronRight className="w-5 h-5 inline ml-2" />
+                  <ChevronRight className="w-5 h-5 ml-2" />
                 </button>
                 <a href="tel:817-453-7522">
                   <Button
@@ -275,9 +275,9 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
-                <Award className="w-4 h-4 text-accent" />
-                <span className="text-sm font-semibold text-accent">Our Founder</span>
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
+                <Award className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Our Founder</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Meet Our Visionary Leader
@@ -286,9 +286,9 @@ export default function BrochurePage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20">
               {/* Founder Image */}
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
+              <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
                 <Image
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fdf7e75028bff4b959bd5bdef48ded5a3%2Fedec6117eba441bca7677541cf928fda?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fdf7e75028bff4b959bd5bdef48ded5a3%2F3709d0ee57784a74997779b550c93804?format=webp&width=800"
                   alt="Founder and Medical Director of Trinity Heritage Clinic"
                   fill
                   className="object-cover"
@@ -302,7 +302,7 @@ export default function BrochurePage() {
                   <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
                     Dr. Victor Nwiloh
                   </h3>
-                  <p className="text-xl font-semibold text-accent mb-6">
+                  <p className="text-xl font-semibold text-primary mb-6">
                     Founder & Medical Director
                   </p>
 
@@ -312,25 +312,25 @@ export default function BrochurePage() {
                     </p>
 
                     <div className="space-y-3 border-t border-border pt-6">
-                      <div className="flex items-start gap-3">
-                        <Award className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
+                        <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-foreground">Board Certified</p>
-                          <p className="text-sm text-muted-foreground">American Board of Occupational & Internal Medicine</p>
+                          <p className="text-sm text-foreground font-medium">American Board of Occupational & Internal Medicine</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
                         <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-foreground">Licensed Professional</p>
-                          <p className="text-sm text-muted-foreground">State of Texas Medical License #TX-12345</p>
+                          <p className="text-sm text-foreground font-medium">State of Texas Medical License #TX-12345</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <Stethoscope className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
+                        <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-foreground">Specialized Training</p>
-                          <p className="text-sm text-muted-foreground">Fellow of American College of Occupational Medicine</p>
+                          <p className="text-sm text-foreground font-medium">Fellow of American College of Occupational Medicine</p>
                         </div>
                       </div>
                     </div>
@@ -356,14 +356,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <Users className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Our Team</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Experienced, Well-Trained Professionals
               </h2>
-              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-xl text-foreground max-w-4xl mx-auto font-medium">
                 Certified in specialties and licensed without restrictions
               </p>
             </div>
@@ -434,8 +434,8 @@ export default function BrochurePage() {
                     <h3 className="text-xl font-bold text-foreground mb-2 font-serif">
                       {member.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-3">{member.specialty}</p>
-                    <p className="text-xs text-muted-foreground italic leading-relaxed">
+                    <p className="text-foreground text-sm mb-3 font-medium">{member.specialty}</p>
+                    <p className="text-sm text-foreground italic leading-relaxed font-medium">
                       Experienced, well-trained professional certified in specialty and licensed without restrictions
                     </p>
                   </CardContent>
@@ -459,7 +459,7 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Our Location</span>
               </div>
@@ -578,14 +578,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-accent/20 px-4 py-2 rounded-full mb-4">
                 <Briefcase className="w-4 h-4 text-accent" />
                 <span className="text-sm font-semibold text-accent">Our Services</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
                 Comprehensive Occupational Health Services
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Keeping your workforce healthy, safe, and productive
               </p>
             </div>
@@ -690,7 +690,7 @@ export default function BrochurePage() {
               <a href="tel:817-453-7522">
                 <Button
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white"
+                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
                 >
                   <Phone className="w-6 h-6 mr-3" />
                   (817) 453-7522
@@ -714,14 +714,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/15 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <HeartPulse className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
                 Proactive Health & Prevention
               </h2>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-medium">
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Keeping your workforce healthy starts with prevention and continuous wellness monitoring
               </p>
             </div>
@@ -741,10 +741,10 @@ export default function BrochurePage() {
               {/* Wellness Content */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                  <h3 className="text-2xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
                     Comprehensive Preventive Care
                   </h3>
-                  <p className="text-lg text-slate-800 leading-relaxed mb-4 font-medium">
+                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
                     At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
                   </p>
                 </div>
@@ -777,8 +777,8 @@ export default function BrochurePage() {
                         <item.icon className="w-5 h-5" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-slate-900 mb-1">{item.title}</h4>
-                        <p className="text-sm text-slate-700 font-medium">{item.description}</p>
+                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm text-foreground font-medium">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -811,7 +811,7 @@ export default function BrochurePage() {
                       <stat.icon className="w-8 h-8 text-primary" />
                     </div>
                     <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
-                    <p className="text-slate-800 font-semibold">{stat.label}</p>
+                    <p className="text-foreground font-semibold">{stat.label}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -844,14 +844,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
                 <Phone className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Contact Us</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Get Started with Trinity Heritage Clinic
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Reach out today to learn how we can serve your business
               </p>
             </div>
@@ -948,7 +948,7 @@ export default function BrochurePage() {
                         >
                           (817) 453-7522
                         </a>
-                        <p className="text-sm text-muted-foreground">Mon-Fri: 8:30 AM - 5:30 PM</p>
+                        <p className="text-sm text-foreground font-medium">Mon-Fri: 8:30 AM - 5:30 PM</p>
                       </div>
                     </div>
                   </CardContent>
@@ -968,7 +968,7 @@ export default function BrochurePage() {
                         >
                           (817) 966-3989
                         </a>
-                        <p className="text-sm text-muted-foreground">For urgent matters only</p>
+                        <p className="text-sm text-foreground font-medium">For urgent matters only</p>
                       </div>
                     </div>
                   </CardContent>
@@ -1018,7 +1018,7 @@ export default function BrochurePage() {
               <p className="text-2xl font-serif font-bold text-primary mb-4">
                 Working to Keep Your Workforce Well
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-foreground font-medium">
                 To learn more, call us today: <a href="tel:817-453-7522" className="text-primary font-bold hover:underline">(817) 453-7522</a>
               </p>
             </div>
@@ -1040,7 +1040,7 @@ export default function BrochurePage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-muted-foreground mb-4 italic">
+              <p className="text-foreground mb-4 italic font-medium">
                 "Working to Keep Your Workforce Well"
               </p>
             </div>
@@ -1048,7 +1048,7 @@ export default function BrochurePage() {
             {/* Contact */}
             <div>
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="space-y-2 text-sm text-foreground font-medium">
                 <p>1475 Heritage Pkwy Ste 225</p>
                 <p>Mansfield, TX 76063</p>
                 <p className="pt-2">
@@ -1077,7 +1077,7 @@ export default function BrochurePage() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
                 >
                   {link.label}
                 </button>
@@ -1086,7 +1086,7 @@ export default function BrochurePage() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Trinity Heritage Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary">
               To learn more, call us today: (817) 453-7522
