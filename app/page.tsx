@@ -478,7 +478,12 @@ export default function BrochurePage() {
         <section id="services" className="relative py-20 bg-white overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
                 <Briefcase className="w-4 h-4 text-accent" />
