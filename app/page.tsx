@@ -84,13 +84,13 @@ export default function BrochurePage() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-24 py-3">
             {/* Logo */}
             <button
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <div className="relative w-104 h-32">
+              <div className="relative w-40 h-16">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
@@ -111,7 +111,7 @@ export default function BrochurePage() {
             </button>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-8 items-center">
+            <div className="hidden lg:flex gap-10 items-center">
               {[
                 { id: "home", label: "Home" },
                 { id: "about", label: "About Us" },
@@ -134,7 +134,7 @@ export default function BrochurePage() {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block ml-8">
               <a href="tel:817-453-7522">
                 <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
@@ -244,7 +244,8 @@ export default function BrochurePage() {
                 <div className="flex flex-wrap justify-center gap-6">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary flex items-center justify-center"
+                    className="text-white text-lg px-10 py-6 rounded-lg shadow-2xl transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 flex items-center justify-center hover:opacity-90"
+                    style={{ backgroundColor: '#8cc73f', borderColor: '#8cc73f' }}
                   >
                     Learn How We Can Help Your Business
                     <ChevronRight className="w-5 h-5 ml-2" />
@@ -399,7 +400,7 @@ export default function BrochurePage() {
                 <Award className="w-4 h-4" />
                 <span className="text-sm font-semibold">Our Founder</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ color: '#8cc73f' }}>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-4">
                 Meet Our Visionary Leader
               </h2>
             </div>
@@ -419,7 +420,7 @@ export default function BrochurePage() {
               {/* Founder Info */}
               <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                 <CardContent className="p-10">
-                  <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
+                  <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
                     Dr. Victor Nwiloh
                   </h3>
                   <p className="text-xl font-semibold text-primary mb-6">
