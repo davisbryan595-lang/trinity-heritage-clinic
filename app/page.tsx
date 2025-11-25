@@ -382,7 +382,7 @@ export default function BrochurePage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
               {/* Map Placeholder */}
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
                 {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7!2d-97.1!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063!5e0!3m2!1sen!2sus!4v1234567890"
@@ -397,7 +397,7 @@ export default function BrochurePage() {
 
               {/* Location Details */}
               <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl">
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Contact Information</h3>
                     
@@ -456,7 +456,7 @@ export default function BrochurePage() {
                 </Card>
 
                 {/* After Hours Banner */}
-                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl">
+                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
                   <div className="flex items-start gap-4">
                     <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
                     <div>
