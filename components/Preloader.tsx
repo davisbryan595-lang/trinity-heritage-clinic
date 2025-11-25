@@ -38,8 +38,8 @@ export default function Preloader() {
         </div>
 
         {/* Animated Text */}
-        <h2 className="text-2xl font-bold text-primary-green mb-2">Trinity Heritage Clinic</h2>
-        <p className="text-lg text-accent-purple fade-in">
+        <h2 className="text-2xl font-bold mb-2" style={{ color: '#006d5b' }}>Trinity Heritage Clinic</h2>
+        <p className="text-lg fade-in" style={{ color: '#6b4c9a' }}>
           Working to Keep Your Workforce Well...
         </p>
       </div>
