@@ -312,25 +312,25 @@ export default function BrochurePage() {
                     </p>
 
                     <div className="space-y-3 border-t border-border pt-6">
-                      <div className="flex items-start gap-3">
-                        <Award className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
+                        <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-foreground">Board Certified</p>
-                          <p className="text-sm text-muted-foreground">American Board of Occupational & Internal Medicine</p>
+                          <p className="text-sm text-foreground font-medium">American Board of Occupational & Internal Medicine</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
                         <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-foreground">Licensed Professional</p>
-                          <p className="text-sm text-muted-foreground">State of Texas Medical License #TX-12345</p>
+                          <p className="text-sm text-foreground font-medium">State of Texas Medical License #TX-12345</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <Stethoscope className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
+                        <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-foreground">Specialized Training</p>
-                          <p className="text-sm text-muted-foreground">Fellow of American College of Occupational Medicine</p>
+                          <p className="text-sm text-foreground font-medium">Fellow of American College of Occupational Medicine</p>
                         </div>
                       </div>
                     </div>
