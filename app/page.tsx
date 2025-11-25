@@ -467,8 +467,13 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <DiagonalShapeDivider color="primary" className="h-20 -mb-1" flip={true} />
+
         {/* Services Section */}
-        <section id="services" className="py-20 bg-white">
+        <section id="services" className="relative py-20 bg-white overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
