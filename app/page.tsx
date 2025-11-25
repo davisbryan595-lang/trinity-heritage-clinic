@@ -380,7 +380,7 @@ export default function BrochurePage() {
               </h2>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
               {/* Map Placeholder */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
