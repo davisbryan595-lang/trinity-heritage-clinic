@@ -111,7 +111,7 @@ export default function BrochurePage() {
             </button>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-8 items-center">
+            <div className="hidden lg:flex gap-10 items-center">
               {[
                 { id: "home", label: "Home" },
                 { id: "about", label: "About Us" },
