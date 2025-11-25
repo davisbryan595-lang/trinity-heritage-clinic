@@ -247,6 +247,31 @@ html {
   box-shadow: 0 0 50px rgba(0, 109, 91, 0.5);
 }
 
+/* Tertiary green accent utilities */
+.text-tertiary {
+  color: var(--tertiary);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
+
+.bg-tertiary\/10 {
+  background-color: rgba(140, 199, 63, 0.1);
+}
+
+.bg-tertiary\/20 {
+  background-color: rgba(140, 199, 63, 0.2);
+}
+
+.border-tertiary {
+  border-color: var(--tertiary);
+}
+
+.border-tertiary\/20 {
+  border-color: rgba(140, 199, 63, 0.2);
+}
+
 /* Enhanced animations for shape dividers and geometric patterns */
 @keyframes float {
   0%, 100% {
