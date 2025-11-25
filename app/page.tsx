@@ -777,8 +777,8 @@ export default function BrochurePage() {
                         <item.icon className="w-5 h-5" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-slate-900 mb-1">{item.title}</h4>
-                        <p className="text-sm text-slate-700 font-medium">{item.description}</p>
+                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm text-foreground font-medium">{item.description}</p>
                       </div>
                     </div>
                   ))}
