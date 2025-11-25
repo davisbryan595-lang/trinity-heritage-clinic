@@ -590,7 +590,7 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20">
+            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20 lg:grid-cols-4">
               {[
                 {
                   icon: Briefcase,
@@ -630,6 +630,19 @@ export default function BrochurePage() {
                     "Corporate Wellness Plans"
                   ],
                   color: "primary"
+                },
+                {
+                  icon: Shield,
+                  title: "Migration Service",
+                  items: [
+                    "USCIS I-693 Medical Examination",
+                    "Certified & Sealed Envelope",
+                    "Patient Copy I-693 Forms",
+                    "Physical Examination",
+                    "Vaccination Status Verification",
+                    "TB Testing & Blood Tests"
+                  ],
+                  color: "accent"
                 }
               ].map((service, idx) => (
                 <Card
