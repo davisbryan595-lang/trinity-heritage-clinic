@@ -941,10 +941,10 @@ export default function BrochurePage() {
               ].map((stat, idx) => (
                 <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow bg-white shadow-md">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-full bg-primary/15 flex items-center justify-center mb-4 mx-auto">
-                      <stat.icon className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: '#8cc73f20' }}>
+                      <stat.icon className="w-8 h-8" style={{ color: '#8cc73f' }} />
                     </div>
-                    <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
+                    <p className="text-4xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>{stat.number}</p>
                     <p className="text-foreground font-semibold">{stat.label}</p>
                   </CardContent>
                 </Card>
