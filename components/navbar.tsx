@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-32 h-16 animate-glow">
               <Image
-                src="/images/colored-logo.png"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                 alt="Trinity Heritage Clinic"
                 fill
                 className="object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
