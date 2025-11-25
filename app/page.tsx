@@ -90,7 +90,7 @@ export default function BrochurePage() {
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-3 group cursor-pointer"
             >
-              <div className="relative w-52 h-16">
+              <div className="relative w-104 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
@@ -133,7 +133,7 @@ export default function BrochurePage() {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <a href="tel:817-453-7522">
-                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow">
+                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </Button>
@@ -173,7 +173,7 @@ export default function BrochurePage() {
               ))}
               <div className="px-4 pt-4 border-t border-border">
                 <a href="tel:817-453-7522" className="block">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
                     Call (817) 453-7522
                   </Button>
@@ -238,7 +238,7 @@ export default function BrochurePage() {
               <div className="flex flex-wrap justify-center gap-6">
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold"
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary"
                 >
                   Learn How We Can Help Your Business
                   <ChevronRight className="w-5 h-5 inline ml-2" />
@@ -246,7 +246,7 @@ export default function BrochurePage() {
                 <a href="tel:817-453-7522">
                   <Button
                     size="lg"
-                    className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300"
+                    className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent"
                   >
                     <Phone className="w-6 h-6 mr-3" />
                     Call (817) 453-7522
