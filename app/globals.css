@@ -405,6 +405,15 @@ html {
   transform: scale(1.25);
 }
 
+/* Custom sizing for enlarged logos */
+.w-104 {
+  width: 26rem; /* 416px - 2x of 208px (w-52) */
+}
+
+.h-32 {
+  height: 8rem; /* 128px - 2x of 64px (h-16) */
+}
+
 /* Position utilities for floating elements */
 .pointer-events-none {
   pointer-events: none;
