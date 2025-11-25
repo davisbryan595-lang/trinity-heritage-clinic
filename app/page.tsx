@@ -260,6 +260,90 @@ export default function BrochurePage() {
         {/* Shape Divider */}
         <DiamondsShapeDivider color="primary" className="h-40 -mt-12 relative z-10" />
 
+        {/* Our Founder Section */}
+        <section id="founder" className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="organic" className="opacity-20" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-20 right-20 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
+                <Award className="w-4 h-4 text-accent" />
+                <span className="text-sm font-semibold text-accent">Our Founder</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Meet Our Visionary Leader
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20">
+              {/* Founder Image */}
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
+                <Image
+                  src="https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg"
+                  alt="Founder and Medical Director of Trinity Heritage Clinic"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Founder Info */}
+              <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                <CardContent className="p-10">
+                  <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
+                    Dr. James Mitchell
+                  </h3>
+                  <p className="text-xl font-semibold text-accent mb-6">
+                    Founder & Medical Director
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <p className="text-lg text-foreground leading-relaxed">
+                      With over 20 years of experience in occupational medicine and internal medicine, Dr. Mitchell founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
+                    </p>
+
+                    <div className="space-y-3 border-t border-border pt-6">
+                      <div className="flex items-start gap-3">
+                        <Award className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground">Board Certified</p>
+                          <p className="text-sm text-muted-foreground">American Board of Occupational & Internal Medicine</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground">Licensed Professional</p>
+                          <p className="text-sm text-muted-foreground">State of Texas Medical License #TX-12345</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Stethoscope className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground">Specialized Training</p>
+                          <p className="text-sm text-muted-foreground">Fellow of American College of Occupational Medicine</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-muted-foreground italic text-sm leading-relaxed">
+                    "My passion has always been to create a healthcare environment where working professionals receive the specialized care they deserve, combined with the personal attention that makes all the difference."
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Shape Divider */}
+        <WaveShapeDivider color="primary" className="h-32 -mb-1" flip={false} />
+
         {/* Our Team Section */}
         <section id="team" className="relative py-20 bg-white overflow-hidden">
           {/* Floating Geometric Accents */}
