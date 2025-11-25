@@ -261,6 +261,125 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* About Us Section */}
+        <section id="about" className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="organic" className="opacity-20" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-20 right-20 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                About Trinity Heritage Clinic
+              </h2>
+              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
+                Comprehensive healthcare for your professional and personal wellness
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
+              {/* About Content */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                    Our Mission
+                  </h3>
+                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
+                    Trinity Heritage Clinic is dedicated to providing compassionate, comprehensive healthcare services to working professionals and businesses in Mansfield, Texas. With over 20 years of expertise in occupational and internal medicine, we serve as a trusted partner in keeping your workforce healthy, safe, and productive.
+                  </p>
+                  <p className="text-lg text-foreground leading-relaxed font-medium">
+                    Our commitment to excellence, combined with personalized care and evidence-based medicine, ensures that every patient receives the attention and treatment they deserve.
+                  </p>
+                </div>
+
+                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6">
+                  <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Trinity Heritage Clinic?</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground font-medium">Board-Certified Physicians & Healthcare Professionals</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground font-medium">Comprehensive Occupational & Internal Medicine Services</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground font-medium">USCIS Certified Medical Examination Services</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* USCIS Section */}
+              <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                <CardContent className="p-10">
+                  <div className="inline-flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full mb-6">
+                    <Shield className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-primary mb-2 font-serif">
+                    Immigration Medical Services
+                  </h3>
+                  <p className="text-accent font-semibold mb-6">
+                    USCIS Certified Civil Surgeon
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <p className="text-foreground leading-relaxed font-medium">
+                      Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
+                    </p>
+
+                    <div className="space-y-3 border-t border-border pt-6">
+                      <h4 className="font-semibold text-foreground mb-3">Migration Medical Services Include:</h4>
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                          <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold text-foreground text-sm">USCIS I-693 Forms</p>
+                            <p className="text-xs text-foreground font-medium">Certified and sealed envelope</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                          <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold text-foreground text-sm">Complete Medical Examination</p>
+                            <p className="text-xs text-foreground font-medium">Physical exam, vaccinations, TB & blood tests</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                          <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-semibold text-foreground text-sm">Expert Medical Questions</p>
+                            <p className="text-xs text-foreground font-medium">For non-medical immigration inquiries, consult an immigration attorney</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
+                    <p className="text-foreground text-sm font-medium">
+                      📋 Learn more at <a href="https://www.uscis.gov/i-693" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:underline">https://www.uscis.gov/i-693</a>
+                    </p>
+                    <p className="text-foreground text-sm font-medium mt-2">
+                      💬 Call today for pricing. Additional fees apply for vaccine administration.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Shape Divider */}
         <DiamondsShapeDivider color="primary" className="h-40 -mt-12 relative z-10" />
 
