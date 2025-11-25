@@ -617,6 +617,10 @@ export default function BrochurePage() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-accent/50"></div>
           </div>
 
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="top-40 right-32 opacity-20" style={{ animationDelay: "0.3s" }} />
+          <GeometricAccent className="bottom-20 left-20 opacity-15 scale-125" style={{ animationDelay: "1s" }} />
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
