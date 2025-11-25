@@ -97,7 +97,7 @@ export function GeometricBackground({
                     fill="none"
                     stroke="#006D5B"
                     strokeWidth="1"
-                    opacity={0.1 + (Math.sin(row + col) * 0.05)}
+                    opacity={String(0.1 + (Math.sin(row + col) * 0.05))}
                   />
                 </g>
               )
