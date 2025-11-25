@@ -218,6 +218,96 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Migration Service Section */}
+      <section className="py-20 bg-primary/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
+            USCIS Immigration Medical Services
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Authorized medical examinations for immigration purposes
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="p-8 bg-white border-2 border-accent/30">
+              <h3 className="font-serif font-bold text-xl text-primary-foreground mb-6">
+                About Our Immigration Medical Services
+              </h3>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                We provide comprehensive USCIS Form I-693 medical examinations, which are required for many immigration applications. Our certified staff ensures all examinations meet federal standards and are properly documented.
+              </p>
+            </Card>
+
+            <Card className="p-8 bg-white border-2 border-accent/30">
+              <h3 className="font-serif font-bold text-xl text-primary-foreground mb-6">
+                Services Included
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span className="text-muted-foreground">USCIS I-693 Forms & Sealed Envelope</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span className="text-muted-foreground">Patient Copy I-693</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span className="text-muted-foreground">Physical Examination</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span className="text-muted-foreground">Vaccination Status Verification</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span className="text-muted-foreground">TB Testing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span className="text-muted-foreground">Complete Blood Testing</span>
+                </li>
+              </ul>
+              <p className="text-sm text-muted-foreground mt-6 italic font-medium">
+                Additional fees apply for vaccine administration
+              </p>
+            </Card>
+          </div>
+
+          <Card className="p-8 bg-white border border-accent/20 mb-8">
+            <h3 className="font-serif font-bold text-xl text-primary-foreground mb-4">
+              USCIS I-693 Form Information
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              The USCIS Form I-693, Report of Medical Examination and Vaccination Record, is the official form required for immigration medical examinations. Detailed guidelines and support for completing the application are available at:
+            </p>
+            <p className="font-semibold text-primary-foreground mb-4">
+              https://www.uscis.gov/i-693
+            </p>
+            <p className="text-muted-foreground">
+              Our team is available to assist with all medical-related questions regarding immigration medical examinations. For non-medical immigration questions, please consult with an immigration attorney.
+            </p>
+          </Card>
+
+          <div className="bg-accent/10 border-2 border-accent/30 rounded-lg p-8 text-center">
+            <h3 className="font-serif font-bold text-xl text-primary-foreground mb-3">
+              Ready to Schedule Your Medical Examination?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Call us today for pricing and to schedule your USCIS-authorized medical examination
+            </p>
+            <Link href="/contact">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                Contact Us Today
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-accent text-center">
         <h2 className="font-serif text-3xl font-bold text-accent-foreground mb-4">
