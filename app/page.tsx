@@ -198,7 +198,7 @@ export default function BrochurePage() {
           <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
 
           {/* Professional Background Image */}
-          <div className="absolute inset-0 opacity-45">
+          <div className="absolute inset-0 opacity-55">
             <Image
               src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
               alt="Professional healthcare team at work"
