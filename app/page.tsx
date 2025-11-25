@@ -994,7 +994,7 @@ export default function BrochurePage() {
               {/* Contact Form */}
               <Card className="border-2 border-primary/20 shadow-2xl animate-rotating-glow">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Send Us a Message</h3>
+                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Send Us a Message</h3>
                   <form className="space-y-6">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
