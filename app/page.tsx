@@ -1018,7 +1018,7 @@ export default function BrochurePage() {
               <p className="text-2xl font-serif font-bold text-primary mb-4">
                 Working to Keep Your Workforce Well
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-foreground font-medium">
                 To learn more, call us today: <a href="tel:817-453-7522" className="text-primary font-bold hover:underline">(817) 453-7522</a>
               </p>
             </div>
@@ -1040,7 +1040,7 @@ export default function BrochurePage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-muted-foreground mb-4 italic">
+              <p className="text-foreground mb-4 italic font-medium">
                 "Working to Keep Your Workforce Well"
               </p>
             </div>
@@ -1048,7 +1048,7 @@ export default function BrochurePage() {
             {/* Contact */}
             <div>
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="space-y-2 text-sm text-foreground font-medium">
                 <p>1475 Heritage Pkwy Ste 225</p>
                 <p>Mansfield, TX 76063</p>
                 <p className="pt-2">
