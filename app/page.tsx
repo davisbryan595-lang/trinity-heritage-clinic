@@ -281,7 +281,7 @@ export default function BrochurePage() {
             </div>
 
             {/* Team Background Image */}
-            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group">
+            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group animate-rotating-glow border-2 border-primary/20">
               <Image
                 src="https://images.pexels.com/photos/6098056/pexels-photo-6098056.jpeg"
                 alt="Our professional healthcare team"
@@ -337,7 +337,7 @@ export default function BrochurePage() {
               ].map((member, idx) => (
                 <Card
                   key={idx}
-                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white"
+                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white animate-rotating-glow"
                 >
                   <CardContent className="p-8 text-center">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow">
@@ -548,7 +548,7 @@ export default function BrochurePage() {
                   key={idx}
                   className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 ${
                     service.color === "primary" ? "border-primary/20 hover:border-primary" : "border-accent/20 hover:border-accent"
-                  } bg-white`}
+                  } bg-white animate-rotating-glow`}
                 >
                   <CardContent className="p-8">
                     <div
