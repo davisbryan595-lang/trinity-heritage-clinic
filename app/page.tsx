@@ -744,7 +744,7 @@ export default function BrochurePage() {
                   <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
                     Comprehensive Preventive Care
                   </h3>
-                  <p className="text-lg text-slate-800 leading-relaxed mb-4 font-medium">
+                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
                     At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
                   </p>
                 </div>
