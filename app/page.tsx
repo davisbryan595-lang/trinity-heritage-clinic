@@ -364,7 +364,12 @@ export default function BrochurePage() {
         <section id="location" className="relative py-20 bg-secondary overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-32 left-20 opacity-12" style={{ animationDelay: "0.8s" }} />
+          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
                 <MapPin className="w-4 h-4 text-primary" />
