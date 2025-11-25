@@ -161,6 +161,7 @@ export default function BrochurePage() {
             <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
               {[
                 { id: "home", label: "Home" },
+                { id: "about", label: "About Us" },
                 { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
