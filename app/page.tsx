@@ -7,7 +7,6 @@ import { Card } from "@/components/ui/card"
 import { Heart, Pill, Clock, TrendingUp, Activity, AlertCircle, Users, Check, MapPin, Phone, Mail } from "lucide-react"
 
 export default function HomePage() {
-  const [isLoaded, setIsLoaded] = useState(false)
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -16,10 +15,6 @@ export default function HomePage() {
     service: "",
     message: "",
   })
-
-  useEffect(() => {
-    setIsLoaded(true)
-  }, [])
 
   const handleChange = (e: any) => {
     const { name, value } = e.target
@@ -48,7 +43,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
-              className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
+              className="transition-all duration-1000 opacity-100 translate-x-0"
             >
               <h1 className="font-serif text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent mb-6 leading-tight">
                 Nurturing Your Health Journey
@@ -106,7 +101,7 @@ export default function HomePage() {
             </div>
 
             <div
-              className={`transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
+              className="transition-all duration-1000 delay-300 opacity-100 translate-x-0"
             >
               <div className="glass-card rounded-3xl overflow-hidden shadow-2xl">
                 <img
