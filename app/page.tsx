@@ -244,7 +244,8 @@ export default function BrochurePage() {
                 <div className="flex flex-wrap justify-center gap-6">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary flex items-center justify-center"
+                    className="text-white text-lg px-10 py-6 rounded-lg shadow-2xl transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 flex items-center justify-center hover:opacity-90"
+                    style={{ backgroundColor: '#8cc73f', borderColor: '#8cc73f' }}
                   >
                     Learn How We Can Help Your Business
                     <ChevronRight className="w-5 h-5 ml-2" />
