@@ -347,3 +347,43 @@ html {
 .animate-slide-up {
   animation: slide-up 0.8s ease-out;
 }
+
+/* Opacity utilities */
+.opacity-08 {
+  opacity: 0.08;
+}
+
+.opacity-12 {
+  opacity: 0.12;
+}
+
+.opacity-15 {
+  opacity: 0.15;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+/* Scale utilities */
+.scale-90 {
+  transform: scale(0.9);
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.scale-125 {
+  transform: scale(1.25);
+}
+
+/* Position utilities for floating elements */
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* Text effects */
+.drop-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
