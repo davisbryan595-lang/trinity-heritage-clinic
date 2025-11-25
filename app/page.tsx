@@ -288,7 +288,7 @@ export default function BrochurePage() {
               {/* Founder Image */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
                 <Image
-                  src="https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fdf7e75028bff4b959bd5bdef48ded5a3%2Fedec6117eba441bca7677541cf928fda?format=webp&width=800"
                   alt="Founder and Medical Director of Trinity Heritage Clinic"
                   fill
                   className="object-cover"
@@ -300,7 +300,7 @@ export default function BrochurePage() {
               <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                 <CardContent className="p-10">
                   <h3 className="text-3xl font-bold text-primary mb-2 font-serif">
-                    Dr. James Mitchell
+                    Dr. Victor Nwiloh
                   </h3>
                   <p className="text-xl font-semibold text-accent mb-6">
                     Founder & Medical Director
