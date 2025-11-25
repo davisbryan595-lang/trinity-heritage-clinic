@@ -502,7 +502,7 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20">
               {[
                 {
                   icon: Briefcase,
