@@ -400,7 +400,7 @@ export default function BrochurePage() {
                 <Award className="w-4 h-4" />
                 <span className="text-sm font-semibold">Our Founder</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ color: '#8cc73f' }}>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-4">
                 Meet Our Visionary Leader
               </h2>
             </div>
