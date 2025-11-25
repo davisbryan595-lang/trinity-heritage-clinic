@@ -288,7 +288,7 @@ export default function BrochurePage() {
               {/* Founder Image */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
                 <Image
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fdf7e75028bff4b959bd5bdef48ded5a3%2Fedec6117eba441bca7677541cf928fda?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fdf7e75028bff4b959bd5bdef48ded5a3%2F3709d0ee57784a74997779b550c93804?format=webp&width=800"
                   alt="Founder and Medical Director of Trinity Heritage Clinic"
                   fill
                   className="object-cover"
