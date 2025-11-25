@@ -353,8 +353,13 @@ export default function BrochurePage() {
           </div>
         </section>
 
+        {/* Shape Divider */}
+        <WaveShapeDivider color="accent" className="h-40 -mb-1" flip={true} />
+
         {/* Location Section */}
-        <section id="location" className="py-20 bg-secondary">
+        <section id="location" className="relative py-20 bg-secondary overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
