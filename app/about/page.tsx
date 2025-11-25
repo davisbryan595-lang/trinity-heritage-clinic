@@ -37,6 +37,8 @@ export default function AboutPage() {
                     <li>• Preventive medicine & wellness optimization</li>
                     <li>• Chronic disease management (diabetes, hypertension, hyperlipidemia)</li>
                     <li>• Evidence-based treatment planning</li>
+                    <li>• Occupational medicine & workplace health</li>
+                    <li>• USCIS-certified medical examinations</li>
                     <li>• Holistic patient-centered approach</li>
                   </ul>
                 </div>
