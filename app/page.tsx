@@ -328,10 +328,10 @@ export default function BrochurePage() {
                     <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-primary mb-2 font-serif">
+                  <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
                     Immigration Medical Services
                   </h3>
-                  <p className="text-accent font-semibold mb-6">
+                  <p className="font-semibold mb-6" style={{ color: '#8cc73f' }}>
                     USCIS Certified Civil Surgeon
                   </p>
 
@@ -396,11 +396,11 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <Award className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Our Founder</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
+                <Award className="w-4 h-4" />
+                <span className="text-sm font-semibold">Our Founder</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ color: '#8cc73f' }}>
                 Meet Our Visionary Leader
               </h2>
             </div>
@@ -608,7 +608,7 @@ export default function BrochurePage() {
               <div className="space-y-6">
                 <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Contact Information</h3>
+                    <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Contact Information</h3>
                     
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
@@ -941,10 +941,10 @@ export default function BrochurePage() {
               ].map((stat, idx) => (
                 <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow bg-white shadow-md">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-full bg-primary/15 flex items-center justify-center mb-4 mx-auto">
-                      <stat.icon className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: '#8cc73f20' }}>
+                      <stat.icon className="w-8 h-8" style={{ color: '#8cc73f' }} />
                     </div>
-                    <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
+                    <p className="text-4xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>{stat.number}</p>
                     <p className="text-foreground font-semibold">{stat.label}</p>
                   </CardContent>
                 </Card>
@@ -994,7 +994,7 @@ export default function BrochurePage() {
               {/* Contact Form */}
               <Card className="border-2 border-primary/20 shadow-2xl animate-rotating-glow">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Send Us a Message</h3>
+                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Send Us a Message</h3>
                   <form className="space-y-6">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
