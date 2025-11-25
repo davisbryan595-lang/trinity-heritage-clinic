@@ -578,9 +578,9 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-accent/20 px-4 py-2 rounded-full mb-4">
-                <Briefcase className="w-4 h-4 text-accent" />
-                <span className="text-sm font-semibold text-accent">Our Services</span>
+              <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full mb-4 border-2 border-accent shadow-lg" style={{ backgroundColor: '#6B4C9A', color: '#ffffff' }}>
+                <Briefcase className="w-5 h-5" />
+                <span className="text-sm font-bold">Our Services</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
                 Comprehensive Occupational Health Services
@@ -714,9 +714,9 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <HeartPulse className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
+              <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full mb-4 border-2 shadow-lg" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a', borderColor: '#8cc73f' }}>
+                <HeartPulse className="w-5 h-5" />
+                <span className="text-sm font-bold">Wellness & Prevention</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
                 Proactive Health & Prevention
