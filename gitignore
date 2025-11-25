@@ -1,0 +1,62 @@
+# Node / Next.js core
+/node_modules
+/.next
+/out
+/build
+/dist
+
+# Environment variables
+.env
+.env*.local
+.env.production
+.env.development
+
+# Vercel / deployment
+.vercel
+.vercel_build_output
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*~
+
+# IDEs
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+*.sublime-*
+
+# Testing / coverage
+coverage/
+.nyc_output/
+jest-coverage/
+
+# Turborepo (if you ever add it)
+/.temp/
+/.cache/
+
+# Optional: ignore large media folders you're not committing
+/public/uploads/
+/public/videos/
+/public/temp/
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Next.js specific caches
+.next/
+.cache/

@@ -1,460 +1,823 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import Preloader from '@/components/Preloader'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import TeamCard from '@/components/TeamCard'
-import ServiceCard from '@/components/ServiceCard'
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import DiamondPreloader from "@/components/diamond-preloader"
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Mail,
+  Stethoscope,
+  Users,
+  Shield,
+  Award,
+  Briefcase,
+  HeartPulse,
+  Activity,
+  CheckCircle2,
+  ChevronRight,
+  Menu,
+  X
+} from "lucide-react"
 
-export default function Home() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-    service: '',
-  })
+export default function BrochurePage() {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+  useEffect(() => {
+    setIsLoaded(true)
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+      
+      // Calculate scroll progress
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+      const scrollTop = window.scrollY
+      const progress = (scrollTop / (documentHeight - windowHeight)) * 100
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+      setMobileMenuOpen(false)
+    }
   }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    alert('Thank you! We will contact you soon to learn more about how we can help your business.')
-    setFormData({ name: '', phone: '', email: '', message: '', service: '' })
-  }
-
-  const teamMembers = [
-    {
-      icon: '👨‍⚕️',
-      title: 'Board Certified Physician',
-      description:
-        'Occupational Medicine & Internal Medicine specialist experienced in comprehensive workforce health management.',
-    },
-    {
-      icon: '👩‍⚕️',
-      title: 'Certified Nurse Practitioner',
-      description: 'Advanced practice nurse providing expert patient care and health assessment services.',
-    },
-    {
-      icon: '💉',
-      title: 'Licensed Nurse',
-      description: 'Registered nurse providing clinical support and patient education.',
-    },
-    {
-      icon: '🧠',
-      title: 'Certified Psychologist',
-      description: 'Mental health professional supporting employee wellness and occupational health.',
-    },
-    {
-      icon: '🏥',
-      title: 'Certified Medical Assistants',
-      description: 'Skilled assistants supporting clinical operations and patient care.',
-    },
-    {
-      icon: '🔧',
-      title: 'Trained Technicians',
-      description: 'Technical specialists operating diagnostic equipment and supporting health services.',
-    },
-  ]
-
-  const services = [
-    {
-      icon: '🔍',
-      title: 'Occupational Medicine',
-      items: [
-        'Pre-Employment/Placement Exams',
-        'Annual Physical/Surveillance Exams',
-        'Return to Work Exams',
-        'Fitness for Duty Exams',
-        'DOT & Respirator Exams',
-        'Executive Physical Exams',
-      ],
-    },
-    {
-      icon: '🩺',
-      title: 'Diagnostic Testing',
-      items: [
-        'Spirometry',
-        'Audiometry',
-        'Vision Screening',
-        'EKG',
-        'Blood Labs',
-        'Urinalysis & Drug Screening',
-      ],
-    },
-    {
-      icon: '💼',
-      title: 'Business Solutions',
-      items: [
-        'Work Site Visits',
-        'Health & Safety Consultation',
-        'On-Site Health Fairs',
-        'Wellness Programs',
-        'Travel Medicine',
-        'MRO Services',
-      ],
-    },
-  ]
 
   return (
     <>
-      <Preloader />
-      <Navbar />
+      <DiamondPreloader />
+      
+      {/* Scroll Progress Bar */}
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="pt-32 pb-20 px-4 text-center min-h-screen flex items-center justify-center"
-        style={{ backgroundColor: '#f0f4f8' }}
+      {/* Fixed Navbar */}
+      <nav
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white shadow-lg border-b border-border"
+            : "bg-transparent"
+        }`}
       >
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8 flex justify-center">
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 80 80"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="diamond-glow"
-            >
-              <path d="M20 40L40 20L60 40L40 60Z" fill="#006d5b" opacity="0.9" />
-              <path d="M40 40L50 30L60 40L50 50Z" fill="#00a680" opacity="0.7" />
-              <path d="M20 40L30 30L40 40L30 50Z" fill="#00a680" opacity="0.7" />
-              <path d="M40 40L45 35L50 40L45 45Z" fill="#6b4c9a" opacity="0.95" />
-            </svg>
-          </div>
-
-          <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#006d5b' }}>
-            Occupational Medicine Services
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#6b4c9a' }}>
-            Working to Keep Your Workforce Well
-          </h2>
-          <p className="text-lg md:text-xl mb-2 text-gray-600">
-            Always friendly. Always knowledgeable.
-          </p>
-          <p className="text-lg mb-8 text-gray-600">
-            Conveniently located in Mansfield, Texas – Serving businesses with certified care
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="#services"
-              className="btn-primary px-8 py-3 text-lg"
-              style={{ backgroundColor: '#006d5b' }}
-            >
-              Learn How We Can Help Your Business
-            </a>
-            <a
-              href="tel:8174537522"
-              className="btn-secondary px-8 py-3 text-lg"
-              style={{ backgroundColor: '#6b4c9a' }}
-            >
-              Call (817) 453-7522
-            </a>
-          </div>
-
-          <div className="mt-12">
-            <p className="text-sm text-gray-500 mb-4">TRUSTED BY BUSINESSES ACROSS THE DFW METROPLEX</p>
-            <div className="flex justify-center gap-8 flex-wrap">
-              <div className="text-center">
-                <div className="text-3xl font-bold" style={{ color: '#006d5b' }}>
-                  100+
-                </div>
-                <p className="text-sm text-gray-600">Businesses Served</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold" style={{ color: '#006d5b' }}>
-                  1000+
-                </div>
-                <p className="text-sm text-gray-600">Employees Cared For</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold" style={{ color: '#006d5b' }}>
-                  20+
-                </div>
-                <p className="text-sm text-gray-600">Years Experience</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team Section */}
-      <section id="team" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#006d5b' }}>
-              Our Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our staff is comprised of experienced, well-trained health and safety professionals who are certified in their specialties and licensed to practice without restrictions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, idx) => (
-              <TeamCard
-                key={idx}
-                icon={member.icon}
-                title={member.title}
-                description={member.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Location Section */}
-      <section
-        id="location"
-        className="py-20 px-4"
-        style={{ backgroundColor: '#f0f4f8' }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#006d5b' }}>
-              Conveniently Located
-            </h2>
-            <p className="text-lg text-gray-600">
-              Easy access from Heritage Parkway and S. Wisteria
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Map Placeholder */}
-            <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-lg p-8 h-96 flex items-center justify-center border-4" style={{ borderColor: '#006d5b' }}>
-              <div className="text-center">
-                <div className="text-5xl mb-4">📍</div>
-                <p className="font-bold text-lg" style={{ color: '#006d5b' }}>
-                  1475 Heritage Pkwy Ste 225
-                </p>
-                <p className="text-sm text-gray-600 mt-2">Mansfield, TX 76063</p>
-                <p className="text-xs text-gray-500 mt-4">
-                  Located at intersection of Heritage Parkway and S. Wisteria
-                </p>
-              </div>
-            </div>
-
-            {/* Contact Details */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-2xl font-bold mb-4" style={{ color: '#006d5b' }}>
-                  Contact Information
-                </h3>
-
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-gray-500 uppercase font-semibold">Address</p>
-                    <p className="text-lg font-semibold" style={{ color: '#006d5b' }}>
-                      1475 Heritage Pkwy Ste 225<br />
-                      Mansfield, TX 76063
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-500 uppercase font-semibold">Phone</p>
-                    <a
-                      href="tel:8174537522"
-                      className="text-lg font-semibold hover:opacity-70"
-                      style={{ color: '#006d5b' }}
-                    >
-                      (817) 453-7522
-                    </a>
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-500 uppercase font-semibold">Fax</p>
-                    <a
-                      href="tel:1-866-665-6659"
-                      className="text-lg font-semibold hover:opacity-70"
-                      style={{ color: '#006d5b' }}
-                    >
-                      1-(866) 665-6659
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <h4 className="text-xl font-bold mb-4" style={{ color: '#006d5b' }}>
-                  Hours of Operation
-                </h4>
-                <div className="space-y-2 text-gray-700">
-                  <p><strong>Monday - Friday:</strong> 8:30am - 5:30pm</p>
-                  <p className="text-sm text-gray-500">(Closed 12pm - 1pm for lunch)</p>
-                  <p><strong>Saturday & Sunday:</strong> Closed</p>
-                </div>
-              </div>
-
-              <div className="bg-red-50 border-l-4 rounded-lg p-6" style={{ borderColor: '#6b4c9a' }}>
-                <h4 className="font-bold mb-2" style={{ color: '#6b4c9a' }}>
-                  After Hours & Weekend
-                </h4>
-                <p className="text-sm text-gray-700">
-                  Call <strong>(817) 966-3989</strong> for urgent medical matters
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#006d5b' }}>
-              Our Services
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive occupational health services tailored to your business needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {services.map((service, idx) => (
-              <ServiceCard
-                key={idx}
-                icon={service.icon}
-                title={service.title}
-                items={service.items}
-              />
-            ))}
-          </div>
-
-          {/* CTA Banner */}
-          <div className="rounded-lg p-8 text-center text-white" style={{ backgroundColor: '#006d5b' }}>
-            <h3 className="text-2xl font-bold mb-4">Ready to Help Your Business?</h3>
-            <p className="text-lg mb-6">
-              To learn more about how we can help your business, call us today:
-            </p>
-            <a
-              href="tel:8174537522"
-              className="inline-block btn-secondary text-xl px-8 py-3"
-              style={{ backgroundColor: '#6b4c9a' }}
-            >
-              (817) 453-7522
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section
-        id="contact"
-        className="py-20 px-4"
-        style={{ backgroundColor: '#f0f4f8' }}
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#006d5b' }}>
-              Get in Touch
-            </h2>
-            <p className="text-lg text-gray-600">
-              Send us a message and we'll respond promptly
-            </p>
-          </div>
-
-          <form
-            onSubmit={handleSubmit}
-            className="bg-white rounded-lg shadow-lg p-8 space-y-6"
-          >
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold mb-2" style={{ color: '#006d5b' }}>
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-                  style={{ borderColor: '#d4dcd7', '--tw-ring-color': '#006d5b' } as any}
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-2" style={{ color: '#006d5b' }}>
-                  Phone *
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-                  style={{ borderColor: '#d4dcd7' }}
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2" style={{ color: '#006d5b' }}>
-                Email *
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-                style={{ borderColor: '#d4dcd7' }}
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2" style={{ color: '#006d5b' }}>
-                Service of Interest
-              </label>
-              <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-                style={{ borderColor: '#d4dcd7' }}
-              >
-                <option value="">Select a service</option>
-                <option value="occupational">Occupational Medicine</option>
-                <option value="diagnostic">Diagnostic Testing</option>
-                <option value="business">Business Solutions</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2" style={{ color: '#006d5b' }}>
-                Message
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-                style={{ borderColor: '#d4dcd7' }}
-              ></textarea>
-            </div>
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
             <button
-              type="submit"
-              className="w-full btn-primary py-3 text-lg font-semibold"
-              style={{ backgroundColor: '#006d5b' }}
+              onClick={() => scrollToSection("home")}
+              className="flex items-center gap-3 group cursor-pointer"
             >
-              Send Message
+              <div className="relative w-40 h-12 diamond-glow">
+                <Image
+                  src="/images/colored-logo.png"
+                  alt="Trinity Heritage Clinic"
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  priority
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fallback = e.currentTarget.parentElement?.nextElementSibling
+                    if (fallback) (fallback as HTMLElement).classList.remove('hidden')
+                  }}
+                />
+                <div className="hidden flex-col">
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage</span>
+                  <span className="text-sm text-accent font-semibold">Clinic</span>
+                </div>
+              </div>
             </button>
-          </form>
-        </div>
-      </section>
 
-      <Footer />
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex gap-8 items-center">
+              {[
+                { id: "home", label: "Home" },
+                { id: "team", label: "Our Team" },
+                { id: "location", label: "Location" },
+                { id: "services", label: "Services" },
+                { id: "contact", label: "Contact" }
+              ].map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block">
+              <a href="tel:817-453-7522">
+                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X size={28} className="text-primary" />
+              ) : (
+                <Menu size={28} className="text-primary" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
+              {[
+                { id: "home", label: "Home" },
+                { id: "team", label: "Our Team" },
+                { id: "location", label: "Location" },
+                { id: "services", label: "Services" },
+                { id: "contact", label: "Contact" }
+              ].map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                >
+                  {link.label}
+                </button>
+              ))}
+              <div className="px-4 pt-4 border-t border-border">
+                <a href="tel:817-453-7522" className="block">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call (817) 453-7522
+                  </Button>
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      <div className="overflow-hidden">
+        {/* Hero Section */}
+        <section
+          id="home"
+          className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10"
+        >
+          {/* Background Image Placeholder */}
+          <div className="absolute inset-0 opacity-20">
+            {/* ← REPLACE WITH BROCHURE SCREENSHOT #1: /images/brochure-hero.jpg */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div
+              className={`transition-all duration-1000 ${
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
+            >
+              {/* Main Heading */}
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
+                OCCUPATIONAL MEDICINE SERVICES
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-2xl md:text-3xl lg:text-4xl text-accent font-bold mb-8">
+                Working to Keep Your Workforce Well
+              </p>
+
+              {/* Tagline */}
+              <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed">
+                Always Friendly. Always Knowledgeable.
+              </p>
+
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+                Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap justify-center gap-6">
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold"
+                >
+                  Learn How We Can Help Your Business
+                  <ChevronRight className="w-5 h-5 inline ml-2" />
+                </button>
+                <a href="tel:817-453-7522">
+                  <Button
+                    size="lg"
+                    className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300"
+                  >
+                    <Phone className="w-6 h-6 mr-3" />
+                    Call (817) 453-7522
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Team Section */}
+        <section id="team" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <Users className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Our Team</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Experienced, Well-Trained Professionals
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+                Certified in specialties and licensed without restrictions
+              </p>
+            </div>
+
+            {/* Team Background Image Placeholder */}
+            <div className="relative mb-12 h-64 rounded-2xl overflow-hidden shadow-xl">
+              {/* ← REPLACE WITH BROCHURE TEAM IMAGE #2: /images/team-brochure.jpg */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <p className="text-2xl font-bold text-white text-center px-4">
+                  Our Dedicated Healthcare Team
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Award,
+                  title: "Board Certified Physician",
+                  specialty: "Occupational & Internal Medicine",
+                  color: "text-primary"
+                },
+                {
+                  icon: HeartPulse,
+                  title: "Certified Nurse Practitioner",
+                  specialty: "Advanced Practice Nursing",
+                  color: "text-accent"
+                },
+                {
+                  icon: Stethoscope,
+                  title: "Licensed Nurse",
+                  specialty: "Registered Nursing Care",
+                  color: "text-primary"
+                },
+                {
+                  icon: Users,
+                  title: "Certified Psychologist",
+                  specialty: "Occupational Health Psychology",
+                  color: "text-accent"
+                },
+                {
+                  icon: Activity,
+                  title: "Certified Medical Assistants",
+                  specialty: "Clinical Support Services",
+                  color: "text-primary"
+                },
+                {
+                  icon: Shield,
+                  title: "Trained Technicians",
+                  specialty: "Diagnostic & Lab Services",
+                  color: "text-accent"
+                }
+              ].map((member, idx) => (
+                <Card
+                  key={idx}
+                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white"
+                >
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow">
+                      <member.icon className={`w-8 h-8 ${member.color} group-hover:text-white`} />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-2 font-serif">
+                      {member.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-3">{member.specialty}</p>
+                    <p className="text-xs text-muted-foreground italic leading-relaxed">
+                      Experienced, well-trained professional certified in specialty and licensed without restrictions
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section id="location" className="py-20 bg-secondary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Our Location</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Conveniently Located in Mansfield, Texas
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Map Placeholder */}
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7!2d-97.1!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  className="grayscale hover:grayscale-0 transition-all duration-300"
+                ></iframe>
+              </div>
+
+              {/* Location Details */}
+              <div className="space-y-6">
+                <Card className="border-2 border-primary/20 shadow-xl">
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Contact Information</h3>
+                    
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground mb-1">Address</p>
+                          <a
+                            href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            1475 Heritage Pkwy Ste 225
+                            <br />
+                            Mansfield, TX 76063
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground mb-1">Phone</p>
+                          <a
+                            href="tel:817-453-7522"
+                            className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
+                          >
+                            (817) 453-7522
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground mb-1">Fax</p>
+                          <p className="text-muted-foreground">1-866-665-6659</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-foreground mb-2">Office Hours</p>
+                          <div className="text-muted-foreground space-y-1">
+                            <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+                            <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
+                            <p>Saturday - Sunday: Closed</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* After Hours Banner */}
+                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl">
+                  <div className="flex items-start gap-4">
+                    <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
+                      <p className="mb-3">For urgent medical matters, call:</p>
+                      <a
+                        href="tel:817-966-3989"
+                        className="text-2xl font-bold hover:underline"
+                      >
+                        (817) 966-3989
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-4">
+                <Briefcase className="w-4 h-4 text-accent" />
+                <span className="text-sm font-semibold text-accent">Our Services</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Comprehensive Occupational Health Services
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Keeping your workforce healthy, safe, and productive
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  icon: Briefcase,
+                  title: "Occupational Medicine",
+                  items: [
+                    "Pre-Employment Physical Exams",
+                    "DOT Physicals & Drug Testing",
+                    "Work Injury Care & Management",
+                    "Drug & Alcohol Screening",
+                    "Respirator Fit Testing",
+                    "OSHA Compliance Services"
+                  ],
+                  color: "primary"
+                },
+                {
+                  icon: HeartPulse,
+                  title: "Internal Medicine",
+                  items: [
+                    "Preventive Care & Wellness",
+                    "Chronic Condition Management",
+                    "Annual Physical Exams",
+                    "Diabetes & Hypertension Care",
+                    "Acute Illness Treatment",
+                    "Health Risk Assessments"
+                  ],
+                  color: "accent"
+                },
+                {
+                  icon: Activity,
+                  title: "Wellness Programs",
+                  items: [
+                    "Employee Health Screenings",
+                    "Workplace Safety Training",
+                    "Health & Wellness Education",
+                    "Ergonomic Assessments",
+                    "Immunization Programs",
+                    "Corporate Wellness Plans"
+                  ],
+                  color: "primary"
+                }
+              ].map((service, idx) => (
+                <Card
+                  key={idx}
+                  className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 ${
+                    service.color === "primary" ? "border-primary/20 hover:border-primary" : "border-accent/20 hover:border-accent"
+                  } bg-white`}
+                >
+                  <CardContent className="p-8">
+                    <div
+                      className={`w-16 h-16 rounded-2xl ${
+                        service.color === "primary" ? "bg-primary/10" : "bg-accent/10"
+                      } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform diamond-glow`}
+                    >
+                      <service.icon
+                        className={`w-8 h-8 ${
+                          service.color === "primary" ? "text-primary" : "text-accent"
+                        }`}
+                      />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground mb-6 font-serif">
+                      {service.title}
+                    </h3>
+                    <ul className="space-y-3 mb-6">
+                      {service.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                            service.color === "primary" ? "text-primary" : "text-accent"
+                          }`} />
+                          <span className="text-muted-foreground text-sm">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <button
+                      onClick={() => scrollToSection("contact")}
+                      className={`w-full ${
+                        service.color === "primary"
+                          ? "bg-primary hover:bg-primary/90"
+                          : "bg-accent hover:bg-accent/90"
+                      } text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-xl`}
+                    >
+                      Inquire Now
+                      <ChevronRight className="w-4 h-4 inline ml-2" />
+                    </button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* CTA Banner */}
+            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl">
+              <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
+                Ready to Keep Your Workforce Well?
+              </h3>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                To learn more about how we can help your business, call us today
+              </p>
+              <a href="tel:817-453-7522">
+                <Button
+                  size="lg"
+                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300"
+                >
+                  <Phone className="w-6 h-6 mr-3" />
+                  (817) 453-7522
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 bg-secondary relative">
+          {/* Background Image Placeholder */}
+          <div className="absolute inset-0 opacity-10">
+            {/* ← REPLACE WITH BROCHURE FRONT #4: /images/contact-brochure.jpg */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <Phone className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Contact Us</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Get Started with Trinity Heritage Clinic
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Reach out today to learn how we can serve your business
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <Card className="border-2 border-primary/20 shadow-2xl">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-primary mb-6 font-serif">Send Us a Message</h3>
+                  <form className="space-y-6">
+                    <div>
+                      <Label htmlFor="name">Full Name *</Label>
+                      <Input
+                        id="name"
+                        placeholder="John Smith"
+                        className="mt-2"
+                        required
+                      />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="phone">Phone *</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          placeholder="(817) 555-1234"
+                          className="mt-2"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <Label htmlFor="email">Email *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="john@company.com"
+                          className="mt-2"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="service">Service Interest</Label>
+                      <Select>
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Select a service" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="occupational">Occupational Medicine</SelectItem>
+                          <SelectItem value="internal">Internal Medicine</SelectItem>
+                          <SelectItem value="wellness">Wellness Programs</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Tell us about your needs..."
+                        rows={5}
+                        className="mt-2"
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      Send Message
+                      <ChevronRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+
+              {/* Contact Cards */}
+              <div className="space-y-6">
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-6 h-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-lg text-foreground mb-2">Call Us</h4>
+                        <a
+                          href="tel:817-453-7522"
+                          className="text-2xl font-bold text-primary hover:underline block mb-2"
+                        >
+                          (817) 453-7522
+                        </a>
+                        <p className="text-sm text-muted-foreground">Mon-Fri: 8:30 AM - 5:30 PM</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-6 h-6 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours</h4>
+                        <a
+                          href="tel:817-966-3989"
+                          className="text-2xl font-bold text-accent hover:underline block mb-2"
+                        >
+                          (817) 966-3989
+                        </a>
+                        <p className="text-sm text-muted-foreground">For urgent matters only</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-6 h-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-lg text-foreground mb-2">Fax</h4>
+                        <p className="text-xl font-bold text-primary">1-866-665-6659</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-lg text-foreground mb-2">Visit Us</h4>
+                        <a
+                          href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          1475 Heritage Pkwy Ste 225
+                          <br />
+                          Mansfield, TX 76063
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Final CTA */}
+            <div className="mt-16 text-center">
+              <p className="text-2xl font-serif font-bold text-primary mb-4">
+                Working to Keep Your Workforce Well
+              </p>
+              <p className="text-lg text-muted-foreground">
+                To learn more, call us today: <a href="tel:817-453-7522" className="text-primary font-bold hover:underline">(817) 453-7522</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-muted border-t-4 border-primary py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-8">
+            {/* Clinic Info */}
+            <div>
+              <h3 className="font-serif text-2xl font-bold text-primary mb-4">
+                Trinity Heritage Clinic
+              </h3>
+              <p className="text-muted-foreground mb-4 italic">
+                "Working to Keep Your Workforce Well"
+              </p>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">Contact</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p>1475 Heritage Pkwy Ste 225</p>
+                <p>Mansfield, TX 76063</p>
+                <p className="pt-2">
+                  Phone: <a href="tel:817-453-7522" className="text-primary hover:underline font-semibold">(817) 453-7522</a>
+                </p>
+                <p>Fax: 1-866-665-6659</p>
+                <p>
+                  After Hours: <a href="tel:817-966-3989" className="text-accent hover:underline font-semibold">(817) 966-3989</a>
+                </p>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
+              <div className="space-y-2">
+                {[
+                  { id: "home", label: "Home" },
+                  { id: "team", label: "Our Team" },
+                  { id: "location", label: "Location" },
+                  { id: "services", label: "Services" },
+                  { id: "contact", label: "Contact" }
+                ].map((link) => (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+            <p>&copy; {new Date().getFullYear()} Trinity Heritage Clinic. All rights reserved.</p>
+            <p className="mt-2 italic font-serif text-primary">
+              To learn more, call us today: (817) 453-7522
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
