@@ -198,15 +198,15 @@ export default function BrochurePage() {
           <GeometricBackground variant="diamonds" className="opacity-30" opacity={1} animated={true} />
 
           {/* Professional Background Image */}
-          <div className="absolute inset-0 opacity-25">
+          <div className="absolute inset-0 opacity-30">
             <Image
-              src="https://cdn.builder.io/api/v1/image/assets%2Fc70ebb3e5225486399c19406cd27bb43%2Fb6240749e17b41fa929cfd5bf55b024c?format=webp&width=800"
-              alt="Professional healthcare team"
+              src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
+              alt="Professional healthcare team at work"
               fill
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-accent/40"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
           </div>
 
           {/* Floating Geometric Accents */}
@@ -704,9 +704,9 @@ export default function BrochurePage() {
         <StairsShapeDivider color="accent" className="h-32 -mb-1" />
 
         {/* Wellness & Prevention Section */}
-        <section id="wellness" className="relative py-20 bg-white overflow-hidden">
+        <section id="wellness" className="relative py-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
           {/* Geometric Background */}
-          <GeometricBackground variant="grid" className="opacity-25" opacity={1} />
+          <GeometricBackground variant="grid" className="opacity-15" opacity={1} />
 
           {/* Floating Geometric Accents */}
           <GeometricAccent className="absolute top-32 left-20 opacity-10" style={{ animationDelay: "1s" }} />
@@ -714,14 +714,14 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/15 px-4 py-2 rounded-full mb-4">
                 <HeartPulse className="w-4 h-4 text-primary" />
                 <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Proactive Health & Prevention
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-medium">
                 Keeping your workforce healthy starts with prevention and continuous wellness monitoring
               </p>
             </div>
@@ -744,7 +744,7 @@ export default function BrochurePage() {
                   <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
                     Comprehensive Preventive Care
                   </h3>
-                  <p className="text-lg text-foreground leading-relaxed mb-4">
+                  <p className="text-lg text-slate-800 leading-relaxed mb-4 font-medium">
                     At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
                   </p>
                 </div>
@@ -772,13 +772,13 @@ export default function BrochurePage() {
                       description: "Ongoing support for managing health conditions"
                     }
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
+                    <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm">
                       <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
                         <item.icon className="w-5 h-5" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                        <h4 className="font-semibold text-slate-900 mb-1">{item.title}</h4>
+                        <p className="text-sm text-slate-700 font-medium">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -805,13 +805,13 @@ export default function BrochurePage() {
                   icon: CheckCircle2
                 }
               ].map((stat, idx) => (
-                <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow">
+                <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow bg-white shadow-md">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                    <div className="w-16 h-16 rounded-full bg-primary/15 flex items-center justify-center mb-4 mx-auto">
                       <stat.icon className="w-8 h-8 text-primary" />
                     </div>
                     <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
-                    <p className="text-foreground font-semibold">{stat.label}</p>
+                    <p className="text-slate-800 font-semibold">{stat.label}</p>
                   </CardContent>
                 </Card>
               ))}
