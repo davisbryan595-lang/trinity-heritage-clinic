@@ -699,6 +699,125 @@ export default function BrochurePage() {
         {/* Shape Divider */}
         <StairsShapeDivider color="accent" className="h-32 -mb-1" />
 
+        {/* Wellness & Prevention Section */}
+        <section id="wellness" className="relative py-20 bg-white overflow-hidden">
+          {/* Geometric Background */}
+          <GeometricBackground variant="grid" className="opacity-25" opacity={1} />
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-32 left-20 opacity-10" style={{ animationDelay: "1s" }} />
+          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.5s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <HeartPulse className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Wellness & Prevention</span>
+              </div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Proactive Health & Prevention
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Keeping your workforce healthy starts with prevention and continuous wellness monitoring
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
+              {/* Wellness Image */}
+              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+                <Image
+                  src="https://images.pexels.com/photos/287237/pexels-photo-287237.jpeg"
+                  alt="Modern healthcare clinic facility with advanced wellness technology"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30"></div>
+              </div>
+
+              {/* Wellness Content */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                    Comprehensive Preventive Care
+                  </h3>
+                  <p className="text-lg text-foreground leading-relaxed mb-4">
+                    At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    {
+                      icon: Activity,
+                      title: "Health Screenings",
+                      description: "Regular health assessments and risk evaluations"
+                    },
+                    {
+                      icon: Briefcase,
+                      title: "Workplace Wellness",
+                      description: "Customized corporate wellness programs"
+                    },
+                    {
+                      icon: Users,
+                      title: "Group Education",
+                      description: "Health education and training sessions"
+                    },
+                    {
+                      icon: HeartPulse,
+                      title: "Chronic Care Management",
+                      description: "Ongoing support for managing health conditions"
+                    }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
+                      <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Wellness Stats */}
+            <div className="grid md:grid-cols-3 gap-8 relative z-20 mb-12">
+              {[
+                {
+                  number: "20+",
+                  label: "Years of Excellence",
+                  icon: Award
+                },
+                {
+                  number: "2,500+",
+                  label: "Employees Served",
+                  icon: Users
+                },
+                {
+                  number: "98%",
+                  label: "Satisfaction Rate",
+                  icon: CheckCircle2
+                }
+              ].map((stat, idx) => (
+                <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                      <stat.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <p className="text-4xl font-bold text-primary mb-2 font-serif">{stat.number}</p>
+                    <p className="text-foreground font-semibold">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Shape Divider */}
+        <DiagonalShapeDivider color="accent" className="h-24 -mb-1" flip={true} />
+
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-secondary relative overflow-hidden">
           {/* Geometric Background */}
