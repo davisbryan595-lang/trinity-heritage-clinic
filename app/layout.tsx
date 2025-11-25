@@ -1,29 +1,44 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import { Montserrat, Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400", "500", "600", "700", "800"]
+})
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"]
+})
 
 export const metadata: Metadata = {
-  title: 'Trinity Heritage Clinic | Occupational Medicine in Mansfield TX',
+  title: "Trinity Heritage Clinic | Occupational Medicine Mansfield TX | Workforce Health",
   description:
-    'Professional occupational health services for businesses in Dallas Fort Worth. Pre-employment exams, diagnostic testing, wellness programs. Working to keep your workforce well.',
+    "Working to keep your workforce well. Trinity Heritage Clinic provides comprehensive occupational medicine, internal medicine, and wellness programs in Mansfield, Texas. Always friendly. Always knowledgeable.",
   keywords: [
-    'occupational medicine',
-    'occupational health',
-    'Mansfield TX',
-    'Dallas Fort Worth',
-    'employee health',
-    'workplace wellness',
-    'pre-employment exam',
-    'drug screening',
-    'diagnostic testing',
+    "occupational medicine",
+    "Mansfield TX",
+    "workforce health",
+    "DOT physicals",
+    "drug screening",
+    "work injury care",
+    "pre-employment exams",
+    "internal medicine",
+    "wellness programs",
+    "Trinity Heritage Clinic"
   ],
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
   openGraph: {
-    title: 'Trinity Heritage Clinic - Occupational Medicine Services',
-    description: 'Professional occupational health services for businesses in DFW',
-    type: 'website',
-    locale: 'en_US',
+    title: "Trinity Heritage Clinic | Occupational Medicine Mansfield TX",
+    description: "Working to keep your workforce well - Occupational medicine and healthcare services",
+    type: "website",
+    locale: "en_US",
+    siteName: "Trinity Heritage Clinic"
   },
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -32,12 +47,44 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <head>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90'>💚</text></svg>" />
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              "name": "Trinity Heritage Clinic",
+              "description": "Occupational medicine and internal medicine services for businesses and individuals",
+              "url": "https://trinityheritageclinic.com",
+              "telephone": "+1-817-453-7522",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1475 Heritage Pkwy Ste 225",
+                "addressLocality": "Mansfield",
+                "addressRegion": "TX",
+                "postalCode": "76063",
+                "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "32.6",
+                "longitude": "-97.1"
+              },
+              "openingHours": "Mo-Fr 08:30-17:30",
+              "priceRange": "$$",
+              "medicalSpecialty": ["Occupational Medicine", "Internal Medicine"],
+              "slogan": "Working to Keep Your Workforce Well"
+            })
+          }}
+        />
       </head>
-      <body>{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
