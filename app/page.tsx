@@ -948,7 +948,7 @@ export default function BrochurePage() {
                         >
                           (817) 453-7522
                         </a>
-                        <p className="text-sm text-muted-foreground">Mon-Fri: 8:30 AM - 5:30 PM</p>
+                        <p className="text-sm text-foreground font-medium">Mon-Fri: 8:30 AM - 5:30 PM</p>
                       </div>
                     </div>
                   </CardContent>
@@ -968,7 +968,7 @@ export default function BrochurePage() {
                         >
                           (817) 966-3989
                         </a>
-                        <p className="text-sm text-muted-foreground">For urgent matters only</p>
+                        <p className="text-sm text-foreground font-medium">For urgent matters only</p>
                       </div>
                     </div>
                   </CardContent>
