@@ -192,77 +192,76 @@ export default function BrochurePage() {
 
       <div className="overflow-hidden">
         {/* Hero Section */}
-        <section
-          id="home"
-          className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
-        >
-          {/* Geometric Background */}
-          <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
+          <section
+            id="home"
+            className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
+          >
+            {/* Geometric Background */}
+            <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
 
-          {/* Professional Background Image */}
-          <div className="absolute inset-0 opacity-55">
-            <Image
-              src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
-              alt="Professional healthcare team at work"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
-          </div>
+            {/* Professional Background Image */}
+            <div className="absolute inset-0 opacity-55">
+              <Image
+                src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
+                alt="Professional healthcare team at work"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
+            </div>
 
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
-          <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+            {/* Floating Geometric Accents */}
+            <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
+            <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div
-              className={`transition-all duration-1000 ${
-                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
-            >
-              {/* Main Heading */}
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg underline-offset-2" style={{ textDecorationLine: 'underline', textDecorationColor: '#8cc73f', textDecorationThickness: '3px', textUnderlineOffset: '8px' }}>
-                OCCUPATIONAL MEDICINE SERVICES
-              </h1>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+              <div
+                className={`transition-all duration-1000 ${
+                  isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
+              >
+                {/* Main Heading – underline removed */}
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
+                  OCCUPATIONAL MEDICINE SERVICES
+                </h1>
 
-              {/* Subtitle */}
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: '#8cc73f' }}>
-                Working to Keep Your Workforce Well
-              </p>
+                {/* Subtitle */}
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: '#8cc73f' }}>
+                  Working to Keep Your Workforce Well
+                </p>
 
-              {/* Tagline */}
-              <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed font-medium">
-                Always Friendly. Always Knowledgeable.
-              </p>
+                {/* Tagline */}
+                <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed font-medium">
+                  Always Friendly. Always Knowledgeable.
+                </p>
 
-              <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
-                Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
-              </p>
+                <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
+                  Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
+                </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap justify-center gap-6">
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary flex items-center justify-center"
-                >
-                  Learn How We Can Help Your Business
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </button>
-                <a href="tel:817-453-7522">
-                  <Button
-                    size="lg"
-                    className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent"
+                {/* CTA Buttons */}
+                <div className="flex flex-wrap justify-center gap-6">
+                  <button
+                    onClick={() => scrollToSection("services")}
+                    className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6 rounded-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 border-primary flex items-center justify-center"
                   >
-                    <Phone className="w-6 h-6 mr-3" />
-                    Call (817) 453-7522
-                  </Button>
-                </a>
+                    Learn How We Can Help Your Business
+                    <ChevronRight className="w-5 h-5 ml-2" />
+                  </button>
+                  <a href="tel:817-453-7522">
+                    <Button
+                      size="lg"
+                      className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent"
+                    >
+                      <Phone className="w-6 h-6 mr-3" />
+                      Call (817) 453-7522
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-
+          </section>
         {/* About Us Section */}
         <section id="about" className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
           {/* Geometric Background */}
