@@ -188,13 +188,26 @@ export default function BrochurePage() {
         {/* Hero Section */}
         <section
           id="home"
-          className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10"
+          className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
         >
-          {/* Background Image Placeholder */}
-          <div className="absolute inset-0 opacity-20">
-            {/* ← REPLACE WITH BROCHURE SCREENSHOT #1: /images/brochure-hero.jpg */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
+          {/* Geometric Background */}
+          <GeometricBackground variant="diamonds" className="opacity-30" opacity={1} animated={true} />
+
+          {/* Professional Background Image */}
+          <div className="absolute inset-0 opacity-25">
+            <Image
+              src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+              alt="Professional healthcare team"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-accent/40"></div>
           </div>
+
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
+          <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div
