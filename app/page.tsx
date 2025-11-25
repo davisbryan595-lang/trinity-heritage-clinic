@@ -196,7 +196,7 @@ export default function BrochurePage() {
           {/* Professional Background Image */}
           <div className="absolute inset-0 opacity-25">
             <Image
-              src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg"
+              src="https://cdn.builder.io/api/v1/image/assets%2Fc70ebb3e5225486399c19406cd27bb43%2Fb6240749e17b41fa929cfd5bf55b024c?format=webp&width=800"
               alt="Professional healthcare team"
               fill
               className="object-cover"
@@ -258,7 +258,7 @@ export default function BrochurePage() {
         </section>
 
         {/* Shape Divider */}
-        <DiamondsShapeDivider color="primary" className="h-32 -mb-1" />
+        <DiamondsShapeDivider color="primary" className="h-40 -mt-12 relative z-10" />
 
         {/* Our Team Section */}
         <section id="team" className="relative py-20 bg-white overflow-hidden">
