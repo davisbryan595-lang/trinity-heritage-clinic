@@ -396,11 +396,11 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <Award className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Our Founder</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
+                <Award className="w-4 h-4" />
+                <span className="text-sm font-semibold">Our Founder</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ color: '#8cc73f' }}>
                 Meet Our Visionary Leader
               </h2>
             </div>
