@@ -276,12 +276,17 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            {/* Team Background Image Placeholder */}
-            <div className="relative mb-12 h-64 rounded-2xl overflow-hidden shadow-xl">
-              {/* ← REPLACE WITH BROCHURE TEAM IMAGE #2: /images/team-brochure.jpg */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
+            {/* Team Background Image */}
+            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group">
+              <Image
+                src="https://images.pexels.com/photos/6098056/pexels-photo-6098056.jpeg"
+                alt="Our professional healthcare team"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-transparent to-accent/40"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-2xl font-bold text-white text-center px-4">
+                <p className="text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
                   Our Dedicated Healthcare Team
                 </p>
               </div>
