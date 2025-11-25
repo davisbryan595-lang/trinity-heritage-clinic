@@ -130,6 +130,80 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Migration Service Section */}
+      <section className="py-20 bg-primary/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary-foreground">
+            USCIS Authorized Immigration Medical Services
+          </h2>
+
+          <Card className="p-12 bg-white border-2 border-accent/30 mb-8">
+            <h3 className="font-serif text-2xl font-bold mb-6 text-primary-foreground">
+              Certified Civil Surgeon Services
+            </h3>
+
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                Our physician is <strong>USCIS certified and authorized</strong> to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services (USCIS). This certification ensures that immigration medical exams are completed to the highest federal standards.
+              </p>
+
+              <p>
+                We provide comprehensive migration medical services including the USCIS Form I-693, Report of Medical Examination and Vaccination Record, which is an essential document for immigration applications and medical-based immigration cases.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 mt-8">
+                <div>
+                  <h4 className="font-semibold text-primary-foreground mb-4">Services We Provide:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">•</span>
+                      <span>USCIS I-693 Forms, Certified and Sealed Envelope</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">•</span>
+                      <span>Patient Copy I-693</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">•</span>
+                      <span>Comprehensive Physical Examination</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">•</span>
+                      <span>Vaccination Status Verification</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">•</span>
+                      <span>TB Testing</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-accent font-bold mt-1">•</span>
+                      <span>Complete Blood Testing</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-primary-foreground mb-4">Additional Information:</h4>
+                  <div className="space-y-4 text-sm">
+                    <p>
+                      The USCIS Form I-693 is obtainable through the official USCIS website at <strong>https://www.uscis.gov/i-693</strong>. The USCIS site offers detailed guidelines and support on how to complete the application.
+                    </p>
+                    <p>
+                      Our team is available to assist with all medical-related questions regarding immigration medical examinations. For immigration questions that are non-medical in nature, we recommend seeking the service of an immigration attorney.
+                    </p>
+                    <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
+                      <p className="font-semibold text-primary-foreground">
+                        Call today for pricing information. Additional fees apply for vaccine administration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
     </div>
   )
 }
