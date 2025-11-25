@@ -114,9 +114,11 @@ export default function BrochurePage() {
             <div className="hidden lg:flex gap-8 items-center">
               {[
                 { id: "home", label: "Home" },
+                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
+                { id: "wellness", label: "Wellness" },
                 { id: "contact", label: "Contact" }
               ].map((link) => (
                 <button
