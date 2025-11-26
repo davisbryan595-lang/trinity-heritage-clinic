@@ -428,7 +428,7 @@ export default function BrochurePage() {
 
                   <div className="space-y-4 mb-8">
                     <p className="text-lg text-foreground leading-relaxed">
-                      With over 20 years of experience in occupational medicine and internal medicine, Dr. Mitchell founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
+                      With over 20 years of experience in occupational medicine and internal medicine, Dr. Victor Nwiloh founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
                     </p>
 
                     <div className="space-y-3 border-t border-border pt-6">
