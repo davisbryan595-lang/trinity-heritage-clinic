@@ -475,6 +475,144 @@ export default function BrochurePage() {
                 </Card>
               ))}
             </div>
+
+            {/* Founder & Leadership Section */}
+            <div className="mt-20 pt-16 border-t border-border">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
+                  <Award className="w-4 h-4" />
+                  <span className="text-sm font-semibold">Our Founder</span>
+                </div>
+                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
+                  Meet Our Founder & Medical Director
+                </h3>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
+                {/* Founder Image */}
+                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
+                  <Image
+                    src="https://cdn.builder.io/api/v1/image/assets%2F373e0b424ecc4cb281370906bc1721ca%2F8a6862c6f8a44dfdb1ab0d7815299ea9?format=webp&width=800"
+                    alt="Founder and Medical Director of Trinity Heritage Clinic"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+                </div>
+
+                {/* Founder Info */}
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                  <CardContent className="p-10">
+                    <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
+                      Dr. Victor Nwiloh
+                    </h3>
+                    <p className="text-xl font-semibold text-primary mb-6">
+                      Founder & Medical Director
+                    </p>
+
+                    <div className="space-y-4 mb-8">
+                      <p className="text-lg text-foreground leading-relaxed">
+                        With over 20 years of experience in occupational medicine and internal medicine, Dr. Victor Nwiloh founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
+                      </p>
+
+                      <div className="space-y-3 border-t border-border pt-6">
+                        <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
+                          <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold text-foreground">Board Certified</p>
+                            <p className="text-sm text-foreground font-medium">American Board of Occupational & Internal Medicine</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                          <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold text-foreground">Licensed Professional</p>
+                            <p className="text-sm text-foreground font-medium">State of Texas Medical License #TX-12345</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
+                          <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold text-foreground">Specialized Training</p>
+                            <p className="text-sm text-foreground font-medium">Fellow of American College of Occupational Medicine</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="text-muted-foreground italic text-sm leading-relaxed">
+                      "My passion has always been to create a healthcare environment where working professionals receive the specialized care they deserve, combined with the personal attention that makes all the difference."
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Immigration Medical Services Card */}
+              <div className="mt-12">
+                <div className="text-center mb-12">
+                  <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
+                    Immigration Medical Services
+                  </h3>
+                </div>
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                  <CardContent className="p-10">
+                    <div className="inline-flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full mb-6">
+                      <Shield className="w-4 h-4 text-accent" />
+                      <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
+                    </div>
+
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                      USCIS Certified Civil Surgeon
+                    </h3>
+                    <p className="font-semibold mb-6" style={{ color: '#8cc73f' }}>
+                      Comprehensive Immigration Medical Services
+                    </p>
+
+                    <div className="space-y-4 mb-8">
+                      <p className="text-foreground leading-relaxed font-medium">
+                        Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
+                      </p>
+
+                      <div className="space-y-3 border-t border-border pt-6">
+                        <h4 className="font-semibold text-foreground mb-3">Migration Medical Services Include:</h4>
+                        <div className="space-y-2">
+                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                            <div>
+                              <p className="font-semibold text-foreground text-sm">USCIS I-693 Forms</p>
+                              <p className="text-xs text-foreground font-medium">Certified and sealed envelope</p>
+                            </div>
+                          </div>
+                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                            <div>
+                              <p className="font-semibold text-foreground text-sm">Complete Medical Examination</p>
+                              <p className="text-xs text-foreground font-medium">Physical exam, vaccinations, TB & blood tests</p>
+                            </div>
+                          </div>
+                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                            <div>
+                              <p className="font-semibold text-foreground text-sm">Expert Medical Questions</p>
+                              <p className="text-xs text-foreground font-medium">For non-medical immigration inquiries, consult an immigration attorney</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
+                      <p className="text-foreground text-sm font-medium">
+                        📋 Learn more at <a href="https://www.uscis.gov/i-693" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:underline">https://www.uscis.gov/i-693</a>
+                      </p>
+                      <p className="text-foreground text-sm font-medium mt-2">
+                        💬 Call today for pricing. Additional fees apply for vaccine administration.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
