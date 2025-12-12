@@ -115,7 +115,6 @@ export default function BrochurePage() {
               {[
                 { id: "home", label: "Home" },
                 { id: "about", label: "About Us" },
-                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
@@ -162,7 +161,6 @@ export default function BrochurePage() {
               {[
                 { id: "home", label: "Home" },
                 { id: "about", label: "About Us" },
-                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
@@ -1202,7 +1200,6 @@ export default function BrochurePage() {
                 {[
                 { id: "home", label: "Home" },
                 { id: "about", label: "About Us" },
-                { id: "founder", label: "Our Founder" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
