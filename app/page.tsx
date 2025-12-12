@@ -1166,7 +1166,7 @@ export default function BrochurePage() {
           <div className="grid md:grid-cols-3 gap-12 mb-8">
             {/* Clinic Info */}
             <div>
-              <div className="relative w-104 h-32 mb-4">
+              <div className="relative w-full h-24 mb-4">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
