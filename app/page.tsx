@@ -1227,9 +1227,9 @@ export default function BrochurePage() {
           </div>
 
           <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
-            <p>&copy; {new Date().getFullYear()} Trinity Heritage Clinic. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary">
-              To learn more, call us today: (817) 453-7522
+              1475 Heritage Pkwy Ste 225, Mansfield, TX 76063 | (817) 453-7522
             </p>
           </div>
         </div>
