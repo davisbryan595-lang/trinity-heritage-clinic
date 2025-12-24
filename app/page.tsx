@@ -930,17 +930,17 @@ export default function BrochurePage() {
               {[
                 {
                   number: "20+",
-                  label: "Years of Excellence",
+                  label: "Years of Excellence in Occupational Medicine",
                   icon: Award
                 },
                 {
-                  number: "2,500+",
-                  label: "Employees Served",
+                  number: "Many",
+                  label: "Businesses Served in DFW",
                   icon: Users
                 },
                 {
-                  number: "98%",
-                  label: "Satisfaction Rate",
+                  number: "100%",
+                  label: "Certified Healthcare Professionals",
                   icon: CheckCircle2
                 }
               ].map((stat, idx) => (
