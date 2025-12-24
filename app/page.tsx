@@ -93,7 +93,7 @@ export default function BrochurePage() {
               <div className="relative w-64 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Trinity Heritage Clinic"
+                  alt="Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -104,7 +104,7 @@ export default function BrochurePage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage</span>
+                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export default function BrochurePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                About Trinity Heritage Clinic
+                About Heritage Healthcare Clinic
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Comprehensive healthcare for your professional and personal wellness
@@ -285,18 +285,18 @@ export default function BrochurePage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
-                    Our Mission
+                    Our Pledge
                   </h3>
                   <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    Trinity Heritage Clinic is dedicated to providing compassionate, comprehensive healthcare services to working professionals and businesses in Mansfield, Texas. With over 20 years of expertise in occupational and internal medicine, we serve as a trusted partner in keeping your workforce healthy, safe, and productive.
+                    Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
                   </p>
                   <p className="text-lg text-foreground leading-relaxed font-medium">
-                    Our commitment to excellence, combined with personalized care and evidence-based medicine, ensures that every patient receives the attention and treatment they deserve.
+                    Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
                   </p>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6">
-                  <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Trinity Heritage Clinic?</h4>
+                  <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Heritage Healthcare Clinic?</h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -308,11 +308,11 @@ export default function BrochurePage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">Comprehensive Occupational & Internal Medicine Services</span>
+                      <span className="text-foreground font-medium">Comprehensive Occupational Medicine Services</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">USCIS Certified Medical Examination Services</span>
+                      <span className="text-foreground font-medium">Integrated Care & Standardized Communication</span>
                     </li>
                   </ul>
                 </div>
@@ -335,10 +335,10 @@ export default function BrochurePage() {
                 <span className="text-sm font-semibold text-primary">Our Team</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Experienced, Well-Trained Professionals
+                Our Dedicated Healthcare Team
               </h2>
               <p className="text-xl text-foreground max-w-4xl mx-auto font-medium">
-                Certified in specialties and licensed without restrictions
+                Experienced professionals certified in specialties and licensed without restrictions
               </p>
             </div>
 
