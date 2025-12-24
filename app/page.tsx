@@ -892,23 +892,23 @@ export default function BrochurePage() {
                   {[
                     {
                       icon: Activity,
-                      title: "Health Screenings",
-                      description: "Regular health assessments and risk evaluations"
+                      title: "Health Fairs & Screenings",
+                      description: "On-site health screenings for employee wellness"
                     },
                     {
                       icon: Briefcase,
-                      title: "Workplace Wellness",
-                      description: "Customized corporate wellness programs"
+                      title: "Health Topics Presentations",
+                      description: "Educational seminars (Lunch and Learn sessions)"
                     },
                     {
                       icon: Users,
-                      title: "Group Education",
-                      description: "Health education and training sessions"
+                      title: "Seasonal Vaccinations",
+                      description: "Flu shots and preventive immunizations"
                     },
                     {
                       icon: HeartPulse,
-                      title: "Chronic Care Management",
-                      description: "Ongoing support for managing health conditions"
+                      title: "Occupational Safety Consultation",
+                      description: "Expert guidance on workplace health and safety"
                     }
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm">
