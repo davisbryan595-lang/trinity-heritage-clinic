@@ -821,7 +821,7 @@ export default function BrochurePage() {
             {/* CTA Banner */}
             <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
               <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
-                Ready to Keep Your Workforce Well?
+                Working to Keep Your Workforce Well
               </h3>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 To learn more about how we can help your business, call us today
@@ -988,10 +988,10 @@ export default function BrochurePage() {
                 <span className="text-sm font-semibold text-primary">Contact Us</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Get Started with Trinity Heritage Clinic
+                Get Started with Heritage Healthcare Clinic
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Reach out today to learn how we can serve your business
+                Reach out today to learn how we can help keep your workforce well
               </p>
             </div>
 
@@ -1013,15 +1013,15 @@ export default function BrochurePage() {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone">Phone *</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="(817) 555-1234"
-                          className="mt-2"
-                          required
-                        />
-                      </div>
+                      <Label htmlFor="phone">Phone *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="(817) 453-7522"
+                        className="mt-2"
+                        required
+                      />
+                    </div>
 
                       <div>
                         <Label htmlFor="email">Email *</Label>
@@ -1042,9 +1042,10 @@ export default function BrochurePage() {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="occupational">Occupational Medicine</SelectItem>
-                          <SelectItem value="internal">Internal Medicine</SelectItem>
-                          <SelectItem value="wellness">Wellness Programs</SelectItem>
+                          <SelectItem value="physical-exam">Physical Exams</SelectItem>
+                          <SelectItem value="injury-treatment">Injury/Illness Treatment</SelectItem>
+                          <SelectItem value="diagnostic">Diagnostic Testing</SelectItem>
+                          <SelectItem value="consultation">Health & Safety Consultation</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -1054,7 +1055,7 @@ export default function BrochurePage() {
                       <Label htmlFor="message">Message</Label>
                       <Textarea
                         id="message"
-                        placeholder="Tell us about your needs..."
+                        placeholder="Tell us about your business needs..."
                         rows={5}
                         className="mt-2"
                       />
@@ -1100,14 +1101,14 @@ export default function BrochurePage() {
                         <Phone className="w-6 h-6 text-accent" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours</h4>
+                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours & Urgent</h4>
                         <a
-                          href="tel:817-966-3989"
+                          href="tel:817-966-3999"
                           className="text-2xl font-bold text-accent hover:underline block mb-2"
                         >
-                          (817) 966-3989
+                          (817) 966-3999
                         </a>
-                        <p className="text-sm text-foreground font-medium">For urgent matters only</p>
+                        <p className="text-sm text-foreground font-medium">For urgent medical matters</p>
                       </div>
                     </div>
                   </CardContent>
