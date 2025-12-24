@@ -84,25 +84,31 @@ export default function NewPatientFormPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-primary/5 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-white to-accent/5 pt-20">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">New Patient Paperwork</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/95 via-primary/90 to-accent/20 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -mr-40 -mt-40"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -ml-40 -mb-40"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-10">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">New Patient Paperwork</h1>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow">
               Please complete this form before your first appointment to save time.
             </p>
           </div>
 
           {/* HIPAA Notice */}
-          <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 flex gap-3">
-            <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+          <div className="bg-red-50 border-2 border-red-300 rounded-lg p-6 flex gap-4 shadow-lg">
+            <AlertCircle className="w-7 h-7 text-red-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-red-900 text-sm">
+              <p className="font-bold text-red-900 text-base">
                 Important Notice
               </p>
-              <p className="text-red-800 text-sm mt-1">
+              <p className="text-red-800 text-sm mt-2 leading-relaxed">
                 This form contains protected health information and will be submitted securely to our HIPAA-compliant intake system. Your privacy and security are our top priority.
               </p>
             </div>
