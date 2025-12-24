@@ -363,7 +363,7 @@ export default function BrochurePage() {
                 {
                   icon: Award,
                   title: "Board Certified Physician",
-                  specialty: "Occupational & Internal Medicine",
+                  specialty: "Occupational Medicine",
                   color: "text-primary"
                 },
                 {
@@ -386,7 +386,7 @@ export default function BrochurePage() {
                 },
                 {
                   icon: Activity,
-                  title: "Certified Medical Assistants",
+                  title: "Medical Assistants",
                   specialty: "Clinical Support Services",
                   color: "text-primary"
                 },
@@ -422,10 +422,10 @@ export default function BrochurePage() {
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
                   <Award className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Our Founder</span>
+                  <span className="text-sm font-semibold">Leadership</span>
                 </div>
                 <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-                  Meet Our Founder & Medical Director
+                  Our Medical Leadership
                 </h3>
               </div>
 
@@ -445,15 +445,15 @@ export default function BrochurePage() {
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                   <CardContent className="p-10">
                     <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
-                      Dr. Victor Nwiloh
+                      Medical Director
                     </h3>
                     <p className="text-xl font-semibold text-primary mb-6">
-                      Founder & Medical Director
+                      Board Certified Occupational Medicine
                     </p>
 
                     <div className="space-y-4 mb-8">
                       <p className="text-lg text-foreground leading-relaxed">
-                        With over 20 years of experience in occupational medicine and internal medicine, Dr. Victor Nwiloh founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
+                        Our medical director brings extensive expertise in occupational medicine and is dedicated to providing excellent, compassionate care to businesses and their employees throughout the Dallas Fort Worth area.
                       </p>
 
                       <div className="space-y-3 border-t border-border pt-6">
@@ -461,28 +461,28 @@ export default function BrochurePage() {
                           <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                           <div>
                             <p className="font-semibold text-foreground">Board Certified</p>
-                            <p className="text-sm text-foreground font-medium">American Board of Occupational & Internal Medicine</p>
+                            <p className="text-sm text-foreground font-medium">American Board of Occupational Medicine</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
                           <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                           <div>
-                            <p className="font-semibold text-foreground">Licensed Professional</p>
-                            <p className="text-sm text-foreground font-medium">State of Texas Medical License #TX-12345</p>
+                            <p className="font-semibold text-foreground">Licensed & Certified</p>
+                            <p className="text-sm text-foreground font-medium">State of Texas Medical License</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
                           <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                           <div>
                             <p className="font-semibold text-foreground">Specialized Training</p>
-                            <p className="text-sm text-foreground font-medium">Fellow of American College of Occupational Medicine</p>
+                            <p className="text-sm text-foreground font-medium">Expertise in Occupational Health & Safety</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <p className="text-muted-foreground italic text-sm leading-relaxed">
-                      "My passion has always been to create a healthcare environment where working professionals receive the specialized care they deserve, combined with the personal attention that makes all the difference."
+                      "Our passion is to create a healthcare environment where working professionals and businesses receive the specialized occupational health care they deserve, combined with the personal attention that makes all the difference."
                     </p>
                   </CardContent>
                 </Card>
