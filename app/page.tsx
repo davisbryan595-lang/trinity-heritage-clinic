@@ -495,63 +495,77 @@ export default function BrochurePage() {
                     Specialized Occupational Services
                   </h3>
                 </div>
-                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                  <CardContent className="p-10">
-                    <div className="inline-flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full mb-6">
-                      <Shield className="w-4 h-4 text-accent" />
-                      <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
-                      USCIS Certified Civil Surgeon
-                    </h3>
-                    <p className="font-semibold mb-6" style={{ color: '#8cc73f' }}>
-                      Comprehensive Immigration Medical Services
-                    </p>
-
-                    <div className="space-y-4 mb-8">
-                      <p className="text-foreground leading-relaxed font-medium">
-                        Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                    <CardContent className="p-10">
+                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                        Work Site Visits
+                      </h3>
+                      <p className="font-semibold mb-6 text-foreground">
+                        Comprehensive workplace assessments
                       </p>
 
-                      <div className="space-y-3 border-t border-border pt-6">
-                        <h4 className="font-semibold text-foreground mb-3">Migration Medical Services Include:</h4>
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">USCIS I-693 Forms</p>
-                              <p className="text-xs text-foreground font-medium">Certified and sealed envelope</p>
+                      <div className="space-y-4 mb-8">
+                        <p className="text-foreground leading-relaxed font-medium">
+                          Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
+                        </p>
+
+                        <div className="space-y-3 border-t border-border pt-6">
+                          <h4 className="font-semibold text-foreground mb-3">Benefits Include:</h4>
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Identify and abate hazards & exposures</p>
                             </div>
-                          </div>
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">Complete Medical Examination</p>
-                              <p className="text-xs text-foreground font-medium">Physical exam, vaccinations, TB & blood tests</p>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Familiarize healthcare provider with work environment</p>
                             </div>
-                          </div>
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">Expert Medical Questions</p>
-                              <p className="text-xs text-foreground font-medium">For non-medical immigration inquiries, consult an immigration attorney</p>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Improved occupational health & safety planning</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </CardContent>
+                  </Card>
 
-                    <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
-                      <p className="text-foreground text-sm font-medium">
-                        📋 Learn more at <a href="https://www.uscis.gov/i-693" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:underline">https://www.uscis.gov/i-693</a>
+                  <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                    <CardContent className="p-10">
+                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                        Travel Medicine
+                      </h3>
+                      <p className="font-semibold mb-6 text-foreground">
+                        Health & wellness for business travelers
                       </p>
-                      <p className="text-foreground text-sm font-medium mt-2">
-                        💬 Call today for pricing. Additional fees apply for vaccine administration.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+
+                      <div className="space-y-4 mb-8">
+                        <p className="text-foreground leading-relaxed font-medium">
+                          HHC offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
+                        </p>
+
+                        <div className="space-y-3 border-t border-border pt-6">
+                          <h4 className="font-semibold text-foreground mb-3">Services Include:</h4>
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Individualized travel health assessment</p>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Travel-specific vaccinations</p>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Country-specific medical guidance</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>
