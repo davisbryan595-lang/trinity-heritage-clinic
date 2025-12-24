@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { AlertCircle, Heart, Pill, Users, TrendingUp, Activity } from "lucide-react"
+import { Briefcase, Heart, Activity, Shield, Award, Users, CheckCircle2, Stethoscope, PhoneOff } from "lucide-react"
 
 export default function ServicesPage() {
   return (
@@ -15,123 +15,98 @@ export default function ServicesPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="font-serif text-5xl font-bold text-primary-foreground mb-4">
-            Comprehensive Internal Medicine Services
+            Occupational Medicine Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl">
-            Tailored care for your unique health needs and life circumstances
+            Comprehensive occupational health services for your workforce
           </p>
         </div>
       </section>
 
-      {/* Conditions We Treat */}
+      {/* Services Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
-            Conditions We Treat
+            Our Services
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Expert management of chronic and acute conditions
+            Heritage Healthcare Clinic provides a full range of occupational medicine services
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                icon: TrendingUp,
-                title: "Diabetes Management",
-                desc: "Comprehensive care for Type 1 & Type 2 diabetes including nutrition guidance, blood sugar monitoring, and medication optimization.",
+                icon: Briefcase,
+                title: "Physical Exams",
+                items: [
+                  "Pre-Employment/Placement Exams",
+                  "Annual Physical/Surveillance Exams",
+                  "Return to Work Exams",
+                  "Fitness for Duty Exams",
+                  "Post Exposure Exams",
+                  "Termination Exams",
+                  "DOT Exams",
+                  "Respirator Exams",
+                  "Executive Physical Exams"
+                ]
               },
               {
                 icon: Heart,
-                title: "Hypertension Control",
-                desc: "Blood pressure management strategies combining medication, lifestyle modifications, and regular monitoring.",
-              },
-              {
-                icon: Pill,
-                title: "Hyperlipidemia",
-                desc: "Cholesterol and lipid management through dietary counseling and evidence-based pharmaceutical interventions.",
+                title: "Injury & Illness Evaluation",
+                items: [
+                  "Work-Related Injury Assessment",
+                  "Non-Work Related Illness Care",
+                  "Occupational Disease Evaluation",
+                  "Injury Management & Treatment",
+                  "Fitness for Duty Determination",
+                  "Treatment Coordination with Specialists",
+                  "Medical Case Management",
+                  "Return to Work Planning",
+                  "Documentation & Reporting"
+                ]
               },
               {
                 icon: Activity,
-                title: "Thyroid Disease",
-                desc: "Complete thyroid management including hormone optimization and symptom relief for hypothyroidism and hyperthyroidism.",
-              },
-              {
-                icon: AlertCircle,
-                title: "Asthma & COPD",
-                desc: "Respiratory condition management with personalized treatment plans and emergency preparedness.",
-              },
-              {
-                icon: Users,
-                title: "Smoking Cessation",
-                desc: "Comprehensive programs combining counseling, medications, and support to help you quit for good.",
-              },
-            ].map((condition, idx) => (
-              <Card
-                key={idx}
-                className="p-6 bg-white border-2 border-accent/20 hover:border-accent hover:shadow-lg transition-all"
-              >
-                <div className="flex gap-4">
-                  <condition.icon className="w-10 h-10 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-serif font-bold text-lg text-primary-foreground mb-2">{condition.title}</h3>
-                    <p className="text-sm text-muted-foreground">{condition.desc}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Services */}
-      <section className="py-20 bg-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">Treatment Services</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Evidence-based therapeutic approaches tailored to your needs
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Preventive Care",
+                title: "Diagnostic Testing",
                 items: [
-                  "Routine wellness exams",
-                  "Vaccinations",
-                  "Health screenings",
-                  "Exercise counseling",
-                  "Nutrition planning",
-                ],
+                  "Spirometry (Lung Function Testing)",
+                  "Audiometry (Hearing Tests)",
+                  "Vision Screening",
+                  "EKG (Electrocardiogram)",
+                  "Blood Work & Routine Labs",
+                  "Urinalysis",
+                  "Respirator Fit Testing",
+                  "Baseline Testing",
+                  "Follow-up Testing"
+                ]
               },
               {
-                title: "Routine Follow-Ups",
+                icon: Shield,
+                title: "Substance Testing & Health",
                 items: [
-                  "Chronic disease management",
-                  "Medication reviews",
-                  "Lab monitoring",
-                  "Symptom assessment",
-                  "Progress evaluation",
-                ],
-              },
-              {
-                title: "Healthy Living Guidance",
-                items: [
-                  "Lifestyle modification coaching",
-                  "Dietary recommendations",
-                  "Stress management",
-                  "Sleep optimization",
-                  "Wellness planning",
-                ],
-              },
+                  "Alcohol Testing",
+                  "Urine Drug Screening",
+                  "MRO (Medical Review Officer) Services",
+                  "Immunization Services",
+                  "Health & Safety Consultation",
+                  "Wellness & Health Promotions",
+                  "Travel Medicine",
+                  "Occupational Health Counseling",
+                  "Documentation Services"
+                ]
+              }
             ].map((service, idx) => (
-              <Card key={idx} className="p-8 bg-white border border-border hover:shadow-lg transition-shadow">
-                <h3 className="font-serif font-bold text-xl text-primary-foreground mb-6 text-center">
-                  {service.title}
-                </h3>
-                <ul className="space-y-3">
+              <Card key={idx} className="p-8 bg-white border-2 border-primary/20 hover:border-primary hover:shadow-lg transition-all">
+                <div className="flex gap-4 items-start mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif font-bold text-xl text-primary-foreground">{service.title}</h3>
+                </div>
+                <ul className="space-y-2">
                   {service.items.map((item, i) => (
-                    <li key={i} className="text-muted-foreground text-sm flex items-start gap-3">
-                      <span className="text-accent font-bold mt-1">•</span>
+                    <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
                       {item}
                     </li>
                   ))}
@@ -142,182 +117,168 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Populations Served */}
+      {/* Specialized Services */}
+      <section className="py-20 bg-primary/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
+            Specialized Occupational Services
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Additional services to support your business health and safety needs
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8 bg-white border-2 border-accent/20">
+              <h3 className="font-serif font-bold text-2xl text-primary-foreground mb-4">
+                Work Site Visits
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Identify and abate hazards and exposures</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Familiarize healthcare provider with work environment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Improved occupational health and safety planning</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8 bg-white border-2 border-accent/20">
+              <h3 className="font-serif font-bold text-2xl text-primary-foreground mb-4">
+                Travel Medicine
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Heritage Healthcare Clinic offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Individualized travel health assessment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Travel-specific vaccinations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">Country-specific medical guidance</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* On-Site Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
-            Populations We Serve
+            On-Site Services
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Inclusive care for all ages and backgrounds
+            Bring healthcare services directly to your workplace
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              "Adults (18+)",
-              "Working Professionals",
-              "Families",
-              "Seniors (65+)",
-              "Active Lifestyle Enthusiasts",
-              "Wellness-Focused Individuals",
-            ].map((pop, idx) => (
-              <Card
-                key={idx}
-                className="p-8 bg-gradient-to-br from-accent/10 to-primary/5 border-2 border-accent/30 text-center"
-              >
-                <h3 className="font-serif font-bold text-lg text-primary-foreground">{pop}</h3>
+              {
+                icon: Users,
+                title: "Health Fairs & Screening",
+                desc: "On-site employee health screenings and wellness fairs to identify health risks and promote employee wellness."
+              },
+              {
+                icon: Briefcase,
+                title: "Health Topics Presentations",
+                desc: "Educational seminars and 'Lunch and Learn' presentations on relevant health and safety topics for your workforce."
+              },
+              {
+                icon: Activity,
+                title: "Seasonal Flu Vaccination",
+                desc: "On-site flu vaccination clinics to protect your employees during flu season and minimize workplace illness."
+              }
+            ].map((service, idx) => (
+              <Card key={idx} className="p-8 bg-white border-2 border-primary/20 text-center hover:shadow-lg transition-all">
+                <div className="w-16 h-16 rounded-lg bg-primary text-white flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8" />
+                </div>
+                <h3 className="font-serif font-bold text-xl text-primary-foreground mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm">{service.desc}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What to Expect */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-primary/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary-foreground">
-            What to Expect at Trinity Heritage
+            Why Choose Heritage Healthcare Clinic
           </h2>
 
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                step: "01",
-                title: "Comprehensive Initial Consultation",
-                desc: "We begin with a thorough assessment of your medical history, current health concerns, and wellness goals.",
+                icon: Award,
+                title: "Board Certified Physicians",
+                desc: "Experienced occupational medicine physicians certified and licensed to practice without restrictions."
               },
               {
-                step: "02",
-                title: "Personalized Health Plan",
-                desc: "Based on our discussion and medical evaluation, we create a tailored treatment and wellness plan aligned with your needs.",
+                icon: Stethoscope,
+                title: "Comprehensive Services",
+                desc: "Full range of occupational medicine services from physical exams to injury treatment to diagnostic testing."
               },
               {
-                step: "03",
-                title: "Evidence-Based Treatment",
-                desc: "We implement treatment combining the latest medical science with holistic wellness principles.",
+                icon: Shield,
+                title: "Integrated Care",
+                desc: "We coordinate with your employee's physicians and specialists to ensure optimal health outcomes."
               },
               {
-                step: "04",
-                title: "Ongoing Support & Monitoring",
-                desc: "Regular follow-ups, progress monitoring, and plan adjustments ensure you continue thriving.",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="flex gap-6 items-start">
-                <div className="flex-shrink-0">
-                  <span className="inline-block bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center font-serif font-bold text-lg">
-                    {item.step}
-                  </span>
+                icon: Users,
+                title: "Standardized Communication",
+                desc: "Professional occupational health service reporting system that meets the needs of most businesses."
+              }
+            ].map((feature, idx) => (
+              <Card key={idx} className="p-6 bg-white border-2 border-accent/20">
+                <div className="flex gap-4">
+                  <feature.icon className="w-10 h-10 text-accent flex-shrink-0" />
+                  <div>
+                    <h3 className="font-serif font-bold text-lg text-primary-foreground mb-2">{feature.title}</h3>
+                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-serif font-bold text-lg text-primary-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.desc}</p>
-                </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Migration Service Section */}
-      <section className="py-20 bg-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
-            USCIS Immigration Medical Services
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Authorized medical examinations for immigration purposes
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <Card className="p-8 bg-white border-2 border-accent/30">
-              <h3 className="font-serif font-bold text-xl text-primary-foreground mb-6">
-                About Our Immigration Medical Services
-              </h3>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                We provide comprehensive USCIS Form I-693 medical examinations, which are required for many immigration applications. Our certified staff ensures all examinations meet federal standards and are properly documented.
-              </p>
-            </Card>
-
-            <Card className="p-8 bg-white border-2 border-accent/30">
-              <h3 className="font-serif font-bold text-xl text-primary-foreground mb-6">
-                Services Included
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-accent font-bold">✓</span>
-                  <span className="text-muted-foreground">USCIS I-693 Forms & Sealed Envelope</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent font-bold">✓</span>
-                  <span className="text-muted-foreground">Patient Copy I-693</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent font-bold">✓</span>
-                  <span className="text-muted-foreground">Physical Examination</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent font-bold">✓</span>
-                  <span className="text-muted-foreground">Vaccination Status Verification</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent font-bold">✓</span>
-                  <span className="text-muted-foreground">TB Testing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent font-bold">✓</span>
-                  <span className="text-muted-foreground">Complete Blood Testing</span>
-                </li>
-              </ul>
-              <p className="text-sm text-muted-foreground mt-6 italic font-medium">
-                Additional fees apply for vaccine administration
-              </p>
-            </Card>
-          </div>
-
-          <Card className="p-8 bg-white border border-accent/20 mb-8">
-            <h3 className="font-serif font-bold text-xl text-primary-foreground mb-4">
-              USCIS I-693 Form Information
-            </h3>
-            <p className="text-muted-foreground mb-4">
-              The USCIS Form I-693, Report of Medical Examination and Vaccination Record, is the official form required for immigration medical examinations. Detailed guidelines and support for completing the application are available at:
-            </p>
-            <p className="font-semibold text-primary-foreground mb-4">
-              https://www.uscis.gov/i-693
-            </p>
-            <p className="text-muted-foreground">
-              Our team is available to assist with all medical-related questions regarding immigration medical examinations. For non-medical immigration questions, please consult with an immigration attorney.
-            </p>
-          </Card>
-
-          <div className="bg-accent/10 border-2 border-accent/30 rounded-lg p-8 text-center">
-            <h3 className="font-serif font-bold text-xl text-primary-foreground mb-3">
-              Ready to Schedule Your Medical Examination?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Call us today for pricing and to schedule your USCIS-authorized medical examination
-            </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                Contact Us Today
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
+      {/* Contact CTA */}
       <section className="py-16 bg-accent text-center">
         <h2 className="font-serif text-3xl font-bold text-accent-foreground mb-4">
-          Ready to Experience Exceptional Care?
+          Ready to Partner with Heritage Healthcare Clinic?
         </h2>
-        <Link href="/contact">
-          <Button size="lg" className="bg-accent-foreground text-accent hover:bg-white">
-            Schedule Your Consultation Today
-          </Button>
-        </Link>
+        <p className="text-accent-foreground/90 mb-6">Contact us today to discuss your occupational health needs</p>
+        <div className="flex gap-4 justify-center">
+          <Link href="/contact">
+            <Button size="lg" className="bg-accent-foreground text-accent hover:bg-white">
+              Contact Us
+            </Button>
+          </Link>
+          <a href="tel:817-453-7522">
+            <Button size="lg" className="bg-accent-foreground text-accent hover:bg-white">
+              Call (817) 453-7522
+            </Button>
+          </a>
+        </div>
       </section>
     </div>
   )
