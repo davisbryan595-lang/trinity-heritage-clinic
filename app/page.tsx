@@ -716,57 +716,57 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20 lg:grid-cols-4">
+            <div className="grid md:grid-cols-2 gap-8 mb-16 relative z-20 lg:grid-cols-4">
               {[
                 {
                   icon: Briefcase,
-                  title: "Occupational Medicine",
+                  title: "Physical Exams",
                   items: [
-                    "Pre-Employment Physical Exams",
-                    "DOT Physicals & Drug Testing",
-                    "Work Injury Care & Management",
-                    "Drug & Alcohol Screening",
-                    "Respirator Fit Testing",
-                    "OSHA Compliance Services"
+                    "Pre-Employment/Placement Exams",
+                    "Annual Physical/Surveillance",
+                    "Return to Work Exams",
+                    "Fitness for Duty Exams",
+                    "Post Exposure Exams",
+                    "DOT & Respirator Exams"
                   ],
                   color: "primary"
                 },
                 {
                   icon: HeartPulse,
-                  title: "Internal Medicine",
+                  title: "Injury/Illness Treatment",
                   items: [
-                    "Preventive Care & Wellness",
-                    "Chronic Condition Management",
-                    "Annual Physical Exams",
-                    "Diabetes & Hypertension Care",
-                    "Acute Illness Treatment",
-                    "Health Risk Assessments"
+                    "Work-Related Injuries",
+                    "Non-Work Related Illness",
+                    "Occupational Disease Care",
+                    "Injury Management & Recovery",
+                    "Fitness for Duty Determination",
+                    "Treatment Coordination"
                   ],
                   color: "accent"
                 },
                 {
                   icon: Activity,
-                  title: "Wellness Programs",
+                  title: "Diagnostic Testing",
                   items: [
-                    "Employee Health Screenings",
-                    "Workplace Safety Training",
-                    "Health & Wellness Education",
-                    "Ergonomic Assessments",
-                    "Immunization Programs",
-                    "Corporate Wellness Plans"
+                    "Spirometry Testing",
+                    "Audiometry",
+                    "Vision Screening",
+                    "EKG Testing",
+                    "Blood Work & Labs",
+                    "Respirator Fit Testing"
                   ],
                   color: "primary"
                 },
                 {
                   icon: Shield,
-                  title: "Migration Service",
+                  title: "Substance & Health",
                   items: [
-                    "USCIS I-693 Medical Examination",
-                    "Certified & Sealed Envelope",
-                    "Patient Copy I-693 Forms",
-                    "Physical Examination",
-                    "Vaccination Status Verification",
-                    "TB Testing & Blood Tests"
+                    "Alcohol Testing",
+                    "Urine Drug Screening",
+                    "MRO Services",
+                    "Immunization",
+                    "Health & Safety Consultation",
+                    "Wellness & Health Promotions"
                   ],
                   color: "accent"
                 }
