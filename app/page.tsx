@@ -113,22 +113,34 @@ export default function BrochurePage() {
             {/* Desktop Menu */}
             <div className="hidden lg:flex gap-10 items-center">
               {[
-                { id: "home", label: "Home" },
-                { id: "about", label: "About Us" },
-                { id: "team", label: "Our Team" },
-                { id: "location", label: "Location" },
-                { id: "services", label: "Services" },
-                { id: "wellness", label: "Wellness" },
-                { id: "contact", label: "Contact" }
+                { id: "home", label: "Home", href: null },
+                { id: "about", label: "About Us", href: null },
+                { id: "team", label: "Our Team", href: null },
+                { id: "location", label: "Location", href: null },
+                { id: "services", label: "Services", href: null },
+                { id: "wellness", label: "Wellness", href: null },
+                { id: "contact", label: "Contact Us", href: "/contact" },
+                { id: "patient-form", label: "New Patient Form", href: "/new-patient-form" }
               ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                link.href ? (
+                  <Link
+                    key={link.id}
+                    href={link.href}
+                    className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                ) : (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </button>
+                )
               ))}
             </div>
 
