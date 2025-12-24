@@ -488,11 +488,11 @@ export default function BrochurePage() {
                 </Card>
               </div>
 
-              {/* Immigration Medical Services Card */}
+              {/* Work Site Visits & Travel Medicine */}
               <div className="mt-12">
                 <div className="text-center mb-12">
                   <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-                    Immigration Medical Services
+                    Specialized Occupational Services
                   </h3>
                 </div>
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
