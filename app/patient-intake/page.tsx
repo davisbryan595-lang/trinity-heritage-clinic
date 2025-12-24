@@ -232,9 +232,35 @@ export default function PatientIntakePage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="font-serif text-4xl font-bold text-primary-foreground mb-2">New Patient Intake Form</h1>
-          <p className="text-muted-foreground">Heritage Healthcare Clinic</p>
-          <div className="mt-4 bg-primary/10 px-4 py-2 rounded-lg border border-primary/20">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h1 className="font-serif text-4xl font-bold text-primary-foreground mb-2">New Patient Intake Form</h1>
+              <p className="text-muted-foreground">Heritage Healthcare Clinic</p>
+            </div>
+            {hasSavedData && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => {
+                  localStorage.removeItem('patientIntakeFormData')
+                  form.reset()
+                  setHasSavedData(false)
+                  setCurrentPage(0)
+                }}
+                className="text-sm"
+              >
+                Start Over
+              </Button>
+            )}
+          </div>
+          {hasSavedData && (
+            <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+              <p className="text-sm text-green-700">
+                ✓ Your form data is being automatically saved
+              </p>
+            </div>
+          )}
+          <div className="bg-primary/10 px-4 py-2 rounded-lg border border-primary/20">
             <p className="text-sm text-muted-foreground">
               Page {currentPage + 1} of {pages.length}
             </p>
