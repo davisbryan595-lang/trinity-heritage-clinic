@@ -881,10 +881,10 @@ export default function BrochurePage() {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
-                    Comprehensive Preventive Care
+                    Health & Safety Consultation
                   </h3>
                   <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
+                    At Heritage Healthcare Clinic, we believe that prevention is the best approach. Our comprehensive health and safety consultation programs are designed to identify occupational health risks and keep your employees healthy and productive.
                   </p>
                 </div>
 
