@@ -636,10 +636,13 @@ export default function NewPatientFormPage() {
             </Accordion>
 
             {/* MEDICATIONS SECTION */}
-            <Accordion type="single" collapsible className="border border-primary/20 rounded-lg">
+            <Accordion type="single" collapsible className="border-2 border-primary/30 rounded-xl overflow-hidden shadow-md">
               <AccordionItem value="medications" className="border-0">
-                <AccordionTrigger className="px-6 py-4 hover:bg-primary/5 rounded-lg">
-                  <span className="font-semibold text-lg text-primary-foreground">Medications & Allergies</span>
+                <AccordionTrigger className="px-6 py-5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 bg-primary/5 rounded-none border-b-2 border-primary/20 transition-all duration-200">
+                  <span className="font-bold text-lg text-primary-foreground flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    Medications & Allergies
+                  </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-6 space-y-6 border-t border-primary/20">
                   <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
