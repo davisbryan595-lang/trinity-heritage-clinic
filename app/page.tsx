@@ -93,7 +93,7 @@ export default function BrochurePage() {
               <div className="relative w-64 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Trinity Heritage Clinic"
+                  alt="Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -104,7 +104,7 @@ export default function BrochurePage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage</span>
+                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export default function BrochurePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                About Trinity Heritage Clinic
+                About Heritage Healthcare Clinic
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Comprehensive healthcare for your professional and personal wellness
@@ -285,18 +285,18 @@ export default function BrochurePage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
-                    Our Mission
+                    Our Pledge
                   </h3>
                   <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    Trinity Heritage Clinic is dedicated to providing compassionate, comprehensive healthcare services to working professionals and businesses in Mansfield, Texas. With over 20 years of expertise in occupational and internal medicine, we serve as a trusted partner in keeping your workforce healthy, safe, and productive.
+                    Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
                   </p>
                   <p className="text-lg text-foreground leading-relaxed font-medium">
-                    Our commitment to excellence, combined with personalized care and evidence-based medicine, ensures that every patient receives the attention and treatment they deserve.
+                    Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
                   </p>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6">
-                  <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Trinity Heritage Clinic?</h4>
+                  <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Heritage Healthcare Clinic?</h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -308,11 +308,11 @@ export default function BrochurePage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">Comprehensive Occupational & Internal Medicine Services</span>
+                      <span className="text-foreground font-medium">Comprehensive Occupational Medicine Services</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">USCIS Certified Medical Examination Services</span>
+                      <span className="text-foreground font-medium">Integrated Care & Standardized Communication</span>
                     </li>
                   </ul>
                 </div>
@@ -335,10 +335,10 @@ export default function BrochurePage() {
                 <span className="text-sm font-semibold text-primary">Our Team</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Experienced, Well-Trained Professionals
+                Our Dedicated Healthcare Team
               </h2>
               <p className="text-xl text-foreground max-w-4xl mx-auto font-medium">
-                Certified in specialties and licensed without restrictions
+                Experienced professionals certified in specialties and licensed without restrictions
               </p>
             </div>
 
@@ -363,7 +363,7 @@ export default function BrochurePage() {
                 {
                   icon: Award,
                   title: "Board Certified Physician",
-                  specialty: "Occupational & Internal Medicine",
+                  specialty: "Occupational Medicine",
                   color: "text-primary"
                 },
                 {
@@ -386,7 +386,7 @@ export default function BrochurePage() {
                 },
                 {
                   icon: Activity,
-                  title: "Certified Medical Assistants",
+                  title: "Medical Assistants",
                   specialty: "Clinical Support Services",
                   color: "text-primary"
                 },
@@ -422,10 +422,10 @@ export default function BrochurePage() {
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
                   <Award className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Our Founder</span>
+                  <span className="text-sm font-semibold">Leadership</span>
                 </div>
                 <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-                  Meet Our Founder & Medical Director
+                  Our Medical Leadership
                 </h3>
               </div>
 
@@ -445,15 +445,15 @@ export default function BrochurePage() {
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                   <CardContent className="p-10">
                     <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
-                      Dr. Victor Nwiloh
+                      Medical Director
                     </h3>
                     <p className="text-xl font-semibold text-primary mb-6">
-                      Founder & Medical Director
+                      Board Certified Occupational Medicine
                     </p>
 
                     <div className="space-y-4 mb-8">
                       <p className="text-lg text-foreground leading-relaxed">
-                        With over 20 years of experience in occupational medicine and internal medicine, Dr. Victor Nwiloh founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
+                        Our medical director brings extensive expertise in occupational medicine and is dedicated to providing excellent, compassionate care to businesses and their employees throughout the Dallas Fort Worth area.
                       </p>
 
                       <div className="space-y-3 border-t border-border pt-6">
@@ -461,97 +461,111 @@ export default function BrochurePage() {
                           <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                           <div>
                             <p className="font-semibold text-foreground">Board Certified</p>
-                            <p className="text-sm text-foreground font-medium">American Board of Occupational & Internal Medicine</p>
+                            <p className="text-sm text-foreground font-medium">American Board of Occupational Medicine</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
                           <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                           <div>
-                            <p className="font-semibold text-foreground">Licensed Professional</p>
-                            <p className="text-sm text-foreground font-medium">State of Texas Medical License #TX-12345</p>
+                            <p className="font-semibold text-foreground">Licensed & Certified</p>
+                            <p className="text-sm text-foreground font-medium">State of Texas Medical License</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
                           <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                           <div>
                             <p className="font-semibold text-foreground">Specialized Training</p>
-                            <p className="text-sm text-foreground font-medium">Fellow of American College of Occupational Medicine</p>
+                            <p className="text-sm text-foreground font-medium">Expertise in Occupational Health & Safety</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <p className="text-muted-foreground italic text-sm leading-relaxed">
-                      "My passion has always been to create a healthcare environment where working professionals receive the specialized care they deserve, combined with the personal attention that makes all the difference."
+                      "Our passion is to create a healthcare environment where working professionals and businesses receive the specialized occupational health care they deserve, combined with the personal attention that makes all the difference."
                     </p>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Immigration Medical Services Card */}
+              {/* Work Site Visits & Travel Medicine */}
               <div className="mt-12">
                 <div className="text-center mb-12">
                   <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-                    Immigration Medical Services
+                    Specialized Occupational Services
                   </h3>
                 </div>
-                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                  <CardContent className="p-10">
-                    <div className="inline-flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full mb-6">
-                      <Shield className="w-4 h-4 text-accent" />
-                      <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
-                      USCIS Certified Civil Surgeon
-                    </h3>
-                    <p className="font-semibold mb-6" style={{ color: '#8cc73f' }}>
-                      Comprehensive Immigration Medical Services
-                    </p>
-
-                    <div className="space-y-4 mb-8">
-                      <p className="text-foreground leading-relaxed font-medium">
-                        Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                    <CardContent className="p-10">
+                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                        Work Site Visits
+                      </h3>
+                      <p className="font-semibold mb-6 text-foreground">
+                        Comprehensive workplace assessments
                       </p>
 
-                      <div className="space-y-3 border-t border-border pt-6">
-                        <h4 className="font-semibold text-foreground mb-3">Migration Medical Services Include:</h4>
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">USCIS I-693 Forms</p>
-                              <p className="text-xs text-foreground font-medium">Certified and sealed envelope</p>
+                      <div className="space-y-4 mb-8">
+                        <p className="text-foreground leading-relaxed font-medium">
+                          Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
+                        </p>
+
+                        <div className="space-y-3 border-t border-border pt-6">
+                          <h4 className="font-semibold text-foreground mb-3">Benefits Include:</h4>
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Identify and abate hazards & exposures</p>
                             </div>
-                          </div>
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">Complete Medical Examination</p>
-                              <p className="text-xs text-foreground font-medium">Physical exam, vaccinations, TB & blood tests</p>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Familiarize healthcare provider with work environment</p>
                             </div>
-                          </div>
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">Expert Medical Questions</p>
-                              <p className="text-xs text-foreground font-medium">For non-medical immigration inquiries, consult an immigration attorney</p>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Improved occupational health & safety planning</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </CardContent>
+                  </Card>
 
-                    <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
-                      <p className="text-foreground text-sm font-medium">
-                        📋 Learn more at <a href="https://www.uscis.gov/i-693" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:underline">https://www.uscis.gov/i-693</a>
+                  <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                    <CardContent className="p-10">
+                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                        Travel Medicine
+                      </h3>
+                      <p className="font-semibold mb-6 text-foreground">
+                        Health & wellness for business travelers
                       </p>
-                      <p className="text-foreground text-sm font-medium mt-2">
-                        💬 Call today for pricing. Additional fees apply for vaccine administration.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+
+                      <div className="space-y-4 mb-8">
+                        <p className="text-foreground leading-relaxed font-medium">
+                          HHC offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
+                        </p>
+
+                        <div className="space-y-3 border-t border-border pt-6">
+                          <h4 className="font-semibold text-foreground mb-3">Services Include:</h4>
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Individualized travel health assessment</p>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Travel-specific vaccinations</p>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-sm font-medium">Country-specific medical guidance</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>
@@ -702,57 +716,57 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20 lg:grid-cols-4">
+            <div className="grid md:grid-cols-2 gap-8 mb-16 relative z-20 lg:grid-cols-4">
               {[
                 {
                   icon: Briefcase,
-                  title: "Occupational Medicine",
+                  title: "Physical Exams",
                   items: [
-                    "Pre-Employment Physical Exams",
-                    "DOT Physicals & Drug Testing",
-                    "Work Injury Care & Management",
-                    "Drug & Alcohol Screening",
-                    "Respirator Fit Testing",
-                    "OSHA Compliance Services"
+                    "Pre-Employment/Placement Exams",
+                    "Annual Physical/Surveillance",
+                    "Return to Work Exams",
+                    "Fitness for Duty Exams",
+                    "Post Exposure Exams",
+                    "DOT & Respirator Exams"
                   ],
                   color: "primary"
                 },
                 {
                   icon: HeartPulse,
-                  title: "Internal Medicine",
+                  title: "Injury/Illness Treatment",
                   items: [
-                    "Preventive Care & Wellness",
-                    "Chronic Condition Management",
-                    "Annual Physical Exams",
-                    "Diabetes & Hypertension Care",
-                    "Acute Illness Treatment",
-                    "Health Risk Assessments"
+                    "Work-Related Injuries",
+                    "Non-Work Related Illness",
+                    "Occupational Disease Care",
+                    "Injury Management & Recovery",
+                    "Fitness for Duty Determination",
+                    "Treatment Coordination"
                   ],
                   color: "accent"
                 },
                 {
                   icon: Activity,
-                  title: "Wellness Programs",
+                  title: "Diagnostic Testing",
                   items: [
-                    "Employee Health Screenings",
-                    "Workplace Safety Training",
-                    "Health & Wellness Education",
-                    "Ergonomic Assessments",
-                    "Immunization Programs",
-                    "Corporate Wellness Plans"
+                    "Spirometry Testing",
+                    "Audiometry",
+                    "Vision Screening",
+                    "EKG Testing",
+                    "Blood Work & Labs",
+                    "Respirator Fit Testing"
                   ],
                   color: "primary"
                 },
                 {
                   icon: Shield,
-                  title: "Migration Service",
+                  title: "Substance & Health",
                   items: [
-                    "USCIS I-693 Medical Examination",
-                    "Certified & Sealed Envelope",
-                    "Patient Copy I-693 Forms",
-                    "Physical Examination",
-                    "Vaccination Status Verification",
-                    "TB Testing & Blood Tests"
+                    "Alcohol Testing",
+                    "Urine Drug Screening",
+                    "MRO Services",
+                    "Immunization",
+                    "Health & Safety Consultation",
+                    "Wellness & Health Promotions"
                   ],
                   color: "accent"
                 }
@@ -807,7 +821,7 @@ export default function BrochurePage() {
             {/* CTA Banner */}
             <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
               <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
-                Ready to Keep Your Workforce Well?
+                Working to Keep Your Workforce Well
               </h3>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 To learn more about how we can help your business, call us today
@@ -867,10 +881,10 @@ export default function BrochurePage() {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
-                    Comprehensive Preventive Care
+                    Health & Safety Consultation
                   </h3>
                   <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
+                    At Heritage Healthcare Clinic, we believe that prevention is the best approach. Our comprehensive health and safety consultation programs are designed to identify occupational health risks and keep your employees healthy and productive.
                   </p>
                 </div>
 
@@ -878,23 +892,23 @@ export default function BrochurePage() {
                   {[
                     {
                       icon: Activity,
-                      title: "Health Screenings",
-                      description: "Regular health assessments and risk evaluations"
+                      title: "Health Fairs & Screenings",
+                      description: "On-site health screenings for employee wellness"
                     },
                     {
                       icon: Briefcase,
-                      title: "Workplace Wellness",
-                      description: "Customized corporate wellness programs"
+                      title: "Health Topics Presentations",
+                      description: "Educational seminars (Lunch and Learn sessions)"
                     },
                     {
                       icon: Users,
-                      title: "Group Education",
-                      description: "Health education and training sessions"
+                      title: "Seasonal Vaccinations",
+                      description: "Flu shots and preventive immunizations"
                     },
                     {
                       icon: HeartPulse,
-                      title: "Chronic Care Management",
-                      description: "Ongoing support for managing health conditions"
+                      title: "Occupational Safety Consultation",
+                      description: "Expert guidance on workplace health and safety"
                     }
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm">
@@ -916,17 +930,17 @@ export default function BrochurePage() {
               {[
                 {
                   number: "20+",
-                  label: "Years of Excellence",
+                  label: "Years of Excellence in Occupational Medicine",
                   icon: Award
                 },
                 {
-                  number: "2,500+",
-                  label: "Employees Served",
+                  number: "Many",
+                  label: "Businesses Served in DFW",
                   icon: Users
                 },
                 {
-                  number: "98%",
-                  label: "Satisfaction Rate",
+                  number: "100%",
+                  label: "Certified Healthcare Professionals",
                   icon: CheckCircle2
                 }
               ].map((stat, idx) => (
@@ -974,10 +988,10 @@ export default function BrochurePage() {
                 <span className="text-sm font-semibold text-primary">Contact Us</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Get Started with Trinity Heritage Clinic
+                Get Started with Heritage Healthcare Clinic
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Reach out today to learn how we can serve your business
+                Reach out today to learn how we can help keep your workforce well
               </p>
             </div>
 
@@ -999,15 +1013,15 @@ export default function BrochurePage() {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone">Phone *</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="(817) 555-1234"
-                          className="mt-2"
-                          required
-                        />
-                      </div>
+                      <Label htmlFor="phone">Phone *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="(817) 453-7522"
+                        className="mt-2"
+                        required
+                      />
+                    </div>
 
                       <div>
                         <Label htmlFor="email">Email *</Label>
@@ -1028,9 +1042,10 @@ export default function BrochurePage() {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="occupational">Occupational Medicine</SelectItem>
-                          <SelectItem value="internal">Internal Medicine</SelectItem>
-                          <SelectItem value="wellness">Wellness Programs</SelectItem>
+                          <SelectItem value="physical-exam">Physical Exams</SelectItem>
+                          <SelectItem value="injury-treatment">Injury/Illness Treatment</SelectItem>
+                          <SelectItem value="diagnostic">Diagnostic Testing</SelectItem>
+                          <SelectItem value="consultation">Health & Safety Consultation</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -1040,7 +1055,7 @@ export default function BrochurePage() {
                       <Label htmlFor="message">Message</Label>
                       <Textarea
                         id="message"
-                        placeholder="Tell us about your needs..."
+                        placeholder="Tell us about your business needs..."
                         rows={5}
                         className="mt-2"
                       />
@@ -1086,14 +1101,14 @@ export default function BrochurePage() {
                         <Phone className="w-6 h-6 text-accent" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours</h4>
+                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours & Urgent</h4>
                         <a
-                          href="tel:817-966-3989"
+                          href="tel:817-966-3999"
                           className="text-2xl font-bold text-accent hover:underline block mb-2"
                         >
-                          (817) 966-3989
+                          (817) 966-3999
                         </a>
-                        <p className="text-sm text-foreground font-medium">For urgent matters only</p>
+                        <p className="text-sm text-foreground font-medium">For urgent medical matters</p>
                       </div>
                     </div>
                   </CardContent>
@@ -1212,9 +1227,9 @@ export default function BrochurePage() {
           </div>
 
           <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
-            <p>&copy; {new Date().getFullYear()} Trinity Heritage Clinic. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary">
-              To learn more, call us today: (817) 453-7522
+              1475 Heritage Pkwy Ste 225, Mansfield, TX 76063 | (817) 453-7522
             </p>
           </div>
         </div>

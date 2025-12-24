@@ -35,7 +35,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-5xl font-bold text-primary-foreground mb-4">Get in Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl">
-            Ready to cherish your health? Reach out to Trinity Heritage Clinic today
+            Contact Heritage Healthcare Clinic for occupational health services
           </p>
         </div>
       </section>
@@ -127,9 +127,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-primary-foreground mb-1">Our Location</h3>
                     <p className="text-muted-foreground">
-                      2204 Joe Battle Blvd D203
+                      1475 Heritage Pkwy Ste 225
                       <br />
-                      El Paso, TX 79938
+                      Mansfield, TX 76063
                     </p>
                   </div>
                 </div>
@@ -140,8 +140,8 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-primary-foreground mb-1">Phone</h3>
-                    <a href="tel:915-300-2276" className="text-accent hover:text-accent/80 font-semibold">
-                      (915) 300-2276
+                    <a href="tel:817-453-7522" className="text-accent hover:text-accent/80 font-semibold">
+                      (817) 453-7522
                     </a>
                   </div>
                 </div>
@@ -151,13 +151,10 @@ export default function ContactPage() {
                 <div className="flex gap-4 items-start">
                   <Mail className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-primary-foreground mb-1">Email</h3>
-                    <a
-                      href="mailto:Trinityheritagecliic@gmail.com"
-                      className="text-accent hover:text-accent/80 break-all"
-                    >
-                      Trinityheritagecliic@gmail.com
-                    </a>
+                    <h3 className="font-semibold text-primary-foreground mb-1">Fax</h3>
+                    <p className="text-accent font-semibold">
+                      1-866-665-6659
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -168,11 +165,11 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-primary-foreground mb-1">Office Hours</h3>
                     <p className="text-muted-foreground text-sm">
-                      Monday - Friday: 9:00 AM - 5:00 PM
+                      Monday - Friday: 8:30 AM - 5:30 PM
                       <br />
-                      Saturday: By Appointment
+                      (Closed for lunch 12:00 PM - 1:00 PM)
                       <br />
-                      Sunday: Closed
+                      Saturday - Sunday: Closed
                     </p>
                   </div>
                 </div>
@@ -180,7 +177,7 @@ export default function ContactPage() {
 
               <div className="bg-primary/10 p-6 rounded-lg border border-primary/20">
                 <p className="font-serif text-lg font-semibold text-primary-foreground italic">
-                  "Cherish Your Health... We Do!"
+                  "Always Friendly. Always Knowledgeable."
                 </p>
               </div>
             </div>
@@ -192,9 +189,9 @@ export default function ContactPage() {
       <section className="py-16 bg-accent text-center">
         <h2 className="font-serif text-3xl font-bold text-accent-foreground mb-4">Still Have Questions?</h2>
         <p className="text-accent-foreground/90 mb-6">Give us a call or schedule your free consultation online</p>
-        <a href="tel:915-300-2276">
+        <a href="tel:817-453-7522">
           <Button size="lg" className="bg-accent-foreground text-accent hover:bg-white">
-            Call (915) 300-2276
+            Call (817) 453-7522
           </Button>
         </a>
       </section>
