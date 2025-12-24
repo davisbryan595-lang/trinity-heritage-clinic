@@ -142,6 +142,7 @@ type PatientIntakeFormData = z.infer<typeof patientIntakeSchema>
 export default function PatientIntakePage() {
   const [currentPage, setCurrentPage] = useState(0)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [hasSavedData, setHasSavedData] = useState(false)
 
   const form = useForm<PatientIntakeFormData>({
     resolver: zodResolver(patientIntakeSchema),
@@ -157,6 +158,28 @@ export default function PatientIntakePage() {
       otherProviders: [{}, {}, {}, {}, {}],
     },
   })
+
+  // Load saved data on mount
+  useEffect(() => {
+    const savedData = localStorage.getItem('patientIntakeFormData')
+    if (savedData) {
+      try {
+        const parsedData = JSON.parse(savedData)
+        form.reset(parsedData)
+        setHasSavedData(true)
+      } catch (error) {
+        console.error('Error loading saved form data:', error)
+      }
+    }
+  }, [])
+
+  // Auto-save form data to localStorage
+  useEffect(() => {
+    const subscription = form.watch((data) => {
+      localStorage.setItem('patientIntakeFormData', JSON.stringify(data))
+    })
+    return () => subscription.unsubscribe()
+  }, [form])
 
   const onSubmit = async (data: PatientIntakeFormData) => {
     try {
