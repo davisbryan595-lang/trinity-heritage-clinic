@@ -1497,24 +1497,36 @@ export default function NewPatientFormPage() {
             )}
 
             {/* Submit Button */}
-            <div className="flex gap-4 pt-8 sticky bottom-0 bg-gradient-to-t from-white to-white/80 p-4 rounded-lg border border-primary/20">
+            <div className="flex gap-4 pt-8 sticky bottom-0 bg-gradient-to-t from-white via-white to-white/95 p-6 rounded-xl border-t-2 border-primary/20 shadow-2xl">
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-accent text-accent-foreground hover:bg-accent/90 py-3 font-semibold text-base"
+                className="flex-1 bg-gradient-to-r from-accent to-accent/80 text-white hover:from-accent/90 hover:to-accent/70 py-4 font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50"
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Patient Form'}
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Submitting...
+                  </span>
+                ) : (
+                  'Submit Patient Form'
+                )}
               </Button>
             </div>
 
-            {/* Note */}
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-              <p className="text-sm text-red-900 font-semibold mb-1">
-                Important Notice
-              </p>
-              <p className="text-red-800 text-sm">
-                This form contains protected health information and will be submitted securely to our HIPAA-compliant intake system.
-              </p>
+            {/* Final Notice */}
+            <div className="bg-gradient-to-r from-red-50 to-red-50/50 border-2 border-red-300 rounded-xl p-6 shadow-md">
+              <div className="flex gap-3">
+                <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-bold text-red-900 mb-1">
+                    Important HIPAA Notice
+                  </p>
+                  <p className="text-red-800 text-sm leading-relaxed">
+                    This form contains protected health information and will be submitted securely to our HIPAA-compliant intake system. Your data is encrypted and protected by industry standards.
+                  </p>
+                </div>
+              </div>
             </div>
           </form>
         </div>
