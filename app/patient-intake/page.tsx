@@ -192,6 +192,7 @@ export default function PatientIntakePage() {
       })
 
       if (response.ok) {
+        localStorage.removeItem('patientIntakeFormData')
         setIsSubmitted(true)
       } else {
         alert('Error submitting form. Please try again.')
