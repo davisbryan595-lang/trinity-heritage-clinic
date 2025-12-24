@@ -158,10 +158,25 @@ export default function PatientIntakePage() {
     },
   })
 
-  const onSubmit = (data: PatientIntakeFormData) => {
-    console.log('Form Data:', data)
-    setIsSubmitted(true)
-    // Here you would typically send the data to your backend
+  const onSubmit = async (data: PatientIntakeFormData) => {
+    try {
+      const response = await fetch('/api/patient-intake', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        alert('Error submitting form. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('Error submitting form. Please try again.')
+    }
   }
 
   const pages = [
