@@ -219,7 +219,12 @@ export default function PatientIntakePage() {
             <h1 className="text-4xl font-bold text-green-600 mb-4">Thank You!</h1>
             <p className="text-lg text-muted-foreground mb-8">Your patient intake form has been submitted successfully.</p>
             <p className="text-muted-foreground mb-8">Our team will review your information and contact you soon to schedule your appointment.</p>
-            <Button onClick={() => { setIsSubmitted(false); form.reset() }}>
+            <Button onClick={() => {
+              setIsSubmitted(false)
+              setCurrentPage(0)
+              setHasSavedData(false)
+              form.reset()
+            }}>
               Submit Another Form
             </Button>
           </Card>
