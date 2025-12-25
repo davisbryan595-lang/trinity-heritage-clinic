@@ -180,9 +180,9 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="md:col-span-2">
-              <Card className="p-8 md:p-10 border-2 border-primary/40 bg-gradient-to-br from-primary/8 to-accent/5 shadow-lg">
-                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Send Us a Message</h2>
-                <p className="text-foreground mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+              <Card className="p-8 md:p-10 border-2 border-primary/60 bg-gradient-to-br from-primary/25 via-primary/15 to-accent/20 shadow-xl">
+                <h2 className="font-serif text-3xl font-bold text-primary-foreground mb-2">Send Us a Message</h2>
+                <p className="text-primary-foreground font-medium mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
