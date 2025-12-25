@@ -180,14 +180,14 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="md:col-span-2">
-              <Card className="p-8 md:p-10 border-2 border-primary/20">
-                <h2 className="font-serif text-3xl font-bold text-primary-foreground mb-2">Send Us a Message</h2>
-                <p className="text-muted-foreground mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+              <Card className="p-8 md:p-10 border-2 border-primary/30 bg-gradient-to-br from-primary/8 to-accent/5">
+                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Send Us a Message</h2>
+                <p className="text-foreground mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <Label htmlFor="name" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="name" className="text-sm font-semibold text-primary mb-2 block">
                       Name <span className="text-red-500">*</span>
                     </Label>
                     <Input
@@ -198,13 +198,13 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
                     />
                   </div>
 
                   {/* Email Field */}
                   <div>
-                    <Label htmlFor="email" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="email" className="text-sm font-semibold text-primary mb-2 block">
                       Email <span className="text-red-500">*</span>
                     </Label>
                     <Input
@@ -215,13 +215,13 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
                     />
                   </div>
 
                   {/* Phone Field */}
                   <div>
-                    <Label htmlFor="phone" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="phone" className="text-sm font-semibold text-primary mb-2 block">
                       Phone Number <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
@@ -231,13 +231,13 @@ export default function ContactPage() {
                       placeholder="(XXX) XXX-XXXX"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
                     />
                   </div>
 
                   {/* Subject Field */}
                   <div>
-                    <Label htmlFor="subject" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="subject" className="text-sm font-semibold text-primary mb-2 block">
                       Subject <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
@@ -247,13 +247,13 @@ export default function ContactPage() {
                       placeholder="What is this regarding?"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
                     />
                   </div>
 
                   {/* Message Field */}
                   <div>
-                    <Label htmlFor="message" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="message" className="text-sm font-semibold text-primary mb-2 block">
                       Message <span className="text-red-500">*</span>
                     </Label>
                     <Textarea
@@ -264,7 +264,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full resize-none"
+                      className="w-full resize-none bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
                     />
                   </div>
 
