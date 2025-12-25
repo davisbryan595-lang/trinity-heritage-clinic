@@ -101,8 +101,8 @@ export default function PatientFormsPage() {
                 </a>
               </div>
 
-              <div className="bg-accent/10 border-l-4 border-accent px-4 py-3 rounded">
-                <p className="text-sm text-foreground font-medium">
+              <div className="bg-accent/15 border-l-4 border-accent px-4 py-3 rounded">
+                <p className="text-sm text-accent font-semibold">
                   ✓ Securely complete at home • ✓ Bring to your appointment or fax
                 </p>
               </div>
