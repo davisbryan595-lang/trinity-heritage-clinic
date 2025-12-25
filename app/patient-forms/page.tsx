@@ -28,11 +28,11 @@ export default function PatientFormsPage() {
       <section className="py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Primary Download Card */}
-          <Card className="border-2 border-primary/20 overflow-hidden mb-12 hover:border-accent/40 transition-colors">
-            <div className="p-8 md:p-10">
+          <Card className="border-2 border-primary/40 overflow-hidden mb-12 hover:border-accent/60 transition-colors bg-white shadow-lg">
+            <div className="p-8 md:p-10 bg-gradient-to-br from-white to-primary/5">
               <div className="flex gap-4 mb-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-6 h-6 text-accent" />
                 </div>
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
