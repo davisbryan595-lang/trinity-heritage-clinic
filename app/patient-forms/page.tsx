@@ -6,9 +6,9 @@ import { Download, Phone, Clock, AlertCircle, MapPin, FileText } from "lucide-re
 
 export default function PatientFormsPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-background to-primary/5 pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-primary/5 border-b border-primary/10">
+      <section className="relative py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
