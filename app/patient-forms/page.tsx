@@ -6,18 +6,18 @@ import { Download, Phone, Clock, AlertCircle, MapPin, FileText } from "lucide-re
 
 export default function PatientFormsPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-accent/5 to-primary/15 pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-primary/5 border-b border-primary/10">
+      <section className="relative py-12 md:py-16 bg-gradient-to-r from-primary/20 to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">
               Patient Forms
             </h1>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-xl text-primary/80 mb-6 max-w-2xl mx-auto font-semibold">
               Download and complete your paperwork at home
             </p>
-            <p className="text-lg text-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-primary/90 max-w-3xl mx-auto leading-relaxed font-medium">
               To save time during your visit, please download, print, and fill out the form below. Bring the completed form to your appointment, or fax it securely to <span className="font-semibold">1-866-665-6659</span>.
             </p>
           </div>
@@ -25,20 +25,20 @@ export default function PatientFormsPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Primary Download Card */}
-          <Card className="border-2 border-primary/20 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 mb-12">
-            <div className="p-8 md:p-12 bg-gradient-to-br from-white to-primary/5">
+          <Card className="border-2 border-primary/40 overflow-hidden mb-12 hover:border-accent/60 transition-colors bg-white shadow-lg">
+            <div className="p-8 md:p-10 bg-gradient-to-br from-white to-primary/5">
               <div className="flex gap-4 mb-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
                     New Patient Paperwork
                   </h2>
-                  <p className="text-sm font-semibold text-muted-foreground">February 2018</p>
+                  <p className="text-sm font-semibold text-primary/70">February 2018</p>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export default function PatientFormsPage() {
                 >
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-bold text-lg py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                    className="w-full bg-gradient-to-r from-accent to-accent/90 hover:from-accent/95 hover:to-accent/85 text-accent-foreground font-bold text-lg py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-200"
                   >
                     <Download className="w-5 h-5 mr-3" />
                     Download New Patient Form (PDF)
@@ -101,8 +101,8 @@ export default function PatientFormsPage() {
                 </a>
               </div>
 
-              <div className="bg-accent/10 border-l-4 border-accent px-4 py-3 rounded">
-                <p className="text-sm text-foreground font-medium">
+              <div className="bg-accent/15 border-l-4 border-accent px-4 py-3 rounded">
+                <p className="text-sm text-accent font-semibold">
                   ✓ Securely complete at home • ✓ Bring to your appointment or fax
                 </p>
               </div>
@@ -112,8 +112,8 @@ export default function PatientFormsPage() {
           {/* Additional Info Section */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Contact Info */}
-            <Card className="p-8 border border-primary/20 rounded-xl">
-              <h3 className="font-bold text-xl text-primary-foreground mb-6 flex items-center gap-2">
+            <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
+              <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5 text-accent" />
                 Contact Us
               </h3>
@@ -144,8 +144,8 @@ export default function PatientFormsPage() {
             </Card>
 
             {/* Location Info */}
-            <Card className="p-8 border border-primary/20 rounded-xl">
-              <h3 className="font-bold text-xl text-primary-foreground mb-6 flex items-center gap-2">
+            <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
+              <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-accent" />
                 Our Location
               </h3>
@@ -173,9 +173,9 @@ export default function PatientFormsPage() {
           </div>
 
           {/* Instructions Card */}
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-xl">
-            <h3 className="font-bold text-2xl text-primary-foreground mb-6 flex items-center gap-2">
-              <Clock className="w-6 h-6 text-accent" />
+          <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
+            <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-accent" />
               How to Submit Your Forms
             </h3>
             <div className="space-y-4">
@@ -222,10 +222,10 @@ export default function PatientFormsPage() {
           </Card>
 
           {/* HIPAA Notice */}
-          <div className="mt-12 bg-blue-50 border-2 border-blue-200 rounded-xl p-6 flex gap-4">
-            <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div className="mt-12 p-4 bg-blue-50 border border-blue-200 rounded-lg flex gap-3">
+            <AlertCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-blue-900 mb-2">Your Privacy Matters</p>
+              <p className="font-semibold text-blue-900 mb-1">Your Privacy Matters</p>
               <p className="text-sm text-blue-800 leading-relaxed">
                 When you complete and fax or bring your form to us, your protected health information (PHI) is handled securely in accordance with HIPAA regulations. We do not store your health data in any online system, ensuring maximum privacy and security.
               </p>
