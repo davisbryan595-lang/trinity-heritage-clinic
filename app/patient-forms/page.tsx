@@ -25,7 +25,7 @@ export default function PatientFormsPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Primary Download Card */}
           <Card className="border-2 border-primary/20 overflow-hidden mb-12 hover:border-accent/40 transition-colors">
