@@ -35,10 +35,10 @@ export default function PatientFormsPage() {
                   <FileText className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
                     New Patient Paperwork
                   </h2>
-                  <p className="text-sm font-semibold text-muted-foreground">February 2018</p>
+                  <p className="text-sm font-semibold text-primary/70">February 2018</p>
                 </div>
               </div>
 
