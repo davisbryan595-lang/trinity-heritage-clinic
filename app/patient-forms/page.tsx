@@ -93,7 +93,7 @@ export default function PatientFormsPage() {
                 >
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-bold text-lg py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                    className="w-full bg-gradient-to-r from-accent to-accent/90 hover:from-accent/95 hover:to-accent/85 text-accent-foreground font-bold text-lg py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-200"
                   >
                     <Download className="w-5 h-5 mr-3" />
                     Download New Patient Form (PDF)
