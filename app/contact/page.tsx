@@ -198,7 +198,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
