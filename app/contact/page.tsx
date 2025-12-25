@@ -187,8 +187,8 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <Label htmlFor="name" className="text-sm font-semibold text-primary mb-2 block">
-                      Name <span className="text-red-500">*</span>
+                    <Label htmlFor="name" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                      Name <span className="text-red-300">*</span>
                     </Label>
                     <Input
                       id="name"
