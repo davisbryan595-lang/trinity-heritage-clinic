@@ -14,10 +14,10 @@ export default function PatientFormsPage() {
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">
               Patient Forms
             </h1>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-xl text-primary/80 mb-6 max-w-2xl mx-auto font-semibold">
               Download and complete your paperwork at home
             </p>
-            <p className="text-lg text-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-primary/90 max-w-3xl mx-auto leading-relaxed font-medium">
               To save time during your visit, please download, print, and fill out the form below. Bring the completed form to your appointment, or fax it securely to <span className="font-semibold">1-866-665-6659</span>.
             </p>
           </div>
