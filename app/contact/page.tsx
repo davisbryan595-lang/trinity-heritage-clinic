@@ -204,8 +204,8 @@ export default function ContactPage() {
 
                   {/* Email Field */}
                   <div>
-                    <Label htmlFor="email" className="text-sm font-semibold text-primary mb-2 block">
-                      Email <span className="text-red-500">*</span>
+                    <Label htmlFor="email" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                      Email <span className="text-red-300">*</span>
                     </Label>
                     <Input
                       id="email"
@@ -221,8 +221,8 @@ export default function ContactPage() {
 
                   {/* Phone Field */}
                   <div>
-                    <Label htmlFor="phone" className="text-sm font-semibold text-primary mb-2 block">
-                      Phone Number <span className="text-muted-foreground text-xs">(optional)</span>
+                    <Label htmlFor="phone" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                      Phone Number <span className="text-primary-foreground/70 text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="phone"
@@ -237,8 +237,8 @@ export default function ContactPage() {
 
                   {/* Subject Field */}
                   <div>
-                    <Label htmlFor="subject" className="text-sm font-semibold text-primary mb-2 block">
-                      Subject <span className="text-muted-foreground text-xs">(optional)</span>
+                    <Label htmlFor="subject" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                      Subject <span className="text-primary-foreground/70 text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="subject"
@@ -253,8 +253,8 @@ export default function ContactPage() {
 
                   {/* Message Field */}
                   <div>
-                    <Label htmlFor="message" className="text-sm font-semibold text-primary mb-2 block">
-                      Message <span className="text-red-500">*</span>
+                    <Label htmlFor="message" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                      Message <span className="text-red-300">*</span>
                     </Label>
                     <Textarea
                       id="message"
