@@ -222,10 +222,10 @@ export default function PatientFormsPage() {
           </Card>
 
           {/* HIPAA Notice */}
-          <div className="mt-12 bg-blue-50 border-2 border-blue-200 rounded-xl p-6 flex gap-4">
-            <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div className="mt-12 p-4 bg-blue-50 border border-blue-200 rounded-lg flex gap-3">
+            <AlertCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-blue-900 mb-2">Your Privacy Matters</p>
+              <p className="font-semibold text-blue-900 mb-1">Your Privacy Matters</p>
               <p className="text-sm text-blue-800 leading-relaxed">
                 When you complete and fax or bring your form to us, your protected health information (PHI) is handled securely in accordance with HIPAA regulations. We do not store your health data in any online system, ensuring maximum privacy and security.
               </p>
