@@ -215,7 +215,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
@@ -231,7 +231,7 @@ export default function ContactPage() {
                       placeholder="(XXX) XXX-XXXX"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
@@ -247,7 +247,7 @@ export default function ContactPage() {
                       placeholder="What is this regarding?"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
@@ -264,7 +264,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full resize-none bg-white border-primary/30 text-foreground placeholder:text-muted-foreground focus-visible:border-primary"
+                      className="w-full resize-none bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
