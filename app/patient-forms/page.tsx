@@ -112,8 +112,8 @@ export default function PatientFormsPage() {
           {/* Additional Info Section */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Contact Info */}
-            <Card className="p-8 border-2 border-primary/20 hover:border-accent/40 transition-colors">
-              <h3 className="font-semibold text-primary-foreground mb-6 flex items-center gap-2">
+            <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
+              <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5 text-accent" />
                 Contact Us
               </h3>
