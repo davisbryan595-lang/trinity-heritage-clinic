@@ -180,15 +180,15 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="md:col-span-2">
-              <Card className="p-8 md:p-10 border-2 border-primary/20">
+              <Card className="p-8 md:p-10 border-2 border-primary/60 bg-gradient-to-br from-primary/25 via-primary/15 to-accent/20 shadow-xl">
                 <h2 className="font-serif text-3xl font-bold text-primary-foreground mb-2">Send Us a Message</h2>
-                <p className="text-muted-foreground mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+                <p className="text-primary-foreground font-medium mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
                     <Label htmlFor="name" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Name <span className="text-red-500">*</span>
+                      Name <span className="text-red-300">*</span>
                     </Label>
                     <Input
                       id="name"
@@ -198,14 +198,14 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
                   {/* Email Field */}
                   <div>
                     <Label htmlFor="email" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Email <span className="text-red-500">*</span>
+                      Email <span className="text-red-300">*</span>
                     </Label>
                     <Input
                       id="email"
@@ -215,14 +215,14 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
                   {/* Phone Field */}
                   <div>
                     <Label htmlFor="phone" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Phone Number <span className="text-muted-foreground text-xs">(optional)</span>
+                      Phone Number <span className="text-primary-foreground/70 text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="phone"
@@ -231,14 +231,14 @@ export default function ContactPage() {
                       placeholder="(XXX) XXX-XXXX"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
                   {/* Subject Field */}
                   <div>
                     <Label htmlFor="subject" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Subject <span className="text-muted-foreground text-xs">(optional)</span>
+                      Subject <span className="text-primary-foreground/70 text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="subject"
@@ -247,14 +247,14 @@ export default function ContactPage() {
                       placeholder="What is this regarding?"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
                   {/* Message Field */}
                   <div>
                     <Label htmlFor="message" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Message <span className="text-red-500">*</span>
+                      Message <span className="text-red-300">*</span>
                     </Label>
                     <Textarea
                       id="message"
@@ -264,7 +264,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full resize-none"
+                      className="w-full resize-none bg-white border-2 border-primary/50 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/20"
                     />
                   </div>
 
