@@ -119,8 +119,8 @@ export default function BrochurePage() {
                 { id: "location", label: "Location", href: null },
                 { id: "services", label: "Services", href: null },
                 { id: "wellness", label: "Wellness", href: null },
-                { id: "contact", label: "Contact Us", href: "/contact" },
-                { id: "patient-form", label: "New Patient Form", href: "/new-patient-form" }
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
                 link.href ? (
                   <Link
@@ -177,8 +177,8 @@ export default function BrochurePage() {
                 { id: "location", label: "Location", href: null },
                 { id: "services", label: "Services", href: null },
                 { id: "wellness", label: "Wellness", href: null },
-                { id: "contact", label: "Contact Us", href: "/contact" },
-                { id: "patient-form", label: "New Patient Form", href: "/new-patient-form" }
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
                 link.href ? (
                   <Link
