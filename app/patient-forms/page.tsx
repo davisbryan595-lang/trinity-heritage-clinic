@@ -173,9 +173,9 @@ export default function PatientFormsPage() {
           </div>
 
           {/* Instructions Card */}
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-xl">
-            <h3 className="font-bold text-2xl text-primary-foreground mb-6 flex items-center gap-2">
-              <Clock className="w-6 h-6 text-accent" />
+          <Card className="p-8 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+            <h3 className="font-semibold text-primary-foreground mb-6 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-accent" />
               How to Submit Your Forms
             </h3>
             <div className="space-y-4">
