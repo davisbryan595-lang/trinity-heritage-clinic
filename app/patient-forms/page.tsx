@@ -144,8 +144,8 @@ export default function PatientFormsPage() {
             </Card>
 
             {/* Location Info */}
-            <Card className="p-8 border border-primary/20 rounded-xl">
-              <h3 className="font-bold text-xl text-primary-foreground mb-6 flex items-center gap-2">
+            <Card className="p-8 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <h3 className="font-semibold text-primary-foreground mb-6 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-accent" />
                 Our Location
               </h3>
