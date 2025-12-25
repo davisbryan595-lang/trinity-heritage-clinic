@@ -95,6 +95,32 @@ export default function ContactPage() {
                 </div>
               </Card>
 
+              {/* New Patient Form Card */}
+              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors bg-gradient-to-br from-accent/5 to-transparent">
+                <div className="flex gap-4 mb-4">
+                  <FileText className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-primary-foreground mb-2">New Patient Form</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Download and complete your paperwork at home to save time at your appointment.
+                    </p>
+                    <a
+                      href="/forms/Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                      download="Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                      className="inline-block"
+                    >
+                      <Button
+                        size="sm"
+                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold flex items-center gap-2"
+                      >
+                        <Download className="w-4 h-4" />
+                        Download Form
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
               {/* Phone Card */}
               <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
                 <div className="flex gap-4">
