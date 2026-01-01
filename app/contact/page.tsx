@@ -1,14 +1,15 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText } from "lucide-react"
+import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText, Menu, X } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
-import Navbar from "@/components/Navbar"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
