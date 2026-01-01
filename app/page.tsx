@@ -1003,8 +1003,8 @@ export default function BrochurePage() {
             <div>
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
               <div className="space-y-2 text-sm text-foreground font-medium">
-                <p>1475 Heritage Pkwy Ste 225</p>
-                <p>Mansfield, TX 76063</p>
+                <p>2204 Joe Battle Blvd Ste D204</p>
+                <p>El Paso, TX 79938</p>
                 <p className="pt-2">
                   Phone: <a href="tel:817-453-7522" className="text-primary hover:underline font-semibold">(817) 453-7522</a>
                 </p>
