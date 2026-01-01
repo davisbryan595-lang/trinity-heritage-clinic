@@ -176,7 +176,7 @@ export default function PatientFormsPage() {
               </div>
 
               <p className="text-foreground mb-8 leading-relaxed">
-                This comprehensive 5-page form covers all essential patient information including:
+                This comprehensive form covers all essential patient information including:
               </p>
 
               <ul className="grid md:grid-cols-2 gap-3 mb-10">
