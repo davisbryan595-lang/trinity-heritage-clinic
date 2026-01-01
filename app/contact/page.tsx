@@ -82,22 +82,28 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-background via-accent/3 to-primary/5 overflow-hidden">
+        {/* Subtle geometric background */}
+        <GeometricBackground variant="organic" className="opacity-5" opacity={1} />
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1 space-y-6">
-              <div>
-                <h2 className="font-serif text-2xl font-bold text-primary-foreground mb-6">Contact Information</h2>
+              <div className="mb-8">
+                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Contact Information</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
 
               {/* Address Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Our Location</h3>
-                    <p className="text-muted-foreground text-sm">
+                  <div className="p-3 bg-primary/20 rounded-lg">
+                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
+                    <p className="text-foreground text-sm leading-relaxed">
                       1475 Heritage Pkwy Ste 225<br />
                       Mansfield, TX 76063
                     </p>
@@ -106,12 +112,14 @@ export default function ContactPage() {
               </Card>
 
               {/* New Patient Form Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors bg-gradient-to-br from-accent/5 to-transparent">
+              <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/15 via-accent/8 to-transparent hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4 mb-4">
-                  <FileText className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="p-3 bg-accent/25 rounded-lg">
+                    <FileText className="w-6 h-6 text-accent flex-shrink-0" />
+                  </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-primary-foreground mb-2">New Patient Form</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <h3 className="font-semibold text-foreground mb-2">New Patient Form</h3>
+                    <p className="text-foreground text-sm mb-4 leading-relaxed">
                       Download and complete your paperwork at home to save time at your appointment.
                     </p>
                     <a
@@ -121,7 +129,7 @@ export default function ContactPage() {
                     >
                       <Button
                         size="sm"
-                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold flex items-center gap-2"
+                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold flex items-center gap-2 shadow-md hover:shadow-lg"
                       >
                         <Download className="w-4 h-4" />
                         Download Form
@@ -132,16 +140,18 @@ export default function ContactPage() {
               </Card>
 
               {/* Phone Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-tertiary/40 hover:border-tertiary/80 transition-all duration-300 bg-gradient-to-br from-tertiary/10 to-primary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="p-3 bg-tertiary/20 rounded-lg">
+                    <Phone className="w-6 h-6 text-tertiary flex-shrink-0" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Phone</h3>
-                    <a href="tel:817-453-7522" className="text-accent hover:text-accent/80 font-semibold text-sm block">
+                    <h3 className="font-semibold text-foreground mb-2">Phone</h3>
+                    <a href="tel:817-453-7522" className="text-tertiary hover:text-tertiary/80 font-bold text-sm block transition-colors">
                       (817) 453-7522
                     </a>
-                    <p className="text-xs text-muted-foreground mt-2">After hours urgent:</p>
-                    <a href="tel:817-966-3999" className="text-accent hover:text-accent/80 text-sm">
+                    <p className="text-xs text-muted-foreground mt-3">After hours urgent:</p>
+                    <a href="tel:817-966-3999" className="text-tertiary hover:text-tertiary/80 font-semibold text-sm transition-colors">
                       (817) 966-3999
                     </a>
                   </div>
@@ -149,12 +159,14 @@ export default function ContactPage() {
               </Card>
 
               {/* Fax Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-primary/30 hover:border-primary/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-accent/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <AlertCircle className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="p-3 bg-primary/20 rounded-lg">
+                    <AlertCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Fax</h3>
-                    <p className="text-muted-foreground text-sm font-semibold">
+                    <h3 className="font-semibold text-foreground mb-2">Fax</h3>
+                    <p className="text-foreground text-sm font-semibold">
                       1-866-665-6659
                     </p>
                   </div>
@@ -162,27 +174,31 @@ export default function ContactPage() {
               </Card>
 
               {/* Hours Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Office Hours</h3>
-                    <p className="text-muted-foreground text-sm">
-                      <span className="block font-semibold text-primary-foreground">Monday - Friday</span>
-                      8:30 AM - 5:30 PM<br />
-                      <span className="text-xs">(Closed 12:00 PM - 1:00 PM)</span>
-                    </p>
-                    <p className="text-muted-foreground text-sm mt-2">
-                      <span className="block font-semibold text-primary-foreground">Saturday - Sunday</span>
-                      Closed
-                    </p>
+                  <div className="p-3 bg-accent/15 rounded-lg">
+                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
+                    <div className="space-y-2">
+                      <div>
+                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
+                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
+                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
+                      </div>
+                      <div>
+                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
+                        <span className="text-foreground text-sm">Closed</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Card>
 
               {/* Tagline */}
-              <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 rounded-lg border border-primary/20 mt-8">
-                <p className="font-serif text-lg font-semibold text-primary-foreground italic">
+              <div className="bg-gradient-to-br from-tertiary/20 via-accent/10 to-primary/10 p-6 rounded-lg border-2 border-tertiary/30 mt-8 shadow-md">
+                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed">
                   "Always Friendly. Always Knowledgeable."
                 </p>
               </div>
