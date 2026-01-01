@@ -49,7 +49,8 @@ export default function ServicesPage() {
                   "DOT Exams",
                   "Respirator Exams",
                   "Executive Physical Exams"
-                ]
+                ],
+                color: "primary" as const
               },
               {
                 icon: Heart,
@@ -64,7 +65,8 @@ export default function ServicesPage() {
                   "Medical Case Management",
                   "Return to Work Planning",
                   "Documentation & Reporting"
-                ]
+                ],
+                color: "accent" as const
               },
               {
                 icon: Activity,
@@ -79,7 +81,8 @@ export default function ServicesPage() {
                   "Respirator Fit Testing",
                   "Baseline Testing",
                   "Follow-up Testing"
-                ]
+                ],
+                color: "primary" as const
               },
               {
                 icon: Shield,
@@ -94,25 +97,18 @@ export default function ServicesPage() {
                   "Travel Medicine",
                   "Occupational Health Counseling",
                   "Documentation Services"
-                ]
+                ],
+                color: "accent" as const
               }
             ].map((service, idx) => (
-              <Card key={idx} className="p-8 bg-white border-2 border-primary/20 hover:border-primary hover:shadow-lg transition-all">
-                <div className="flex gap-4 items-start mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-serif font-bold text-xl text-primary-foreground">{service.title}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {service.items.map((item, i) => (
-                    <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+              <AnimatedServiceCard
+                key={idx}
+                icon={service.icon}
+                title={service.title}
+                items={service.items}
+                color={service.color}
+                itemIcon={CheckCircle2}
+              />
             ))}
           </div>
         </div>
