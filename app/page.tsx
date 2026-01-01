@@ -826,9 +826,9 @@ export default function BrochurePage() {
                         </li>
                       ))}
                     </ul>
-                    <button
-                      onClick={() => scrollToSection("contact")}
-                      className={`w-full ${
+                    <Link
+                      href="/contact"
+                      className={`block w-full text-center ${
                         service.color === "primary"
                           ? "bg-primary hover:bg-primary/90"
                           : "bg-accent hover:bg-accent/90"
@@ -836,7 +836,7 @@ export default function BrochurePage() {
                     >
                       Inquire Now
                       <ChevronRight className="w-4 h-4 inline ml-2" />
-                    </button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
