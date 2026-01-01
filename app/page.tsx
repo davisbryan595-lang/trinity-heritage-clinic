@@ -218,9 +218,6 @@ export default function BrochurePage() {
             id="home"
             className="relative min-h-screen flex items-center justify-center pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
           >
-            {/* Geometric Background */}
-            <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
-
             {/* Professional Background Image */}
             <div className="absolute inset-0 opacity-55">
               <Image
@@ -232,10 +229,6 @@ export default function BrochurePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
             </div>
-
-            {/* Floating Geometric Accents */}
-            <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
-            <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
               <div
