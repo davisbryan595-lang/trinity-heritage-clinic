@@ -1027,21 +1027,32 @@ export default function BrochurePage() {
               <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {[
-                { id: "home", label: "Home" },
+                { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About Us" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
                 { id: "wellness", label: "Wellness" },
-                { id: "contact", label: "Contact" }
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {link.label}
-                </button>
+                link.href ? (
+                  <Link
+                    key={link.id}
+                    href={link.href}
+                    className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </button>
+                )
               ))}
               </div>
             </div>
