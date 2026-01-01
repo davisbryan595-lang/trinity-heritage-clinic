@@ -638,14 +638,14 @@ export default function BrochurePage() {
                         <div>
                           <p className="font-semibold text-foreground mb-1">Address</p>
                           <a
-                            href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
+                            href="https://maps.google.com/?q=2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary transition-colors"
                           >
-                            1475 Heritage Pkwy Ste 225
+                            2204 Joe Battle Blvd Ste D204
                             <br />
-                            Mansfield, TX 76063
+                            El Paso, TX 79938
                           </a>
                         </div>
                       </div>
