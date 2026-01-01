@@ -826,9 +826,9 @@ export default function BrochurePage() {
                         </li>
                       ))}
                     </ul>
-                    <button
-                      onClick={() => scrollToSection("contact")}
-                      className={`w-full ${
+                    <Link
+                      href="/contact"
+                      className={`block w-full text-center ${
                         service.color === "primary"
                           ? "bg-primary hover:bg-primary/90"
                           : "bg-accent hover:bg-accent/90"
@@ -836,7 +836,7 @@ export default function BrochurePage() {
                     >
                       Inquire Now
                       <ChevronRight className="w-4 h-4 inline ml-2" />
-                    </button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
@@ -985,209 +985,6 @@ export default function BrochurePage() {
         {/* Shape Divider */}
         <DiagonalShapeDivider color="accent" className="h-24 -mb-1" flip={true} />
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20 bg-secondary relative overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="organic" className="opacity-40" opacity={1} />
-
-          {/* Professional Background Image */}
-          <div className="absolute inset-0 opacity-08">
-            <Image
-              src="https://images.pexels.com/photos/8376177/pexels-photo-8376177.jpeg"
-              alt="Healthcare consultation"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-accent/50"></div>
-          </div>
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="top-40 right-32 opacity-20" style={{ animationDelay: "0.3s" }} />
-          <GeometricAccent className="bottom-20 left-20 opacity-15 scale-125" style={{ animationDelay: "1s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <Phone className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Contact Us</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Get Started with Heritage Healthcare Clinic
-              </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Reach out today to learn how we can help keep your workforce well
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 relative z-20">
-              {/* Contact Form */}
-              <Card className="border-2 border-primary/20 shadow-2xl animate-rotating-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Send Us a Message</h3>
-                  <form className="space-y-6">
-                    <div>
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        placeholder="John Smith"
-                        className="mt-2"
-                        required
-                      />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                      <Label htmlFor="phone">Phone *</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="(817) 453-7522"
-                        className="mt-2"
-                        required
-                      />
-                    </div>
-
-                      <div>
-                        <Label htmlFor="email">Email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="john@company.com"
-                          className="mt-2"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="service">Service Interest</Label>
-                      <Select>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="physical-exam">Physical Exams</SelectItem>
-                          <SelectItem value="injury-treatment">Injury/Illness Treatment</SelectItem>
-                          <SelectItem value="diagnostic">Diagnostic Testing</SelectItem>
-                          <SelectItem value="consultation">Health & Safety Consultation</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell us about your business needs..."
-                        rows={5}
-                        className="mt-2"
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-primary"
-                    >
-                      Send Message
-                      <ChevronRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-
-              {/* Contact Cards */}
-              <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">Call Us</h4>
-                        <a
-                          href="tel:817-453-7522"
-                          className="text-2xl font-bold text-primary hover:underline block mb-2"
-                        >
-                          (817) 453-7522
-                        </a>
-                        <p className="text-sm text-foreground font-medium">Mon-Fri: 8:30 AM - 5:30 PM</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6 text-accent" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours & Urgent</h4>
-                        <a
-                          href="tel:817-966-3999"
-                          className="text-2xl font-bold text-accent hover:underline block mb-2"
-                        >
-                          (817) 966-3999
-                        </a>
-                        <p className="text-sm text-foreground font-medium">For urgent medical matters</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">Fax</h4>
-                        <p className="text-xl font-bold text-primary">1-866-665-6659</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">Visit Us</h4>
-                        <a
-                          href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline"
-                        >
-                          1475 Heritage Pkwy Ste 225
-                          <br />
-                          Mansfield, TX 76063
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            {/* Final CTA */}
-            <div className="mt-16 text-center">
-              <p className="text-2xl font-serif font-bold text-primary mb-4">
-                Working to Keep Your Workforce Well
-              </p>
-              <p className="text-lg text-foreground font-medium">
-                To learn more, call us today: <a href="tel:817-453-7522" className="text-primary font-bold hover:underline">(817) 453-7522</a>
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
 
       {/* Footer */}
@@ -1230,21 +1027,32 @@ export default function BrochurePage() {
               <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {[
-                { id: "home", label: "Home" },
+                { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About Us" },
                 { id: "team", label: "Our Team" },
                 { id: "location", label: "Location" },
                 { id: "services", label: "Services" },
                 { id: "wellness", label: "Wellness" },
-                { id: "contact", label: "Contact" }
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {link.label}
-                </button>
+                link.href ? (
+                  <Link
+                    key={link.id}
+                    href={link.href}
+                    className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </button>
+                )
               ))}
               </div>
             </div>
