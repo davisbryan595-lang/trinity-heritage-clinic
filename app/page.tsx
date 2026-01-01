@@ -221,7 +221,7 @@ export default function BrochurePage() {
             {/* Professional Background Image */}
             <div className="absolute inset-0 opacity-55">
               <Image
-                src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2Feaa719c761d64fc58dbfe871f4fb5f8e%2Fd2c644fa07204d21bf75021cd10f2f3e?format=webp&width=800"
                 alt="Professional healthcare team at work"
                 fill
                 className="object-cover"
