@@ -1,8 +1,11 @@
 "use client"
 
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Download, Phone, Clock, AlertCircle, MapPin, FileText } from "lucide-react"
+import { Download, Phone, Clock, AlertCircle, MapPin, FileText, Menu, X } from "lucide-react"
 
 export default function PatientFormsPage() {
   return (
