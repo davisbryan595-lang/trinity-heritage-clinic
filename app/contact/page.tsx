@@ -59,15 +59,24 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-primary/5 pt-20">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">Contact Us</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
+        {/* Geometric Background */}
+        <GeometricBackground variant="diamonds" className="opacity-10" opacity={1} animated={true} />
+
+        {/* Floating Geometric Accents */}
+        <GeometricAccent className="absolute top-32 right-20 opacity-20 animate-diamond-float" />
+        <GeometricAccent className="absolute bottom-40 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+        <GeometricAccent className="absolute top-1/2 right-10 opacity-10 animate-diamond-float" style={{ animationDelay: "1s" }} />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="space-y-6">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 drop-shadow-lg">Contact Us</h1>
+            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto font-medium leading-relaxed">
               Get in touch with Heritage Healthcare Clinic. We're here to help and look forward to hearing from you.
             </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
         </div>
       </section>
