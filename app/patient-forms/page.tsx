@@ -141,7 +141,7 @@ export default function PatientFormsPage() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-r from-primary/20 to-accent/10">
+      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">
