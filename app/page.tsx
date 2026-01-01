@@ -616,7 +616,7 @@ export default function BrochurePage() {
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
                 {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7!2d-97.1!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
