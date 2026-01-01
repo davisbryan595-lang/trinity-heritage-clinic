@@ -286,9 +286,9 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Address</p>
                   <p className="text-foreground font-medium">
-                    1475 Heritage Pkwy Ste 225
+                    2204 Joe Battle Blvd Ste D204
                     <br />
-                    Mansfield, TX 76063
+                    El Paso, TX 79938
                   </p>
                 </div>
                 <div>
