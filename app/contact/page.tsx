@@ -297,17 +297,17 @@ export default function ContactPage() {
 
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
-                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div className="p-4 bg-tertiary/20 border-2 border-tertiary/50 rounded-lg flex gap-3 animate-slide-up">
+                      <CheckCircle className="w-5 h-5 text-tertiary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-green-900">Message sent successfully!</p>
-                        <p className="text-sm text-green-800">We'll get back to you as soon as possible.</p>
+                        <p className="font-semibold text-foreground">Message sent successfully!</p>
+                        <p className="text-sm text-foreground/80">We'll get back to you as soon as possible.</p>
                       </div>
                     </div>
                   )}
 
                   {submitStatus === 'error' && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex gap-3">
+                    <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg flex gap-3 animate-slide-up">
                       <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-red-900">Error sending message</p>
@@ -320,14 +320,14 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-3 font-semibold text-base"
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
 
                   {/* Note */}
-                  <p className="text-xs text-muted-foreground text-center pt-2">
-                    We'll get back to you as soon as possible. For urgent matters, please call us directly.
+                  <p className="text-xs text-muted-foreground text-center pt-2 leading-relaxed">
+                    We'll get back to you as soon as possible. For urgent matters, please call us directly at <span className="font-semibold text-primary">(817) 453-7522</span>.
                   </p>
                 </form>
               </Card>
