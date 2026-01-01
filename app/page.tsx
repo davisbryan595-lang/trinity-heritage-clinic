@@ -252,7 +252,7 @@ export default function BrochurePage() {
                 </p>
 
                 <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
-                  Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
+                  Conveniently Located in El Paso, Texas – Serving Businesses with Certified Care
                 </p>
 
                 {/* CTA Buttons */}
