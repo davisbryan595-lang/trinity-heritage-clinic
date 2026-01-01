@@ -206,9 +206,10 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="md:col-span-2">
-              <Card className="p-8 md:p-10 border-2 border-primary/60 bg-gradient-to-br from-primary/25 via-primary/15 to-accent/20 shadow-xl">
-                <h2 className="font-serif text-3xl font-bold text-primary-foreground mb-2">Send Us a Message</h2>
-                <p className="text-primary-foreground font-medium mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+              <Card className="p-8 md:p-10 border-2 border-accent/60 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/20 via-primary/12 to-tertiary/10 shadow-xl hover:shadow-2xl">
+                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Send Us a Message</h2>
+                <p className="text-foreground font-medium mb-8 text-lg leading-relaxed">Fill out the form below and we'll get back to you as soon as possible.</p>
+                <div className="w-16 h-1 bg-gradient-to-r from-accent to-tertiary rounded-full mb-8"></div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
