@@ -63,7 +63,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
         {/* Geometric Background */}
         <GeometricBackground variant="diamonds" className="opacity-10" opacity={1} animated={true} />
 
