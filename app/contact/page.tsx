@@ -76,7 +76,122 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      {/* Fixed Navbar */}
+      <nav
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white shadow-lg border-b border-border"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-40 py-4">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
+            >
+              <div className="relative w-64 h-32">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                  alt="Heritage Healthcare Clinic"
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  priority
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fallback = e.currentTarget.parentElement?.nextElementSibling
+                    if (fallback) (fallback as HTMLElement).classList.remove('hidden')
+                  }}
+                />
+                <div className="hidden flex-col">
+                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-sm text-accent font-semibold">Clinic</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex gap-10 items-center">
+              {[
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About Us", href: "/" },
+                { id: "team", label: "Our Team", href: "/" },
+                { id: "location", label: "Location", href: "/" },
+                { id: "services", label: "Services", href: "/" },
+                { id: "wellness", label: "Wellness", href: "/" },
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
+              ].map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block ml-8">
+              <a href="tel:817-453-7522">
+                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X size={28} className="text-primary" />
+              ) : (
+                <Menu size={28} className="text-primary" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
+              {[
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About Us", href: "/" },
+                { id: "team", label: "Our Team", href: "/" },
+                { id: "location", label: "Location", href: "/" },
+                { id: "services", label: "Services", href: "/" },
+                { id: "wellness", label: "Wellness", href: "/" },
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
+              ].map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="px-4 pt-4 border-t border-border">
+                <a href="tel:817-453-7522" className="block">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call (817) 453-7522
+                  </Button>
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
         {/* Geometric Background */}
