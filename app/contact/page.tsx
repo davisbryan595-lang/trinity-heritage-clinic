@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText } from "lucide-react"
+import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
