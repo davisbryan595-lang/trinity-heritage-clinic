@@ -235,8 +235,8 @@ export default function ContactPage() {
                   <div className="flex-1">
                     <h3 className="font-semibold text-primary mb-2">Our Location</h3>
                     <p className="text-foreground text-sm leading-relaxed">
-                      1475 Heritage Pkwy Ste 225<br />
-                      Mansfield, TX 76063
+                      2204 Joe Battle Blvd Ste D204<br />
+                      El Paso, TX 79938
                     </p>
                   </div>
                 </div>

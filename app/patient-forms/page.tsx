@@ -176,7 +176,7 @@ export default function PatientFormsPage() {
               </div>
 
               <p className="text-foreground mb-8 leading-relaxed">
-                This comprehensive 5-page form covers all essential patient information including:
+                This comprehensive form covers all essential patient information including:
               </p>
 
               <ul className="grid md:grid-cols-2 gap-3 mb-10">
@@ -286,9 +286,9 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Address</p>
                   <p className="text-foreground font-medium">
-                    1475 Heritage Pkwy Ste 225
+                    2204 Joe Battle Blvd Ste D204
                     <br />
-                    Mansfield, TX 76063
+                    El Paso, TX 79938
                   </p>
                 </div>
                 <div>

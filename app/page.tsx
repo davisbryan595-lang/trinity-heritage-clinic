@@ -218,13 +218,10 @@ export default function BrochurePage() {
             id="home"
             className="relative min-h-screen flex items-center justify-center pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
           >
-            {/* Geometric Background */}
-            <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
-
             {/* Professional Background Image */}
             <div className="absolute inset-0 opacity-55">
               <Image
-                src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
+                src="https://cdn.builder.io/api/v1/image/assets%2Feaa719c761d64fc58dbfe871f4fb5f8e%2Fd2c644fa07204d21bf75021cd10f2f3e?format=webp&width=800"
                 alt="Professional healthcare team at work"
                 fill
                 className="object-cover"
@@ -232,10 +229,6 @@ export default function BrochurePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
             </div>
-
-            {/* Floating Geometric Accents */}
-            <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
-            <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
               <div
@@ -245,7 +238,7 @@ export default function BrochurePage() {
               >
                 {/* Main Heading – underline removed */}
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
-                  OCCUPATIONAL MEDICINE SERVICES
+                  Internal Occupational Medicine Services
                 </h1>
 
                 {/* Subtitle */}
@@ -259,7 +252,7 @@ export default function BrochurePage() {
                 </p>
 
                 <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
-                  Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
+                  Conveniently Located in El Paso, Texas – Serving Businesses with Certified Care
                 </p>
 
                 {/* CTA Buttons */}
@@ -614,7 +607,7 @@ export default function BrochurePage() {
                 <span className="text-sm font-semibold text-primary">Our Location</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Conveniently Located in Mansfield, Texas
+                Conveniently Located in El Paso, Texas
               </h2>
             </div>
 
@@ -623,7 +616,7 @@ export default function BrochurePage() {
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
                 {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7!2d-97.1!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -645,14 +638,14 @@ export default function BrochurePage() {
                         <div>
                           <p className="font-semibold text-foreground mb-1">Address</p>
                           <a
-                            href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
+                            href="https://maps.google.com/?q=2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary transition-colors"
                           >
-                            1475 Heritage Pkwy Ste 225
+                            2204 Joe Battle Blvd Ste D204
                             <br />
-                            Mansfield, TX 76063
+                            El Paso, TX 79938
                           </a>
                         </div>
                       </div>
@@ -1010,8 +1003,8 @@ export default function BrochurePage() {
             <div>
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
               <div className="space-y-2 text-sm text-foreground font-medium">
-                <p>1475 Heritage Pkwy Ste 225</p>
-                <p>Mansfield, TX 76063</p>
+                <p>2204 Joe Battle Blvd Ste D204</p>
+                <p>El Paso, TX 79938</p>
                 <p className="pt-2">
                   Phone: <a href="tel:817-453-7522" className="text-primary hover:underline font-semibold">(817) 453-7522</a>
                 </p>
@@ -1061,7 +1054,7 @@ export default function BrochurePage() {
           <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary">
-              1475 Heritage Pkwy Ste 225, Mansfield, TX 76063 | (817) 453-7522
+              2204 Joe Battle Blvd Ste D204, El Paso, TX 79938 | (817) 453-7522
             </p>
           </div>
         </div>
