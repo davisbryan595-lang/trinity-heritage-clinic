@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Briefcase, Heart, Activity, Shield, Award, Users, CheckCircle2, Stethoscope, PhoneOff } from "lucide-react"
+import AnimatedServiceCard from "@/components/AnimatedServiceCard"
 
 export default function ServicesPage() {
   return (
