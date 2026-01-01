@@ -607,7 +607,7 @@ export default function BrochurePage() {
                 <span className="text-sm font-semibold text-primary">Our Location</span>
               </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Conveniently Located in Mansfield, Texas
+                Conveniently Located in El Paso, Texas
               </h2>
             </div>
 
