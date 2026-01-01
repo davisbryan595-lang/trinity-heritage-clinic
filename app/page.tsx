@@ -789,50 +789,14 @@ export default function BrochurePage() {
                   color: "accent"
                 }
               ].map((service, idx) => (
-                <Card
+                <AnimatedServiceCard
                   key={idx}
-                  className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 ${
-                    service.color === "primary" ? "border-primary/20 hover:border-primary" : "border-accent/20 hover:border-accent"
-                  } bg-white animate-rotating-glow`}
-                >
-                  <CardContent className="p-8">
-                    <div
-                      className={`w-16 h-16 rounded-2xl ${
-                        service.color === "primary" ? "bg-primary/10" : "bg-accent/10"
-                      } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform diamond-glow`}
-                    >
-                      <service.icon
-                        className={`w-8 h-8 ${
-                          service.color === "primary" ? "text-primary" : "text-accent"
-                        }`}
-                      />
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-6 font-serif">
-                      {service.title}
-                    </h3>
-                    <ul className="space-y-3 mb-6">
-                      {service.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                            service.color === "primary" ? "text-primary" : "text-accent"
-                          }`} />
-                          <span className="text-muted-foreground text-sm">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href="/contact"
-                      className={`block w-full text-center ${
-                        service.color === "primary"
-                          ? "bg-primary hover:bg-primary/90"
-                          : "bg-accent hover:bg-accent/90"
-                      } text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-xl`}
-                    >
-                      Inquire Now
-                      <ChevronRight className="w-4 h-4 inline ml-2" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                  icon={service.icon}
+                  title={service.title}
+                  items={service.items}
+                  color={service.color}
+                  itemIcon={CheckCircle2}
+                />
               ))}
             </div>
 
