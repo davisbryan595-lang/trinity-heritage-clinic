@@ -63,35 +63,46 @@ export default function LocationPage() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+            <div className="hidden md:flex items-center gap-3 lg:gap-6">
+              <Link href="/" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/#about" className="text-foreground hover:text-primary transition-colors font-medium">
-                About Us
+              <Link href="/#about" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/#team" className="text-foreground hover:text-primary transition-colors font-medium">
-                Our Team
+              <Link href="/#team" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Team
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/location" className="text-primary transition-colors font-bold">
+              <Link href="/gallery" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Gallery
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link href="/location" className="text-xs lg:text-sm font-semibold text-primary font-bold transition-colors relative group">
                 Location
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
               </Link>
-              <Link href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="/services" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Services
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/wellness" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="/wellness" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Wellness
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/#contact" className="text-foreground hover:text-primary transition-colors font-medium">
-                Contact Us
+              <Link href="/patient-forms" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Forms
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <a href="tel:817-453-7522">
                 <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                  size="sm"
+                  className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 shadow-lg hover:shadow-xl transition-all animate-rotating-glow border-2 border-accent"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
+                  <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
+                  <span className="hidden lg:inline">Call</span>
                 </Button>
               </a>
             </div>
