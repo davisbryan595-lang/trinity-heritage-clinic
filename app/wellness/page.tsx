@@ -127,32 +127,35 @@ export default function WellnessPage() {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <div className="md:hidden bg-white border-t border-border py-4 space-y-2">
-              <Link href="/" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded">
+            <div className="md:hidden bg-white border-t border-border py-4 space-y-2 animate-fadeInUp">
+              <Link href="/" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Home
               </Link>
-              <Link href="/#about" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded">
+              <Link href="/#about" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 About Us
               </Link>
-              <Link href="/#team" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded">
+              <Link href="/#team" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Our Team
               </Link>
-              <Link href="/location" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded">
+              <Link href="/gallery" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Gallery
+              </Link>
+              <Link href="/location" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Location
               </Link>
-              <Link href="/services" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded">
+              <Link href="/services" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Services
               </Link>
               <Link href="/wellness" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
                 Wellness
               </Link>
-              <Link href="/#contact" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded">
-                Contact Us
+              <Link href="/patient-forms" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Patient Forms
               </Link>
               <a href="tel:817-453-7522" className="block">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Now
+                  Call (817) 453-7522
                 </Button>
               </a>
             </div>
