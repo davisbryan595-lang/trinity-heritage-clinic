@@ -313,7 +313,7 @@ export default function BrochurePage() {
                   </p>
                 </div>
 
-                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6">
+                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6 animate-rotating-glow">
                   <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Heritage Healthcare Clinic?</h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
@@ -893,7 +893,7 @@ export default function BrochurePage() {
                       description: "Expert guidance on workplace health and safety"
                     }
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm">
+                    <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm animate-rotating-glow">
                       <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
                         <item.icon className="w-5 h-5" />
                       </div>
