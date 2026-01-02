@@ -342,7 +342,7 @@ export default function BrochurePage() {
 
 
         {/* Our Team Section */}
-        <section id="team" className="relative py-20 bg-white overflow-hidden">
+        <section id="team" className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
           {/* Floating Geometric Accents */}
           <GeometricAccent className="absolute top-10 left-10 opacity-10 animate-diamond-float" />
           <GeometricAccent className="absolute bottom-32 right-20 opacity-10" style={{ animationDelay: "1.5s" }} />
