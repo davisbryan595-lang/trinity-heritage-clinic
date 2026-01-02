@@ -579,353 +579,82 @@ export default function BrochurePage() {
           </div>
         </section>
 
-        {/* Shape Divider */}
-        <WaveShapeDivider color="accent" className="h-40 -mb-1" flip={true} />
-
-        {/* Location Section */}
-        <section id="location" className="relative py-12 sm:py-16 md:py-20 bg-secondary overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-32 left-20 opacity-12" style={{ animationDelay: "0.8s" }} />
-          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Our Location</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Conveniently Located in El Paso, Texas
-              </h2>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
-              {/* Map Placeholder */}
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-                {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  className="grayscale hover:grayscale-0 transition-all duration-300"
-                ></iframe>
-              </div>
-
-              {/* Location Details */}
-              <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Contact Information</h3>
-                    
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-1">Address</p>
-                          <a
-                            href="https://maps.google.com/?q=2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            2204 Joe Battle Blvd Ste D204
-                            <br />
-                            El Paso, TX 79938
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-1">Phone</p>
-                          <a
-                            href="tel:817-453-7522"
-                            className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
-                          >
-                            (817) 453-7522
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-1">Fax</p>
-                          <p className="text-muted-foreground">1-866-665-6659</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-2">Office Hours</p>
-                          <div className="text-muted-foreground space-y-1">
-                            <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
-                            <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
-                            <p>Saturday - Sunday: Closed</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* After Hours Banner */}
-                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
-                  <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
-                      <p className="mb-3">For urgent medical matters, call:</p>
-                      <a
-                        href="tel:817-966-3989"
-                        className="text-2xl font-bold hover:underline"
-                      >
-                        (817) 966-3989
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Shape Divider */}
-        <DiagonalShapeDivider color="primary" className="h-20 -mb-1" flip={true} />
-
-        {/* Services Section */}
-        <section id="services" className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
-          {/* Geometric Background */}
+        {/* Featured Sections Teaser */}
+        <section className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
           <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
-
-          {/* Floating Geometric Accents */}
           <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
           <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full mb-4 border-2 border-accent shadow-lg" style={{ backgroundColor: '#6B4C9A', color: '#ffffff' }}>
-                <Briefcase className="w-5 h-5" />
-                <span className="text-sm font-bold">Our Services</span>
-              </div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
-                Comprehensive Occupational Health Services
+                Learn More About Our Services
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Keeping your workforce healthy, safe, and productive
+                Explore our comprehensive offerings designed to keep your workforce healthy
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-16 relative z-20 lg:grid-cols-4">
-              {[
-                {
-                  icon: Briefcase,
-                  title: "Physical Exams",
-                  items: [
-                    "Pre-Employment/Placement Exams",
-                    "Annual Physical/Surveillance",
-                    "Return to Work Exams",
-                    "Fitness for Duty Exams",
-                    "Post Exposure Exams",
-                    "DOT & Respirator Exams"
-                  ],
-                  color: "primary"
-                },
-                {
-                  icon: HeartPulse,
-                  title: "Injury/Illness Treatment",
-                  items: [
-                    "Work-Related Injuries",
-                    "Non-Work Related Illness",
-                    "Occupational Disease Care",
-                    "Injury Management & Recovery",
-                    "Fitness for Duty Determination",
-                    "Treatment Coordination"
-                  ],
-                  color: "accent"
-                },
-                {
-                  icon: Activity,
-                  title: "Diagnostic Testing",
-                  items: [
-                    "Spirometry Testing",
-                    "Audiometry",
-                    "Vision Screening",
-                    "EKG Testing",
-                    "Blood Work & Labs",
-                    "Respirator Fit Testing"
-                  ],
-                  color: "primary"
-                },
-                {
-                  icon: Shield,
-                  title: "Substance & Health",
-                  items: [
-                    "Alcohol Testing",
-                    "Urine Drug Screening",
-                    "MRO Services",
-                    "Immunization",
-                    "Health & Safety Consultation",
-                    "Wellness & Health Promotions"
-                  ],
-                  color: "accent"
-                }
-              ].map((service, idx) => (
-                <AnimatedServiceCard
-                  key={idx}
-                  icon={service.icon}
-                  title={service.title}
-                  items={service.items}
-                  color={service.color}
-                  itemIcon={CheckCircle2}
-                />
-              ))}
-            </div>
-
-            {/* CTA Banner */}
-            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
-                Working to Keep Your Workforce Well
-              </h3>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                To learn more about how we can help your business, call us today
-              </p>
-              <a href="tel:817-453-7522">
-                <Button
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
-                >
-                  <Phone className="w-6 h-6 mr-3" />
-                  (817) 453-7522
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Shape Divider */}
-        <StairsShapeDivider color="accent" className="h-32 -mb-1" />
-
-        {/* Wellness & Prevention Section */}
-        <section id="wellness" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="grid" className="opacity-15" opacity={1} />
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-32 left-20 opacity-10" style={{ animationDelay: "1s" }} />
-          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.5s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full mb-4 border-2 shadow-lg" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a', borderColor: '#8cc73f' }}>
-                <HeartPulse className="w-5 h-5" />
-                <span className="text-sm font-bold">Wellness & Prevention</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
-                Proactive Health & Prevention
-              </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Keeping your workforce healthy starts with prevention and continuous wellness monitoring
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
-              {/* Wellness Image */}
-              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-                <Image
-                  src="https://images.pexels.com/photos/287237/pexels-photo-287237.jpeg"
-                  alt="Modern healthcare clinic facility with advanced wellness technology"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30"></div>
-              </div>
-
-              {/* Wellness Content */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
-                    Health & Safety Consultation
-                  </h3>
-                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    At Heritage Healthcare Clinic, we believe that prevention is the best approach. Our comprehensive health and safety consultation programs are designed to identify occupational health risks and keep your employees healthy and productive.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  {[
-                    {
-                      icon: Activity,
-                      title: "Health Fairs & Screenings",
-                      description: "On-site health screenings for employee wellness"
-                    },
-                    {
-                      icon: Briefcase,
-                      title: "Health Topics Presentations",
-                      description: "Educational seminars (Lunch and Learn sessions)"
-                    },
-                    {
-                      icon: Users,
-                      title: "Seasonal Vaccinations",
-                      description: "Flu shots and preventive immunizations"
-                    },
-                    {
-                      icon: HeartPulse,
-                      title: "Occupational Safety Consultation",
-                      description: "Expert guidance on workplace health and safety"
-                    }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm animate-rotating-glow">
-                      <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-5 h-5" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                        <p className="text-sm text-foreground font-medium">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Wellness Stats */}
-            <div className="grid md:grid-cols-3 gap-8 relative z-20 mb-12">
-              {[
-                {
-                  number: "20+",
-                  label: "Years of Excellence in Occupational Medicine",
-                  icon: Award
-                },
-                {
-                  number: "Many",
-                  label: "Businesses Served in DFW",
-                  icon: Users
-                },
-                {
-                  number: "100%",
-                  label: "Certified Healthcare Professionals",
-                  icon: CheckCircle2
-                }
-              ].map((stat, idx) => (
-                <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow bg-white shadow-md">
+            <div className="grid md:grid-cols-3 gap-8 relative z-20">
+              {/* Services Card */}
+              <Link href="/services">
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: '#8cc73f20' }}>
-                      <stat.icon className="w-8 h-8" style={{ color: '#8cc73f' }} />
+                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
+                      <Briefcase className="w-6 h-6" />
                     </div>
-                    <p className="text-4xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>{stat.number}</p>
-                    <p className="text-foreground font-semibold">{stat.label}</p>
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                      Our Services
+                    </h3>
+                    <p className="text-foreground mb-6 font-medium">
+                      From physical exams to diagnostic testing and injury treatment, discover our full range of occupational health services.
+                    </p>
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                      Learn More <ChevronRight className="w-5 h-5 ml-2" />
+                    </div>
                   </CardContent>
                 </Card>
-              ))}
+              </Link>
+
+              {/* Location Card */}
+              <Link href="/location">
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
+                  <CardContent className="p-8">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                      Our Location
+                    </h3>
+                    <p className="text-foreground mb-6 font-medium">
+                      Conveniently located in El Paso, Texas. Get directions, hours, and contact information.
+                    </p>
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                      Visit <ChevronRight className="w-5 h-5 ml-2" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Wellness Card */}
+              <Link href="/wellness">
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
+                  <CardContent className="p-8">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
+                      <HeartPulse className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                      Wellness & Prevention
+                    </h3>
+                    <p className="text-foreground mb-6 font-medium">
+                      Proactive health programs including wellness consultations, health fairs, and safety training.
+                    </p>
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                      Explore <ChevronRight className="w-5 h-5 ml-2" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </section>
