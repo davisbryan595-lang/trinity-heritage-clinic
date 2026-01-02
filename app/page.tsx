@@ -217,7 +217,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
           >
             {/* Professional Background Image */}
             <div className="absolute inset-0 opacity-55">
