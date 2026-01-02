@@ -290,11 +290,11 @@ export default function BrochurePage() {
           <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
                 About Heritage Healthcare Clinic
               </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium">
                 Comprehensive healthcare for your professional and personal wellness
               </p>
             </div>
