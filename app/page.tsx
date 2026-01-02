@@ -362,7 +362,7 @@ export default function BrochurePage() {
             </div>
 
             {/* Team Background Image */}
-            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group animate-rotating-glow border-2 border-primary/20">
+            <div className="relative mb-8 sm:mb-12 h-40 sm:h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl group animate-rotating-glow border-2 border-primary/20">
               <Image
                 src="https://images.pexels.com/photos/6098056/pexels-photo-6098056.jpeg"
                 alt="Our professional healthcare team"
@@ -371,7 +371,7 @@ export default function BrochurePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-transparent to-accent/40"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
+                <p className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
                   Our Dedicated Healthcare Team
                 </p>
               </div>
