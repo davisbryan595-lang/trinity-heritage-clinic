@@ -210,13 +210,13 @@ export default function GalleryPage() {
 
       <div className="overflow-hidden">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
+        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="organic" className="opacity-15" opacity={1} />
-          
+
           {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-20 right-20 opacity-10 animate-diamond-float" />
-          <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute top-10 right-20 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-20 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div
@@ -224,13 +224,13 @@ export default function GalleryPage() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
             >
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight drop-shadow-lg">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-primary mb-3 sm:mb-4 leading-tight drop-shadow-lg">
                 Gallery
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8" style={{ color: '#8cc73f' }}>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-4 sm:mb-6" style={{ color: '#8cc73f' }}>
                 Our Community in Action
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium">
                 Glimpses of our healthcare initiatives and professional services in action
               </p>
             </div>
