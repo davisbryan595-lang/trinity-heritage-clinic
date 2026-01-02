@@ -158,12 +158,12 @@ export default function BrochurePage() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+              className="lg:hidden p-1 rounded-lg hover:bg-primary/10 transition-colors"
             >
               {mobileMenuOpen ? (
-                <X size={28} className="text-primary" />
+                <X size={24} className="text-primary" />
               ) : (
-                <Menu size={28} className="text-primary" />
+                <Menu size={24} className="text-primary" />
               )}
             </button>
           </div>
