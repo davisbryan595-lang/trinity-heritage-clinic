@@ -281,7 +281,7 @@ export default function BrochurePage() {
             </div>
           </section>
         {/* About Us Section */}
-        <section id="about" className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+        <section id="about" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="organic" className="opacity-20" opacity={1} />
 
