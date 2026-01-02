@@ -303,13 +303,13 @@ export default function BrochurePage() {
               {/* About Content */}
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 sm:mb-4 font-serif">
                     Our Pledge
                   </h3>
-                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 sm:mb-4 font-medium">
                     Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
                   </p>
-                  <p className="text-lg text-foreground leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
                     Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
                   </p>
                 </div>
