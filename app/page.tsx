@@ -826,7 +826,7 @@ export default function BrochurePage() {
         <StairsShapeDivider color="accent" className="h-32 -mb-1" />
 
         {/* Wellness & Prevention Section */}
-        <section id="wellness" className="relative py-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+        <section id="wellness" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="grid" className="opacity-15" opacity={1} />
 
