@@ -713,7 +713,7 @@ export default function BrochurePage() {
         <DiagonalShapeDivider color="primary" className="h-20 -mb-1" flip={true} />
 
         {/* Services Section */}
-        <section id="services" className="relative py-20 bg-white overflow-hidden">
+        <section id="services" className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
 
