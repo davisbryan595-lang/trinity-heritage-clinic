@@ -257,22 +257,23 @@ export default function BrochurePage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="text-white text-lg px-10 py-6 rounded-lg shadow-2xl transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 flex items-center justify-center hover:opacity-90"
+                    className="text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 rounded-lg shadow-2xl transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 flex items-center justify-center hover:opacity-90 w-full sm:w-auto"
                     style={{ backgroundColor: '#8cc73f', borderColor: '#8cc73f' }}
                   >
-                    Learn How We Can Help Your Business
-                    <ChevronRight className="w-5 h-5 ml-2" />
+                    <span className="hidden sm:inline">Learn How We Can Help Your Business</span>
+                    <span className="sm:hidden">Learn How We Can Help</span>
+                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </button>
-                  <a href="tel:817-453-7522">
+                  <a href="tel:817-453-7522" className="w-full sm:w-auto">
                     <Button
-                      size="lg"
-                      className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent"
+                      className="bg-accent hover:bg-accent/90 text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent w-full sm:w-auto"
                     >
-                      <Phone className="w-6 h-6 mr-3" />
-                      Call (817) 453-7522
+                      <Phone className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+                      <span className="hidden sm:inline">Call (817) 453-7522</span>
+                      <span className="sm:hidden">Call Now</span>
                     </Button>
                   </a>
                 </div>
