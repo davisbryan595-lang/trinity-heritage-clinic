@@ -176,6 +176,7 @@ export default function BrochurePage() {
                 { id: "home", label: "Home", href: null },
                 { id: "about", label: "About Us", href: null },
                 { id: "team", label: "Our Team", href: null },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Location", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
