@@ -252,7 +252,7 @@ export function GeometricAccent({
         {/* Small diamond */}
         <path
           d="M 100 80 L 120 100 L 100 120 L 80 100 Z"
-          stroke="#10b981"
+          stroke="#8cc73f"
           strokeWidth="1"
           fill="none"
           opacity="0.5"

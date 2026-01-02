@@ -61,21 +61,24 @@ export default function PatientFormsPage() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-10 items-center">
+            <div className="hidden lg:flex gap-2 items-center flex-wrap justify-center">
               {[
                 { id: "home", label: "Home", href: "/" },
-                { id: "about", label: "About Us", href: "/" },
-                { id: "team", label: "Our Team", href: "/" },
-                { id: "location", label: "Location", href: "/" },
-                { id: "services", label: "Services", href: "/" },
-                { id: "wellness", label: "Wellness", href: "/" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "about", label: "About", href: "/#about" },
+                { id: "team", label: "Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
                   href={link.href}
-                  className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                  className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative group px-2 py-1 ${
+                    link.href === "/patient-forms" ? "text-primary font-bold" : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -111,11 +114,12 @@ export default function PatientFormsPage() {
             <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
               {[
                 { id: "home", label: "Home", href: "/" },
-                { id: "about", label: "About Us", href: "/" },
-                { id: "team", label: "Our Team", href: "/" },
-                { id: "location", label: "Location", href: "/" },
-                { id: "services", label: "Services", href: "/" },
-                { id: "wellness", label: "Wellness", href: "/" },
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
