@@ -324,6 +324,9 @@ export default function GalleryPage() {
       {/* Modal for Full Screen View */}
       <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
         <DialogContent className="max-w-5xl w-full h-auto max-h-[90vh] overflow-hidden p-4 sm:p-6 lg:p-8 bg-black/95 border border-accent/20 rounded-lg">
+          <DialogTitle className="sr-only">
+            {selectedIndex !== null ? galleryImages[selectedIndex].title : 'Gallery Image'}
+          </DialogTitle>
           <div className="relative w-full h-full flex flex-col items-center justify-center">
             {selectedIndex !== null && (
               <>
