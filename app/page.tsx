@@ -448,18 +448,7 @@ export default function BrochurePage() {
                 </h3>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
-                {/* Founder Image */}
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets%2F373e0b424ecc4cb281370906bc1721ca%2F8a6862c6f8a44dfdb1ab0d7815299ea9?format=webp&width=800"
-                    alt="Founder and Medical Director of Trinity Heritage Clinic"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
-                </div>
-
+              <div className="relative z-20 mb-16">
                 {/* Founder Info */}
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                   <CardContent className="p-10">
