@@ -114,11 +114,12 @@ export default function PatientFormsPage() {
             <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
               {[
                 { id: "home", label: "Home", href: "/" },
-                { id: "about", label: "About Us", href: "/" },
-                { id: "team", label: "Our Team", href: "/" },
-                { id: "location", label: "Location", href: "/" },
-                { id: "services", label: "Services", href: "/" },
-                { id: "wellness", label: "Wellness", href: "/" },
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
