@@ -112,7 +112,7 @@ export default function BrochurePage() {
             </button>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-10 items-center">
+            <div className="hidden lg:flex gap-6 xl:gap-10 items-center">
               {[
                 { id: "home", label: "Home", href: null },
                 { id: "about", label: "About Us", href: null },
@@ -127,7 +127,7 @@ export default function BrochurePage() {
                   <Link
                     key={link.id}
                     href={link.href}
-                    className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                    className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
                   >
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -136,7 +136,7 @@ export default function BrochurePage() {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                    className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
                   >
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
