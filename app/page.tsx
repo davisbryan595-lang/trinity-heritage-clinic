@@ -594,7 +594,7 @@ export default function BrochurePage() {
         <WaveShapeDivider color="accent" className="h-40 -mb-1" flip={true} />
 
         {/* Location Section */}
-        <section id="location" className="relative py-20 bg-secondary overflow-hidden">
+        <section id="location" className="relative py-12 sm:py-16 md:py-20 bg-secondary overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
 
