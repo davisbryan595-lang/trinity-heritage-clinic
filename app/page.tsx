@@ -705,11 +705,11 @@ export default function BrochurePage() {
               <div className="space-y-1 sm:space-y-2">
                 {[
                 { id: "home", label: "Home", href: "/" },
-                { id: "about", label: "About Us" },
-                { id: "team", label: "Our Team" },
-                { id: "location", label: "Location" },
-                { id: "services", label: "Services" },
-                { id: "wellness", label: "Wellness" },
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact Us", href: "/contact" }
               ].map((link) => (
