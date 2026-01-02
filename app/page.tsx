@@ -85,13 +85,13 @@ export default function BrochurePage() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-40 py-4">
+          <div className="flex justify-between items-center h-20 sm:h-28 lg:h-40 py-2 sm:py-3 lg:py-4">
             {/* Logo */}
             <button
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-64 h-32">
+              <div className="relative w-40 h-16 sm:w-52 sm:h-20 lg:w-64 lg:h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
