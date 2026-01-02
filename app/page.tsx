@@ -377,7 +377,7 @@ export default function BrochurePage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-20">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative z-20">
               {[
                 {
                   icon: Award,
@@ -420,15 +420,15 @@ export default function BrochurePage() {
                   key={idx}
                   className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white animate-rotating-glow"
                 >
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow">
-                      <member.icon className={`w-8 h-8 ${member.color} group-hover:text-white`} />
+                  <CardContent className="p-4 sm:p-6 lg:p-8 text-center">
+                    <div className="w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow">
+                      <member.icon className={`w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 ${member.color} group-hover:text-white`} />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2 font-serif">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 sm:mb-2 font-serif">
                       {member.title}
                     </h3>
-                    <p className="text-foreground text-sm mb-3 font-medium">{member.specialty}</p>
-                    <p className="text-sm text-foreground italic leading-relaxed font-medium">
+                    <p className="text-foreground text-xs sm:text-xs lg:text-sm mb-2 sm:mb-3 font-medium">{member.specialty}</p>
+                    <p className="text-xs sm:text-xs lg:text-sm text-foreground italic leading-relaxed font-medium">
                       Experienced, well-trained professional certified in specialty and licensed without restrictions
                     </p>
                   </CardContent>
