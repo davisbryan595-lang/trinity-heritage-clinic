@@ -146,11 +146,11 @@ export default function BrochurePage() {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:block ml-8">
+            <div className="hidden lg:block ml-4 xl:ml-8">
               <a href="tel:817-453-7522">
-                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                <Button className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
+                  <span className="hidden lg:inline">Call Now</span>
                 </Button>
               </a>
             </div>
