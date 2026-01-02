@@ -952,7 +952,7 @@ export default function BrochurePage() {
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mb-6 sm:mb-8">
             {/* Clinic Info */}
             <div>
-              <div className="relative w-full h-24 mb-4">
+              <div className="relative w-full h-16 sm:h-20 md:h-24 mb-3 sm:mb-4">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
@@ -960,18 +960,18 @@ export default function BrochurePage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-foreground mb-4 italic font-medium">
+              <p className="text-xs sm:text-sm text-foreground mb-3 sm:mb-4 italic font-medium">
                 "Working to Keep Your Workforce Well"
               </p>
             </div>
 
             {/* Contact */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-foreground font-medium">
+              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm md:text-base">Contact</h4>
+              <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground font-medium">
                 <p>2204 Joe Battle Blvd Ste D204</p>
                 <p>El Paso, TX 79938</p>
-                <p className="pt-2">
+                <p className="pt-1 sm:pt-2">
                   Phone: <a href="tel:817-453-7522" className="text-primary hover:underline font-semibold">(817) 453-7522</a>
                 </p>
                 <p>Fax: 1-866-665-6659</p>
@@ -983,8 +983,8 @@ export default function BrochurePage() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-              <div className="space-y-2">
+              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm md:text-base">Quick Links</h4>
+              <div className="space-y-1 sm:space-y-2">
                 {[
                 { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About Us" },
