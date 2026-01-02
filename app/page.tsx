@@ -238,21 +238,21 @@ export default function BrochurePage() {
                 }`}
               >
                 {/* Main Heading – underline removed */}
-                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
+                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight drop-shadow-lg">
                   Internal Occupational Medicine Services
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: '#8cc73f' }}>
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8" style={{ color: '#8cc73f' }}>
                   Working to Keep Your Workforce Well
                 </p>
 
                 {/* Tagline */}
-                <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-4xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium">
                   Always Friendly. Always Knowledgeable.
                 </p>
 
-                <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground max-w-3xl mx-auto mb-8 sm:mb-12 font-medium">
                   Conveniently Located in El Paso, Texas – Serving Businesses with Certified Care
                 </p>
 
