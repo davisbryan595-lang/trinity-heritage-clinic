@@ -999,7 +999,7 @@ export default function BrochurePage() {
                   <Link
                     key={link.id}
                     href={link.href}
-                    className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
+                    className="block text-xs sm:text-sm text-foreground hover:text-primary transition-colors font-medium"
                   >
                     {link.label}
                   </Link>
@@ -1007,7 +1007,7 @@ export default function BrochurePage() {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
+                    className="block text-xs sm:text-sm text-foreground hover:text-primary transition-colors font-medium"
                   >
                     {link.label}
                   </button>
@@ -1017,9 +1017,9 @@ export default function BrochurePage() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
+          <div className="border-t border-border pt-6 sm:pt-8 text-center text-xs sm:text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
-            <p className="mt-2 italic font-serif text-primary">
+            <p className="mt-2 italic font-serif text-primary text-xs sm:text-sm">
               2204 Joe Battle Blvd Ste D204, El Paso, TX 79938 | (817) 453-7522
             </p>
           </div>
