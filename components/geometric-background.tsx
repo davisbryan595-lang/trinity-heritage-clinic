@@ -23,15 +23,15 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="diamondPattern" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" />
-              <stop offset="100%" stopColor="#6B4C9A" />
+              <stop offset="0%" stopColor="var(--primary)" />
+              <stop offset="100%" stopColor="var(--accent)" />
             </linearGradient>
             <pattern id="diamondTile" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
               {/* Large diamond */}
               <path
                 d="M 60 10 L 110 60 L 60 110 L 10 60 Z"
                 fill="none"
-                stroke="#006D5B"
+                stroke="var(--primary)"
                 strokeWidth="1.5"
                 opacity="0.4"
               />
@@ -39,7 +39,7 @@ export function GeometricBackground({
               <path
                 d="M 60 40 L 90 60 L 60 80 L 30 60 Z"
                 fill="none"
-                stroke="#6B4C9A"
+                stroke="var(--accent)"
                 strokeWidth="1"
                 opacity="0.3"
               />
