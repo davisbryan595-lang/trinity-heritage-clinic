@@ -75,8 +75,8 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" />
-              <stop offset="100%" stopColor="#6B4C9A" />
+              <stop offset="0%" stopColor="var(--primary)" />
+              <stop offset="100%" stopColor="var(--accent)" />
             </linearGradient>
           </defs>
 
@@ -95,7 +95,7 @@ export function GeometricBackground({
                         : `M ${x - 75} ${y} L ${x + 75} ${y} L ${x} ${y + 80} Z`
                     }
                     fill="none"
-                    stroke="#006D5B"
+                    stroke="var(--primary)"
                     strokeWidth="1"
                     opacity={String(0.1 + (Math.sin(row + col) * 0.05))}
                   />
