@@ -239,7 +239,7 @@ export default function ContactPage() {
                   <div className="flex-1">
                     <h3 className="font-semibold text-primary mb-2">Our Location</h3>
                     <p className="text-foreground text-sm leading-relaxed">
-                      2204 Joe Battle Blvd Ste D204<br />
+                      2204 Joe Battle Blvd, STE D204<br />
                       El Paso, TX 79938
                     </p>
                   </div>
