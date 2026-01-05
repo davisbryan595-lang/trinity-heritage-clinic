@@ -11,8 +11,8 @@
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #347942;
-  /* Dark Green - professional, trustworthy */
+  --primary: #6ba842;
+  /* Bright Green - professional, vibrant */
   --primary-foreground: #ffffff;
   --secondary: #F0F4F8;
   /* Light Gray background */
@@ -29,8 +29,8 @@
   --destructive-foreground: #ffffff;
   --border: #d1d5db;
   --input: #ffffff;
-  --ring: #347942;
-  --chart-1: #347942;
+  --ring: #6ba842;
+  --chart-1: #6ba842;
   --chart-2: #6e388e;
   --chart-3: #87be52;
   --chart-4: #a678d9;
@@ -38,12 +38,12 @@
   --radius: 0.5rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1a1a;
-  --sidebar-primary: #347942;
+  --sidebar-primary: #6ba842;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #6e388e;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #d1d5db;
-  --sidebar-ring: #347942;
+  --sidebar-ring: #6ba842;
 }
 
 .dark {
