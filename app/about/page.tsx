@@ -305,7 +305,7 @@ export default function AboutPage() {
                     What sets us apart is our unwavering dedication to seeing you as a whole person—not just a collection of symptoms. Dr. Nwiloh takes the time to listen, understand your unique health needs, and partner with you to create sustainable wellness solutions that fit your life.
                   </p>
 
-                  <p style={{ color: '#8cc73f' }} className="font-semibold italic">
+                  <p style={{ color: 'var(--tertiary)' }} className="font-semibold italic">
                     We believe that lasting health comes from prevention, education, and genuine partnership. That's why we're here: to cherish your health, empower your choices, and support you every step of the way.
                   </p>
                 </div>
