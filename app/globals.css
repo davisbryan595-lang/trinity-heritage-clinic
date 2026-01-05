@@ -160,10 +160,10 @@
 
 @keyframes diamond-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(52, 121, 66, 0.3);
+    box-shadow: 0 0 20px rgba(107, 168, 66, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(52, 121, 66, 0.6);
+    box-shadow: 0 0 40px rgba(107, 168, 66, 0.6);
   }
 }
 
