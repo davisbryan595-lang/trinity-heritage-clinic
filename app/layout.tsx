@@ -63,7 +63,7 @@ export default function RootLayout({
               "email": "Trinityheritageclinic@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "2204 Joe Battle Blvd Ste D204",
+                "streetAddress": "2204 Joe Battle Blvd, STE D204",
                 "addressLocality": "El Paso",
                 "addressRegion": "TX",
                 "postalCode": "79938",

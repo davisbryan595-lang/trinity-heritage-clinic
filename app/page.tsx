@@ -91,7 +91,7 @@ export default function BrochurePage() {
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-80 h-32 sm:w-[416px] sm:h-40 lg:w-[512px] lg:h-64">
+              <div className="relative w-40 h-16 sm:w-[208px] sm:h-20 lg:w-[256px] lg:h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -148,7 +148,7 @@ export default function BrochurePage() {
 
             {/* CTA Button */}
             <div className="hidden lg:block ml-4 xl:ml-8">
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
                   <span className="hidden lg:inline">Call Now</span>
@@ -203,10 +203,10 @@ export default function BrochurePage() {
                 )
               ))}
               <div className="px-4 pt-4 border-t border-border">
-                <a href="tel:817-453-7522" className="block">
+                <a href="tel:915-300-2276" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call (817) 453-7522
+                    Call (915) 300-2276
                   </Button>
                 </a>
               </div>
@@ -269,12 +269,12 @@ export default function BrochurePage() {
                     <span className="sm:hidden">Learn How We Can Help</span>
                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </button>
-                  <a href="tel:817-453-7522" className="w-full sm:w-auto">
+                  <a href="tel:915-300-2276" className="w-full sm:w-auto">
                     <Button
                       className="bg-accent hover:bg-accent/90 text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent w-full sm:w-auto"
                     >
                       <Phone className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                      <span className="hidden sm:inline">Call (817) 453-7522</span>
+                      <span className="hidden sm:inline">Call (915) 300-2276</span>
                       <span className="sm:hidden">Call Now</span>
                     </Button>
                   </a>
@@ -689,15 +689,12 @@ export default function BrochurePage() {
             <div>
               <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm md:text-base">Contact</h4>
               <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground font-medium">
-                <p>2204 Joe Battle Blvd Ste D204</p>
+                <p>2204 Joe Battle Blvd, STE D204</p>
                 <p>El Paso, TX 79938</p>
                 <p className="pt-1 sm:pt-2">
-                  Phone: <a href="tel:817-453-7522" className="text-primary hover:underline font-semibold">(817) 453-7522</a>
+                  Phone: <a href="tel:915-300-2276" className="text-primary hover:underline font-semibold">(915) 300-2276</a>
                 </p>
-                <p>Fax: 1-866-665-6659</p>
-                <p>
-                  After Hours: <a href="tel:817-966-3989" className="text-accent hover:underline font-semibold">(817) 966-3989</a>
-                </p>
+                <p>Fax: 866-222-5219</p>
               </div>
             </div>
 
@@ -741,7 +738,7 @@ export default function BrochurePage() {
           <div className="border-t border-border pt-6 sm:pt-8 text-center text-xs sm:text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary text-xs sm:text-sm">
-              2204 Joe Battle Blvd Ste D204, El Paso, TX 79938 | (817) 453-7522
+              2204 Joe Battle Blvd, STE D204 El Paso, TX 79938 | (915) 300-2276
             </p>
           </div>
         </div>

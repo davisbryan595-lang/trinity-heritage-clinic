@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="flex gap-2 items-start">
                 <MapPin size={16} className="mt-1 flex-shrink-0 text-accent" />
                 <p>
-                  2204 Joe Battle Blvd Ste D204
+                  2204 Joe Battle Blvd, STE D204
                   <br />
                   El Paso, TX 79938
                 </p>

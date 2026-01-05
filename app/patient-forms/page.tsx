@@ -290,7 +290,7 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Address</p>
                   <p className="text-foreground font-medium">
-                    2204 Joe Battle Blvd Ste D204
+                    2204 Joe Battle Blvd, STE D204
                     <br />
                     El Paso, TX 79938
                   </p>
