@@ -232,7 +232,7 @@ html {
   left: 0;
   width: 0%;
   height: 4px;
-  background: linear-gradient(to right, #347942, #6e388e, #87be52);
+  background: linear-gradient(to right, #6ba842, #6e388e, #87be52);
   z-index: 9999;
   transition: width 0.1s ease-out;
 }
