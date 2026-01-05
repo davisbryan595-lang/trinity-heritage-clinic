@@ -114,8 +114,8 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" opacity="0.3" />
-              <stop offset="100%" stopColor="#6B4C9A" opacity="0.1" />
+              <stop offset="0%" stopColor="var(--primary)" opacity="0.3" />
+              <stop offset="100%" stopColor="var(--accent)" opacity="0.1" />
             </linearGradient>
           </defs>
 
@@ -127,7 +127,7 @@ export function GeometricBackground({
               y1="0"
               x2={i * 150}
               y2="900"
-              stroke="#006D5B"
+              stroke="var(--primary)"
               strokeWidth="1"
               opacity="0.15"
             />
@@ -141,7 +141,7 @@ export function GeometricBackground({
               y1={i * 120}
               x2="1440"
               y2={i * 120}
-              stroke="#6B4C9A"
+              stroke="var(--accent)"
               strokeWidth="1"
               opacity="0.1"
             />
@@ -155,7 +155,7 @@ export function GeometricBackground({
                 cx={row * 150}
                 cy={col * 120}
                 r="2"
-                fill="#006D5B"
+                fill="var(--primary)"
                 opacity="0.2"
               />
             ))
