@@ -157,11 +157,11 @@ export default function LocationPage() {
       {/* Hero Section */}
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#8cc73f' }}>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--tertiary)' }}>
             Our Location
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Conveniently located in El Paso, Texas, serving the Dallas Fort Worth area with comprehensive occupational health services
+            Conveniently Located in East of El Paso, Texas – Serving to keep the community healthy
           </p>
         </div>
       </div>
