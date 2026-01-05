@@ -290,7 +290,7 @@ export default function ServicesPage() {
             <div className="space-y-4">
               <div>
                 <p className="font-semibold mb-1">Contact Us</p>
-                <p className="text-white/80">2204 Joe Battle Blvd Ste D204</p>
+                <p className="text-white/80">2204 Joe Battle Blvd, STE D204</p>
                 <p className="text-white/80">El Paso, TX 79938</p>
                 <a href="tel:915-300-2276" className="text-accent hover:text-white transition-colors">(915) 300-2276</a>
               </div>
