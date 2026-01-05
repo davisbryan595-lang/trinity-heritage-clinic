@@ -478,11 +478,11 @@ html {
 
 /* Enhanced gradient backgrounds */
 .gradient-primary-accent {
-  background: linear-gradient(135deg, #006D5B 0%, #6B4C9A 100%);
+  background: linear-gradient(135deg, #347942 0%, #6e388e 100%);
 }
 
 .gradient-accent-primary {
-  background: linear-gradient(135deg, #6B4C9A 0%, #006D5B 100%);
+  background: linear-gradient(135deg, #6e388e 0%, #347942 100%);
 }
 
 /* Image hover effects */
