@@ -4,26 +4,26 @@
 
 :root {
   /* Trinity Heritage Clinic - Occupational Medicine Brochure Theme */
-  /* Dark Green Primary | Purple Accent | Light Green Highlight | Light Gray Background | White */
-  --background: #F0F4F8;
+  /* Bright Lime Green Primary | Purple Accent | Light Green Highlight | White Background | Dark Text */
+  --background: #ffffff;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #6ba842;
-  /* Bright Green - professional, vibrant */
-  --primary-foreground: #ffffff;
-  --secondary: #F0F4F8;
-  /* Light Gray background */
+  --primary: #8cc73f;
+  /* Bright Lime Green - vibrant and energetic */
+  --primary-foreground: #1a1a1a;
+  --secondary: #f8faf5;
+  /* Very light green-tinted background */
   --secondary-foreground: #1a1a1a;
-  --muted: #e8ecf1;
-  --muted-foreground: #64748b;
+  --muted: #e8f0d8;
+  --muted-foreground: #4a5a3a;
   --accent: #6e388e;
   /* Purple accent */
   --accent-foreground: #ffffff;
-  --tertiary: #87be52;
-  /* Light Green highlight */
+  --tertiary: #a8d94f;
+  /* Light Green highlight - even brighter */
   --tertiary-foreground: #1a1a1a;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
