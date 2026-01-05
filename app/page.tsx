@@ -454,7 +454,7 @@ export default function BrochurePage() {
                 {/* Founder Info */}
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                   <CardContent className="p-10">
-                    <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
+                    <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: 'var(--tertiary)' }}>
                       Medical Director
                     </h3>
                     <p className="text-xl font-semibold text-primary mb-6">
@@ -508,7 +508,7 @@ export default function BrochurePage() {
                 <div className="grid lg:grid-cols-2 gap-8">
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                     <CardContent className="p-10">
-                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                         Work Site Visits
                       </h3>
                       <p className="font-semibold mb-6 text-foreground">
@@ -543,7 +543,7 @@ export default function BrochurePage() {
 
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                     <CardContent className="p-10">
-                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                         Travel Medicine
                       </h3>
                       <p className="font-semibold mb-6 text-foreground">
@@ -589,7 +589,7 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--tertiary)' }}>
                 Learn More About Our Services
               </h2>
               <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
@@ -605,7 +605,7 @@ export default function BrochurePage() {
                     <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
                       <Briefcase className="w-6 h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Our Services
                     </h3>
                     <p className="text-foreground mb-6 font-medium">
@@ -625,7 +625,7 @@ export default function BrochurePage() {
                     <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
                       <MapPin className="w-6 h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Our Location
                     </h3>
                     <p className="text-foreground mb-6 font-medium">
@@ -645,7 +645,7 @@ export default function BrochurePage() {
                     <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
                       <HeartPulse className="w-6 h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
+                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Wellness & Prevention
                     </h3>
                     <p className="text-foreground mb-6 font-medium">
