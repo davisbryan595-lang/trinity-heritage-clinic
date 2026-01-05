@@ -204,7 +204,7 @@ export default function LocationPage() {
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          2204 Joe Battle Blvd Ste D204
+                          2204 Joe Battle Blvd, STE D204
                           <br />
                           El Paso, TX 79938
                         </a>
