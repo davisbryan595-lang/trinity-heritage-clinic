@@ -463,7 +463,7 @@ html {
 
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(52, 121, 66, 0.2);
+  box-shadow: 0 20px 40px rgba(107, 168, 66, 0.2);
 }
 
 /* Hero section animations */
