@@ -257,11 +257,11 @@ html {
 }
 
 .bg-tertiary\/10 {
-  background-color: rgba(140, 199, 63, 0.1);
+  background-color: rgba(135, 190, 82, 0.1);
 }
 
 .bg-tertiary\/20 {
-  background-color: rgba(140, 199, 63, 0.2);
+  background-color: rgba(135, 190, 82, 0.2);
 }
 
 .border-tertiary {
@@ -269,7 +269,7 @@ html {
 }
 
 .border-tertiary\/20 {
-  border-color: rgba(140, 199, 63, 0.2);
+  border-color: rgba(135, 190, 82, 0.2);
 }
 
 /* Enhanced animations for shape dividers and geometric patterns */
