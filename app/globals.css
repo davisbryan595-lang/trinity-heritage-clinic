@@ -67,20 +67,20 @@
   --destructive-foreground: #fecaca;
   --border: #334155;
   --input: #1a2129;
-  --ring: #52c452;
-  --chart-1: #52c452;
+  --ring: #7fbe3f;
+  --chart-1: #7fbe3f;
   --chart-2: #a678d9;
   --chart-3: #a8d94f;
   --chart-4: #b88ce6;
   --chart-5: #6dd66d;
   --sidebar: #1a2129;
   --sidebar-foreground: #F0F4F8;
-  --sidebar-primary: #52c452;
+  --sidebar-primary: #7fbe3f;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #a678d9;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #334155;
-  --sidebar-ring: #52c452;
+  --sidebar-ring: #7fbe3f;
 }
 
 @theme inline {
