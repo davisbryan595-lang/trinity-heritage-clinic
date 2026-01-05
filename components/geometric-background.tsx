@@ -200,12 +200,12 @@ export function GeometricBackground({
           {/* Corner diamonds */}
           <path
             d="M 0 0 L 150 0 L 75 130 Z"
-            fill="#006D5B"
+            fill="var(--primary)"
             opacity="0.05"
           />
           <path
             d="M 1440 900 L 1290 900 L 1365 770 Z"
-            fill="#6B4C9A"
+            fill="var(--accent)"
             opacity="0.05"
           />
         </svg>
