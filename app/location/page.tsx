@@ -96,7 +96,7 @@ export default function LocationPage() {
                 Forms
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button
                   size="sm"
                   className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 shadow-lg hover:shadow-xl transition-all animate-rotating-glow border-2 border-accent"

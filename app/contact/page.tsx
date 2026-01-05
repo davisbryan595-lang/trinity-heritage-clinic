@@ -462,7 +462,7 @@ export default function ContactPage() {
 
                   {/* Note */}
                   <p className="text-xs text-muted-foreground text-center pt-2 leading-relaxed">
-                    We'll get back to you as soon as possible. For urgent matters, please call us directly at <span className="font-semibold text-primary">(817) 453-7522</span>.
+                    We'll get back to you as soon as possible. For urgent matters, please call us directly at <span className="font-semibold text-primary">(915) 300-2276</span>.
                   </p>
                 </form>
               </Card>
