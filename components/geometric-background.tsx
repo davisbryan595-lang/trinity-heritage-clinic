@@ -173,8 +173,8 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="organicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" />
-              <stop offset="100%" stopColor="#6B4C9A" />
+              <stop offset="0%" stopColor="var(--primary)" />
+              <stop offset="100%" stopColor="var(--accent)" />
             </linearGradient>
             <filter id="blur">
               <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
