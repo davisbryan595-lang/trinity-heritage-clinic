@@ -88,7 +88,7 @@ export default function PatientFormsPage() {
 
             {/* CTA Button */}
             <div className="hidden lg:block ml-8">
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
