@@ -191,7 +191,7 @@ export default function LocationPage() {
             <div className="space-y-6">
               <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Contact Information</h3>
+                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: 'var(--tertiary)' }}>Contact Information</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
