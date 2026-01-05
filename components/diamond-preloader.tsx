@@ -29,18 +29,18 @@ export default function DiamondPreloader() {
           >
             <path
               d="M40 5L70 40L40 75L10 40L40 5Z"
-              fill="#006D5B"
-              stroke="#6B4C9A"
+              fill="var(--primary)"
+              stroke="var(--accent)"
               strokeWidth="2"
             />
             <path
               d="M40 5L55 20L40 40L25 20L40 5Z"
-              fill="#10b981"
+              fill="var(--tertiary)"
               opacity="0.6"
             />
             <path
               d="M40 40L55 60L40 75L25 60L40 40Z"
-              fill="#047857"
+              fill="var(--primary)"
               opacity="0.4"
             />
           </svg>

@@ -16,12 +16,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Trinity Heritage Clinic | Occupational Medicine Mansfield TX | Workforce Health",
+  title: "Trinity Heritage Clinic | Occupational Medicine El Paso TX | Workforce Health",
   description:
-    "Working to keep your workforce well. Trinity Heritage Clinic provides comprehensive occupational medicine, internal medicine, and wellness programs in Mansfield, Texas. Always friendly. Always knowledgeable.",
+    "Working to keep your workforce well. Trinity Heritage Clinic provides comprehensive occupational medicine, internal medicine, and wellness programs in El Paso, Texas. Always friendly. Always knowledgeable.",
   keywords: [
     "occupational medicine",
-    "Mansfield TX",
+    "El Paso TX",
     "workforce health",
     "DOT physicals",
     "drug screening",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Trinity Heritage Clinic"
   ],
   openGraph: {
-    title: "Trinity Heritage Clinic | Occupational Medicine Mansfield TX",
+    title: "Trinity Heritage Clinic | Occupational Medicine El Paso TX",
     description: "Working to keep your workforce well - Occupational medicine and healthcare services",
     type: "website",
     locale: "en_US",
@@ -59,19 +59,20 @@ export default function RootLayout({
               "name": "Trinity Heritage Clinic",
               "description": "Occupational medicine and internal medicine services for businesses and individuals",
               "url": "https://trinityheritageclinic.com",
-              "telephone": "+1-817-453-7522",
+              "telephone": "+1-915-300-2276",
+              "email": "Trinityheritageclinic@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "1475 Heritage Pkwy Ste 225",
-                "addressLocality": "Mansfield",
+                "streetAddress": "2204 Joe Battle Blvd, STE D204",
+                "addressLocality": "El Paso",
                 "addressRegion": "TX",
-                "postalCode": "76063",
+                "postalCode": "79938",
                 "addressCountry": "US"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "32.6",
-                "longitude": "-97.1"
+                "latitude": "31.8",
+                "longitude": "-106.41"
               },
               "openingHours": "Mo-Fr 08:30-17:30",
               "priceRange": "$$",
