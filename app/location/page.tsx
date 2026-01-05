@@ -51,7 +51,7 @@ export default function LocationPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-80 h-32">
+              <div className="relative w-40 h-16">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
