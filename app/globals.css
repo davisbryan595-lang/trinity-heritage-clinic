@@ -239,12 +239,12 @@ html {
 
 /* Diamond glow effect */
 .diamond-glow {
-  box-shadow: 0 0 30px rgba(52, 121, 66, 0.3);
+  box-shadow: 0 0 30px rgba(107, 168, 66, 0.3);
   transition: box-shadow 0.3s ease;
 }
 
 .diamond-glow:hover {
-  box-shadow: 0 0 50px rgba(52, 121, 66, 0.5);
+  box-shadow: 0 0 50px rgba(107, 168, 66, 0.5);
 }
 
 /* Tertiary green accent utilities */
