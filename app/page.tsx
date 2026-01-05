@@ -689,7 +689,7 @@ export default function BrochurePage() {
             <div>
               <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm md:text-base">Contact</h4>
               <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground font-medium">
-                <p>2204 Joe Battle Blvd Ste D204</p>
+                <p>2204 Joe Battle Blvd, STE D204</p>
                 <p>El Paso, TX 79938</p>
                 <p className="pt-1 sm:pt-2">
                   Phone: <a href="tel:915-300-2276" className="text-primary hover:underline font-semibold">(915) 300-2276</a>
@@ -738,7 +738,7 @@ export default function BrochurePage() {
           <div className="border-t border-border pt-6 sm:pt-8 text-center text-xs sm:text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
             <p className="mt-2 italic font-serif text-primary text-xs sm:text-sm">
-              2204 Joe Battle Blvd Ste D204, El Paso, TX 79938 | (915) 300-2276
+              2204 Joe Battle Blvd, STE D204 El Paso, TX 79938 | (915) 300-2276
             </p>
           </div>
         </div>
