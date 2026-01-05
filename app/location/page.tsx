@@ -51,7 +51,7 @@ export default function LocationPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-40 h-16">
+              <div className="relative w-80 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -96,7 +96,7 @@ export default function LocationPage() {
                 Forms
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button
                   size="sm"
                   className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 shadow-lg hover:shadow-xl transition-all animate-rotating-glow border-2 border-accent"
@@ -143,10 +143,10 @@ export default function LocationPage() {
               <Link href="/patient-forms" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Patient Forms
               </Link>
-              <a href="tel:817-453-7522" className="block">
+              <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (817) 453-7522
+                  Call (915) 300-2276
                 </Button>
               </a>
             </div>
@@ -157,11 +157,11 @@ export default function LocationPage() {
       {/* Hero Section */}
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#8cc73f' }}>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--tertiary)' }}>
             Our Location
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Conveniently located in El Paso, Texas, serving the Dallas Fort Worth area with comprehensive occupational health services
+            Conveniently Located in East of El Paso, Texas – Serving to keep the community healthy
           </p>
         </div>
       </div>
@@ -191,7 +191,7 @@ export default function LocationPage() {
             <div className="space-y-6">
               <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Contact Information</h3>
+                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: 'var(--tertiary)' }}>Contact Information</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -216,10 +216,10 @@ export default function LocationPage() {
                       <div>
                         <p className="font-semibold text-foreground mb-1">Phone</p>
                         <a
-                          href="tel:817-453-7522"
+                          href="tel:915-300-2276"
                           className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
                         >
-                          (817) 453-7522
+                          (915) 300-2276
                         </a>
                       </div>
                     </div>
@@ -228,7 +228,7 @@ export default function LocationPage() {
                       <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold text-foreground mb-1">Fax</p>
-                        <p className="text-muted-foreground">1-866-665-6659</p>
+                        <p className="text-muted-foreground">866-222-5219</p>
                       </div>
                     </div>
 

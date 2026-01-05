@@ -23,15 +23,15 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="diamondPattern" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" />
-              <stop offset="100%" stopColor="#6B4C9A" />
+              <stop offset="0%" stopColor="var(--primary)" />
+              <stop offset="100%" stopColor="var(--accent)" />
             </linearGradient>
             <pattern id="diamondTile" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
               {/* Large diamond */}
               <path
                 d="M 60 10 L 110 60 L 60 110 L 10 60 Z"
                 fill="none"
-                stroke="#006D5B"
+                stroke="var(--primary)"
                 strokeWidth="1.5"
                 opacity="0.4"
               />
@@ -39,7 +39,7 @@ export function GeometricBackground({
               <path
                 d="M 60 40 L 90 60 L 60 80 L 30 60 Z"
                 fill="none"
-                stroke="#6B4C9A"
+                stroke="var(--accent)"
                 strokeWidth="1"
                 opacity="0.3"
               />
@@ -75,8 +75,8 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" />
-              <stop offset="100%" stopColor="#6B4C9A" />
+              <stop offset="0%" stopColor="var(--primary)" />
+              <stop offset="100%" stopColor="var(--accent)" />
             </linearGradient>
           </defs>
 
@@ -95,7 +95,7 @@ export function GeometricBackground({
                         : `M ${x - 75} ${y} L ${x + 75} ${y} L ${x} ${y + 80} Z`
                     }
                     fill="none"
-                    stroke="#006D5B"
+                    stroke="var(--primary)"
                     strokeWidth="1"
                     opacity={String(0.1 + (Math.sin(row + col) * 0.05))}
                   />
@@ -114,8 +114,8 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" opacity="0.3" />
-              <stop offset="100%" stopColor="#6B4C9A" opacity="0.1" />
+              <stop offset="0%" stopColor="var(--primary)" opacity="0.3" />
+              <stop offset="100%" stopColor="var(--accent)" opacity="0.1" />
             </linearGradient>
           </defs>
 
@@ -127,7 +127,7 @@ export function GeometricBackground({
               y1="0"
               x2={i * 150}
               y2="900"
-              stroke="#006D5B"
+              stroke="var(--primary)"
               strokeWidth="1"
               opacity="0.15"
             />
@@ -141,7 +141,7 @@ export function GeometricBackground({
               y1={i * 120}
               x2="1440"
               y2={i * 120}
-              stroke="#6B4C9A"
+              stroke="var(--accent)"
               strokeWidth="1"
               opacity="0.1"
             />
@@ -155,7 +155,7 @@ export function GeometricBackground({
                 cx={row * 150}
                 cy={col * 120}
                 r="2"
-                fill="#006D5B"
+                fill="var(--primary)"
                 opacity="0.2"
               />
             ))
@@ -173,8 +173,8 @@ export function GeometricBackground({
         >
           <defs>
             <linearGradient id="organicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#006D5B" />
-              <stop offset="100%" stopColor="#6B4C9A" />
+              <stop offset="0%" stopColor="var(--primary)" />
+              <stop offset="100%" stopColor="var(--accent)" />
             </linearGradient>
             <filter id="blur">
               <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
@@ -200,12 +200,12 @@ export function GeometricBackground({
           {/* Corner diamonds */}
           <path
             d="M 0 0 L 150 0 L 75 130 Z"
-            fill="#006D5B"
+            fill="var(--primary)"
             opacity="0.05"
           />
           <path
             d="M 1440 900 L 1290 900 L 1365 770 Z"
-            fill="#6B4C9A"
+            fill="var(--accent)"
             opacity="0.05"
           />
         </svg>
@@ -234,7 +234,7 @@ export function GeometricAccent({
         {/* Large diamond */}
         <path
           d="M 100 20 L 180 100 L 100 180 L 20 100 Z"
-          stroke="#006D5B"
+          stroke="var(--primary)"
           strokeWidth="2"
           fill="none"
           opacity="0.3"
@@ -243,7 +243,7 @@ export function GeometricAccent({
         {/* Medium diamond */}
         <path
           d="M 100 50 L 150 100 L 100 150 L 50 100 Z"
-          stroke="#6B4C9A"
+          stroke="var(--accent)"
           strokeWidth="1.5"
           fill="none"
           opacity="0.4"
@@ -252,7 +252,7 @@ export function GeometricAccent({
         {/* Small diamond */}
         <path
           d="M 100 80 L 120 100 L 100 120 L 80 100 Z"
-          stroke="#8cc73f"
+          stroke="var(--tertiary)"
           strokeWidth="1"
           fill="none"
           opacity="0.5"

@@ -60,7 +60,7 @@ export default function WellnessPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-40 h-16">
+              <div className="relative w-80 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -197,7 +197,7 @@ export default function WellnessPage() {
             {/* Wellness Content */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
+                <h2 className="text-3xl font-bold mb-4 font-serif" style={{ color: 'var(--tertiary)' }}>
                   Health & Safety Consultation
                 </h2>
                 <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
@@ -263,10 +263,10 @@ export default function WellnessPage() {
             ].map((stat, idx) => (
               <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow bg-white shadow-md">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: '#8cc73f20' }}>
-                    <stat.icon className="w-8 h-8" style={{ color: '#8cc73f' }} />
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: 'var(--tertiary) 12%' }}>
+                    <stat.icon className="w-8 h-8" style={{ color: 'var(--tertiary)' }} />
                   </div>
-                  <p className="text-4xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>{stat.number}</p>
+                  <p className="text-4xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>{stat.number}</p>
                   <p className="text-foreground font-semibold">{stat.label}</p>
                 </CardContent>
               </Card>

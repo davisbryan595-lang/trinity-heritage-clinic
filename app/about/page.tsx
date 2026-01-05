@@ -61,7 +61,7 @@ export default function AboutPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-40 h-16 sm:w-52 sm:h-20 lg:w-64 lg:h-32">
+              <div className="relative w-80 h-32 sm:w-[416px] sm:h-40 lg:w-[512px] lg:h-64">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -305,7 +305,7 @@ export default function AboutPage() {
                     What sets us apart is our unwavering dedication to seeing you as a whole person—not just a collection of symptoms. Dr. Nwiloh takes the time to listen, understand your unique health needs, and partner with you to create sustainable wellness solutions that fit your life.
                   </p>
 
-                  <p style={{ color: '#8cc73f' }} className="font-semibold italic">
+                  <p style={{ color: 'var(--tertiary)' }} className="font-semibold italic">
                     We believe that lasting health comes from prevention, education, and genuine partnership. That's why we're here: to cherish your health, empower your choices, and support you every step of the way.
                   </p>
                 </div>

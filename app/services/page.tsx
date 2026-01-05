@@ -61,7 +61,7 @@ export default function ServicesPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-40 h-16">
+              <div className="relative w-80 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -292,7 +292,7 @@ export default function ServicesPage() {
                 <p className="font-semibold mb-1">Contact Us</p>
                 <p className="text-white/80">2204 Joe Battle Blvd Ste D204</p>
                 <p className="text-white/80">El Paso, TX 79938</p>
-                <a href="tel:817-453-7522" className="text-accent hover:text-white transition-colors">(817) 453-7522</a>
+                <a href="tel:915-300-2276" className="text-accent hover:text-white transition-colors">(915) 300-2276</a>
               </div>
             </div>
           </div>
