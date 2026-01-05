@@ -91,7 +91,7 @@ export default function ContactPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-64 h-32">
+              <div className="relative w-128 h-64">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -139,7 +139,7 @@ export default function ContactPage() {
 
             {/* CTA Button */}
             <div className="hidden lg:block ml-8">
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
@@ -184,12 +184,12 @@ export default function ContactPage() {
                 </Link>
               ))}
               <div className="px-4 pt-4 border-t border-border">
-                <a href="tel:817-453-7522" className="block">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call (817) 453-7522
-                  </Button>
-                </a>
+                <a href="tel:915-300-2276" className="block">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call (915) 300-2276
+                </Button>
+              </a>
               </div>
             </div>
           )}
@@ -282,12 +282,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-                    <a href="tel:817-453-7522" className="text-tertiary hover:text-tertiary/80 font-bold text-sm block transition-colors">
-                      (817) 453-7522
-                    </a>
-                    <p className="text-xs text-muted-foreground mt-3">After hours urgent:</p>
-                    <a href="tel:817-966-3999" className="text-tertiary hover:text-tertiary/80 font-semibold text-sm transition-colors">
-                      (817) 966-3999
+                    <a href="tel:915-300-2276" className="text-tertiary hover:text-tertiary/80 font-bold text-sm block transition-colors">
+                      (915) 300-2276
                     </a>
                   </div>
                 </div>
@@ -302,7 +298,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Fax</h3>
                     <p className="text-foreground text-sm font-semibold">
-                      1-866-665-6659
+                      866-222-5219
                     </p>
                   </div>
                 </div>
