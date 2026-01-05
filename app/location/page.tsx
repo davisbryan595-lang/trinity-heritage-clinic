@@ -228,7 +228,7 @@ export default function LocationPage() {
                       <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold text-foreground mb-1">Fax</p>
-                        <p className="text-muted-foreground">1-866-665-6659</p>
+                        <p className="text-muted-foreground">866-222-5219</p>
                       </div>
                     </div>
 
