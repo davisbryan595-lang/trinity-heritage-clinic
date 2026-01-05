@@ -234,7 +234,7 @@ export function GeometricAccent({
         {/* Large diamond */}
         <path
           d="M 100 20 L 180 100 L 100 180 L 20 100 Z"
-          stroke="#006D5B"
+          stroke="var(--primary)"
           strokeWidth="2"
           fill="none"
           opacity="0.3"
@@ -243,7 +243,7 @@ export function GeometricAccent({
         {/* Medium diamond */}
         <path
           d="M 100 50 L 150 100 L 100 150 L 50 100 Z"
-          stroke="#6B4C9A"
+          stroke="var(--accent)"
           strokeWidth="1.5"
           fill="none"
           opacity="0.4"
@@ -252,7 +252,7 @@ export function GeometricAccent({
         {/* Small diamond */}
         <path
           d="M 100 80 L 120 100 L 100 120 L 80 100 Z"
-          stroke="#8cc73f"
+          stroke="var(--tertiary)"
           strokeWidth="1"
           fill="none"
           opacity="0.5"
