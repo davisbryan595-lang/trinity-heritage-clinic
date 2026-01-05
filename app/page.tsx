@@ -255,7 +255,7 @@ export default function BrochurePage() {
                 </p>
 
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground max-w-3xl mx-auto mb-8 sm:mb-12 font-medium">
-                  Conveniently Located in El Paso, Texas – Serving Businesses with Certified Care
+                  Conveniently Located in East of El Paso, Texas – Serving to keep the community healthy
                 </p>
 
                 {/* CTA Buttons */}
