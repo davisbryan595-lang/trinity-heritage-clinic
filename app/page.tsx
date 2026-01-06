@@ -241,7 +241,7 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center">
+                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center pr-8 sm:pr-12 md:pr-16 lg:pr-20">
                     <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
                   </h1>
                   <p className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
@@ -258,15 +258,7 @@ export default function BrochurePage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
-                  <button
-                    onClick={() => scrollToSection("services")}
-                    className="text-foreground text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 rounded-lg transition-all duration-300 font-semibold hover:opacity-90 inline-flex items-center justify-center"
-                    style={{ color: '#6b3fa0' }}
-                  >
-                    Learn how we can help you
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                  </button>
+                <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6">
                   <a href="tel:915-300-2276" className="w-full sm:w-auto">
                     <Button
                       className="text-white text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 shadow-lg transition-all duration-300 border-2 w-full sm:w-auto"
@@ -277,6 +269,9 @@ export default function BrochurePage() {
                       <span className="hidden sm:inline ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
+                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold" style={{ color: '#6b3fa0' }}>
+                    to learn how we can help you
+                  </p>
                 </div>
               </div>
             </div>
