@@ -225,8 +225,8 @@ export default function PatientFormsPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <a
-                  href="/forms/Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
-                  download="Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                  href="/forms/AllForms.pdf"
+                  download="AllForms.pdf"
                   className="flex-1"
                 >
                   <Button

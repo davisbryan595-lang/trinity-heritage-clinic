@@ -259,8 +259,8 @@ export default function ContactPage() {
                       Download and complete your paperwork at home to save time at your appointment.
                     </p>
                     <a
-                      href="/forms/Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
-                      download="Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                      href="/forms/AllForms.pdf"
+                      download="AllForms.pdf"
                       className="inline-block"
                     >
                       <Button
