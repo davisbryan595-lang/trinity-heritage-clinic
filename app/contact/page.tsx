@@ -210,7 +210,7 @@ export default function ContactPage() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-4">
-            <div className="flex flex-nowrap items-center justify-center gap-2 mb-4">
+            <div className="flex flex-nowrap items-center justify-center gap-2 mb-4 whitespace-nowrap overflow-x-auto">
               <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">Always Accepting New Patients...</span>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">Contact Us Today</h1>
             </div>
