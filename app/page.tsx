@@ -215,7 +215,7 @@ export default function BrochurePage() {
             id="home"
             className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 overflow-hidden"
             style={{
-              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F68a489fd8213482a93d3002e599fd74c?format=webp&width=800)',
+              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed'
@@ -223,10 +223,7 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="max-w-4xl mx-auto px-2 sm:px-4 relative z-10 text-center backdrop-blur-lg rounded-4xl py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 bg-white/5 border border-white/15" style={{
-              WebkitBackdropFilter: 'blur(20px)',
-              backdropFilter: 'blur(20px)'
-            }}>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-12 sm:py-16 lg:py-20">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -234,7 +231,7 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center">
+                  <h1 className="font-serif text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 text-center">
                     <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
                   </h1>
                   <p className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
