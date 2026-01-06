@@ -247,7 +247,7 @@ export default function BrochurePage() {
                   <p className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
                   </p>
-                  <h2 className="font-serif text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
+                  <h2 className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
                     Occupational Medicine Clinic
                   </h2>
                 </div>
