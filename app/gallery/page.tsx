@@ -199,7 +199,7 @@ export default function GalleryPage() {
                 <a href="tel:817-453-7522" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call (817) 453-7522
+                    Call 915.300.2276
                   </Button>
                 </a>
               </div>
@@ -308,7 +308,7 @@ export default function GalleryPage() {
               <a href="tel:817-453-7522">
                 <Button className="bg-primary hover:bg-primary/90 text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-primary w-full sm:w-auto">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Call (817) 453-7522
+                  Call 915.300.2276
                 </Button>
               </a>
               <Link href="/contact">

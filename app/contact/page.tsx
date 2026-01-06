@@ -187,7 +187,7 @@ export default function ContactPage() {
                 <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call (915) 300-2276
+                  Call 915.300.2276
                 </Button>
               </a>
               </div>
@@ -283,7 +283,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                     <a href="tel:915-300-2276" className="text-tertiary hover:text-tertiary/80 font-bold text-sm block transition-colors">
-                      (915) 300-2276
+                      915.300.2276
                     </a>
                   </div>
                 </div>
@@ -458,7 +458,7 @@ export default function ContactPage() {
 
                   {/* Note */}
                   <p className="text-xs text-muted-foreground text-center pt-2 leading-relaxed">
-                    We'll get back to you as soon as possible. For urgent matters, please call us directly at <span className="font-semibold text-primary">(915) 300-2276</span>.
+                    We'll get back to you as soon as possible. For urgent matters, please call us directly at <span className="font-semibold text-primary">915.300.2276</span>.
                   </p>
                 </form>
               </Card>

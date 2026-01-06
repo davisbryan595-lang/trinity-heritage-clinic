@@ -127,7 +127,7 @@ export default function Navbar() {
                   className="w-full border-2 border-accent text-accent hover:bg-accent hover:text-white"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call (915) 300-2276
+                  Call 915.300.2276
                 </Button>
               </a>
               <Link href="/contact" className="block" onClick={() => setIsOpen(false)}>

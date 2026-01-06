@@ -153,10 +153,10 @@ export default function ServicesPage() {
               <Link href="/patient-forms" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Patient Forms
               </Link>
-              <a href="tel:817-453-7522" className="block">
+              <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (817) 453-7522
+                  Call 915.300.2276
                 </Button>
               </a>
             </div>
@@ -263,7 +263,7 @@ export default function ServicesPage() {
                 className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
               >
                 <Phone className="w-6 h-6 mr-3" />
-                (817) 453-7522
+                817.453.7522
               </Button>
             </a>
           </div>
@@ -284,7 +284,9 @@ export default function ServicesPage() {
                 />
               </div>
               <p className="text-white/80">
-                Providing comprehensive occupational health services to the DFW area.
+                2204 Joe Battle Blvd, STE D204
+                <br />
+                El Paso, TX 79938
               </p>
             </div>
             <div className="space-y-4">
@@ -292,7 +294,7 @@ export default function ServicesPage() {
                 <p className="font-semibold mb-1">Contact Us</p>
                 <p className="text-white/80">2204 Joe Battle Blvd, STE D204</p>
                 <p className="text-white/80">El Paso, TX 79938</p>
-                <a href="tel:915-300-2276" className="text-accent hover:text-white transition-colors">(915) 300-2276</a>
+                <a href="tel:915-300-2276" className="text-accent hover:text-white transition-colors">915.300.2276</a>
               </div>
             </div>
           </div>
