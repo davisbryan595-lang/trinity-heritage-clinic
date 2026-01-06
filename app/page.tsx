@@ -242,13 +242,6 @@ export default function BrochurePage() {
                   </h2>
                 </div>
 
-                {/* Cherish Your Health Text Box */}
-                <div className="mb-6 sm:mb-8 inline-block px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-white/80 backdrop-blur-sm border-2 border-primary/20 shadow-lg">
-                  <p className="text-sm sm:text-base md:text-lg font-serif font-bold" style={{ color: '#6b3fa0' }}>
-                    ...Cherish Your Health
-                  </p>
-                </div>
-
                 {/* Tagline */}
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-medium">
                   Always friendly and knowledgeable
