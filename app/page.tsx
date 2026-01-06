@@ -137,7 +137,7 @@ export default function BrochurePage() {
                 onClick={() => scrollToSection("home")}
                 className="flex flex-col items-center group cursor-pointer flex-shrink-0"
               >
-                <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
+                <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72 flex flex-col items-center justify-end">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
@@ -154,11 +154,11 @@ export default function BrochurePage() {
                     <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                     <span className="text-sm text-accent font-semibold">Clinic</span>
                   </div>
-                </div>
-                <div className="mt-[5px] px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
-                  <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
-                    ...Cherish Your Health
-                  </p>
+                  <div className="relative z-10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md mb-2">
+                    <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                      ...Cherish Your Health
+                    </p>
+                  </div>
                 </div>
               </button>
 
