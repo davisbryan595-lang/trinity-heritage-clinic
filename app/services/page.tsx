@@ -171,7 +171,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Comprehensive occupational health services designed to keep your workforce healthy, safe, and productive
+            Comprehensive healthcare services for your entire family and workplace wellness needs
           </p>
         </div>
       </div>
