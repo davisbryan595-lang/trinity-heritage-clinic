@@ -95,7 +95,6 @@ export default function BrochurePage() {
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Location", href: "/location" },
-                { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact", href: "/contact" }
@@ -118,7 +117,7 @@ export default function BrochurePage() {
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </button>
                   )}
-                  {index === 5 && <ServicesDropdown />}
+                  {index === 4 && <ServicesDropdown />}
                 </div>
               ))}
             </div>
@@ -138,7 +137,7 @@ export default function BrochurePage() {
                 onClick={() => scrollToSection("home")}
                 className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
               >
-                <div className="relative w-40 h-16 sm:w-[208px] sm:h-20 lg:w-[256px] lg:h-32">
+                <div className="relative w-60 h-24 sm:w-[312px] sm:h-30 lg:w-[384px] lg:h-48">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
@@ -190,7 +189,6 @@ export default function BrochurePage() {
                   { id: "team", label: "Our Team", href: null },
                   { id: "gallery", label: "Gallery", href: "/gallery" },
                   { id: "location", label: "Location", href: "/location" },
-                  { id: "services", label: "Services", href: "/services" },
                   { id: "wellness", label: "Wellness", href: "/wellness" },
                   { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
                   { id: "contact", label: "Contact Us", href: "/contact" }
@@ -243,14 +241,14 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3">
+                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center pr-8 sm:pr-12 md:pr-16 lg:pr-20">
                     <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
                   </h1>
-                  <p className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
+                  <p className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
                   </p>
-                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg" style={{ color: '#6b3fa0' }}>
-                    Occupational Medicine Services
+                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
+                    Occupational Medicine Clinic
                   </h2>
                 </div>
 
@@ -260,15 +258,7 @@ export default function BrochurePage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
-                  <button
-                    onClick={() => scrollToSection("services")}
-                    className="text-foreground text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 rounded-lg transition-all duration-300 font-semibold hover:opacity-90 inline-flex items-center justify-center"
-                    style={{ color: '#6b3fa0' }}
-                  >
-                    Learn how we can help you
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                  </button>
+                <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6">
                   <a href="tel:915-300-2276" className="w-full sm:w-auto">
                     <Button
                       className="text-white text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 shadow-lg transition-all duration-300 border-2 w-full sm:w-auto"
@@ -279,6 +269,9 @@ export default function BrochurePage() {
                       <span className="hidden sm:inline ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
+                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold" style={{ color: '#6b3fa0' }}>
+                    to learn how we can help you
+                  </p>
                 </div>
               </div>
             </div>
