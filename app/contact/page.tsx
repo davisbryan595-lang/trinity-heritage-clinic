@@ -23,6 +23,8 @@ export default function ContactPage() {
     phone: "",
     subject: "",
     message: "",
+    availability1: "",
+    availability2: "",
   })
 
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "", availability1: "", availability2: "" })
         setTimeout(() => setSubmitStatus('idle'), 5000)
       } else {
         setSubmitStatus('error')
@@ -208,10 +210,13 @@ export default function ContactPage() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-4">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 drop-shadow-lg">Contact Us</h1>
-            <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-medium leading-relaxed">
-              Get in touch with Heritage Healthcare Clinic. We're here to help and look forward to hearing from you.
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary drop-shadow-lg">Contact
+              </h1>
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">us
+              </h1>
+              <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">— Always Accepting New Patients</span>
+            </div>
             <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
         </div>
@@ -259,8 +264,8 @@ export default function ContactPage() {
                       Download and complete your paperwork at home to save time at your appointment.
                     </p>
                     <a
-                      href="/forms/Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
-                      download="Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                      href="/forms/AllForms.pdf"
+                      download="AllForms.pdf"
                       className="inline-block"
                     >
                       <Button
@@ -327,13 +332,6 @@ export default function ContactPage() {
                   </div>
                 </div>
               </Card>
-
-              {/* Tagline */}
-              <div className="bg-gradient-to-br from-tertiary/20 via-accent/10 to-primary/10 p-6 rounded-lg border-2 border-tertiary/30 mt-8 shadow-md">
-                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed whitespace-nowrap">
-                  "Always Friendly. Always Knowledgeable."
-                </p>
-              </div>
             </div>
 
             {/* Contact Form */}
@@ -397,7 +395,7 @@ export default function ContactPage() {
                   {/* Subject Field */}
                   <div>
                     <Label htmlFor="subject" className="text-sm font-semibold text-primary mb-2 block">
-                      Subject <span className="text-muted-foreground text-xs">(optional)</span>
+                      Purpose of Contacting Us <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="subject"
@@ -425,6 +423,42 @@ export default function ContactPage() {
                       rows={5}
                       className="w-full resize-none bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
+                  </div>
+
+                  {/* Availability Section */}
+                  <div className="pt-4 border-t border-primary/20">
+                    <h3 className="text-sm font-semibold text-primary mb-4">Appointment Availability <span className="text-muted-foreground text-xs">(optional)</span></h3>
+                    <p className="text-sm text-muted-foreground mb-4">Please provide two suitable times when you're available for an appointment. We'll confirm which time works best.</p>
+
+                    {/* First Availability */}
+                    <div>
+                      <Label htmlFor="availability1" className="text-sm font-semibold text-primary mb-2 block">
+                        First Available Time
+                      </Label>
+                      <Input
+                        id="availability1"
+                        name="availability1"
+                        type="datetime-local"
+                        value={formData.availability1}
+                        onChange={handleChange}
+                        className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
+                      />
+                    </div>
+
+                    {/* Second Availability */}
+                    <div className="mt-4">
+                      <Label htmlFor="availability2" className="text-sm font-semibold text-primary mb-2 block">
+                        Second Available Time
+                      </Label>
+                      <Input
+                        id="availability2"
+                        name="availability2"
+                        type="datetime-local"
+                        value={formData.availability2}
+                        onChange={handleChange}
+                        className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
+                      />
+                    </div>
                   </div>
 
                   {/* Status Messages */}
@@ -465,6 +499,13 @@ export default function ContactPage() {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Bottom Tagline */}
+        <div className="mt-16 pt-8 border-t border-accent/30 text-center">
+          <p className="font-serif text-2xl md:text-3xl font-bold text-green-700 whitespace-nowrap">
+            Visit us today, walk-ins are always welcome!
+          </p>
         </div>
       </section>
     </div>
