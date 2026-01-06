@@ -19,6 +19,7 @@ import {
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { WaveShapeDivider, StairsShapeDivider, DiagonalShapeDivider } from "@/components/shape-dividers"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function ServicesPage() {
   const [isScrolled, setIsScrolled] = useState(false)
