@@ -215,9 +215,6 @@ export default function ContactPage() {
               </h1>
               <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">— Always Accepting New Patients</span>
             </div>
-            <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-medium leading-relaxed">
-              Always Accepting New Patients...Contact us!
-            </p>
             <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
         </div>
@@ -336,7 +333,7 @@ export default function ContactPage() {
 
               {/* Tagline */}
               <div className="bg-gradient-to-br from-green-50 via-green-100 to-green-50 p-8 rounded-lg border-2 border-green-300 mt-8 shadow-lg text-center">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-green-700 leading-relaxed">
+                <p className="font-serif text-2xl md:text-3xl font-bold text-green-700 whitespace-nowrap">
                   Visit us today, walk-ins are always welcome!
                 </p>
               </div>
