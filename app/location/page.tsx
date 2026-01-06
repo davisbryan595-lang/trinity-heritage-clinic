@@ -258,7 +258,7 @@ export default function LocationPage() {
                       href="tel:817-966-3989"
                       className="text-2xl font-bold hover:underline"
                     >
-                      (817) 966-3989
+                      817.966.3989
                     </a>
                   </div>
                 </div>
