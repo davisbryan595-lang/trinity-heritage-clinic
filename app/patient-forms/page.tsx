@@ -136,7 +136,7 @@ export default function PatientFormsPage() {
                 <a href="tel:817-453-7522" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call (817) 453-7522
+                    Call 817.453.7522
                   </Button>
                 </a>
               </div>
