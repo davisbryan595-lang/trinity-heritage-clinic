@@ -5,43 +5,43 @@
 
 :root {
   /* Trinity Heritage Clinic - Occupational Medicine Brochure Theme */
-  /* Deep Green Primary | Purple Accent | Light Gray Background | White */
+  /* Dark Green Primary | Purple Accent | Light Green Highlight | Light Gray Background | White */
   --background: #F0F4F8;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #006D5B;
-  /* Deep Green - professional, trustworthy */
+  --primary: #347942;
+  /* Dark Green - professional, trustworthy */
   --primary-foreground: #ffffff;
   --secondary: #F0F4F8;
   /* Light Gray background */
   --secondary-foreground: #1a1a1a;
   --muted: #e8ecf1;
   --muted-foreground: #64748b;
-  --accent: #6B4C9A;
+  --accent: #6e388e;
   /* Purple accent */
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #d1d5db;
   --input: #ffffff;
-  --ring: #006D5B;
-  --chart-1: #006D5B;
-  --chart-2: #6B4C9A;
-  --chart-3: #10b981;
-  --chart-4: #8b5cf6;
-  --chart-5: #14b8a6;
+  --ring: #347942;
+  --chart-1: #347942;
+  --chart-2: #6e388e;
+  --chart-3: #87be52;
+  --chart-4: #a678d9;
+  --chart-5: #52c452;
   --radius: 0.5rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1a1a;
-  --sidebar-primary: #006D5B;
+  --sidebar-primary: #347942;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #6B4C9A;
+  --sidebar-accent: #6e388e;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #d1d5db;
-  --sidebar-ring: #006D5B;
+  --sidebar-ring: #347942;
 }
 
 .dark {
