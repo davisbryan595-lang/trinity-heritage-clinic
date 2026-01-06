@@ -233,7 +233,7 @@ export default function BrochurePage() {
             className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
           >
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div className="w-full mx-auto px-2 sm:px-4 relative z-10 text-center">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -241,13 +241,13 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center pr-8 sm:pr-12 md:pr-16 lg:pr-20">
+                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center">
                     <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
                   </h1>
                   <p className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
                   </p>
-                  <h2 className="font-serif text-sm sm:text-base md:text-lg lg:text-xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
+                  <h2 className="font-serif text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
                     Occupational Medicine Clinic
                   </h2>
                 </div>
