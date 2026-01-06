@@ -120,7 +120,6 @@ export default function BrochurePage() {
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Location", href: "/location" },
-                { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact", href: "/contact" }
@@ -145,6 +144,7 @@ export default function BrochurePage() {
                   </button>
                 )
               ))}
+              <ServicesDropdown />
             </div>
 
             {/* CTA Button */}
