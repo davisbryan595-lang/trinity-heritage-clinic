@@ -330,13 +330,6 @@ export default function ContactPage() {
                   </div>
                 </div>
               </Card>
-
-              {/* Tagline */}
-              <div className="text-center mt-8">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-green-700">
-                  Visit us today, walk-ins are always welcome!
-                </p>
-              </div>
             </div>
 
             {/* Contact Form */}
@@ -468,6 +461,13 @@ export default function ContactPage() {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Bottom Tagline */}
+        <div className="mt-16 pt-8 border-t border-accent/30 text-center">
+          <p className="font-serif text-2xl md:text-3xl font-bold text-green-700 whitespace-nowrap">
+            Visit us today, walk-ins are always welcome!
+          </p>
         </div>
       </section>
     </div>
