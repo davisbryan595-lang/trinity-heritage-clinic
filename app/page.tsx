@@ -137,7 +137,7 @@ export default function BrochurePage() {
                 onClick={() => scrollToSection("home")}
                 className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
               >
-                <div className="relative w-60 h-24 sm:w-[312px] sm:h-30 lg:w-[384px] lg:h-48">
+                <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
