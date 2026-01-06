@@ -208,14 +208,11 @@ export default function ContactPage() {
         <GeometricAccent className="absolute top-10 right-20 opacity-20 animate-diamond-float" />
         <GeometricAccent className="absolute -bottom-10 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-4">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary drop-shadow-lg">Contact
-              </h1>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">us
-              </h1>
-              <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">— Always Accepting New Patients</span>
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">Always Accepting New Patients...</span>
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">Contact Us Today</h1>
             </div>
             <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
@@ -235,22 +232,6 @@ export default function ContactPage() {
                 <h2 className="font-serif text-3xl font-bold text-primary mb-2">Contact Information</h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
-
-              {/* Address Card */}
-              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-primary/20 rounded-lg">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
-                    <p className="text-foreground text-sm leading-relaxed">
-                      2204 Joe Battle Blvd, STE D204<br />
-                      El Paso, TX 79938
-                    </p>
-                  </div>
-                </div>
-              </Card>
 
               {/* New Patient Form Card */}
               <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/15 via-accent/8 to-transparent hover:shadow-lg hover:scale-105 transform">
@@ -276,6 +257,45 @@ export default function ContactPage() {
                         Download Form
                       </Button>
                     </a>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Address Card */}
+              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
+                <div className="flex gap-4">
+                  <div className="p-3 bg-primary/20 rounded-lg">
+                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
+                    <p className="text-foreground text-sm leading-relaxed">
+                      2204 Joe Battle Blvd, STE D204<br />
+                      El Paso, TX 79938
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Hours Card */}
+              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
+                <div className="flex gap-4">
+                  <div className="p-3 bg-accent/15 rounded-lg">
+                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
+                    <div className="space-y-2">
+                      <div>
+                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
+                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
+                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
+                      </div>
+                      <div>
+                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
+                        <span className="text-foreground text-sm">Closed</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -321,29 +341,6 @@ export default function ContactPage() {
                     <a href="mailto:Trinityheritageclinic@gmail.com" className="text-accent hover:text-accent/80 font-bold text-sm block transition-colors">
                       Trinityheritageclinic@gmail.com
                     </a>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Hours Card */}
-              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-accent/15 rounded-lg">
-                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
-                    <div className="space-y-2">
-                      <div>
-                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
-                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
-                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
-                      </div>
-                      <div>
-                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
-                        <span className="text-foreground text-sm">Closed</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </Card>
