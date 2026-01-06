@@ -23,6 +23,8 @@ export default function ContactPage() {
     phone: "",
     subject: "",
     message: "",
+    availability1: "",
+    availability2: "",
   })
 
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "", availability1: "", availability2: "" })
         setTimeout(() => setSubmitStatus('idle'), 5000)
       } else {
         setSubmitStatus('error')
@@ -421,6 +423,42 @@ export default function ContactPage() {
                       rows={5}
                       className="w-full resize-none bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
+                  </div>
+
+                  {/* Availability Section */}
+                  <div className="pt-4 border-t border-primary/20">
+                    <h3 className="text-sm font-semibold text-primary mb-4">Appointment Availability <span className="text-muted-foreground text-xs">(optional)</span></h3>
+                    <p className="text-sm text-muted-foreground mb-4">Please provide two suitable times when you're available for an appointment. We'll confirm which time works best.</p>
+
+                    {/* First Availability */}
+                    <div>
+                      <Label htmlFor="availability1" className="text-sm font-semibold text-primary mb-2 block">
+                        First Available Time
+                      </Label>
+                      <Input
+                        id="availability1"
+                        name="availability1"
+                        type="datetime-local"
+                        value={formData.availability1}
+                        onChange={handleChange}
+                        className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
+                      />
+                    </div>
+
+                    {/* Second Availability */}
+                    <div className="mt-4">
+                      <Label htmlFor="availability2" className="text-sm font-semibold text-primary mb-2 block">
+                        Second Available Time
+                      </Label>
+                      <Input
+                        id="availability2"
+                        name="availability2"
+                        type="datetime-local"
+                        value={formData.availability2}
+                        onChange={handleChange}
+                        className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
+                      />
+                    </div>
                   </div>
 
                   {/* Status Messages */}
