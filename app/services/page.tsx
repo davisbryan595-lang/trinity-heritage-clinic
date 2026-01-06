@@ -263,7 +263,7 @@ export default function ServicesPage() {
                 className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
               >
                 <Phone className="w-6 h-6 mr-3" />
-                (817) 453-7522
+                817.453.7522
               </Button>
             </a>
           </div>
