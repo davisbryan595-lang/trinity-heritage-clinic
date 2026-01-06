@@ -60,6 +60,10 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex gap-2 items-center">
+                <Phone size={16} className="text-accent flex-shrink-0" />
+                <p className="text-xs">Fax: 866-222-5219</p>
+              </div>
+              <div className="flex gap-2 items-center">
                 <Mail size={16} className="text-accent flex-shrink-0" />
                 <a href="mailto:Trinityheritageclinic@gmail.com" className="hover:text-accent transition-colors text-xs">
                   Trinityheritageclinic@gmail.com
