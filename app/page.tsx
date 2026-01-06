@@ -19,6 +19,7 @@ import DiamondPreloader from "@/components/diamond-preloader"
 import { DiamondsShapeDivider, DiagonalShapeDivider, WaveShapeDivider, StairsShapeDivider } from "@/components/shape-dividers"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 import {
   Phone,
   MapPin,
