@@ -154,7 +154,7 @@ export default function BrochurePage() {
                     <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                     <span className="text-sm text-accent font-semibold">Clinic</span>
                   </div>
-                  <div className="absolute top-[58%] -translate-y-1/2 right-4 sm:right-6 lg:right-10 z-10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
+                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
                     <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                       ...Cherish Your Health
                     </p>
