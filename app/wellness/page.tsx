@@ -293,7 +293,7 @@ export default function WellnessPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-12 sm:py-16">
+      <footer className="bg-muted border-t-4 border-primary py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
@@ -305,7 +305,7 @@ export default function WellnessPage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-white/80">
+              <p className="text-foreground">
                 2204 Joe Battle Blvd, STE D204
                 <br />
                 El Paso, TX 79938
@@ -313,17 +313,17 @@ export default function WellnessPage() {
             </div>
             <div className="space-y-4">
               <div>
-                <p className="font-semibold mb-1">Quick Links</p>
+                <p className="font-semibold mb-1 text-foreground">Quick Links</p>
                 <div className="space-y-1">
-                  <Link href="/" className="text-white/80 hover:text-white transition-colors block">Home</Link>
-                  <Link href="/services" className="text-white/80 hover:text-white transition-colors block">Services</Link>
-                  <Link href="/location" className="text-white/80 hover:text-white transition-colors block">Location</Link>
+                  <Link href="/" className="text-foreground hover:text-primary transition-colors block">Home</Link>
+                  <Link href="/services" className="text-foreground hover:text-primary transition-colors block">Services</Link>
+                  <Link href="/location" className="text-foreground hover:text-primary transition-colors block">Location</Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-white/20 pt-8">
-            <p className="text-center text-white/60 text-sm">
+          <div className="border-t border-border pt-8">
+            <p className="text-center text-foreground text-sm font-medium">
               © 2024 Heritage Healthcare Clinic. All rights reserved.
             </p>
           </div>
