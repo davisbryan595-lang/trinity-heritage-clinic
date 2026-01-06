@@ -200,7 +200,7 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 md:pt-28 lg:pt-32 pb-12 sm:pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
         {/* Geometric Background */}
         <GeometricBackground variant="diamonds" className="opacity-10" opacity={1} animated={true} />
 

@@ -211,7 +211,7 @@ export default function GalleryPage() {
 
       <div className="overflow-hidden">
         {/* Hero Section */}
-        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
+        <section className="relative pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16 lg:pb-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="organic" className="opacity-15" opacity={1} />
 
