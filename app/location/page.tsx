@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Clock, Mail, Menu, X } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { WaveShapeDivider } from "@/components/shape-dividers"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function LocationPage() {
   const [isScrolled, setIsScrolled] = useState(false)
