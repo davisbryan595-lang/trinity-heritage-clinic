@@ -218,7 +218,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-end justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
+            className="relative min-h-screen flex items-end justify-center pt-12 sm:pt-16 md:pt-24 lg:pt-32 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
             style={{
               backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
               backgroundSize: 'cover',
