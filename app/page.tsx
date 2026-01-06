@@ -206,7 +206,7 @@ export default function BrochurePage() {
                 <a href="tel:915-300-2276" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call (915) 300-2276
+                    Call 915.300.2276
                   </Button>
                 </a>
               </div>
@@ -274,7 +274,7 @@ export default function BrochurePage() {
                       className="bg-accent hover:bg-accent/90 text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent w-full sm:w-auto"
                     >
                       <Phone className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                      <span className="hidden sm:inline">Call (915) 300-2276</span>
+                      <span className="hidden sm:inline">Call 915.300.2276</span>
                       <span className="sm:hidden">Call Now</span>
                     </Button>
                   </a>
