@@ -135,7 +135,7 @@ export default function BrochurePage() {
               {/* Logo */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center gap-2 group cursor-pointer flex-shrink-0"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0"
               >
                 <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
                   <Image
