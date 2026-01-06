@@ -133,10 +133,10 @@ export default function PatientFormsPage() {
                 </Link>
               ))}
               <div className="px-4 pt-4 border-t border-border">
-                <a href="tel:817-453-7522" className="block">
+                <a href="tel:915-300-2276" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call 817.453.7522
+                    Call 915.300.2276
                   </Button>
                 </a>
               </div>
