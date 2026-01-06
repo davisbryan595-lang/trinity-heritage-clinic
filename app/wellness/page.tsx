@@ -17,6 +17,7 @@ import {
   X,
 } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function WellnessPage() {
   const [isScrolled, setIsScrolled] = useState(false)
