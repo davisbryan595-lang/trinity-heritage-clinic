@@ -106,7 +106,7 @@ export default function ServicesPage() {
                 Forms
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button
                   size="sm"
                   className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 shadow-lg hover:shadow-xl transition-all animate-rotating-glow border-2 border-accent"
@@ -257,13 +257,13 @@ export default function ServicesPage() {
             <p className="text-xl mb-8 max-w-3xl mx-auto">
               To learn more about how we can help your business, call us today
             </p>
-            <a href="tel:817-453-7522">
+            <a href="tel:915-300-2276">
               <Button
                 size="lg"
                 className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
               >
                 <Phone className="w-6 h-6 mr-3" />
-                817.453.7522
+                915.300.2276
               </Button>
             </a>
           </div>

@@ -109,7 +109,7 @@ export default function AboutPage() {
 
             {/* CTA Button */}
             <div className="hidden lg:block ml-4 xl:ml-8">
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
                   <span className="hidden lg:inline">Call Now</span>
@@ -154,10 +154,10 @@ export default function AboutPage() {
                 </Link>
               ))}
               <div className="px-4 pt-4 border-t border-border">
-                <a href="tel:817-453-7522" className="block">
+                <a href="tel:915-300-2276" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call 817.453.7522
+                    Call 915.300.2276
                   </Button>
                 </a>
               </div>
@@ -440,10 +440,10 @@ export default function AboutPage() {
             </Card>
 
             <div className="text-center">
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button className="bg-accent hover:bg-accent/90 text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Call 817.453.7522 for Pricing
+                  Call 915.300.2276 for Pricing
                 </Button>
               </a>
             </div>
