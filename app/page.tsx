@@ -127,13 +127,9 @@ export default function BrochurePage() {
         {/* Main Navbar */}
         <div className={`transition-all duration-300 ${
           isScrolled
-            ? "bg-white/80"
-            : "bg-white/10"
-        }`}
-        style={{
-          WebkitBackdropFilter: 'blur(12px)',
-          backdropFilter: 'blur(12px)'
-        }}>
+            ? "bg-white"
+            : "bg-transparent"
+        }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20 sm:h-24 lg:h-32 py-2 sm:py-3 lg:py-4">
               {/* Logo */}
