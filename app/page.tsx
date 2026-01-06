@@ -155,8 +155,8 @@ export default function BrochurePage() {
                     <span className="text-sm text-accent font-semibold">Clinic</span>
                   </div>
                 </div>
-                <div className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
-                  <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center" style={{ color: '#6b3fa0' }}>
+                <div className="mt-[5px] px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
+                  <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                     ...Cherish Your Health
                   </p>
                 </div>
