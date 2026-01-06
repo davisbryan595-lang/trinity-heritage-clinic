@@ -231,7 +231,10 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-black/30 to-accent/40"></div>
 
-            <div className="w-full mx-auto px-2 sm:px-4 relative z-10 text-center">
+            <div className="w-full mx-auto px-2 sm:px-4 relative z-10 text-center backdrop-blur-lg rounded-3xl py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 bg-white/10 border border-white/20" style={{
+              WebkitBackdropFilter: 'blur(20px)',
+              backdropFilter: 'blur(20px)'
+            }}>
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
