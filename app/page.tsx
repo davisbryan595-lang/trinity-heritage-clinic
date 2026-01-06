@@ -95,7 +95,6 @@ export default function BrochurePage() {
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Location", href: "/location" },
-                { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact", href: "/contact" }
@@ -118,7 +117,7 @@ export default function BrochurePage() {
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </button>
                   )}
-                  {index === 5 && <ServicesDropdown />}
+                  {index === 4 && <ServicesDropdown />}
                 </div>
               ))}
             </div>
@@ -138,7 +137,7 @@ export default function BrochurePage() {
                 onClick={() => scrollToSection("home")}
                 className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
               >
-                <div className="relative w-40 h-16 sm:w-[208px] sm:h-20 lg:w-[256px] lg:h-32">
+                <div className="relative w-60 h-24 sm:w-[312px] sm:h-30 lg:w-[384px] lg:h-48">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
@@ -249,7 +248,7 @@ export default function BrochurePage() {
                   <p className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
                   </p>
-                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg" style={{ color: '#6b3fa0' }}>
+                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg whitespace-nowrap overflow-hidden text-ellipsis px-2 w-full" style={{ color: '#6b3fa0' }}>
                     Occupational Medicine Services
                   </h2>
                 </div>
