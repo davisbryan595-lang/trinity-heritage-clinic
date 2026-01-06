@@ -218,7 +218,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 overflow-hidden"
+            className="relative min-h-screen flex items-end justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
             style={{
               backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
               backgroundSize: 'cover',
@@ -228,7 +228,7 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-12 sm:py-16 lg:py-20">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-12 sm:py-16 lg:py-20 backdrop-blur-xl bg-white/30 border border-white/20 rounded-2xl shadow-2xl">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
