@@ -258,10 +258,10 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-1">General Phone</p>
                   <a
-                    href="tel:817-453-7522"
+                    href="tel:915-300-2276"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    817.453.7522
+                    915.300.2276
                   </a>
                 </div>
                 <div>
