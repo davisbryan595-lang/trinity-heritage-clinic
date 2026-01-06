@@ -261,7 +261,7 @@ export default function PatientFormsPage() {
                     href="tel:817-453-7522"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    (817) 453-7522
+                    817.453.7522
                   </a>
                 </div>
                 <div>
