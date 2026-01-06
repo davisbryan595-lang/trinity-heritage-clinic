@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Phone, Menu, X, Heart, Award, Shield, Users, CheckCircle2 } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { DiagonalShapeDivider, WaveShapeDivider } from "@/components/shape-dividers"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function AboutPage() {
   const [isLoaded, setIsLoaded] = useState(false)
