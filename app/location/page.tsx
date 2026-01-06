@@ -279,7 +279,7 @@ export default function LocationPage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-white/80">
+              <p className="text-foreground">
                 2204 Joe Battle Blvd, STE D204
                 <br />
                 El Paso, TX 79938
@@ -287,17 +287,17 @@ export default function LocationPage() {
             </div>
             <div className="space-y-4">
               <div>
-                <p className="font-semibold mb-1">Quick Links</p>
+                <p className="font-semibold mb-1 text-foreground">Quick Links</p>
                 <div className="space-y-1">
-                  <Link href="/" className="text-white/80 hover:text-white transition-colors block">Home</Link>
-                  <Link href="/services" className="text-white/80 hover:text-white transition-colors block">Services</Link>
-                  <Link href="/wellness" className="text-white/80 hover:text-white transition-colors block">Wellness</Link>
+                  <Link href="/" className="text-foreground hover:text-primary transition-colors block">Home</Link>
+                  <Link href="/services" className="text-foreground hover:text-primary transition-colors block">Services</Link>
+                  <Link href="/wellness" className="text-foreground hover:text-primary transition-colors block">Wellness</Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-white/20 pt-8">
-            <p className="text-center text-white/60 text-sm">
+          <div className="border-t border-border pt-8">
+            <p className="text-center text-foreground text-sm font-medium">
               © 2024 Heritage Healthcare Clinic. All rights reserved.
             </p>
           </div>
