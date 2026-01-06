@@ -19,6 +19,7 @@ import {
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { WaveShapeDivider, StairsShapeDivider, DiagonalShapeDivider } from "@/components/shape-dividers"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function ServicesPage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -84,6 +85,7 @@ export default function ServicesPage() {
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
+              <ServicesDropdown />
               <Link href="/#team" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Team
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -95,10 +97,6 @@ export default function ServicesPage() {
               <Link href="/location" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Location
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link href="/services" className="text-xs lg:text-sm font-semibold text-primary font-bold transition-colors relative group">
-                Services
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
               </Link>
               <Link href="/wellness" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Wellness

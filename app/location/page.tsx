@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Clock, Mail, Menu, X } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { WaveShapeDivider } from "@/components/shape-dividers"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function LocationPage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -84,10 +85,7 @@ export default function LocationPage() {
                 Location
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
               </Link>
-              <Link href="/services" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
-                Services
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              <ServicesDropdown />
               <Link href="/wellness" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Wellness
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>

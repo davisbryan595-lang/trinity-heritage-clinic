@@ -19,6 +19,7 @@ import DiamondPreloader from "@/components/diamond-preloader"
 import { DiamondsShapeDivider, DiagonalShapeDivider, WaveShapeDivider, StairsShapeDivider } from "@/components/shape-dividers"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 import {
   Phone,
   MapPin,
@@ -119,30 +120,30 @@ export default function BrochurePage() {
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Location", href: "/location" },
-                { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact", href: "/contact" }
-              ].map((link) => (
-                link.href ? (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 py-1"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                ) : (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 py-1"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                  </button>
-                )
+              ].map((link, index) => (
+                <div key={link.id} className="flex items-center">
+                  {link.href ? (
+                    <Link
+                      href={link.href}
+                      className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 py-1"
+                    >
+                      {link.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => scrollToSection(link.id)}
+                      className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 py-1"
+                    >
+                      {link.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </button>
+                  )}
+                  {index === 1 && <ServicesDropdown />}
+                </div>
               ))}
             </div>
 
