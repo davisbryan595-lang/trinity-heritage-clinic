@@ -282,7 +282,9 @@ export default function LocationPage() {
                 />
               </div>
               <p className="text-white/80">
-                Providing comprehensive occupational health services to the DFW area.
+                2204 Joe Battle Blvd, STE D204
+                <br />
+                El Paso, TX 79938
               </p>
             </div>
             <div className="space-y-4">
