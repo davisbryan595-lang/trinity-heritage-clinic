@@ -93,19 +93,20 @@ export default function AboutPage() {
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact", href: "/contact" }
-              ].map((link) => (
-                <Link
-                  key={link.id}
-                  href={link.href}
-                  className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative group px-2 py-1 ${
-                    link.href === "/#about" ? "text-primary font-bold" : "text-foreground hover:text-primary"
-                  }`}
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+              ].map((link, index) => (
+                <div key={link.id} className="flex items-center">
+                  <Link
+                    href={link.href}
+                    className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative group px-2 py-1 ${
+                      link.href === "/#about" ? "text-primary font-bold" : "text-foreground hover:text-primary"
+                    }`}
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                  {index === 1 && <ServicesDropdown />}
+                </div>
               ))}
-              <ServicesDropdown />
             </div>
 
             {/* CTA Button */}
