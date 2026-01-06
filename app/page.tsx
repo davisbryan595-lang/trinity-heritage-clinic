@@ -79,15 +79,11 @@ export default function BrochurePage() {
 
       {/* Fixed Navbar */}
       <nav
-        className={`fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md ${
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/80 shadow-lg"
-            : "bg-white/10"
+            ? "bg-white shadow-lg"
+            : "bg-transparent"
         }`}
-        style={{
-          WebkitBackdropFilter: 'blur(12px)',
-          backdropFilter: 'blur(12px)'
-        }}
       >
         {/* Top Navigation Row */}
         <div className={`border-b transition-all duration-300 ${isScrolled ? "border-border" : "border-transparent"}`}>
