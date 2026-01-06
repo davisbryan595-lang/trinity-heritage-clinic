@@ -248,7 +248,7 @@ export default function BrochurePage() {
                     &
                   </p>
                   <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg whitespace-nowrap overflow-hidden text-ellipsis px-2 w-full" style={{ color: '#6b3fa0' }}>
-                    Occupational Medicine Services
+                    Occupational Medicine Clinic
                   </h2>
                 </div>
 
