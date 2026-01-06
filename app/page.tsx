@@ -135,7 +135,7 @@ export default function BrochurePage() {
               {/* Logo */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0"
               >
                 <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
                   <Image
@@ -153,6 +153,11 @@ export default function BrochurePage() {
                   <div className="hidden flex-col">
                     <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                     <span className="text-sm text-accent font-semibold">Clinic</span>
+                  </div>
+                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
+                    <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                      ...Cherish Your Health
+                    </p>
                   </div>
                 </div>
               </button>
@@ -213,7 +218,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 overflow-hidden"
+            className="relative min-h-screen flex items-end justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
             style={{
               backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
               backgroundSize: 'cover',
@@ -223,7 +228,7 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-12 sm:py-16 lg:py-20">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-12 sm:py-16 lg:py-20 backdrop-blur-xl bg-white/15 border border-white/10 rounded-2xl shadow-2xl">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
