@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText, Menu, X } from "lucide-react"
+import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText, Menu, X, Mail } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { ServicesDropdown } from "@/components/ServicesDropdown"
 
@@ -306,6 +306,21 @@ export default function ContactPage() {
                     <p className="text-foreground text-sm font-semibold">
                       866-222-5219
                     </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Email Card */}
+              <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/10 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
+                <div className="flex gap-4">
+                  <div className="p-3 bg-accent/20 rounded-lg">
+                    <Mail className="w-6 h-6 text-accent flex-shrink-0" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">Email</h3>
+                    <a href="mailto:Trinityheritageclinic@gmail.com" className="text-accent hover:text-accent/80 font-bold text-sm block transition-colors">
+                      Trinityheritageclinic@gmail.com
+                    </a>
                   </div>
                 </div>
               </Card>
