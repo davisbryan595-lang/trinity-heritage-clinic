@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { ChevronLeft, ChevronRight, X, Menu, Phone, Home, Award } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { DiamondsShapeDivider, WaveShapeDivider } from "@/components/shape-dividers"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 const galleryImages = [
   {
