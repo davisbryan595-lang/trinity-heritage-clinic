@@ -79,11 +79,15 @@ export default function BrochurePage() {
 
       {/* Fixed Navbar */}
       <nav
-        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        className={`fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md ${
           isScrolled
-            ? "bg-white shadow-lg"
-            : "bg-transparent"
+            ? "bg-white/80 shadow-lg"
+            : "bg-white/10"
         }`}
+        style={{
+          WebkitBackdropFilter: 'blur(12px)',
+          backdropFilter: 'blur(12px)'
+        }}
       >
         {/* Top Navigation Row */}
         <div className={`border-b transition-all duration-300 ${isScrolled ? "border-border" : "border-transparent"}`}>
@@ -127,9 +131,13 @@ export default function BrochurePage() {
         {/* Main Navbar */}
         <div className={`transition-all duration-300 ${
           isScrolled
-            ? "bg-white"
-            : "bg-transparent"
-        }`}>
+            ? "bg-white/80"
+            : "bg-white/10"
+        }`}
+        style={{
+          WebkitBackdropFilter: 'blur(12px)',
+          backdropFilter: 'blur(12px)'
+        }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20 sm:h-24 lg:h-32 py-2 sm:py-3 lg:py-4">
               {/* Logo */}
@@ -157,15 +165,6 @@ export default function BrochurePage() {
                 </div>
               </button>
 
-              {/* CTA Button */}
-              <div className="hidden lg:block">
-                <a href="tel:915-300-2276">
-                  <Button className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
-                    <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
-                    <span className="hidden lg:inline">Call Now</span>
-                  </Button>
-                </a>
-              </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -212,14 +211,6 @@ export default function BrochurePage() {
                     </button>
                   )
                 ))}
-                <div className="px-4 pt-4 border-t border-border">
-                  <a href="tel:915-300-2276" className="block">
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Call 915.300.2276
-                    </Button>
-                  </a>
-                </div>
               </div>
             )}
           </div>
