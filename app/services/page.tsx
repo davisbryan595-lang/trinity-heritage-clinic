@@ -153,10 +153,10 @@ export default function ServicesPage() {
               <Link href="/patient-forms" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Patient Forms
               </Link>
-              <a href="tel:817-453-7522" className="block">
+              <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call 817.453.7522
+                  Call 915.300.2276
                 </Button>
               </a>
             </div>
