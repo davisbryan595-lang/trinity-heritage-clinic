@@ -135,7 +135,7 @@ export default function BrochurePage() {
               {/* Logo */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
+                className="flex flex-col items-center gap-2 group cursor-pointer flex-shrink-0"
               >
                 <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
                   <Image
@@ -154,6 +154,11 @@ export default function BrochurePage() {
                     <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                     <span className="text-sm text-accent font-semibold">Clinic</span>
                   </div>
+                </div>
+                <div className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
+                  <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center" style={{ color: '#6b3fa0' }}>
+                    ...Cherish Your Health
+                  </p>
                 </div>
               </button>
 
