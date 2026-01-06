@@ -208,9 +208,15 @@ export default function ContactPage() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-4">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 drop-shadow-lg">Contact Us</h1>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary drop-shadow-lg">Contact
+              </h1>
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">us
+              </h1>
+              <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">— Always Accepting New Patients</span>
+            </div>
             <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-medium leading-relaxed">
-              Get in touch with Heritage Healthcare Clinic. We're here to help and look forward to hearing from you.
+              Always Accepting New Patients...Contact us!
             </p>
             <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
@@ -329,9 +335,9 @@ export default function ContactPage() {
               </Card>
 
               {/* Tagline */}
-              <div className="bg-gradient-to-br from-tertiary/20 via-accent/10 to-primary/10 p-6 rounded-lg border-2 border-tertiary/30 mt-8 shadow-md">
-                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed whitespace-nowrap">
-                  "Always Friendly. Always Knowledgeable."
+              <div className="bg-gradient-to-br from-green-50 via-green-100 to-green-50 p-8 rounded-lg border-2 border-green-300 mt-8 shadow-lg text-center">
+                <p className="font-serif text-2xl md:text-3xl font-bold text-green-700 leading-relaxed">
+                  Visit us today, walk-ins are always welcome!
                 </p>
               </div>
             </div>
@@ -397,7 +403,7 @@ export default function ContactPage() {
                   {/* Subject Field */}
                   <div>
                     <Label htmlFor="subject" className="text-sm font-semibold text-primary mb-2 block">
-                      Subject <span className="text-muted-foreground text-xs">(optional)</span>
+                      Purpose of Contacting Us <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="subject"
