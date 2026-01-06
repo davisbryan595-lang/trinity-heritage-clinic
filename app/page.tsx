@@ -251,7 +251,7 @@ export default function BrochurePage() {
                 </p>
 
                 {/* Tagline */}
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-4xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-4xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium whitespace-nowrap">
                   Always Friendly. Always Knowledgeable.
                 </p>
 

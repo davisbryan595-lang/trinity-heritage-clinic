@@ -330,7 +330,7 @@ export default function ContactPage() {
 
               {/* Tagline */}
               <div className="bg-gradient-to-br from-tertiary/20 via-accent/10 to-primary/10 p-6 rounded-lg border-2 border-tertiary/30 mt-8 shadow-md">
-                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed">
+                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed whitespace-nowrap">
                   "Always Friendly. Always Knowledgeable."
                 </p>
               </div>
