@@ -419,7 +419,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-12 sm:py-16">
+      <footer className="bg-muted border-t-4 border-primary py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>

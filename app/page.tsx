@@ -242,7 +242,7 @@ export default function BrochurePage() {
               >
                 {/* Main Heading – underline removed */}
                 <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight drop-shadow-lg">
-                  Internal Occupational Medicine Services
+                  Internal medicine and occupational services
                 </h1>
 
                 {/* Subtitle */}
