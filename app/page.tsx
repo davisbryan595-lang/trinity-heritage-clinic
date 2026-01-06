@@ -230,8 +230,15 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 overflow-hidden"
+            style={{
+              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F68a489fd8213482a93d3002e599fd74c?format=webp&width=800)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed'
+            }}
           >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-black/30 to-accent/40"></div>
 
             <div className="w-full mx-auto px-2 sm:px-4 relative z-10 text-center">
               <div
