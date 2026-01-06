@@ -222,17 +222,6 @@ export default function BrochurePage() {
             id="home"
             className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
           >
-            {/* Professional Background Image */}
-            <div className="absolute inset-0 opacity-55">
-              <Image
-                src="https://cdn.builder.io/api/v1/image/assets%2Feaa719c761d64fc58dbfe871f4fb5f8e%2F0e9f3a657b704078bdc79886aba53dcd?format=webp&width=800"
-                alt="Professional healthcare team at work"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
-            </div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
               <div
