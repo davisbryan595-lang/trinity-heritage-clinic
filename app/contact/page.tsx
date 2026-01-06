@@ -211,11 +211,8 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-4">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary drop-shadow-lg">Contact
-              </h1>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">us
-              </h1>
-              <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">— Always Accepting New Patients</span>
+              <span className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">Always Accepting New Patients...</span>
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">Contact Us Today</h1>
             </div>
             <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
