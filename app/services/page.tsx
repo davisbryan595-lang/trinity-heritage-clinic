@@ -14,6 +14,7 @@ import {
   Phone,
   Menu,
   X,
+  ChevronDown,
 } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { WaveShapeDivider, StairsShapeDivider, DiagonalShapeDivider } from "@/components/shape-dividers"
