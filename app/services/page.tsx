@@ -171,7 +171,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Comprehensive occupational health services designed to keep your workforce healthy, safe, and productive
+            Comprehensive healthcare services for your entire family and workplace wellness needs
           </p>
         </div>
       </div>
@@ -183,70 +183,163 @@ export default function ServicesPage() {
         <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 mb-16 relative z-20 lg:grid-cols-4">
-            {[
-              {
-                icon: Briefcase,
-                title: "Physical Exams",
-                items: [
-                  "Pre-Employment/Placement Exams",
-                  "Annual Physical/Surveillance",
-                  "Return to Work Exams",
-                  "Fitness for Duty Exams",
-                  "Post Exposure Exams",
-                  "DOT & Respirator Exams"
-                ],
-                color: "primary"
-              },
-              {
-                icon: HeartPulse,
-                title: "Injury/Illness Treatment",
-                items: [
-                  "Work-Related Injuries",
-                  "Non-Work Related Illness",
-                  "Occupational Disease Care",
-                  "Injury Management & Recovery",
-                  "Fitness for Duty Determination",
-                  "Treatment Coordination"
-                ],
-                color: "accent"
-              },
-              {
-                icon: Activity,
-                title: "Diagnostic Testing",
-                items: [
-                  "Spirometry Testing",
-                  "Audiometry",
-                  "Vision Screening",
-                  "EKG Testing",
-                  "Blood Work & Labs",
-                  "Respirator Fit Testing"
-                ],
-                color: "primary"
-              },
-              {
-                icon: Shield,
-                title: "Substance & Health",
-                items: [
-                  "Alcohol Testing",
-                  "Urine Drug Screening",
-                  "MRO Services",
-                  "Immunization",
-                  "Health & Safety Consultation",
-                  "Wellness & Health Promotions"
-                ],
-                color: "accent"
-              }
-            ].map((service, idx) => (
-              <AnimatedServiceCard
-                key={idx}
-                icon={service.icon}
-                title={service.title}
-                items={service.items}
-                color={service.color}
-                itemIcon={CheckCircle2}
-              />
-            ))}
+          {/* Internal Medicine & Family Practice Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-6" style={{ color: '#a855f7' }}>
+              Internal Medicine & Family Practice
+            </h2>
+            <p className="text-lg text-foreground mb-8 max-w-4xl">
+              At Trinity Heritage, we dedicate our time to providing personalized, compassionate quality care to meet your unique health needs. Access your records from your previous doctor and fax it to us, and schedule an appointment by phone, email or online appointment request. Come in and learn more about our comprehensive services. Your health is our priority.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 relative z-20 lg:grid-cols-3">
+              {[
+                {
+                  icon: HeartPulse,
+                  title: "Internal Medicine",
+                  items: [
+                    "Preventive care",
+                    "Routine visits/follow up visits",
+                    "Healthy living and exercise counseling",
+                    "Diabetes",
+                    "Hypertension",
+                    "Hyperlipidemia",
+                    "Thyroid disease",
+                    "Asthma/COPD management",
+                    "Smoking cessation",
+                    "Other chronic and acute conditions"
+                  ],
+                  color: "primary"
+                },
+                {
+                  icon: Activity,
+                  title: "Pediatrics (10 years and older)",
+                  items: [
+                    "Annual physicals",
+                    "Routine services",
+                    "Immunization recommendations and referral",
+                    "Back to school/sports physicals",
+                    "Sick visits"
+                  ],
+                  color: "accent"
+                },
+                {
+                  icon: HeartPulse,
+                  title: "Gynecology",
+                  items: [
+                    "Routine cervical examination and pap smear",
+                    "STD screening and treatment",
+                    "Vaginal infections & Urinary Tract Infections",
+                    "Family planning – Oral and injectable implantations are referred out"
+                  ],
+                  color: "primary"
+                },
+                {
+                  icon: Activity,
+                  title: "Dermatology",
+                  items: [
+                    "Removal of minor skin tags, moles, and warts",
+                    "Acne",
+                    "Psoriasis",
+                    "Athletic Foot",
+                    "Eczema",
+                    "Dermatitis",
+                    "Scabies"
+                  ],
+                  color: "accent"
+                },
+                {
+                  icon: HeartPulse,
+                  title: "Minor Surgery",
+                  items: [
+                    "Laceration Repair",
+                    "Minor Incision and Drainage",
+                    "Simple Biopsy"
+                  ],
+                  color: "primary"
+                }
+              ].map((service, idx) => (
+                <AnimatedServiceCard
+                  key={idx}
+                  icon={service.icon}
+                  title={service.title}
+                  items={service.items}
+                  color={service.color}
+                  itemIcon={CheckCircle2}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Occupational Medicine Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-8" style={{ color: '#8cc73f' }}>
+              Occupational Medicine
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 relative z-20 lg:grid-cols-4">
+              {[
+                {
+                  icon: Briefcase,
+                  title: "Physical Exams",
+                  items: [
+                    "Pre-Employment/Placement Exams",
+                    "Annual Physical/Surveillance",
+                    "Return to Work Exams",
+                    "Fitness for Duty Exams",
+                    "Post Exposure Exams",
+                    "DOT & Respirator Exams"
+                  ],
+                  color: "primary"
+                },
+                {
+                  icon: HeartPulse,
+                  title: "Injury/Illness Treatment",
+                  items: [
+                    "Work-Related Injuries",
+                    "Non-Work Related Illness",
+                    "Occupational Disease Care",
+                    "Injury Management & Recovery",
+                    "Fitness for Duty Determination",
+                    "Treatment Coordination"
+                  ],
+                  color: "accent"
+                },
+                {
+                  icon: Activity,
+                  title: "Diagnostic Testing",
+                  items: [
+                    "Spirometry Testing",
+                    "Audiometry",
+                    "Vision Screening",
+                    "EKG Testing",
+                    "Blood Work & Labs",
+                    "Respirator Fit Testing"
+                  ],
+                  color: "primary"
+                },
+                {
+                  icon: Shield,
+                  title: "Substance & Health",
+                  items: [
+                    "Alcohol Testing",
+                    "Urine Drug Screening",
+                    "MRO Services",
+                    "Immunization",
+                    "Health & Safety Consultation",
+                    "Wellness & Health Promotions"
+                  ],
+                  color: "accent"
+                }
+              ].map((service, idx) => (
+                <AnimatedServiceCard
+                  key={idx}
+                  icon={service.icon}
+                  title={service.title}
+                  items={service.items}
+                  color={service.color}
+                  itemIcon={CheckCircle2}
+                />
+              ))}
+            </div>
           </div>
 
           {/* CTA Banner */}
