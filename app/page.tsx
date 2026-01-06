@@ -234,49 +234,48 @@ export default function BrochurePage() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
               >
-                {/* Main Heading – underline removed */}
-                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-4 sm:mb-6 leading-tight drop-shadow-lg">
-                  Internal medicine and occupational services
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8" style={{ color: '#8cc73f' }}>
-                  Working to Keep Your Workforce Well
-                </p>
+                {/* Main Heading with two-color design */}
+                <div className="mb-4 sm:mb-6 lg:mb-8">
+                  <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3">
+                    <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
+                  </h1>
+                  <p className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
+                    &
+                  </p>
+                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg" style={{ color: '#6b3fa0' }}>
+                    Occupational Medicine Services
+                  </h2>
+                </div>
 
                 {/* Tagline */}
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-4xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium whitespace-nowrap">
-                  Always Friendly. Always Knowledgeable.
-                </p>
-
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground max-w-3xl mx-auto mb-8 sm:mb-12 font-medium">
-                  Conveniently Located in East of El Paso, Texas – Serving to keep the community healthy
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-medium">
+                  Always friendly and knowledgeable
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6">
+                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 rounded-lg shadow-2xl transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 flex items-center justify-center hover:opacity-90 w-full sm:w-auto"
-                    style={{ backgroundColor: '#8cc73f', borderColor: '#8cc73f' }}
+                    className="text-foreground text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 rounded-lg transition-all duration-300 font-semibold hover:opacity-90 inline-flex items-center justify-center"
+                    style={{ color: '#6b3fa0' }}
                   >
-                    <span className="hidden sm:inline">Learn How We Can Help Your Business</span>
-                    <span className="sm:hidden">Learn How We Can Help</span>
+                    Learn how we can help you
                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </button>
                   <a href="tel:915-300-2276" className="w-full sm:w-auto">
                     <Button
-                      className="bg-accent hover:bg-accent/90 text-white text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent w-full sm:w-auto"
+                      className="text-white text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 shadow-lg transition-all duration-300 border-2 w-full sm:w-auto"
+                      style={{ backgroundColor: '#6b3fa0', borderColor: '#6b3fa0' }}
                     >
-                      <Phone className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                      <span className="hidden sm:inline">Call 915.300.2276</span>
-                      <span className="sm:hidden">Call Now</span>
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <span>Call Now</span>
+                      <span className="hidden sm:inline ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
                 </div>
