@@ -185,7 +185,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Internal Medicine & Family Practice Section */}
           <div className="mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-6" style={{ color: '#8cc73f' }}>
+            <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-6" style={{ color: '#a855f7' }}>
               Internal Medicine & Family Practice
             </h2>
             <p className="text-lg text-foreground mb-8 max-w-4xl">
