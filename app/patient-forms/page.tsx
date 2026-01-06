@@ -1,14 +1,151 @@
 "use client"
 
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Download, Phone, Clock, AlertCircle, MapPin, FileText } from "lucide-react"
+import { Download, Phone, Clock, AlertCircle, MapPin, FileText, Menu, X } from "lucide-react"
 
 export default function PatientFormsPage() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false)
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-accent/5 to-primary/15 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-accent/5 to-primary/15">
+      {/* Fixed Navbar */}
+      <nav
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white shadow-lg border-b border-border"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-40 py-4">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
+            >
+              <div className="relative w-64 h-32">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                  alt="Heritage Healthcare Clinic"
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  priority
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fallback = e.currentTarget.parentElement?.nextElementSibling
+                    if (fallback) (fallback as HTMLElement).classList.remove('hidden')
+                  }}
+                />
+                <div className="hidden flex-col">
+                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-sm text-accent font-semibold">Clinic</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex gap-2 items-center flex-wrap justify-center">
+              {[
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About", href: "/#about" },
+                { id: "team", label: "Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact", href: "/contact" }
+              ].map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative group px-2 py-1 ${
+                    link.href === "/patient-forms" ? "text-primary font-bold" : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block ml-8">
+              <a href="tel:915-300-2276">
+                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X size={28} className="text-primary" />
+              ) : (
+                <Menu size={28} className="text-primary" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
+              {[
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
+              ].map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="px-4 pt-4 border-t border-border">
+                <a href="tel:915-300-2276" className="block">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call 915.300.2276
+                  </Button>
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-r from-primary/20 to-accent/10">
+      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">
@@ -43,7 +180,7 @@ export default function PatientFormsPage() {
               </div>
 
               <p className="text-foreground mb-8 leading-relaxed">
-                This comprehensive 5-page form covers all essential patient information including:
+                This comprehensive form covers all essential patient information including:
               </p>
 
               <ul className="grid md:grid-cols-2 gap-3 mb-10">
@@ -121,10 +258,10 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-1">General Phone</p>
                   <a
-                    href="tel:817-453-7522"
+                    href="tel:915-300-2276"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    (817) 453-7522
+                    915.300.2276
                   </a>
                 </div>
                 <div>
@@ -133,7 +270,7 @@ export default function PatientFormsPage() {
                     href="tel:817-966-3999"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    (817) 966-3999
+                    817.966.3999
                   </a>
                 </div>
                 <div>
@@ -153,9 +290,9 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Address</p>
                   <p className="text-foreground font-medium">
-                    1475 Heritage Pkwy Ste 225
+                    2204 Joe Battle Blvd, STE D204
                     <br />
-                    Mansfield, TX 76063
+                    El Paso, TX 79938
                   </p>
                 </div>
                 <div>

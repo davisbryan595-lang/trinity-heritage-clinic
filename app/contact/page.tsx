@@ -1,16 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText } from "lucide-react"
+import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText, Menu, X } from "lucide-react"
+import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,6 +23,18 @@ export default function ContactPage() {
     subject: "",
     message: "",
   })
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false)
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -58,50 +75,186 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-primary/5 pt-20">
+    <div className="min-h-screen bg-background">
+      {/* Fixed Navbar */}
+      <nav
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white shadow-lg border-b border-border"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-40 py-4">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
+            >
+              <div className="relative w-64 h-24 sm:w-80 sm:h-32 lg:w-96 lg:h-40">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                  alt="Heritage Healthcare Clinic"
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  priority
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fallback = e.currentTarget.parentElement?.nextElementSibling
+                    if (fallback) (fallback as HTMLElement).classList.remove('hidden')
+                  }}
+                />
+                <div className="hidden flex-col">
+                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-sm text-accent font-semibold">Clinic</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex gap-2 items-center flex-wrap justify-center">
+              {[
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About", href: "/#about" },
+                { id: "team", label: "Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact", href: "/contact" }
+              ].map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative group px-2 py-1 ${
+                    link.href === "/contact" ? "text-primary font-bold" : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:block ml-8">
+              <a href="tel:915-300-2276">
+                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X size={28} className="text-primary" />
+              ) : (
+                <Menu size={28} className="text-primary" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
+              {[
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Location", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
+                { id: "contact", label: "Contact Us", href: "/contact" }
+              ].map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="px-4 pt-4 border-t border-border">
+                <a href="tel:915-300-2276" className="block">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call 915.300.2276
+                </Button>
+              </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">Contact Us</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
+        {/* Geometric Background */}
+        <GeometricBackground variant="diamonds" className="opacity-10" opacity={1} animated={true} />
+
+        {/* Floating Geometric Accents */}
+        <GeometricAccent className="absolute top-10 right-20 opacity-20 animate-diamond-float" />
+        <GeometricAccent className="absolute -bottom-10 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="space-y-4">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 drop-shadow-lg">Contact Us</h1>
+            <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-medium leading-relaxed">
               Get in touch with Heritage Healthcare Clinic. We're here to help and look forward to hearing from you.
             </p>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-background via-accent/3 to-primary/5 overflow-hidden">
+        {/* Subtle geometric background */}
+        <GeometricBackground variant="organic" className="opacity-5" opacity={1} />
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1 space-y-6">
-              <div>
-                <h2 className="font-serif text-2xl font-bold text-primary-foreground mb-6">Contact Information</h2>
+              <div className="mb-8">
+                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Contact Information</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
 
               {/* Address Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Our Location</h3>
-                    <p className="text-muted-foreground text-sm">
-                      1475 Heritage Pkwy Ste 225<br />
-                      Mansfield, TX 76063
+                  <div className="p-3 bg-primary/20 rounded-lg">
+                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
+                    <p className="text-foreground text-sm leading-relaxed">
+                      2204 Joe Battle Blvd, STE D204<br />
+                      El Paso, TX 79938
                     </p>
                   </div>
                 </div>
               </Card>
 
               {/* New Patient Form Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors bg-gradient-to-br from-accent/5 to-transparent">
+              <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/15 via-accent/8 to-transparent hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4 mb-4">
-                  <FileText className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="p-3 bg-accent/25 rounded-lg">
+                    <FileText className="w-6 h-6 text-accent flex-shrink-0" />
+                  </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-primary-foreground mb-2">New Patient Form</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <h3 className="font-semibold text-foreground mb-2">New Patient Form</h3>
+                    <p className="text-foreground text-sm mb-4 leading-relaxed">
                       Download and complete your paperwork at home to save time at your appointment.
                     </p>
                     <a
@@ -111,7 +264,7 @@ export default function ContactPage() {
                     >
                       <Button
                         size="sm"
-                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold flex items-center gap-2"
+                        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold flex items-center gap-2 shadow-md hover:shadow-lg"
                       >
                         <Download className="w-4 h-4" />
                         Download Form
@@ -122,57 +275,61 @@ export default function ContactPage() {
               </Card>
 
               {/* Phone Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-tertiary/40 hover:border-tertiary/80 transition-all duration-300 bg-gradient-to-br from-tertiary/10 to-primary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="p-3 bg-tertiary/20 rounded-lg">
+                    <Phone className="w-6 h-6 text-tertiary flex-shrink-0" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Phone</h3>
-                    <a href="tel:817-453-7522" className="text-accent hover:text-accent/80 font-semibold text-sm block">
-                      (817) 453-7522
-                    </a>
-                    <p className="text-xs text-muted-foreground mt-2">After hours urgent:</p>
-                    <a href="tel:817-966-3999" className="text-accent hover:text-accent/80 text-sm">
-                      (817) 966-3999
+                    <h3 className="font-semibold text-foreground mb-2">Phone</h3>
+                    <a href="tel:915-300-2276" className="text-tertiary hover:text-tertiary/80 font-bold text-sm block transition-colors">
+                      915.300.2276
                     </a>
                   </div>
                 </div>
               </Card>
 
               {/* Fax Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-primary/30 hover:border-primary/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-accent/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <AlertCircle className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="p-3 bg-primary/20 rounded-lg">
+                    <AlertCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Fax</h3>
-                    <p className="text-muted-foreground text-sm font-semibold">
-                      1-866-665-6659
+                    <h3 className="font-semibold text-foreground mb-2">Fax</h3>
+                    <p className="text-foreground text-sm font-semibold">
+                      866-222-5219
                     </p>
                   </div>
                 </div>
               </Card>
 
               {/* Hours Card */}
-              <Card className="p-6 border-2 border-primary/20 hover:border-accent/40 transition-colors">
+              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-primary-foreground mb-2">Office Hours</h3>
-                    <p className="text-muted-foreground text-sm">
-                      <span className="block font-semibold text-primary-foreground">Monday - Friday</span>
-                      8:30 AM - 5:30 PM<br />
-                      <span className="text-xs">(Closed 12:00 PM - 1:00 PM)</span>
-                    </p>
-                    <p className="text-muted-foreground text-sm mt-2">
-                      <span className="block font-semibold text-primary-foreground">Saturday - Sunday</span>
-                      Closed
-                    </p>
+                  <div className="p-3 bg-accent/15 rounded-lg">
+                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
+                    <div className="space-y-2">
+                      <div>
+                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
+                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
+                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
+                      </div>
+                      <div>
+                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
+                        <span className="text-foreground text-sm">Closed</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Card>
 
               {/* Tagline */}
-              <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 rounded-lg border border-primary/20 mt-8">
-                <p className="font-serif text-lg font-semibold text-primary-foreground italic">
+              <div className="bg-gradient-to-br from-tertiary/20 via-accent/10 to-primary/10 p-6 rounded-lg border-2 border-tertiary/30 mt-8 shadow-md">
+                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed">
                   "Always Friendly. Always Knowledgeable."
                 </p>
               </div>
@@ -180,15 +337,16 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="md:col-span-2">
-              <Card className="p-8 md:p-10 border-2 border-primary/20">
-                <h2 className="font-serif text-3xl font-bold text-primary-foreground mb-2">Send Us a Message</h2>
-                <p className="text-muted-foreground mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+              <Card className="p-8 md:p-10 border-2 border-accent/60 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/20 via-primary/12 to-tertiary/10 shadow-xl hover:shadow-2xl">
+                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Send Us a Message</h2>
+                <p className="text-foreground font-medium mb-8 text-lg leading-relaxed">Fill out the form below and we'll get back to you as soon as possible.</p>
+                <div className="w-16 h-1 bg-gradient-to-r from-accent to-tertiary rounded-full mb-8"></div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <Label htmlFor="name" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Name <span className="text-red-500">*</span>
+                    <Label htmlFor="name" className="text-sm font-semibold text-primary mb-2 block">
+                      Name <span className="text-accent">*</span>
                     </Label>
                     <Input
                       id="name"
@@ -198,14 +356,14 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
                   </div>
 
                   {/* Email Field */}
                   <div>
-                    <Label htmlFor="email" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Email <span className="text-red-500">*</span>
+                    <Label htmlFor="email" className="text-sm font-semibold text-primary mb-2 block">
+                      Email <span className="text-accent">*</span>
                     </Label>
                     <Input
                       id="email"
@@ -215,13 +373,13 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
                   </div>
 
                   {/* Phone Field */}
                   <div>
-                    <Label htmlFor="phone" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="phone" className="text-sm font-semibold text-primary mb-2 block">
                       Phone Number <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
@@ -231,13 +389,13 @@ export default function ContactPage() {
                       placeholder="(XXX) XXX-XXXX"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
                   </div>
 
                   {/* Subject Field */}
                   <div>
-                    <Label htmlFor="subject" className="text-sm font-semibold text-primary-foreground mb-2 block">
+                    <Label htmlFor="subject" className="text-sm font-semibold text-primary mb-2 block">
                       Subject <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
@@ -247,14 +405,14 @@ export default function ContactPage() {
                       placeholder="What is this regarding?"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
                   </div>
 
                   {/* Message Field */}
                   <div>
-                    <Label htmlFor="message" className="text-sm font-semibold text-primary-foreground mb-2 block">
-                      Message <span className="text-red-500">*</span>
+                    <Label htmlFor="message" className="text-sm font-semibold text-primary mb-2 block">
+                      Message <span className="text-accent">*</span>
                     </Label>
                     <Textarea
                       id="message"
@@ -264,23 +422,23 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full resize-none"
+                      className="w-full resize-none bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
                   </div>
 
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
-                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div className="p-4 bg-tertiary/20 border-2 border-tertiary/50 rounded-lg flex gap-3 animate-slide-up">
+                      <CheckCircle className="w-5 h-5 text-tertiary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-green-900">Message sent successfully!</p>
-                        <p className="text-sm text-green-800">We'll get back to you as soon as possible.</p>
+                        <p className="font-semibold text-foreground">Message sent successfully!</p>
+                        <p className="text-sm text-foreground/80">We'll get back to you as soon as possible.</p>
                       </div>
                     </div>
                   )}
 
                   {submitStatus === 'error' && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex gap-3">
+                    <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg flex gap-3 animate-slide-up">
                       <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-red-900">Error sending message</p>
@@ -293,14 +451,14 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-3 font-semibold text-base"
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
 
                   {/* Note */}
-                  <p className="text-xs text-muted-foreground text-center pt-2">
-                    We'll get back to you as soon as possible. For urgent matters, please call us directly.
+                  <p className="text-xs text-muted-foreground text-center pt-2 leading-relaxed">
+                    We'll get back to you as soon as possible. For urgent matters, please call us directly at <span className="font-semibold text-primary">915.300.2276</span>.
                   </p>
                 </form>
               </Card>

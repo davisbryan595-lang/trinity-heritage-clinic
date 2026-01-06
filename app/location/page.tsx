@@ -5,21 +5,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Briefcase,
-  HeartPulse,
-  Activity,
-  Shield,
-  CheckCircle2,
-  Phone,
-  Menu,
-  X,
-} from "lucide-react"
+import { MapPin, Phone, Clock, Mail, Menu, X } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
-import { WaveShapeDivider, StairsShapeDivider, DiagonalShapeDivider } from "@/components/shape-dividers"
-import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { WaveShapeDivider } from "@/components/shape-dividers"
 
-export default function ServicesPage() {
+export default function LocationPage() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -61,7 +51,7 @@ export default function ServicesPage() {
               href="/"
               className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
             >
-              <div className="relative w-80 h-32">
+              <div className="relative w-40 h-16">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Heritage Healthcare Clinic"
@@ -73,7 +63,7 @@ export default function ServicesPage() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            <div className="hidden md:flex items-center gap-3 lg:gap-6">
               <Link href="/" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Home
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -90,13 +80,13 @@ export default function ServicesPage() {
                 Gallery
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/location" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+              <Link href="/location" className="text-xs lg:text-sm font-semibold text-primary font-bold transition-colors relative group">
                 Location
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link href="/services" className="text-xs lg:text-sm font-semibold text-primary font-bold transition-colors relative group">
-                Services
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+              </Link>
+              <Link href="/services" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Services
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/wellness" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Wellness
@@ -141,10 +131,10 @@ export default function ServicesPage() {
               <Link href="/gallery" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Gallery
               </Link>
-              <Link href="/location" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+              <Link href="/location" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
                 Location
               </Link>
-              <Link href="/services" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
+              <Link href="/services" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Services
               </Link>
               <Link href="/wellness" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
@@ -167,105 +157,113 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#8cc73f' }}>
-            Our Services
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--tertiary)' }}>
+            Our Location
           </h1>
           <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Comprehensive occupational health services designed to keep your workforce healthy, safe, and productive
+            Conveniently Located in East of El Paso, Texas – Serving to keep the community healthy
           </p>
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
-        <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
-        <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
-        <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
+      {/* Location Section */}
+      <div className="relative py-12 sm:py-16 md:py-20 bg-secondary overflow-hidden">
+        <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
+        <GeometricAccent className="absolute top-32 left-20 opacity-12" style={{ animationDelay: "0.8s" }} />
+        <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 mb-16 relative z-20 lg:grid-cols-4">
-            {[
-              {
-                icon: Briefcase,
-                title: "Physical Exams",
-                items: [
-                  "Pre-Employment/Placement Exams",
-                  "Annual Physical/Surveillance",
-                  "Return to Work Exams",
-                  "Fitness for Duty Exams",
-                  "Post Exposure Exams",
-                  "DOT & Respirator Exams"
-                ],
-                color: "primary"
-              },
-              {
-                icon: HeartPulse,
-                title: "Injury/Illness Treatment",
-                items: [
-                  "Work-Related Injuries",
-                  "Non-Work Related Illness",
-                  "Occupational Disease Care",
-                  "Injury Management & Recovery",
-                  "Fitness for Duty Determination",
-                  "Treatment Coordination"
-                ],
-                color: "accent"
-              },
-              {
-                icon: Activity,
-                title: "Diagnostic Testing",
-                items: [
-                  "Spirometry Testing",
-                  "Audiometry",
-                  "Vision Screening",
-                  "EKG Testing",
-                  "Blood Work & Labs",
-                  "Respirator Fit Testing"
-                ],
-                color: "primary"
-              },
-              {
-                icon: Shield,
-                title: "Substance & Health",
-                items: [
-                  "Alcohol Testing",
-                  "Urine Drug Screening",
-                  "MRO Services",
-                  "Immunization",
-                  "Health & Safety Consultation",
-                  "Wellness & Health Promotions"
-                ],
-                color: "accent"
-              }
-            ].map((service, idx) => (
-              <AnimatedServiceCard
-                key={idx}
-                icon={service.icon}
-                title={service.title}
-                items={service.items}
-                color={service.color}
-                itemIcon={CheckCircle2}
-              />
-            ))}
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
+            {/* Map */}
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                className="grayscale hover:grayscale-0 transition-all duration-300"
+              ></iframe>
+            </div>
 
-          {/* CTA Banner */}
-          <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
-              Working to Keep Your Workforce Well
-            </h3>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              To learn more about how we can help your business, call us today
-            </p>
-            <a href="tel:915-300-2276">
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
-              >
-                <Phone className="w-6 h-6 mr-3" />
-                915.300.2276
-              </Button>
-            </a>
+            {/* Location Details */}
+            <div className="space-y-6">
+              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: 'var(--tertiary)' }}>Contact Information</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Address</p>
+                        <a
+                          href="https://maps.google.com/?q=2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          2204 Joe Battle Blvd, STE D204
+                          <br />
+                          El Paso, TX 79938
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Phone</p>
+                        <a
+                          href="tel:915-300-2276"
+                          className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
+                        >
+                          915.300.2276
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Fax</p>
+                        <p className="text-muted-foreground">866-222-5219</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">Office Hours</p>
+                        <div className="text-muted-foreground space-y-1">
+                          <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+                          <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
+                          <p>Saturday - Sunday: Closed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* After Hours Banner */}
+              <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
+                <div className="flex items-start gap-4">
+                  <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
+                    <p className="mb-3">For urgent medical matters, call:</p>
+                    <a
+                      href="tel:817-966-3989"
+                      className="text-2xl font-bold hover:underline"
+                    >
+                      817.966.3989
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -291,10 +289,12 @@ export default function ServicesPage() {
             </div>
             <div className="space-y-4">
               <div>
-                <p className="font-semibold mb-1">Contact Us</p>
-                <p className="text-white/80">2204 Joe Battle Blvd, STE D204</p>
-                <p className="text-white/80">El Paso, TX 79938</p>
-                <a href="tel:915-300-2276" className="text-accent hover:text-white transition-colors">915.300.2276</a>
+                <p className="font-semibold mb-1">Quick Links</p>
+                <div className="space-y-1">
+                  <Link href="/" className="text-white/80 hover:text-white transition-colors block">Home</Link>
+                  <Link href="/services" className="text-white/80 hover:text-white transition-colors block">Services</Link>
+                  <Link href="/wellness" className="text-white/80 hover:text-white transition-colors block">Wellness</Link>
+                </div>
               </div>
             </div>
           </div>

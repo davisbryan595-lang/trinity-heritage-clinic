@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-48 h-20">
+            <div className="relative w-24 h-10">
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                 alt="Trinity Heritage Clinic"
@@ -127,7 +127,7 @@ export default function Navbar() {
                   className="w-full border-2 border-accent text-accent hover:bg-accent hover:text-white"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call (915) 300-2276
+                  Call 915.300.2276
                 </Button>
               </a>
               <Link href="/contact" className="block" onClick={() => setIsOpen(false)}>
