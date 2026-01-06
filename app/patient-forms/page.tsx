@@ -270,7 +270,7 @@ export default function PatientFormsPage() {
                     href="tel:817-966-3999"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    (817) 966-3999
+                    817.966.3999
                   </a>
                 </div>
                 <div>
