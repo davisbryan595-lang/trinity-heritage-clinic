@@ -132,7 +132,6 @@ export default function GalleryPage() {
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Location", href: "/location" },
-                { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Forms", href: "/patient-forms" },
                 { id: "contact", label: "Contact", href: "/contact" }
@@ -148,6 +147,7 @@ export default function GalleryPage() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
+              <ServicesDropdown />
             </div>
 
             {/* CTA Button */}
