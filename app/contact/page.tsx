@@ -226,13 +226,6 @@ export default function ContactPage() {
         <GeometricBackground variant="organic" className="opacity-5" opacity={1} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Tagline Section */}
-          <div className="text-center mb-12">
-            <p className="font-serif text-2xl md:text-3xl font-bold text-green-700">
-              Visit us today, walk-ins are always welcome!
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1 space-y-6">
@@ -337,6 +330,13 @@ export default function ContactPage() {
                   </div>
                 </div>
               </Card>
+
+              {/* Tagline */}
+              <div className="text-center mt-8">
+                <p className="font-serif text-2xl md:text-3xl font-bold text-green-700">
+                  Visit us today, walk-ins are always welcome!
+                </p>
+              </div>
             </div>
 
             {/* Contact Form */}
