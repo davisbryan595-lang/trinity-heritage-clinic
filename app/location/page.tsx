@@ -153,7 +153,7 @@ export default function LocationPage() {
       </nav>
 
       {/* Hero Section */}
-      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
+      <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--tertiary)' }}>
             Our Location
