@@ -146,7 +146,7 @@ export default function LocationPage() {
               <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (915) 300-2276
+                  Call 915.300.2276
                 </Button>
               </a>
             </div>
@@ -219,7 +219,7 @@ export default function LocationPage() {
                           href="tel:915-300-2276"
                           className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
                         >
-                          (915) 300-2276
+                          915.300.2276
                         </a>
                       </div>
                     </div>
