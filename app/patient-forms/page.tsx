@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Download, Phone, Clock, AlertCircle, MapPin, FileText, Menu, X } from "lucide-react"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function PatientFormsPage() {
   const [isScrolled, setIsScrolled] = useState(false)
