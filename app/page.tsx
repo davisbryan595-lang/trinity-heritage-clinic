@@ -137,7 +137,7 @@ export default function BrochurePage() {
                 onClick={() => scrollToSection("home")}
                 className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
               >
-                <div className="relative w-60 h-24 sm:w-[312px] sm:h-30 lg:w-[384px] lg:h-48">
+                <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
@@ -157,15 +157,6 @@ export default function BrochurePage() {
                 </div>
               </button>
 
-              {/* CTA Button */}
-              <div className="hidden lg:block">
-                <a href="tel:915-300-2276">
-                  <Button className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 lg:py-2.5 shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
-                    <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
-                    <span className="hidden lg:inline">Call Now</span>
-                  </Button>
-                </a>
-              </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -212,14 +203,6 @@ export default function BrochurePage() {
                     </button>
                   )
                 ))}
-                <div className="px-4 pt-4 border-t border-border">
-                  <a href="tel:915-300-2276" className="block">
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Call 915.300.2276
-                    </Button>
-                  </a>
-                </div>
               </div>
             )}
           </div>
@@ -230,10 +213,20 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 overflow-hidden"
+            style={{
+              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fd262aa17ef624b1d94677905217b9bcb%2F68a489fd8213482a93d3002e599fd74c?format=webp&width=800)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed'
+            }}
           >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div className="max-w-4xl mx-auto px-2 sm:px-4 relative z-10 text-center backdrop-blur-lg rounded-4xl py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 bg-white/5 border border-white/15" style={{
+              WebkitBackdropFilter: 'blur(20px)',
+              backdropFilter: 'blur(20px)'
+            }}>
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -241,13 +234,13 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center pr-8 sm:pr-12 md:pr-16 lg:pr-20">
+                  <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 whitespace-nowrap text-center">
                     <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
                   </h1>
-                  <p className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
+                  <p className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
                   </p>
-                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
+                  <h2 className="font-serif text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
                     Occupational Medicine Clinic
                   </h2>
                 </div>
