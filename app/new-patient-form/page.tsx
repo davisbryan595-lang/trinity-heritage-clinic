@@ -86,7 +86,7 @@ export default function NewPatientFormPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-white to-accent/5 pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/95 via-primary/90 to-accent/20 overflow-hidden">
+      <section className="relative pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-br from-primary/95 via-primary/90 to-accent/20 overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -mr-40 -mt-40"></div>

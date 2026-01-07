@@ -1,282 +1,458 @@
 "use client"
 
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Briefcase, Heart, Activity, Shield, Award, Users, CheckCircle2, Stethoscope, PhoneOff } from "lucide-react"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Briefcase,
+  HeartPulse,
+  Activity,
+  Shield,
+  CheckCircle2,
+  Phone,
+  Menu,
+  X,
+  ChevronDown,
+} from "lucide-react"
+import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
+import { WaveShapeDivider, StairsShapeDivider, DiagonalShapeDivider } from "@/components/shape-dividers"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function ServicesPage() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+      const scrollTop = window.scrollY
+      const progress = (scrollTop / (documentHeight - windowHeight)) * 100
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false)
+  }
+
   return (
-    <div className="overflow-hidden pt-20">
-      {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-br from-primary/40 to-background">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="font-serif text-5xl font-bold text-primary-foreground mb-4">
-            Occupational Medicine Services
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Comprehensive occupational health services for your workforce
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-white">
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
-      {/* Services Overview */}
-      <section className="py-20">
+      {/* Fixed Navbar */}
+      <nav
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white shadow-lg border-b border-border"
+            : "bg-transparent"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
+          <div className="flex justify-between items-center h-20 py-2">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
+            >
+              <div className="relative w-80 h-32">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                  alt="Heritage Healthcare Clinic"
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  priority
+                />
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+              <Link href="/" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link href="/#about" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <ServicesDropdown />
+              <Link href="/#team" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Team
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link href="/gallery" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Gallery
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link href="/location" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Contact Us
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link href="/wellness" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Wellness
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link href="/contact" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+                Forms
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <a href="tel:915-300-2276">
+                <Button
+                  size="sm"
+                  className="bg-accent hover:bg-accent/90 text-white text-xs lg:text-sm px-3 lg:px-4 py-2 shadow-lg hover:shadow-xl transition-all animate-rotating-glow border-2 border-accent"
+                >
+                  <Phone className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
+                  <span className="hidden lg:inline">Call</span>
+                </Button>
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <div className="md:hidden bg-white border-t border-border py-4 space-y-2 animate-fadeInUp">
+              <Link href="/" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Home
+              </Link>
+              <Link href="/#about" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                About Us
+              </Link>
+              <Link href="/#team" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Our Team
+              </Link>
+              <Link href="/gallery" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Gallery
+              </Link>
+              <Link href="/location" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Contact Us
+              </Link>
+              <Link href="/services" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
+                Services
+              </Link>
+              <Link href="/wellness" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Wellness
+              </Link>
+              <Link href="/contact" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Forms
+              </Link>
+              <a href="tel:915-300-2276" className="block">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call 915.300.2276
+                </Button>
+              </a>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#8cc73f' }}>
             Our Services
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Heritage Healthcare Clinic provides a full range of occupational medicine services
+          </h1>
+          <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
+            Comprehensive healthcare services for your entire family and workplace wellness needs
           </p>
+        </div>
+      </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: Briefcase,
-                title: "Physical Exams",
-                items: [
-                  "Pre-Employment/Placement Exams",
-                  "Annual Physical/Surveillance Exams",
-                  "Return to Work Exams",
-                  "Fitness for Duty Exams",
-                  "Post Exposure Exams",
-                  "Termination Exams",
-                  "DOT Exams",
-                  "Respirator Exams",
-                  "Executive Physical Exams"
-                ],
-                color: "primary" as const
-              },
-              {
-                icon: Heart,
-                title: "Injury & Illness Evaluation",
-                items: [
-                  "Work-Related Injury Assessment",
-                  "Non-Work Related Illness Care",
-                  "Occupational Disease Evaluation",
-                  "Injury Management & Treatment",
-                  "Fitness for Duty Determination",
-                  "Treatment Coordination with Specialists",
-                  "Medical Case Management",
-                  "Return to Work Planning",
-                  "Documentation & Reporting"
-                ],
-                color: "accent" as const
-              },
-              {
-                icon: Activity,
-                title: "Diagnostic Testing",
-                items: [
-                  "Spirometry (Lung Function Testing)",
-                  "Audiometry (Hearing Tests)",
-                  "Vision Screening",
-                  "EKG (Electrocardiogram)",
-                  "Blood Work & Routine Labs",
-                  "Urinalysis",
-                  "Respirator Fit Testing",
-                  "Baseline Testing",
-                  "Follow-up Testing"
-                ],
-                color: "primary" as const
-              },
-              {
-                icon: Shield,
-                title: "Substance Testing & Health",
-                items: [
-                  "Alcohol Testing",
-                  "Urine Drug Screening",
-                  "MRO (Medical Review Officer) Services",
-                  "Immunization Services",
-                  "Health & Safety Consultation",
-                  "Wellness & Health Promotions",
-                  "Travel Medicine",
-                  "Occupational Health Counseling",
-                  "Documentation Services"
-                ],
-                color: "accent" as const
-              }
-            ].map((service, idx) => (
-              <AnimatedServiceCard
-                key={idx}
-                icon={service.icon}
-                title={service.title}
-                items={service.items}
-                color={service.color}
-                itemIcon={CheckCircle2}
+      {/* Services Grid */}
+      <div className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
+        <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
+        <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+        <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Introductory Section */}
+          <div className="mb-16">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-5xl font-bold mb-6" style={{ color: '#8cc73f' }}>
+              Explore Our Comprehensive Services
+            </h2>
+            <p className="text-lg text-foreground mb-12 max-w-4xl">
+              At Trinity Heritage Clinic, we offer two main areas of expertise to meet both your personal health needs and workplace wellness requirements. Select a category below to view detailed services.
+            </p>
+
+            {/* Category Teaser Sections */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Internal Medicine Teaser */}
+              <div className="border border-primary/20 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-2xl sm:text-3xl font-bold font-serif mb-4" style={{ color: '#a855f7' }}>
+                  Internal Medicine &amp; Family Practice
+                </h3>
+                <p className="text-lg text-foreground">
+                  Personalized, compassionate primary care for individuals and families (ages 10+), including preventive care, chronic condition management, pediatrics, gynecology, dermatology, and minor procedures. Ideal for routine health maintenance and acute needs.
+                </p>
+              </div>
+
+              {/* Occupational Medicine Teaser */}
+              <div className="border border-accent/20 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-2xl sm:text-3xl font-bold font-serif mb-4" style={{ color: '#8cc73f' }}>
+                  Occupational Medicine
+                </h3>
+                <p className="text-lg text-foreground">
+                  Specialized workforce health services for businesses and employees, including compliance exams, injury treatment, diagnostic testing, substance screening, and preventive wellness programs. Focused on keeping your team healthy, safe, and productive.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Accordion Section */}
+          <div className="mb-16">
+            <button
+              onClick={() => setIsDetailsOpen(!isDetailsOpen)}
+              className="w-full border-2 border-primary/30 rounded-lg p-6 flex items-center justify-between hover:bg-primary/5 transition-colors duration-300 group"
+            >
+              <h3 className="text-2xl font-bold font-serif text-foreground">
+                View All Services Details
+              </h3>
+              <ChevronDown
+                className={`w-6 h-6 text-primary transition-transform duration-300 ${
+                  isDetailsOpen ? "rotate-180" : ""
+                }`}
               />
-            ))}
-          </div>
-        </div>
-      </section>
+            </button>
 
-      {/* Specialized Services */}
-      <section className="py-20 bg-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
-            Specialized Occupational Services
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Additional services to support your business health and safety needs
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 bg-white border-2 border-accent/20">
-              <h3 className="font-serif font-bold text-2xl text-primary-foreground mb-4">
-                Work Site Visits
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Identify and abate hazards and exposures</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Familiarize healthcare provider with work environment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Improved occupational health and safety planning</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-8 bg-white border-2 border-accent/20">
-              <h3 className="font-serif font-bold text-2xl text-primary-foreground mb-4">
-                Travel Medicine
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Heritage Healthcare Clinic offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Individualized travel health assessment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Travel-specific vaccinations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Country-specific medical guidance</span>
-                </li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* On-Site Services */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-4 text-primary-foreground">
-            On-Site Services
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Bring healthcare services directly to your workplace
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Health Fairs & Screening",
-                desc: "On-site employee health screenings and wellness fairs to identify health risks and promote employee wellness."
-              },
-              {
-                icon: Briefcase,
-                title: "Health Topics Presentations",
-                desc: "Educational seminars and 'Lunch and Learn' presentations on relevant health and safety topics for your workforce."
-              },
-              {
-                icon: Activity,
-                title: "Seasonal Flu Vaccination",
-                desc: "On-site flu vaccination clinics to protect your employees during flu season and minimize workplace illness."
-              }
-            ].map((service, idx) => (
-              <Card key={idx} className="p-8 bg-white border-2 border-primary/20 text-center hover:shadow-lg transition-all">
-                <div className="w-16 h-16 rounded-lg bg-primary text-white flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8" />
-                </div>
-                <h3 className="font-serif font-bold text-xl text-primary-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground text-sm">{service.desc}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-primary/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary-foreground">
-            Why Choose Heritage Healthcare Clinic
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: Award,
-                title: "Board Certified Physicians",
-                desc: "Experienced occupational medicine physicians certified and licensed to practice without restrictions."
-              },
-              {
-                icon: Stethoscope,
-                title: "Comprehensive Services",
-                desc: "Full range of occupational medicine services from physical exams to injury treatment to diagnostic testing."
-              },
-              {
-                icon: Shield,
-                title: "Integrated Care",
-                desc: "We coordinate with your employee's physicians and specialists to ensure optimal health outcomes."
-              },
-              {
-                icon: Users,
-                title: "Standardized Communication",
-                desc: "Professional occupational health service reporting system that meets the needs of most businesses."
-              }
-            ].map((feature, idx) => (
-              <Card key={idx} className="p-6 bg-white border-2 border-accent/20">
-                <div className="flex gap-4">
-                  <feature.icon className="w-10 h-10 text-accent flex-shrink-0" />
-                  <div>
-                    <h3 className="font-serif font-bold text-lg text-primary-foreground mb-2">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.desc}</p>
+            {/* Accordion Content */}
+            {isDetailsOpen && (
+              <div className="mt-8 space-y-16 animate-fadeInUp">
+                {/* Internal Medicine & Family Practice Section */}
+                <div className="mb-16">
+                  <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-6" style={{ color: '#a855f7' }}>
+                    Internal Medicine & Family Practice
+                  </h2>
+                  <p className="text-lg text-foreground mb-8 max-w-4xl">
+                    At Trinity Heritage, we dedicate our time to providing personalized, compassionate quality care to meet your unique health needs. Access your records from your previous doctor and fax it to us, and schedule an appointment by phone, email or online appointment request. Come in and learn more about our comprehensive services. Your health is our priority.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-8 relative z-20 lg:grid-cols-3">
+                    {[
+                      {
+                        icon: HeartPulse,
+                        title: "Internal Medicine",
+                        items: [
+                          "Preventive care",
+                          "Routine visits/follow up visits",
+                          "Healthy living and exercise counseling",
+                          "Diabetes",
+                          "Hypertension",
+                          "Hyperlipidemia",
+                          "Thyroid disease",
+                          "Asthma/COPD management",
+                          "Smoking cessation",
+                          "Other chronic and acute conditions"
+                        ],
+                        color: "primary"
+                      },
+                      {
+                        icon: Activity,
+                        title: "Pediatrics (10 years and older)",
+                        items: [
+                          "Annual physicals",
+                          "Routine services",
+                          "Immunization recommendations and referral",
+                          "Back to school/sports physicals",
+                          "Sick visits"
+                        ],
+                        color: "accent"
+                      },
+                      {
+                        icon: HeartPulse,
+                        title: "Gynecology",
+                        items: [
+                          "Routine cervical examination and pap smear",
+                          "STD screening and treatment",
+                          "Vaginal infections & Urinary Tract Infections",
+                          "Family planning – Oral and injectable implantations are referred out"
+                        ],
+                        color: "primary"
+                      },
+                      {
+                        icon: Activity,
+                        title: "Dermatology",
+                        items: [
+                          "Removal of minor skin tags, moles, and warts",
+                          "Acne",
+                          "Psoriasis",
+                          "Athletic Foot",
+                          "Eczema",
+                          "Dermatitis",
+                          "Scabies"
+                        ],
+                        color: "accent"
+                      },
+                      {
+                        icon: HeartPulse,
+                        title: "Minor Surgery",
+                        items: [
+                          "Laceration Repair",
+                          "Minor Incision and Drainage",
+                          "Simple Biopsy"
+                        ],
+                        color: "primary"
+                      }
+                    ].map((service, idx) => (
+                      <AnimatedServiceCard
+                        key={idx}
+                        icon={service.icon}
+                        title={service.title}
+                        items={service.items}
+                        color={service.color}
+                        itemIcon={CheckCircle2}
+                      />
+                    ))}
                   </div>
                 </div>
-              </Card>
-            ))}
+
+                {/* Occupational Medicine Section */}
+                <div className="mb-16">
+                  <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-8" style={{ color: '#8cc73f' }}>
+                    Occupational Medicine
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-8 relative z-20 lg:grid-cols-4">
+                    {[
+                      {
+                        icon: Briefcase,
+                        title: "Physical Exams",
+                        items: [
+                          "Pre-Employment/Placement Exams",
+                          "Annual Physical/Surveillance",
+                          "Return to Work Exams",
+                          "Fitness for Duty Exams",
+                          "Post Exposure Exams",
+                          "DOT & Respirator Exams"
+                        ],
+                        color: "primary"
+                      },
+                      {
+                        icon: HeartPulse,
+                        title: "Injury/Illness Treatment",
+                        items: [
+                          "Work-Related Injuries",
+                          "Non-Work Related Illness",
+                          "Occupational Disease Care",
+                          "Injury Management & Recovery",
+                          "Fitness for Duty Determination",
+                          "Treatment Coordination"
+                        ],
+                        color: "accent"
+                      },
+                      {
+                        icon: Activity,
+                        title: "Diagnostic Testing",
+                        items: [
+                          "Spirometry Testing",
+                          "Audiometry",
+                          "Vision Screening",
+                          "EKG Testing",
+                          "Blood Work & Labs",
+                          "Respirator Fit Testing"
+                        ],
+                        color: "primary"
+                      },
+                      {
+                        icon: Shield,
+                        title: "Substance & Health",
+                        items: [
+                          "Alcohol Testing",
+                          "Urine Drug Screening",
+                          "MRO Services",
+                          "Immunization",
+                          "Health & Safety Consultation",
+                          "Wellness & Health Promotions"
+                        ],
+                        color: "accent"
+                      }
+                    ].map((service, idx) => (
+                      <AnimatedServiceCard
+                        key={idx}
+                        icon={service.icon}
+                        title={service.title}
+                        items={service.items}
+                        color={service.color}
+                        itemIcon={CheckCircle2}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* CTA Banner */}
+          <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
+              Working to Keep Your Workforce Well
+            </h3>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              To learn more about how we can help your business, call us today
+            </p>
+            <a href="tel:915-300-2276">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
+              >
+                <Phone className="w-6 h-6 mr-3" />
+                915.300.2276
+              </Button>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Contact CTA */}
-      <section className="py-16 bg-accent text-center">
-        <h2 className="font-serif text-3xl font-bold text-accent-foreground mb-4">
-          Ready to Partner with Heritage Healthcare Clinic?
-        </h2>
-        <p className="text-accent-foreground/90 mb-6">Contact us today to discuss your occupational health needs</p>
-        <div className="flex gap-4 justify-center">
-          <Link href="/contact">
-            <Button size="lg" className="bg-accent-foreground text-accent hover:bg-white">
-              Contact Us
-            </Button>
-          </Link>
-          <a href="tel:817-453-7522">
-            <Button size="lg" className="bg-accent-foreground text-accent hover:bg-white">
-              Call (817) 453-7522
-            </Button>
-          </a>
+      {/* Footer */}
+      <footer className="bg-muted border-t-4 border-primary py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <div className="relative w-40 h-16 mb-4">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                  alt="Heritage Healthcare Clinic"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-foreground">
+                2204 Joe Battle Blvd, STE D204
+                <br />
+                El Paso, TX 79938
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <p className="font-semibold mb-1 text-foreground">Contact Us</p>
+                <p className="text-foreground">2204 Joe Battle Blvd, STE D204</p>
+                <p className="text-foreground">El Paso, TX 79938</p>
+                <a href="tel:915-300-2276" className="text-primary hover:text-primary/80 transition-colors font-semibold">915.300.2276</a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-border pt-8">
+            <p className="text-center text-foreground text-sm font-medium">
+              © 2024 Heritage Healthcare Clinic. All rights reserved.
+            </p>
+          </div>
         </div>
-      </section>
+      </footer>
     </div>
   )
 }

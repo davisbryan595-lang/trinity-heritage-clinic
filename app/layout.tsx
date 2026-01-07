@@ -59,11 +59,11 @@ export default function RootLayout({
               "name": "Trinity Heritage Clinic",
               "description": "Occupational medicine and internal medicine services for businesses and individuals",
               "url": "https://trinityheritageclinic.com",
-              "telephone": "+1-817-453-7522",
+              "telephone": "+1-915.300.2276",
               "email": "Trinityheritageclinic@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "2204 Joe Battle Blvd Ste D204",
+                "streetAddress": "2204 Joe Battle Blvd, STE D204",
                 "addressLocality": "El Paso",
                 "addressRegion": "TX",
                 "postalCode": "79938",

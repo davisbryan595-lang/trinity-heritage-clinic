@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Download, Phone, Clock, AlertCircle, MapPin, FileText, Menu, X } from "lucide-react"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
 
 export default function PatientFormsPage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -61,31 +62,33 @@ export default function PatientFormsPage() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-10 items-center">
+            <div className="hidden lg:flex gap-2 items-center flex-wrap justify-center">
               {[
                 { id: "home", label: "Home", href: "/" },
-                { id: "about", label: "About Us", href: "/" },
-                { id: "team", label: "Our Team", href: "/" },
-                { id: "location", label: "Location", href: "/" },
-                { id: "services", label: "Services", href: "/" },
-                { id: "wellness", label: "Wellness", href: "/" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "about", label: "About", href: "/#about" },
+                { id: "team", label: "Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Contact Us", href: "/location" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
                   href={link.href}
-                  className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
+                  className={`text-xs lg:text-sm font-semibold transition-all duration-300 relative group px-2 py-1 ${
+                    link.href === "/patient-forms" ? "text-primary font-bold" : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
+              <ServicesDropdown />
             </div>
 
             {/* CTA Button */}
             <div className="hidden lg:block ml-8">
-              <a href="tel:817-453-7522">
+              <a href="tel:915-300-2276">
                 <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
@@ -111,13 +114,13 @@ export default function PatientFormsPage() {
             <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
               {[
                 { id: "home", label: "Home", href: "/" },
-                { id: "about", label: "About Us", href: "/" },
-                { id: "team", label: "Our Team", href: "/" },
-                { id: "location", label: "Location", href: "/" },
-                { id: "services", label: "Services", href: "/" },
-                { id: "wellness", label: "Wellness", href: "/" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Contact Us", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -129,10 +132,10 @@ export default function PatientFormsPage() {
                 </Link>
               ))}
               <div className="px-4 pt-4 border-t border-border">
-                <a href="tel:817-453-7522" className="block">
+                <a href="tel:915-300-2276" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call (817) 453-7522
+                    Call 915.300.2276
                   </Button>
                 </a>
               </div>
@@ -141,7 +144,7 @@ export default function PatientFormsPage() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
+      <section className="relative pt-16 sm:pt-20 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">
@@ -220,8 +223,8 @@ export default function PatientFormsPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <a
-                  href="/forms/Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
-                  download="Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                  href="/forms/AllForms.pdf"
+                  download="AllForms.pdf"
                   className="flex-1"
                 >
                   <Button
@@ -254,10 +257,10 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-1">General Phone</p>
                   <a
-                    href="tel:817-453-7522"
+                    href="tel:915-300-2276"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    (817) 453-7522
+                    915.300.2276
                   </a>
                 </div>
                 <div>
@@ -266,7 +269,7 @@ export default function PatientFormsPage() {
                     href="tel:817-966-3999"
                     className="text-lg font-bold text-accent hover:text-accent/80 transition-colors"
                   >
-                    (817) 966-3999
+                    817.966.3999
                   </a>
                 </div>
                 <div>
@@ -286,7 +289,7 @@ export default function PatientFormsPage() {
                 <div>
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Address</p>
                   <p className="text-foreground font-medium">
-                    2204 Joe Battle Blvd Ste D204
+                    2204 Joe Battle Blvd, STE D204
                     <br />
                     El Paso, TX 79938
                   </p>

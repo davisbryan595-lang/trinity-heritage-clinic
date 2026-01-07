@@ -13,9 +13,9 @@ export function DiamondsShapeDivider({
   flip = false
 }: ShapeDividerProps) {
   const colorMap = {
-    primary: "#006D5B",
-    accent: "#6B4C9A",
-    secondary: "#F0F4F8"
+    primary: "var(--primary)",
+    accent: "var(--accent)",
+    secondary: "var(--secondary)"
   }
 
   return (
@@ -92,9 +92,9 @@ export function DiagonalShapeDivider({
   flip = false
 }: ShapeDividerProps) {
   const colorMap = {
-    primary: "#006D5B",
-    accent: "#6B4C9A",
-    secondary: "#F0F4F8"
+    primary: "var(--primary)",
+    accent: "var(--accent)",
+    secondary: "var(--secondary)"
   }
 
   return (
@@ -127,9 +127,9 @@ export function StairsShapeDivider({
   flip = false
 }: ShapeDividerProps) {
   const colorMap = {
-    primary: "#006D5B",
-    accent: "#6B4C9A",
-    secondary: "#F0F4F8"
+    primary: "var(--primary)",
+    accent: "var(--accent)",
+    secondary: "var(--secondary)"
   }
 
   const stepCount = 6
@@ -186,9 +186,9 @@ export function WaveShapeDivider({
   flip = false
 }: ShapeDividerProps) {
   const colorMap = {
-    primary: "#006D5B",
-    accent: "#6B4C9A",
-    secondary: "#F0F4F8"
+    primary: "var(--primary)",
+    accent: "var(--accent)",
+    secondary: "var(--secondary)"
   }
 
   return (
