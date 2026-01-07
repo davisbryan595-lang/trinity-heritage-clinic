@@ -87,8 +87,8 @@ export default function BrochurePage() {
       >
         {/* Top Navigation Row */}
         <div className={`border-b transition-all duration-300 ${isScrolled ? "border-border" : "border-transparent"}`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:flex justify-center items-center h-12 gap-1 xl:gap-2">
+          <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 gap-0.5 xl:gap-1">
               {[
                 { id: "home", label: "Home", href: null },
                 { id: "about", label: "About", href: null },
@@ -102,7 +102,7 @@ export default function BrochurePage() {
                   {link.href ? (
                     <Link
                       href={link.href}
-                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 py-1"
+                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-1.5 xs:px-2 py-1"
                     >
                       {link.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -110,7 +110,7 @@ export default function BrochurePage() {
                   ) : (
                     <button
                       onClick={() => scrollToSection(link.id)}
-                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 py-1"
+                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-1.5 xs:px-2 py-1"
                     >
                       {link.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
