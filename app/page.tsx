@@ -437,48 +437,48 @@ export default function BrochurePage() {
                 </h3>
               </div>
 
-              <div className="relative z-20 mb-16">
+              <div className="relative z-20 mb-12 xs:mb-14 sm:mb-16">
                 {/* Founder Info */}
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                  <CardContent className="p-10">
-                    <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: 'var(--tertiary)' }}>
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
+                    <h3 className="text-2xl xs:text-3xl sm:text-3xl md:text-3xl lg:text-3xl font-bold font-serif mb-2 xs:mb-2 sm:mb-2" style={{ color: 'var(--tertiary)' }}>
                       Medical Director
                     </h3>
-                    <p className="text-xl font-semibold text-primary mb-6">
+                    <p className="text-base xs:text-lg sm:text-xl md:text-xl lg:text-xl font-semibold text-primary mb-5 xs:mb-6 sm:mb-6">
                       Board Certified Occupational Medicine
                     </p>
 
-                    <div className="space-y-4 mb-8">
-                      <p className="text-lg text-foreground leading-relaxed">
+                    <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
+                      <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-lg text-foreground leading-relaxed">
                         Our medical director brings extensive expertise in occupational medicine and is dedicated to providing excellent, compassionate care to businesses and their employees throughout the Dallas Fort Worth area.
                       </p>
 
-                      <div className="space-y-3 border-t border-border pt-6">
-                        <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
-                          <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
+                        <div className="flex items-start gap-3 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-primary/5">
+                          <Award className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold text-foreground">Board Certified</p>
-                            <p className="text-sm text-foreground font-medium">American Board of Occupational Medicine</p>
+                            <p className="font-semibold text-foreground text-sm xs:text-sm sm:text-base">Board Certified</p>
+                            <p className="text-xs xs:text-xs sm:text-sm text-foreground font-medium">American Board of Occupational Medicine</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                          <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <div className="flex items-start gap-3 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                          <Shield className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold text-foreground">Licensed & Certified</p>
-                            <p className="text-sm text-foreground font-medium">State of Texas Medical License</p>
+                            <p className="font-semibold text-foreground text-sm xs:text-sm sm:text-base">Licensed & Certified</p>
+                            <p className="text-xs xs:text-xs sm:text-sm text-foreground font-medium">State of Texas Medical License</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
-                          <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                        <div className="flex items-start gap-3 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-primary/5">
+                          <Stethoscope className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-semibold text-foreground">Specialized Training</p>
-                            <p className="text-sm text-foreground font-medium">Expertise in Occupational Health & Safety</p>
+                            <p className="font-semibold text-foreground text-sm xs:text-sm sm:text-base">Specialized Training</p>
+                            <p className="text-xs xs:text-xs sm:text-sm text-foreground font-medium">Expertise in Occupational Health & Safety</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <p className="text-muted-foreground italic text-sm leading-relaxed">
+                    <p className="text-muted-foreground italic text-xs xs:text-xs sm:text-sm md:text-sm leading-relaxed">
                       "Our passion is to create a healthcare environment where working professionals and businesses receive the specialized occupational health care they deserve, combined with the personal attention that makes all the difference."
                     </p>
                   </CardContent>
