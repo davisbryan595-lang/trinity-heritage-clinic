@@ -95,7 +95,7 @@ export default function ServicesPage() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/location" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
-                Contact Us
+                Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/wellness" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                 Gallery
               </Link>
               <Link href="/location" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
-                Contact Us
+                Contact
               </Link>
               <Link href="/services" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
                 Services
@@ -439,7 +439,7 @@ export default function ServicesPage() {
             </div>
             <div className="space-y-4">
               <div>
-                <p className="font-semibold mb-1 text-foreground">Contact Us</p>
+                <p className="font-semibold mb-1 text-foreground">Contact</p>
                 <p className="text-foreground">2204 Joe Battle Blvd, STE D204</p>
                 <p className="text-foreground">El Paso, TX 79938</p>
                 <a href="tel:915-300-2276" className="text-primary hover:text-primary/80 transition-colors font-semibold">915.300.2276</a>
