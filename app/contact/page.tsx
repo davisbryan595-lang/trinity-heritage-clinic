@@ -259,6 +259,66 @@ export default function ContactPage() {
                 </div>
               </Card>
 
+              {/* How to Submit Your Forms Card */}
+              <Card className="p-5 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/10 to-transparent">
+                <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2 text-sm">
+                  <Clock className="w-4 h-4 text-accent flex-shrink-0" />
+                  How to Submit Your Forms
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        1
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Download & Print</p>
+                      <p className="text-xs text-muted-foreground">
+                        Click the download button above
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        2
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Complete at Home</p>
+                      <p className="text-xs text-muted-foreground">
+                        Fill out before your appointment
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        3
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Bring or Fax</p>
+                      <p className="text-xs text-muted-foreground">
+                        1-866-665-6659
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Your Privacy Matters Card */}
+              <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg flex gap-3">
+                <AlertCircle className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-blue-900 mb-1 text-xs">Your Privacy Matters</p>
+                  <p className="text-xs text-blue-800 leading-relaxed">
+                    Your health information is handled securely per HIPAA. We do not store your data in any online system.
+                  </p>
+                </div>
+              </div>
+
               {/* Address Card */}
               <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
