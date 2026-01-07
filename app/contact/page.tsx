@@ -297,7 +297,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-semibold text-foreground text-xs mb-0.5">Bring or Fax</p>
                       <p className="text-xs text-muted-foreground">
-                        1-866-665-6659
+                        866-222-5219
                       </p>
                     </div>
                   </div>
