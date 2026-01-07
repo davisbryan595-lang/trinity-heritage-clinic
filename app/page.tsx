@@ -270,20 +270,20 @@ export default function BrochurePage() {
             </div>
           </section>
         {/* About Us Section */}
-        <section id="about" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+        <section id="about" className="relative py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="organic" className="opacity-20" opacity={1} />
 
           {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-20 right-20 opacity-10 animate-diamond-float" />
-          <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute top-10 xs:top-16 sm:top-20 right-10 xs:right-16 sm:right-20 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-32 xs:bottom-40 sm:bottom-40 left-5 xs:left-10 sm:left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
+          <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-10 xs:mb-12 sm:mb-16">
+              <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
                 About Heritage Healthcare Clinic
               </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium">
+              <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Comprehensive healthcare for your professional and personal wellness
               </p>
             </div>
