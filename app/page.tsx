@@ -654,12 +654,12 @@ export default function BrochurePage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-muted border-t-4 border-primary py-8 sm:py-10 md:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mb-6 sm:mb-8">
+      <footer className="bg-muted border-t-4 border-primary py-8 xs:py-9 sm:py-10 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 xs:gap-6 sm:gap-6 md:gap-8 lg:gap-12 mb-6 xs:mb-7 sm:mb-8">
             {/* Clinic Info */}
-            <div>
-              <div className="relative w-full h-16 sm:h-20 md:h-24 mb-3 sm:mb-4">
+            <div className="text-center xs:text-center sm:text-left">
+              <div className="relative w-full h-14 xs:h-16 sm:h-16 md:h-20 mb-2 xs:mb-3 sm:mb-4">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
@@ -667,18 +667,18 @@ export default function BrochurePage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-xs sm:text-sm text-foreground mb-3 sm:mb-4 italic font-medium">
+              <p className="text-xs xs:text-xs sm:text-sm text-foreground mb-2 xs:mb-3 sm:mb-4 italic font-medium">
                 "Working to Keep Your Workforce Well"
               </p>
             </div>
 
             {/* Contact */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm md:text-base">Contact</h4>
-              <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground font-medium">
+            <div className="text-center xs:text-center sm:text-left">
+              <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-xs xs:text-xs sm:text-sm md:text-base">Contact</h4>
+              <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2 text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
                 <p>2204 Joe Battle Blvd, STE D204</p>
                 <p>El Paso, TX 79938</p>
-                <p className="pt-1 sm:pt-2">
+                <p className="pt-0.5 xs:pt-1 sm:pt-1 sm:pt-2">
                   Phone: <a href="tel:915-300-2276" className="text-primary hover:underline font-semibold">915.300.2276</a>
                 </p>
                 <p>Fax: 866-222-5219</p>
@@ -686,9 +686,9 @@ export default function BrochurePage() {
             </div>
 
             {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm md:text-base">Quick Links</h4>
-              <div className="space-y-1 sm:space-y-2">
+            <div className="text-center xs:text-center sm:text-left">
+              <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-xs xs:text-xs sm:text-sm md:text-base">Quick Links</h4>
+              <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2">
                 {[
                 { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About Us", href: "/#about" },
@@ -703,7 +703,7 @@ export default function BrochurePage() {
                   <Link
                     key={link.id}
                     href={link.href}
-                    className="block text-xs sm:text-sm text-foreground hover:text-primary transition-colors font-medium"
+                    className="block text-xs xs:text-xs sm:text-xs md:text-sm text-foreground hover:text-primary transition-colors font-medium"
                   >
                     {link.label}
                   </Link>
@@ -711,7 +711,7 @@ export default function BrochurePage() {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="block text-xs sm:text-sm text-foreground hover:text-primary transition-colors font-medium"
+                    className="block text-xs xs:text-xs sm:text-xs md:text-sm text-foreground hover:text-primary transition-colors font-medium"
                   >
                     {link.label}
                   </button>
@@ -721,9 +721,9 @@ export default function BrochurePage() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-6 sm:pt-8 text-center text-xs sm:text-sm text-foreground font-medium">
+          <div className="border-t border-border pt-5 xs:pt-6 sm:pt-6 sm:pt-8 text-center text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
-            <p className="mt-2 italic font-serif text-primary text-xs sm:text-sm">
+            <p className="mt-1 xs:mt-2 sm:mt-2 italic font-serif text-primary text-xs xs:text-xs sm:text-xs md:text-sm">
               2204 Joe Battle Blvd, STE D204 El Paso, TX 79938 | 915.300.2276
             </p>
           </div>
