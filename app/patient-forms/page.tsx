@@ -68,10 +68,9 @@ export default function PatientFormsPage() {
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -118,11 +117,10 @@ export default function PatientFormsPage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -146,7 +144,7 @@ export default function PatientFormsPage() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
+      <section className="relative pt-16 sm:pt-20 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">

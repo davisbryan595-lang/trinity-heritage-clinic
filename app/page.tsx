@@ -94,10 +94,9 @@ export default function BrochurePage() {
                 { id: "about", label: "About", href: null },
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link, index) => (
                 <div key={link.id} className="flex items-center">
                   {link.href ? (
@@ -184,10 +183,9 @@ export default function BrochurePage() {
                   { id: "about", label: "About Us", href: null },
                   { id: "team", label: "Our Team", href: null },
                   { id: "gallery", label: "Gallery", href: "/gallery" },
-                  { id: "location", label: "Location", href: "/location" },
+                  { id: "location", label: "Contact Us", href: "/location" },
                   { id: "wellness", label: "Wellness", href: "/wellness" },
-                  { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                  { id: "contact", label: "Contact Us", href: "/contact" }
+                  { id: "contact", label: "Contact Form", href: "/contact" }
                 ].map((link) => (
                   link.href ? (
                     <Link
@@ -218,7 +216,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-end justify-center pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
+            className="relative min-h-screen flex items-end justify-center pt-12 sm:pt-16 md:pt-24 lg:pt-32 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
             style={{
               backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
               backgroundSize: 'cover',
@@ -696,11 +694,10 @@ export default function BrochurePage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link) => (
                 link.href ? (
                   <Link
