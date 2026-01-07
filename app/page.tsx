@@ -130,13 +130,13 @@ export default function BrochurePage() {
             : "bg-transparent"
         }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20 sm:h-24 lg:h-32 py-2 sm:py-3 lg:py-4">
+            <div className="flex justify-between items-center h-16 xs:h-20 sm:h-24 md:h-28 lg:h-32 py-1 xs:py-2 sm:py-3 md:py-3.5 lg:py-4">
               {/* Logo */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center group cursor-pointer flex-shrink-0"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-full sm:w-auto"
               >
-                <div className="relative w-90 h-36 sm:w-[468px] sm:h-45 lg:w-[576px] lg:h-72">
+                <div className="relative w-60 h-24 xs:w-72 xs:h-32 sm:w-96 sm:h-40 md:w-[480px] md:h-56 lg:w-[576px] lg:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
@@ -150,11 +150,11 @@ export default function BrochurePage() {
                     }}
                   />
                   <div className="hidden flex-col">
-                    <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
-                    <span className="text-sm text-accent font-semibold">Clinic</span>
+                    <span className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                    <span className="text-xs xs:text-sm text-accent font-semibold">Clinic</span>
                   </div>
-                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-2 sm:px-3 py-1 sm:py-1.5">
-                    <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-1 xs:px-2 sm:px-3 py-0.5 xs:py-1 sm:py-1.5">
+                    <p className="text-xs xs:text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                       ...Cherish Your Health
                     </p>
                   </div>
