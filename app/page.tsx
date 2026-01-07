@@ -94,10 +94,9 @@ export default function BrochurePage() {
                 { id: "about", label: "About", href: null },
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link, index) => (
                 <div key={link.id} className="flex items-center">
                   {link.href ? (
@@ -184,10 +183,9 @@ export default function BrochurePage() {
                   { id: "about", label: "About Us", href: null },
                   { id: "team", label: "Our Team", href: null },
                   { id: "gallery", label: "Gallery", href: "/gallery" },
-                  { id: "location", label: "Location", href: "/location" },
+                  { id: "location", label: "Contact Us", href: "/location" },
                   { id: "wellness", label: "Wellness", href: "/wellness" },
-                  { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                  { id: "contact", label: "Contact Us", href: "/contact" }
+                  { id: "contact", label: "Contact Form", href: "/contact" }
                 ].map((link) => (
                   link.href ? (
                     <Link
