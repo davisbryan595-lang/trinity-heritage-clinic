@@ -251,7 +251,7 @@ export default function PatientFormsPage() {
             <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
               <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5 text-accent" />
-                Contact Us
+                Contact
               </h3>
               <div className="space-y-4">
                 <div>
