@@ -494,33 +494,33 @@ export default function BrochurePage() {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 lg:gap-8">
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                    <CardContent className="p-10">
-                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
+                      <h3 className="text-xl xs:text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                         Work Site Visits
                       </h3>
-                      <p className="font-semibold mb-6 text-foreground">
+                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-sm xs:text-sm sm:text-base">
                         Comprehensive workplace assessments
                       </p>
 
-                      <div className="space-y-4 mb-8">
-                        <p className="text-foreground leading-relaxed font-medium">
+                      <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
+                        <p className="text-foreground text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed font-medium">
                           Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
                         </p>
 
-                        <div className="space-y-3 border-t border-border pt-6">
-                          <h4 className="font-semibold text-foreground mb-3">Benefits Include:</h4>
+                        <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
+                          <h4 className="font-semibold text-foreground text-sm xs:text-sm sm:text-base mb-2 xs:mb-3 sm:mb-3">Benefits Include:</h4>
                           <div className="space-y-2">
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-sm font-medium">Identify and abate hazards & exposures</p>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Identify and abate hazards & exposures</p>
                             </div>
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-sm font-medium">Familiarize healthcare provider with work environment</p>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Familiarize healthcare provider with work environment</p>
                             </div>
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-sm font-medium">Improved occupational health & safety planning</p>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Improved occupational health & safety planning</p>
                             </div>
                           </div>
                         </div>
@@ -529,33 +529,33 @@ export default function BrochurePage() {
                   </Card>
 
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                    <CardContent className="p-10">
-                      <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
+                      <h3 className="text-xl xs:text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                         Travel Medicine
                       </h3>
-                      <p className="font-semibold mb-6 text-foreground">
+                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-sm xs:text-sm sm:text-base">
                         Health & wellness for business travelers
                       </p>
 
-                      <div className="space-y-4 mb-8">
-                        <p className="text-foreground leading-relaxed font-medium">
+                      <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
+                        <p className="text-foreground text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed font-medium">
                           HHC offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
                         </p>
 
-                        <div className="space-y-3 border-t border-border pt-6">
-                          <h4 className="font-semibold text-foreground mb-3">Services Include:</h4>
+                        <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
+                          <h4 className="font-semibold text-foreground text-sm xs:text-sm sm:text-base mb-2 xs:mb-3 sm:mb-3">Services Include:</h4>
                           <div className="space-y-2">
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-sm font-medium">Individualized travel health assessment</p>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Individualized travel health assessment</p>
                             </div>
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-sm font-medium">Travel-specific vaccinations</p>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Travel-specific vaccinations</p>
                             </div>
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                              <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-sm font-medium">Country-specific medical guidance</p>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Country-specific medical guidance</p>
                             </div>
                           </div>
                         </div>
