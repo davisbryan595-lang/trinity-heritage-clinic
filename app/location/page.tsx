@@ -130,7 +130,7 @@ export default function LocationPage() {
                 Gallery
               </Link>
               <Link href="/location" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
-                Contact Us
+                Contact
               </Link>
               <Link href="/services" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Services
