@@ -103,7 +103,7 @@ export default function ServicesPage() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/contact" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
-                Contact Form
+                Forms
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <a href="tel:915-300-2276">
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                 Wellness
               </Link>
               <Link href="/contact" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
-                Contact Form
+                Forms
               </Link>
               <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
