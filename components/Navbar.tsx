@@ -1,125 +1,141 @@
-'use client'
+"use client"
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Menu, X, Phone, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 50)
     }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'Our Team', href: '#team' },
-    { label: 'Location', href: '#location' },
-    { label: 'Services', href: '#services' },
-    { label: 'Contact', href: '#contact' },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/resources", label: "Resources" },
+    { href: "/testimonials", label: "Testimonials" },
+    { href: "/contact", label: "Contact" }
   ]
 
   return (
     <nav
-      className="fixed w-full top-0 z-40 transition-all duration-300"
-      style={{
-        backgroundColor: isScrolled ? '#ffffff' : 'rgba(255, 255, 255, 0.95)',
-        boxShadow: isScrolled ? '0 2px 8px rgba(0, 0, 0, 0.1)' : 'none',
-      }}
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/98 backdrop-blur-md shadow-lg border-b border-border"
+          : "glass"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-12 h-12 diamond-glow" style={{ padding: '4px' }}>
-              <svg
-                viewBox="0 0 80 80"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full"
-              >
-                <path d="M20 40L40 20L60 40L40 60Z" fill="#006d5b" opacity="0.9" />
-                <path d="M40 40L50 30L60 40L50 50Z" fill="#00a680" opacity="0.7" />
-                <path d="M20 40L30 30L40 40L30 50Z" fill="#00a680" opacity="0.7" />
-                <path d="M40 40L45 35L50 40L45 45Z" fill="#6b4c9a" opacity="0.95" />
-              </svg>
-            </div>
-            <div>
-              <div className="font-bold text-sm" style={{ color: '#006d5b' }}>
-                TRINITY HERITAGE
-              </div>
-              <div className="text-xs font-semibold" style={{ color: '#6b4c9a' }}>
-                CLINIC
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-48 h-20 animate-logo-glow rounded-lg" style={{ boxShadow: '0 0 20px rgba(107, 168, 66, 0.3)' }}>
+              <Image
+                src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                alt="Trinity Heritage Clinic"
+                fill
+                className="object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110 filter brightness-110"
+                priority
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fallback = e.currentTarget.parentElement?.nextElementSibling
+                  if (fallback) (fallback as HTMLElement).classList.remove('hidden')
+                }}
+              />
+              <div className="hidden flex-col">
+                <span className="text-xl font-serif font-bold text-primary-foreground">Trinity Heritage</span>
+                <span className="text-sm text-accent font-semibold">Clinic</span>
               </div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium transition-colors hover:opacity-70"
-                style={{ color: '#006d5b' }}
+                className="text-sm font-semibold text-foreground hover:text-accent transition-all duration-300 relative group"
               >
                 {link.label}
-              </a>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+              </Link>
             ))}
           </div>
 
-          {/* CTA Button + Mobile Menu */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="#contact" className="btn-secondary" style={{ backgroundColor: '#6b4c9a' }}>
-              Call Now
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex gap-3 items-center">
+            <a href="tel:915-300-2276">
+              <Button
+                variant="outline"
+                className="border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all duration-300"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Call Now
+              </Button>
             </a>
+            <Link href="/contact">
+              <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-glow">
+                <Calendar className="w-4 h-4 mr-2" />
+                Book Free Consult
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={{ color: '#006d5b' }}
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg hover:bg-primary/20 transition-colors"
+            aria-label="Toggle menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isMobileMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-              />
-            </svg>
+            {isOpen ? (
+              <X size={28} className="text-accent" />
+            ) : (
+              <Menu size={28} className="text-accent" />
+            )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-2 bg-white">
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-sm font-medium rounded transition-colors"
-                style={{ color: '#006d5b' }}
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/20 hover:text-accent transition-all"
+                onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <div className="px-4 pt-2">
-              <a href="#contact" className="btn-secondary w-full text-center block" style={{ backgroundColor: '#6b4c9a' }}>
-                Call Now
+            <div className="px-4 pt-4 space-y-3 border-t border-border mt-4">
+              <a href="tel:915-300-2276" className="block">
+                <Button
+                  variant="outline"
+                  className="w-full border-2 border-accent text-accent hover:bg-accent hover:text-white"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call 915.300.2276
+                </Button>
               </a>
+              <Link href="/contact" className="block" onClick={() => setIsOpen(false)}>
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Book Free Consult
+                </Button>
+              </Link>
             </div>
           </div>
         )}
