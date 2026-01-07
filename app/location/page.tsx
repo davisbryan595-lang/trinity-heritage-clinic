@@ -172,12 +172,23 @@ export default function LocationPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 relative z-20">
-            {/* Left Column - Map and Contact Details */}
+            {/* Left Column - Clinic Image */}
+            <div className="relative h-[400px] sm:h-[450px] lg:h-[900px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+              <Image
+                src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=800"
+                alt="Heritage Healthcare Clinic - Internal Medicine Clinic Location"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                priority
+              />
+            </div>
+
+            {/* Right Column - Map and Contact Details */}
             <div className="space-y-6">
-              {/* Map */}
+              {/* Map with Red Marker */}
               <div className="relative h-[400px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5046662988556!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75ca17cffffff%3A0x123456789!2s2204%20Joe%20Battle%20Blvd%2C%20Suite%20D204%2C%20El%20Paso%2C%20TX%2079938!5e0!3m2!1sen!2sus!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -285,17 +296,6 @@ export default function LocationPage() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Right Column - Clinic Image */}
-            <div className="relative h-[400px] sm:h-[450px] lg:h-[900px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-              <Image
-                src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=800"
-                alt="Heritage Healthcare Clinic - Internal Medicine Clinic Location"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                priority
-              />
             </div>
           </div>
         </div>
