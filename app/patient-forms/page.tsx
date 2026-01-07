@@ -68,7 +68,7 @@ export default function PatientFormsPage() {
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Contact Us", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
@@ -117,7 +117,7 @@ export default function PatientFormsPage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Contact Us", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "contact", label: "Forms", href: "/contact" }
@@ -251,7 +251,7 @@ export default function PatientFormsPage() {
             <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
               <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5 text-accent" />
-                Contact Us
+                Contact
               </h3>
               <div className="space-y-4">
                 <div>

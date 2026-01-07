@@ -91,7 +91,7 @@ export default function WellnessPage() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/location" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
-                Contact Us
+                Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <ServicesDropdown />
@@ -139,7 +139,7 @@ export default function WellnessPage() {
                 Gallery
               </Link>
               <Link href="/location" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
-                Contact Us
+                Contact
               </Link>
               <Link href="/services" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Services

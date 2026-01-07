@@ -94,7 +94,7 @@ export default function BrochurePage() {
                 { id: "about", label: "About", href: null },
                 { id: "team", label: "Team", href: null },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Contact Us", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "contact", label: "Forms", href: "/contact" }
               ].map((link, index) => (
@@ -183,7 +183,7 @@ export default function BrochurePage() {
                   { id: "about", label: "About Us", href: null },
                   { id: "team", label: "Our Team", href: null },
                   { id: "gallery", label: "Gallery", href: "/gallery" },
-                  { id: "location", label: "Contact Us", href: "/location" },
+                  { id: "location", label: "Contact", href: "/location" },
                   { id: "wellness", label: "Wellness", href: "/wellness" },
                   { id: "contact", label: "Forms", href: "/contact" }
                 ].map((link) => (
@@ -694,7 +694,7 @@ export default function BrochurePage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Contact Us", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "contact", label: "Forms", href: "/contact" }
