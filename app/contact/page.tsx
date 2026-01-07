@@ -121,10 +121,9 @@ export default function ContactPage() {
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
