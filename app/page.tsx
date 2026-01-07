@@ -486,13 +486,13 @@ export default function BrochurePage() {
               </div>
 
               {/* Work Site Visits & Travel Medicine */}
-              <div className="mt-12">
-                <div className="text-center mb-12">
-                  <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
+              <div className="mt-12 xs:mt-12 sm:mt-14">
+                <div className="text-center mb-10 xs:mb-12 sm:mb-12">
+                  <h3 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4">
                     Specialized Occupational Services
                   </h3>
                 </div>
-                <div className="grid lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 lg:gap-8">
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                     <CardContent className="p-10">
                       <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
