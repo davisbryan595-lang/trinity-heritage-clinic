@@ -173,12 +173,12 @@ export default function LocationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 relative z-20">
             {/* Left Column - Clinic Image */}
-            <div className="relative h-[400px] sm:h-[450px] lg:h-[900px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+            <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20 aspect-square">
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=800"
                 alt="Heritage Healthcare Clinic - Internal Medicine Clinic Location"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
+                className="object-contain hover:scale-105 transition-transform duration-300 bg-white"
                 priority
               />
             </div>
