@@ -144,7 +144,7 @@ export default function AboutPage() {
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Contact", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
