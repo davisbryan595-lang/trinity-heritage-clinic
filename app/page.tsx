@@ -288,24 +288,24 @@ export default function BrochurePage() {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto relative z-20 mb-16">
+            <div className="max-w-4xl mx-auto relative z-20 mb-12 xs:mb-14 sm:mb-16 px-2">
               {/* About Content */}
-              <div className="space-y-6">
+              <div className="space-y-6 xs:space-y-6 sm:space-y-8">
                 <div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Pledge
                   </h3>
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 sm:mb-4 font-medium">
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
                     Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
                   </p>
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
                     Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
                   </p>
                 </div>
 
-                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-4 sm:p-6 animate-rotating-glow">
-                  <h4 className="font-semibold text-primary mb-3 sm:mb-4 text-base sm:text-lg">Why Choose Heritage Healthcare Clinic?</h4>
-                  <ul className="space-y-2 sm:space-y-3">
+                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-4 xs:p-5 sm:p-6 animate-rotating-glow">
+                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-sm xs:text-base sm:text-lg">Why Choose Heritage Healthcare Clinic?</h4>
+                  <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
