@@ -569,22 +569,22 @@ export default function BrochurePage() {
         </section>
 
         {/* Featured Sections Teaser */}
-        <section className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
+        <section className="relative py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
           <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
-          <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
-          <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
+          <GeometricAccent className="absolute top-10 xs:top-16 sm:top-20 right-5 xs:right-10 sm:right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute bottom-20 xs:bottom-40 sm:bottom-40 left-16 xs:left-32 sm:left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--tertiary)' }}>
+          <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 xs:mb-14 sm:mb-16">
+              <h2 className="font-serif text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-3 xs:mb-3 sm:mb-4" style={{ color: 'var(--tertiary)' }}>
                 Learn More About Our Services
               </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
+              <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Explore our comprehensive offerings designed to keep your workforce healthy
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xs:gap-6 sm:gap-8 lg:gap-8 relative z-20">
               {/* Services Card */}
               <Link href="/services">
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
