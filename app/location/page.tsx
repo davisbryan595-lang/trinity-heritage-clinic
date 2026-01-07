@@ -164,21 +164,6 @@ export default function LocationPage() {
         </div>
       </div>
 
-      {/* Clinic Visual Section */}
-      <div className="relative py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="relative h-64 sm:h-80 md:h-96 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-            <Image
-              src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=800"
-              alt="Heritage Healthcare Clinic - Internal Medicine Clinic Location"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Location Section */}
       <div className="relative py-12 sm:py-16 md:py-20 bg-secondary overflow-hidden">
         <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
@@ -186,75 +171,99 @@ export default function LocationPage() {
         <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
-            {/* Map */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              ></iframe>
-            </div>
-
-            {/* Location Details */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 relative z-20">
+            {/* Left Column - Map and Contact Details */}
             <div className="space-y-6">
-              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: 'var(--tertiary)' }}>Contact Information</h3>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">Address</p>
-                        <a
-                          href="https://maps.google.com/?q=2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          2204 Joe Battle Blvd, STE D204
-                          <br />
-                          El Paso, TX 79938
-                        </a>
-                      </div>
-                    </div>
+              {/* Map */}
+              <div className="relative h-[400px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  className="grayscale hover:grayscale-0 transition-all duration-300"
+                ></iframe>
+              </div>
 
+              {/* Contact Information Cards */}
+              <div className="space-y-4">
+                {/* Phone Card */}
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">Phone</p>
+                      <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-2">Phone</p>
                         <a
                           href="tel:915-300-2276"
-                          className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
+                          className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
                         >
                           915.300.2276
                         </a>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
 
+                {/* Fax Card */}
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">Fax</p>
-                        <p className="text-muted-foreground">866-222-5219</p>
+                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-2">Fax</p>
+                        <p className="text-muted-foreground font-semibold text-lg">866-222-5219</p>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
 
+                {/* Email Card */}
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-2">Office Hours</p>
-                        <div className="text-muted-foreground space-y-1">
-                          <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
-                          <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
-                          <p>Saturday - Sunday: Closed</p>
-                        </div>
+                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-2">Email</p>
+                        <a
+                          href="mailto:Trinityheritageclinic@gmail.com"
+                          className="text-primary hover:text-primary/80 transition-colors break-all"
+                        >
+                          Trinityheritageclinic@gmail.com
+                        </a>
                       </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Hours of Operation Card */}
+              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
+                      <div className="text-muted-foreground space-y-2">
+                        <p className="font-medium">Monday - Friday</p>
+                        <p>8:30 AM - 5:30 PM</p>
+                        <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Weekend Closed Card */}
+              <Card className="border-2 border-accent/30 shadow-lg bg-accent/5">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-accent mb-2">Weekend Hours</p>
+                      <p className="text-muted-foreground font-medium">Saturday & Sunday: Closed</p>
                     </div>
                   </div>
                 </CardContent>
@@ -263,10 +272,10 @@ export default function LocationPage() {
               {/* After Hours Banner */}
               <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
                 <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <Phone className="w-6 h-6 flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
-                    <p className="mb-3">For urgent medical matters, call:</p>
+                    <p className="mb-3 text-sm">For urgent medical matters, call:</p>
                     <a
                       href="tel:817-966-3989"
                       className="text-2xl font-bold hover:underline"
@@ -276,6 +285,17 @@ export default function LocationPage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Right Column - Clinic Image */}
+            <div className="relative h-[400px] sm:h-[450px] lg:h-[900px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+              <Image
+                src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=800"
+                alt="Heritage Healthcare Clinic - Internal Medicine Clinic Location"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                priority
+              />
             </div>
           </div>
         </div>
