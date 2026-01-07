@@ -123,7 +123,7 @@ export default function ContactPage() {
                 { id: "gallery", label: "Gallery", href: "/gallery" },
                 { id: "location", label: "Contact Us", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "contact", label: "Contact Form", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -173,7 +173,7 @@ export default function ContactPage() {
                 { id: "location", label: "Contact Us", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "contact", label: "Contact Form", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
