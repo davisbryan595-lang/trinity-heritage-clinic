@@ -694,11 +694,10 @@ export default function BrochurePage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact Us", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Contact Form", href: "/contact" }
               ].map((link) => (
                 link.href ? (
                   <Link
