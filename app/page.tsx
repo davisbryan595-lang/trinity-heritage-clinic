@@ -153,7 +153,7 @@ export default function BrochurePage() {
                     <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
                     <span className="text-sm text-accent font-semibold">Clinic</span>
                   </div>
-                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md bg-white/70 backdrop-blur-sm border border-primary/30 shadow-md">
+                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md backdrop-blur-sm border border-primary/30 shadow-md">
                     <p className="text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                       ...Cherish Your Health
                     </p>
@@ -226,7 +226,7 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-12 sm:py-16 lg:py-20 backdrop-blur-lg bg-white/10 border border-white/5 rounded-2xl shadow-2xl -mb-20 sm:-mb-24 lg:-mb-32">
+            <div className="max-w-4xl mx-auto px-3 sm:px-5 lg:px-6 relative z-10 text-center py-6 sm:py-9 lg:py-12 backdrop-blur-lg bg-white/5 border border-white/5 rounded-2xl shadow-2xl -mb-20 sm:-mb-24 lg:-mb-32">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
