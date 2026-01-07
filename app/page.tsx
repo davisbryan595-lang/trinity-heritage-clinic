@@ -246,23 +246,23 @@ export default function BrochurePage() {
                 </div>
 
                 {/* Tagline */}
-                <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-6 xs:mb-8 sm:mb-10 md:mb-12 leading-relaxed font-medium px-2">
+                <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-6 xs:mb-7 sm:mb-10 md:mb-12 leading-relaxed font-medium px-2">
                   Always friendly and knowledgeable
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col xs:flex-col sm:flex-row flex-wrap justify-center items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6 px-2">
-                  <a href="tel:915-300-2276" className="w-full xs:w-full sm:w-auto">
+                <div className="flex flex-col gap-3 xs:gap-3 sm:gap-4 md:gap-6 px-2">
+                  <a href="tel:915-300-2276" className="w-full">
                     <Button
-                      className="text-white text-xs sm:text-sm md:text-base px-3 xs:px-4 sm:px-8 py-2 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full sm:w-auto rounded-lg"
+                      className="text-white text-xs sm:text-sm md:text-base px-4 xs:px-5 sm:px-8 py-2.5 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full rounded-lg"
                       style={{ backgroundColor: '#6b3fa0', borderColor: '#6b3fa0' }}
                     >
-                      <Phone className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1 xs:mr-2" />
+                      <Phone className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1.5 xs:mr-2" />
                       <span>Call Now</span>
-                      <span className="hidden sm:inline ml-1 xs:ml-2 font-semibold">915.300.2276</span>
+                      <span className="hidden sm:inline ml-2 xs:ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
-                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold w-full sm:w-auto text-center sm:text-left" style={{ color: '#6b3fa0' }}>
+                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold text-center" style={{ color: '#6b3fa0' }}>
                     to learn how we can help you
                   </p>
                 </div>
