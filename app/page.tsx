@@ -136,7 +136,7 @@ export default function BrochurePage() {
                 onClick={() => scrollToSection("home")}
                 className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-full sm:w-auto"
               >
-                <div className="relative w-60 h-24 xs:w-72 xs:h-32 sm:w-96 sm:h-40 md:w-[480px] md:h-56 lg:w-[576px] lg:h-72">
+                <div className="relative w-48 h-20 xs:w-56 xs:h-24 sm:w-72 sm:h-32 md:w-96 md:h-40 lg:w-[480px] lg:h-56 xl:w-[576px] xl:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Heritage Healthcare Clinic"
@@ -154,7 +154,7 @@ export default function BrochurePage() {
                     <span className="text-xs xs:text-sm text-accent font-semibold">Clinic</span>
                   </div>
                   <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-1 xs:px-2 sm:px-3 py-0.5 xs:py-1 sm:py-1.5">
-                    <p className="text-xs xs:text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                    <p className="text-[10px] xs:text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                       ...Cherish Your Health
                     </p>
                   </div>
