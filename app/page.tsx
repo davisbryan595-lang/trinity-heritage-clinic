@@ -426,13 +426,13 @@ export default function BrochurePage() {
             </div>
 
             {/* Founder & Leadership Section */}
-            <div className="mt-20 pt-16 border-t border-border">
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
-                  <Award className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Leadership</span>
+            <div className="mt-16 xs:mt-18 sm:mt-20 pt-12 xs:pt-14 sm:pt-16 border-t border-border px-2">
+              <div className="text-center mb-12 xs:mb-14 sm:mb-16">
+                <div className="inline-flex items-center gap-2 px-3 xs:px-4 sm:px-4 py-1.5 xs:py-2 sm:py-2 rounded-full mb-3 xs:mb-3 sm:mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
+                  <Award className="w-3 h-3 xs:w-4 xs:h-4 sm:w-4 sm:h-4" />
+                  <span className="text-xs xs:text-xs sm:text-sm font-semibold">Leadership</span>
                 </div>
-                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
+                <h3 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4">
                   Our Medical Leadership
                 </h3>
               </div>
