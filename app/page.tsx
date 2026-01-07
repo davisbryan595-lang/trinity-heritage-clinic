@@ -216,7 +216,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-end justify-center pt-12 sm:pt-16 md:pt-24 lg:pt-32 pb-20 sm:pb-24 lg:pb-32 overflow-hidden"
+            className="relative w-full min-h-screen flex items-end justify-center pt-12 xs:pt-14 sm:pt-16 md:pt-20 lg:pt-28 xl:pt-32 pb-16 xs:pb-20 sm:pb-24 md:pb-28 lg:pb-32 overflow-hidden"
             style={{
               backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
               backgroundSize: 'cover',
@@ -226,43 +226,43 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="max-w-4xl mx-auto px-3 sm:px-5 lg:px-6 relative z-10 text-center py-6 sm:py-9 lg:py-12 backdrop-blur-lg bg-white/5 border border-white/5 rounded-2xl shadow-2xl -mb-20 sm:-mb-24 lg:-mb-32">
+            <div className="w-full max-w-4xl mx-auto px-2 xs:px-3 sm:px-5 md:px-6 lg:px-8 relative z-10 text-center py-4 xs:py-6 sm:py-8 md:py-10 lg:py-12 backdrop-blur-lg bg-white/5 border border-white/5 rounded-2xl shadow-2xl -mb-16 xs:-mb-18 sm:-mb-20 md:-mb-24 lg:-mb-32 mx-auto">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
               >
                 {/* Main Heading with two-color design */}
-                <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 sm:mb-3 text-center">
+                <div className="mb-3 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8">
+                  <h1 className="font-serif text-xs xs:text-sm sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-1 xs:mb-2 sm:mb-3 text-center px-1">
                     <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
                   </h1>
-                  <p className="font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
+                  <p className="font-serif text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-1 xs:mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
                   </p>
-                  <h2 className="font-serif text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold drop-shadow-lg whitespace-nowrap px-2" style={{ color: '#6b3fa0' }}>
+                  <h2 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold drop-shadow-lg px-2 xs:px-3 sm:px-4 break-words" style={{ color: '#6b3fa0' }}>
                     Occupational Medicine Clinic
                   </h2>
                 </div>
 
                 {/* Tagline */}
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-medium">
+                <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-6 xs:mb-8 sm:mb-10 md:mb-12 leading-relaxed font-medium px-2">
                   Always friendly and knowledgeable
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6">
-                  <a href="tel:915-300-2276" className="w-full sm:w-auto">
+                <div className="flex flex-col xs:flex-col sm:flex-row flex-wrap justify-center items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6 px-2">
+                  <a href="tel:915-300-2276" className="w-full xs:w-full sm:w-auto">
                     <Button
-                      className="text-white text-xs sm:text-sm md:text-base px-4 sm:px-8 py-2.5 sm:py-3.5 md:py-4 shadow-lg transition-all duration-300 border-2 w-full sm:w-auto"
+                      className="text-white text-xs sm:text-sm md:text-base px-3 xs:px-4 sm:px-8 py-2 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full sm:w-auto rounded-lg"
                       style={{ backgroundColor: '#6b3fa0', borderColor: '#6b3fa0' }}
                     >
-                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <Phone className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1 xs:mr-2" />
                       <span>Call Now</span>
-                      <span className="hidden sm:inline ml-2 font-semibold">915.300.2276</span>
+                      <span className="hidden sm:inline ml-1 xs:ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
-                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold" style={{ color: '#6b3fa0' }}>
+                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold w-full sm:w-auto text-center sm:text-left" style={{ color: '#6b3fa0' }}>
                     to learn how we can help you
                   </p>
                 </div>
