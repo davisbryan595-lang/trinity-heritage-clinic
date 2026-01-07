@@ -226,10 +226,6 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1 space-y-6">
-              <div className="mb-8">
-                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Contact Information</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-              </div>
 
               {/* New Patient Form Card */}
               <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/15 via-accent/8 to-transparent hover:shadow-lg hover:scale-105 transform">
@@ -319,44 +315,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Address Card */}
-              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-primary/20 rounded-lg">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
-                    <p className="text-foreground text-sm leading-relaxed">
-                      2204 Joe Battle Blvd, STE D204<br />
-                      El Paso, TX 79938
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Hours Card */}
-              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-accent/15 rounded-lg">
-                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
-                    <div className="space-y-2">
-                      <div>
-                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
-                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
-                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
-                      </div>
-                      <div>
-                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
-                        <span className="text-foreground text-sm">Closed</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
 
               {/* Phone Card */}
               <Card className="p-6 border-2 border-tertiary/40 hover:border-tertiary/80 transition-all duration-300 bg-gradient-to-br from-tertiary/10 to-primary/5 hover:shadow-lg hover:scale-105 transform">
