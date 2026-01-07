@@ -82,7 +82,7 @@ export default function LocationPage() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/location" className="text-xs lg:text-sm font-semibold text-primary font-bold transition-colors relative group">
-                Contact Us
+                Contact
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
               </Link>
               <ServicesDropdown />
