@@ -588,18 +588,18 @@ export default function BrochurePage() {
               {/* Services Card */}
               <Link href="/services">
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
-                      <Briefcase className="w-6 h-6" />
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
+                      <Briefcase className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Our Services
                     </h3>
-                    <p className="text-foreground mb-6 font-medium">
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
                       From physical exams to diagnostic testing and injury treatment, discover our full range of occupational health services.
                     </p>
-                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all">
-                      Learn More <ChevronRight className="w-5 h-5 ml-2" />
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                      Learn More <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
                     </div>
                   </CardContent>
                 </Card>
@@ -608,18 +608,18 @@ export default function BrochurePage() {
               {/* Location Card */}
               <Link href="/location">
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
-                      <MapPin className="w-6 h-6" />
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
+                      <MapPin className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Our Location
                     </h3>
-                    <p className="text-foreground mb-6 font-medium">
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
                       Conveniently located in El Paso, Texas. Get directions, hours, and contact information.
                     </p>
-                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all">
-                      Visit <ChevronRight className="w-5 h-5 ml-2" />
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                      Visit <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
                     </div>
                   </CardContent>
                 </Card>
@@ -628,18 +628,18 @@ export default function BrochurePage() {
               {/* Wellness Card */}
               <Link href="/wellness">
                 <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
-                  <CardContent className="p-8">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary text-white mb-4">
-                      <HeartPulse className="w-6 h-6" />
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
+                      <HeartPulse className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Wellness & Prevention
                     </h3>
-                    <p className="text-foreground mb-6 font-medium">
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
                       Proactive health programs including wellness consultations, health fairs, and safety training.
                     </p>
-                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all">
-                      Explore <ChevronRight className="w-5 h-5 ml-2" />
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                      Explore <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
                     </div>
                   </CardContent>
                 </Card>
