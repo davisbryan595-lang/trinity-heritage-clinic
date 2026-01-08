@@ -87,43 +87,6 @@ export default function BrochurePage() {
             : "bg-transparent"
         }`}
       >
-        {/* Top Navigation Row */}
-        <div className={`border-b transition-all duration-300 relative z-20 ${isScrolled ? "border-border" : "border-transparent"}`}>
-          <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1 flex-nowrap">
-              {[
-                { id: "home", label: "Home", href: null },
-                { id: "about", label: "About", href: null },
-                { id: "team", label: "Team", href: null },
-                { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Contact", href: "/location" },
-                { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "contact", label: "Forms", href: "/contact" }
-              ].map((link, index) => (
-                <div key={link.id} className="flex items-center">
-                  {link.href ? (
-                    <Link
-                      href={link.href}
-                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-1.5 xs:px-2 py-1"
-                    >
-                      {link.label}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                    </Link>
-                  ) : (
-                    <button
-                      onClick={() => scrollToSection(link.id)}
-                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-1.5 xs:px-2 py-1"
-                    >
-                      {link.label}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                    </button>
-                  )}
-                  {index === 4 && <ServicesDropdown />}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Main Navbar */}
         <div className={`transition-all duration-300 relative z-10 ${
