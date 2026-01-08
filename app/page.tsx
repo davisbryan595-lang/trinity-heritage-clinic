@@ -20,6 +20,7 @@ import { DiamondsShapeDivider, DiagonalShapeDivider, WaveShapeDivider, StairsSha
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
 import { ServicesDropdown } from "@/components/ServicesDropdown"
+import WelcomeModal from "@/components/WelcomeModal"
 import {
   Phone,
   MapPin,
@@ -73,7 +74,8 @@ export default function BrochurePage() {
   return (
     <>
       <DiamondPreloader />
-      
+      <WelcomeModal />
+
       {/* Scroll Progress Bar */}
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
@@ -352,9 +354,6 @@ export default function BrochurePage() {
               <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
                 Our Dedicated Healthcare Team
               </h2>
-              <p className="text-xs xs:text-sm sm:text-sm md:text-lg lg:text-xl text-foreground max-w-4xl mx-auto font-medium px-2">
-                Experienced professionals certified in specialties and licensed without restrictions
-              </p>
             </div>
 
             {/* Team Background Image */}
@@ -373,7 +372,7 @@ export default function BrochurePage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 relative z-20">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 relative z-20 mx-auto max-w-4xl">
               {[
                 {
                   icon: Award,
@@ -385,18 +384,6 @@ export default function BrochurePage() {
                   icon: HeartPulse,
                   title: "Certified Nurse Practitioner",
                   specialty: "Advanced Practice Nursing",
-                  color: "text-accent"
-                },
-                {
-                  icon: Stethoscope,
-                  title: "Licensed Nurse",
-                  specialty: "Registered Nursing Care",
-                  color: "text-primary"
-                },
-                {
-                  icon: Users,
-                  title: "Certified Psychologist",
-                  specialty: "Occupational Health Psychology",
                   color: "text-accent"
                 },
                 {
