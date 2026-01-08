@@ -58,16 +58,16 @@ export default function WelcomeModal() {
           showCloseButton={true}
         >
           {/* Logo & Header */}
-          <div className="flex flex-col items-center mb-8">
-            <div className="w-24 h-24 mb-6 relative">
+          <div className="flex flex-col items-center mb-6">
+            <div className="w-20 h-14 sm:w-24 sm:h-16 mb-4 relative">
               <Image
-                src="/placeholder-logo.svg"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                 alt="Trinity Heritage Clinic Logo"
                 fill
                 className="object-contain"
               />
             </div>
-            <DialogTitle className="text-4xl sm:text-5xl font-bold font-serif text-foreground text-center">
+            <DialogTitle className="text-3xl sm:text-4xl font-bold font-serif text-foreground text-center">
               Welcome!
             </DialogTitle>
           </div>
