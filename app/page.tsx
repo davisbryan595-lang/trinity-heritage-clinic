@@ -20,6 +20,7 @@ import { DiamondsShapeDivider, DiagonalShapeDivider, WaveShapeDivider, StairsSha
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import AnimatedServiceCard from "@/components/AnimatedServiceCard"
 import { ServicesDropdown } from "@/components/ServicesDropdown"
+import WelcomeModal from "@/components/WelcomeModal"
 import {
   Phone,
   MapPin,
