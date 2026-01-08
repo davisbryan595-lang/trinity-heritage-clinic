@@ -262,7 +262,7 @@ export default function BrochurePage() {
                       <span className="hidden sm:inline ml-2 xs:ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
-                  <p className="text-foreground text-sm sm:text-base md:text-lg font-semibold whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                  <p className="text-foreground text-lg sm:text-xl md:text-2xl font-semibold whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                     to learn how we can help you
                   </p>
                 </div>
