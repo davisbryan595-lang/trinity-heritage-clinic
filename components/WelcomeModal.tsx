@@ -67,9 +67,9 @@ export default function WelcomeModal() {
                 className="object-contain"
               />
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold font-serif text-foreground text-center">
+            <DialogTitle className="text-4xl sm:text-5xl font-bold font-serif text-foreground text-center">
               Welcome!
-            </h1>
+            </DialogTitle>
           </div>
 
           {/* Body Content */}
