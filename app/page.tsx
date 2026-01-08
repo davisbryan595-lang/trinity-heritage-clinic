@@ -622,7 +622,6 @@ export default function BrochurePage() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Featured Sections Teaser */}
