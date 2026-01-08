@@ -419,9 +419,9 @@ export default function BrochurePage() {
               ))}
             </div>
 
-            {/* Founder & Leadership Section */}
-            <div className="mt-16 xs:mt-18 sm:mt-20 pt-12 xs:pt-14 sm:pt-16 border-t border-border px-2">
-              <div className="text-center mb-12 xs:mb-14 sm:mb-16">
+            {/* Our Medical Leadership Section */}
+            <div className="mt-16 xs:mt-18 sm:mt-20 pt-16 xs:pt-20 sm:pt-24 px-2">
+              <div className="text-center mb-16 xs:mb-20 sm:mb-24">
                 <div className="inline-flex items-center gap-2 px-3 xs:px-4 sm:px-4 py-1.5 xs:py-2 sm:py-2 rounded-full mb-3 xs:mb-3 sm:mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
                   <Award className="w-3 h-3 xs:w-4 xs:h-4 sm:w-4 sm:h-4" />
                   <span className="text-xs xs:text-xs sm:text-sm font-semibold">Leadership</span>
@@ -431,53 +431,116 @@ export default function BrochurePage() {
                 </h3>
               </div>
 
-              <div className="relative z-20 mb-12 xs:mb-14 sm:mb-16">
-                {/* Founder Info */}
-                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
-                    <h3 className="text-2xl xs:text-3xl sm:text-3xl md:text-3xl lg:text-3xl font-bold font-serif mb-2 xs:mb-2 sm:mb-2" style={{ color: 'var(--tertiary)' }}>
-                      Medical Director
-                    </h3>
-                    <p className="text-base xs:text-lg sm:text-xl md:text-xl lg:text-xl font-semibold text-primary mb-5 xs:mb-6 sm:mb-6">
-                      Board Certified Occupational Medicine
-                    </p>
-
-                    <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
-                      <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-lg text-foreground leading-relaxed">
-                        Our medical director brings extensive expertise in occupational medicine and is dedicated to providing excellent, compassionate care to businesses and their employees throughout the Dallas Fort Worth area.
-                      </p>
-
-                      <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
-                        <div className="flex items-start gap-3 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-primary/5">
-                          <Award className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <div>
-                            <p className="font-semibold text-foreground text-sm xs:text-sm sm:text-base">Board Certified</p>
-                            <p className="text-xs xs:text-xs sm:text-sm text-foreground font-medium">American Board of Occupational Medicine</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
-                          <Shield className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                          <div>
-                            <p className="font-semibold text-foreground text-sm xs:text-sm sm:text-base">Licensed & Certified</p>
-                            <p className="text-xs xs:text-xs sm:text-sm text-foreground font-medium">State of Texas Medical License</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-primary/5">
-                          <Stethoscope className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <div>
-                            <p className="font-semibold text-foreground text-sm xs:text-sm sm:text-base">Specialized Training</p>
-                            <p className="text-xs xs:text-xs sm:text-sm text-foreground font-medium">Expertise in Occupational Health & Safety</p>
-                          </div>
-                        </div>
-                      </div>
+              {/* Top Section - Two Columns */}
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 mb-16 xs:mb-20 sm:mb-24">
+                {/* Left Column - Photo (40%) */}
+                <div className="lg:col-span-2 flex items-center justify-center">
+                  <div className="relative w-full max-w-sm">
+                    <div 
+                      className="relative w-full aspect-square rounded-lg overflow-hidden"
+                      style={{ border: '10px solid #8B4789' }}
+                    >
+                      <Image
+                        src="/professional-male-physician-dr-victor-nwiloh-heads.jpg"
+                        alt="Dr. Victor Nwiloh, MD"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
+                    {/* Lime Green Banner Overlay */}
+                    <div className="absolute -bottom-24 left-0 right-0 bg-lime-green p-5 xs:p-6 sm:p-6 mx-4 rounded-lg shadow-lg" style={{ backgroundColor: '#CDDC39' }}>
+                      <h3 className="font-serif font-bold text-lg xs:text-xl sm:text-2xl" style={{ color: '#8B4789' }}>
+                        Dr. Victor Nwiloh
+                      </h3>
+                      <p className="font-bold text-sm xs:text-base" style={{ color: '#8B4789' }}>
+                        Internal Medicine Clinic
+                      </p>
+                      <p className="text-xs xs:text-sm font-medium" style={{ color: '#8B4789' }}>
+                        Board Certified In Internal Medicine
+                      </p>
+                      <p className="text-xs xs:text-sm font-medium" style={{ color: '#8B4789' }}>
+                        Board Certified In Occupational Medicine
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                    <p className="text-muted-foreground italic text-xs xs:text-xs sm:text-sm md:text-sm leading-relaxed">
-                      "Our passion is to create a healthcare environment where working professionals and businesses receive the specialized occupational health care they deserve, combined with the personal attention that makes all the difference."
+                {/* Right Column - Bio (60%) */}
+                <div className="lg:col-span-3 flex items-center justify-center lg:pt-12">
+                  <div>
+                    <p 
+                      className="font-serif text-lg xs:text-xl sm:text-2xl md:text-2xl leading-relaxed font-semibold"
+                      style={{ color: '#4A90E2' }}
+                    >
+                      Dr. Victor Nwiloh is a board-certified internal medicine and occupational medicine physician with over 25 years of experience in various healthcare settings across the United States as a Primary care physician, Occupational Medicine / Urgent care physician and a Hospitalist.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
+
+              {/* Bottom Section - Two Columns */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-32 xs:mt-36 sm:mt-40 pt-12 xs:pt-16 sm:pt-20 border-t border-border">
+                {/* Left Column - Education */}
+                <div>
+                  <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
+                    Education
+                  </h4>
+                  <ul className="space-y-6 xs:space-y-7 sm:space-y-8">
+                    <li className="flex gap-4 xs:gap-5 sm:gap-6">
+                      <span className="text-2xl xs:text-3xl sm:text-3xl font-bold" style={{ color: '#8B4789' }}>•</span>
+                      <span className="text-base xs:text-lg sm:text-lg font-semibold text-foreground">
+                        Board Certified in Internal Medicine by the American Board of Internal Medicine
+                      </span>
+                    </li>
+                    <li className="flex gap-4 xs:gap-5 sm:gap-6">
+                      <span className="text-2xl xs:text-3xl sm:text-3xl font-bold" style={{ color: '#8B4789' }}>•</span>
+                      <span className="text-base xs:text-lg sm:text-lg font-semibold text-foreground">
+                        Board Certified in Occupational and Environmental Medicine (OEM)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Right Column - Professional Organizations */}
+                <div>
+                  <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12 lg:text-right">
+                    Professional Organizations
+                  </h4>
+                  <div className="flex flex-col items-start lg:items-end gap-8 xs:gap-10 sm:gap-12">
+                    {/* AMA Logo */}
+                    <div className="w-24 xs:w-28 sm:w-32">
+                      <Image
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23663399' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='24' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAMA%3C/text%3E%3C/svg%3E"
+                        alt="AMA - American Medical Association"
+                        width={128}
+                        height={128}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    {/* ACP Logo */}
+                    <div className="w-24 xs:w-28 sm:w-32">
+                      <Image
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2320A39F' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='20' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EACP%3C/text%3E%3C/svg%3E"
+                        alt="ACP - American College of Physicians"
+                        width={128}
+                        height={128}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    {/* ACOEM Logo */}
+                    <div className="w-24 xs:w-28 sm:w-32">
+                      <Image
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234A90E2' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='16' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EACOEM%3C/text%3E%3C/svg%3E"
+                        alt="ACOEM - American College of Occupational and Environmental Medicine"
+                        width={128}
+                        height={128}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
               {/* Work Site Visits & Travel Medicine */}
               <div className="mt-12 xs:mt-12 sm:mt-14">
