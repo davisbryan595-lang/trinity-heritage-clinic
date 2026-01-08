@@ -55,7 +55,7 @@ export default function LocationPage() {
               <div className="relative w-40 h-16">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -314,7 +314,7 @@ export default function LocationPage() {
               <div className="relative w-40 h-16 mb-4">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain"
                 />
@@ -338,7 +338,7 @@ export default function LocationPage() {
           </div>
           <div className="border-t border-border pt-8">
             <p className="text-center text-foreground text-sm font-medium">
-              © 2024 Heritage Healthcare Clinic. All rights reserved.
+              © 2024 Trinity Heritage Healthcare Clinic. All rights reserved.
             </p>
           </div>
         </div>

@@ -107,7 +107,7 @@ export default function GalleryPage() {
               <div className="relative w-80 h-32 sm:w-[416px] sm:h-40 lg:w-[512px] lg:h-64">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -118,7 +118,7 @@ export default function GalleryPage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
