@@ -16,11 +16,12 @@ export default function WelcomeModal() {
     
     // Check if user has seen the popup
     const hasSeenPopup = sessionStorage.getItem('hasSeenPopup')
-    
+
     if (!hasSeenPopup) {
       // Show popup after 1 second
       const timer = setTimeout(() => {
         setIsOpen(true)
+        document.body.style.overflow = 'hidden'
         sessionStorage.setItem('hasSeenPopup', 'true')
       }, 1000)
       
@@ -34,6 +35,7 @@ export default function WelcomeModal() {
   const handleClose = () => {
     setIsOpen(false)
     setShowBadge(true)
+    document.body.style.overflow = 'auto'
   }
 
   const handleBadgeClick = () => {
