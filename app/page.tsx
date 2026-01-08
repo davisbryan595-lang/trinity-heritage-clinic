@@ -300,6 +300,116 @@ export default function BrochurePage() {
             <div className="max-w-4xl mx-auto relative z-20 mb-12 xs:mb-14 sm:mb-16 px-2">
               {/* About Content */}
               <div className="space-y-6 xs:space-y-6 sm:space-y-8">
+                {/* Welcome Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Welcome!
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                    Trinity Heritage clinic also known as Heritage Healthcare clinic is a family-oriented clinic that was established 12 years ago to provide excellent comprehensive medical care to adults and children.
+                  </p>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                    We are focused on health promotion and disease prevention. Providing education and support services to help our patients make plans and decisions that promote wellness and healthy living.
+                  </p>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground font-semibold italic">
+                    … Cherish your health!
+                  </p>
+                </div>
+
+                {/* Our Belief Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Belief
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    We believe in the "art" and "science" of medicine. Our clinical practice styles combine outstanding clinical acumen to serve families in the El Paso metropolis utilizing the latest technology and ancillary services which is supported by evidence-based medicine.
+                  </p>
+                </div>
+
+                {/* Our Vision Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Vision
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    To be the preferred healthcare provider partners for your quality healthcare service.
+                  </p>
+                </div>
+
+                {/* Our Mission Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Mission
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    To provide the highest quality of service by transforming the promise of science, technology & medicine into service that promotes, restores, & prolongs life while preventing diseases.
+                  </p>
+                </div>
+
+                {/* Our Values Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Values
+                  </h3>
+                  <Card className="border-2 border-primary/20 shadow-lg bg-white mb-6">
+                    <CardContent className="p-4 xs:p-4 sm:p-5">
+                      <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3 text-foreground">
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Accountability</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Excellence in service</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Evidence based medicine</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Operational Efficiency</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Quality personalized care</span>
+                        </li>
+                      </ul>
+                      <p className="mt-4 xs:mt-5 sm:mt-5 pt-4 xs:pt-5 sm:pt-5 border-t border-border text-foreground font-semibold text-xs xs:text-sm sm:text-sm md:text-base">
+                        Our result is maintenance of your good health and prevention of illness and/or disability.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Hospital Affiliations Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Always Accepting New Patients
+                  </h3>
+                  <Card className="border-2 border-accent/20 shadow-lg bg-gradient-to-br from-accent/5 to-white">
+                    <CardContent className="p-4 xs:p-4 sm:p-5">
+                      <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground font-medium mb-4 xs:mb-5 sm:mb-5">
+                        Dr. Nwiloh is affiliated with the following hospitals:
+                      </p>
+                      <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3 text-foreground mb-4 xs:mb-5 sm:mb-5">
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>The Hospitals of Providence East Campus</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Del Sol Medical Center</span>
+                        </li>
+                      </ul>
+                      <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium">
+                        Visit us and let's talk about you and your well-being because we…
+                        <span className="block font-semibold text-primary mt-2">CHERISH YOUR HEALTH!</span>
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+
                 <div>
                   <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Pledge
