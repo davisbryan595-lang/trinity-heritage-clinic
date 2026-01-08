@@ -226,7 +226,7 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="w-full max-w-4xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 text-center py-5 xs:py-6 sm:py-8 md:py-10 lg:py-12 backdrop-blur-lg bg-white/5 border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32">
+            <div className="w-full max-w-4xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 text-center pt-2 xs:pt-2 sm:pt-3 md:pt-4 lg:pt-5 pb-3 xs:pb-3 sm:pb-4 md:pb-6 lg:pb-8 backdrop-blur-lg bg-white border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32" style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}>
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -251,10 +251,10 @@ export default function BrochurePage() {
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col gap-3 xs:gap-3 sm:gap-4 md:gap-6 px-2">
-                  <a href="tel:915-300-2276" className="w-full">
+                <div className="flex flex-col md:flex-row gap-3 xs:gap-3 sm:gap-4 md:gap-4 lg:gap-6 px-2 items-center justify-center">
+                  <a href="tel:915-300-2276" className="w-full md:w-auto">
                     <Button
-                      className="text-white text-xs sm:text-sm md:text-base px-4 xs:px-5 sm:px-8 py-2.5 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full rounded-lg"
+                      className="text-white text-sm sm:text-base md:text-lg px-4 xs:px-5 sm:px-8 py-2.5 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full rounded-lg"
                       style={{ backgroundColor: '#6b3fa0', borderColor: '#6b3fa0' }}
                     >
                       <Phone className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1.5 xs:mr-2" />
@@ -262,7 +262,7 @@ export default function BrochurePage() {
                       <span className="hidden sm:inline ml-2 xs:ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
-                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold text-center" style={{ color: '#6b3fa0' }}>
+                  <p className="text-foreground text-sm sm:text-base md:text-lg font-semibold whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                     to learn how we can help you
                   </p>
                 </div>
