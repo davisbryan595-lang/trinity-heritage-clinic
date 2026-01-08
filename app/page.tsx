@@ -224,9 +224,9 @@ export default function BrochurePage() {
               backgroundAttachment: 'fixed'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20" style={{ margin: '0 0 auto auto' }}></div>
 
-            <div className="w-full max-w-4xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 relative z-10 text-center pt-2 xs:pt-2 sm:pt-3 md:pt-4 lg:pt-5 pb-3 xs:pb-3 sm:pb-4 md:pb-6 lg:pb-8 backdrop-blur-lg bg-white border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32" style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}>
+            <div className="w-full mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 relative z-10 text-center pt-2 xs:pt-2 sm:pt-3 md:pt-4 lg:pt-5 pb-3 xs:pb-3 sm:pb-4 md:pb-6 lg:pb-8 backdrop-blur-lg bg-white border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32" style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)', maxWidth: '802px' }}>
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -234,8 +234,15 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 text-center whitespace-nowrap">
-                    <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
+                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 whitespace-nowrap" style={{ transform: 'scale(0.98)', display: 'flex', flexDirection: 'column' }}>
+                    <span className="text-primary" style={{ marginRight: 'auto', fontFamily: 'Montserrat, sans-serif', textAlign: 'left' }}>
+                      <h2>
+                        <strong>
+                          <span className="ql-cursor">﻿</span>
+                        </strong>
+                        Internal Medicine, Family Practice Clinic
+                      </h2>
+                    </span>
                   </h1>
                   <p className="font-serif text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 xs:mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
