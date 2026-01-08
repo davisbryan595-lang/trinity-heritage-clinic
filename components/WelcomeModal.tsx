@@ -73,45 +73,45 @@ export default function WelcomeModal() {
           </div>
 
           {/* Body Content */}
-          <div className="space-y-3 text-center mb-6">
+          <div className="space-y-2 text-center mb-4">
             {/* Paragraph 1 */}
-            <p className="text-sm sm:text-base text-foreground leading-snug">
+            <p className="text-xs sm:text-sm text-foreground leading-tight">
               Trinity Heritage clinic is a practice established to provide comprehensive medical services for ill and well patients in a friendly and compassionate environment.
             </p>
 
             {/* Paragraph 2 */}
-            <p className="text-sm sm:text-base text-foreground leading-snug">
+            <p className="text-xs sm:text-sm text-foreground leading-tight">
               We believe in the 'art' and 'science' of medicine. Our clinical practice styles combine outstanding clinical acumen refined over the past 27 years with the latest technology and ancillary services supported by evidence based medicine.
             </p>
 
             {/* Paragraph 3 */}
-            <p className="text-sm sm:text-base text-foreground leading-snug">
+            <p className="text-xs sm:text-sm text-foreground leading-tight">
               Our result is maintenance of your good health and prevention of illness and/or disability.
             </p>
 
             {/* Paragraph 4 */}
-            <p className="text-sm sm:text-base text-foreground leading-snug">
+            <p className="text-xs sm:text-sm text-foreground leading-tight">
               Visit us and let's talk about you and your well-being because we…
             </p>
 
             {/* Emphasized Cherish Health */}
-            <div className="py-3 px-4 bg-primary/10 rounded-lg border-2 border-primary/30">
-              <p className="text-2xl sm:text-3xl font-bold text-primary font-serif">
+            <div className="py-2 px-3 bg-primary/10 rounded-lg border-2 border-primary/30">
+              <p className="text-lg sm:text-xl font-bold text-primary font-serif">
                 ... CHERISH YOUR HEALTH!
               </p>
             </div>
 
             {/* Accepting New Patients Callout */}
-            <div className="py-2.5 px-4 bg-accent text-accent-foreground rounded-lg border-2 border-accent/80 font-bold text-base sm:text-lg">
+            <div className="py-2 px-3 bg-accent text-accent-foreground rounded-lg border-2 border-accent/80 font-bold text-xs sm:text-sm">
               ALWAYS ACCEPTING NEW PATIENTS
             </div>
 
             {/* Hospital Affiliations */}
-            <div className="pt-3 border-t border-border">
-              <p className="font-bold text-sm sm:text-base text-foreground mb-2">
+            <div className="pt-2 border-t border-border">
+              <p className="font-bold text-xs sm:text-sm text-foreground mb-1">
                 Dr. Nwiloh is affiliated with the following hospitals:
               </p>
-              <ul className="space-y-1 text-xs sm:text-sm text-foreground">
+              <ul className="space-y-0.5 text-xs text-foreground">
                 <li>• The Hospitals of Providence East Campus</li>
                 <li>• Del Sol Medical Center</li>
               </ul>
