@@ -479,7 +479,7 @@ export default function BrochurePage() {
               </div>
 
               {/* Bottom Section - Two Columns */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-32 xs:mt-36 sm:mt-40 pt-12 xs:pt-16 sm:pt-20 border-t border-border">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-8 xs:mt-10 sm:mt-12 pt-6 xs:pt-8 sm:pt-10">
                 {/* Left Column - Education */}
                 <div>
                   <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
