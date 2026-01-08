@@ -241,7 +241,7 @@ export default function PatientIntakePage() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <h1 className="font-serif text-4xl font-bold text-primary-foreground mb-2">New Patient Intake Form</h1>
-              <p className="text-muted-foreground">Heritage Healthcare Clinic</p>
+              <p className="text-muted-foreground">Trinity Heritage Healthcare Clinic</p>
             </div>
             {hasSavedData && (
               <Button

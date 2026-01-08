@@ -139,7 +139,7 @@ export default function BrochurePage() {
                 <div className="relative w-48 h-20 xs:w-56 xs:h-24 sm:w-72 sm:h-32 md:w-96 md:h-40 lg:w-[480px] lg:h-56 xl:w-[576px] xl:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                    alt="Heritage Healthcare Clinic"
+                    alt="Trinity Heritage Healthcare Clinic"
                     fill
                     className="object-contain transition-transform duration-300 group-hover:scale-110"
                     priority
@@ -150,7 +150,7 @@ export default function BrochurePage() {
                     }}
                   />
                   <div className="hidden flex-col">
-                    <span className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                    <span className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                     <span className="text-xs xs:text-sm text-accent font-semibold">Clinic</span>
                   </div>
                   <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-1 xs:px-2 sm:px-3 py-0.5 xs:py-1 sm:py-1.5">
@@ -281,7 +281,7 @@ export default function BrochurePage() {
           <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-10 xs:mb-12 sm:mb-16">
               <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
-                About Heritage Healthcare Clinic
+                About Trinity Heritage Healthcare Clinic
               </h2>
               <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Comprehensive healthcare for your professional and personal wellness
@@ -722,7 +722,7 @@ export default function BrochurePage() {
           </div>
 
           <div className="border-t border-border pt-5 xs:pt-6 sm:pt-6 sm:pt-8 text-center text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
-            <p>&copy; {new Date().getFullYear()} Heritage Healthcare Clinic. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Trinity Heritage Healthcare Clinic. All rights reserved.</p>
             <p className="mt-1 xs:mt-2 sm:mt-2 italic font-serif text-primary text-xs xs:text-xs sm:text-xs md:text-sm">
               2204 Joe Battle Blvd, STE D204 El Paso, TX 79938 | 915.300.2276
             </p>
