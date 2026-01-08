@@ -485,17 +485,20 @@ export default function BrochurePage() {
                   <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
                     Education
                   </h4>
+                  <p className="text-base xs:text-lg sm:text-lg font-semibold text-foreground mb-6">
+                    Dr. Nwiloh is affiliated with the following hospitals:
+                  </p>
                   <ul className="space-y-6 xs:space-y-7 sm:space-y-8">
                     <li className="flex gap-4 xs:gap-5 sm:gap-6">
                       <span className="text-2xl xs:text-3xl sm:text-3xl font-bold" style={{ color: '#8B4789' }}>•</span>
                       <span className="text-base xs:text-lg sm:text-lg font-semibold text-foreground">
-                        Board Certified in Internal Medicine by the American Board of Internal Medicine
+                        The Hospitals of Providence East Campus
                       </span>
                     </li>
                     <li className="flex gap-4 xs:gap-5 sm:gap-6">
                       <span className="text-2xl xs:text-3xl sm:text-3xl font-bold" style={{ color: '#8B4789' }}>•</span>
                       <span className="text-base xs:text-lg sm:text-lg font-semibold text-foreground">
-                        Board Certified in Occupational and Environmental Medicine (OEM)
+                        Del Sol Medical Center
                       </span>
                     </li>
                   </ul>
