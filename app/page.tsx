@@ -74,7 +74,8 @@ export default function BrochurePage() {
   return (
     <>
       <DiamondPreloader />
-      
+      <WelcomeModal />
+
       {/* Scroll Progress Bar */}
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
