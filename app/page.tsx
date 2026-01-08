@@ -234,7 +234,7 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 whitespace-nowrap" style={{ transform: 'scale(0.98)', display: 'flex', flexDirection: 'column' }}>
+                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 whitespace-nowrap" style={{ transform: 'scale(0.98)', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
                     <span className="text-primary" style={{ fontFamily: 'Montserrat, sans-serif', textAlign: 'center', margin: '0', display: 'block', width: '100%', paddingLeft: '0', paddingRight: '0' }}>
                       <h2 style={{ margin: '0', padding: '0' }}>
                         <strong>
