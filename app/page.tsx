@@ -124,7 +124,7 @@ export default function BrochurePage() {
         </div>
 
         {/* Main Navbar */}
-        <div className={`transition-all duration-300 ${
+        <div className={`transition-all duration-300 relative z-10 ${
           isScrolled
             ? "bg-white"
             : "bg-transparent"
