@@ -42,6 +42,7 @@ export default function WelcomeModal() {
 
   const handleBadgeClick = () => {
     setIsOpen(true)
+    document.body.style.overflow = 'hidden'
   }
 
   if (!mounted) {
