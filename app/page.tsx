@@ -132,13 +132,13 @@ export default function BrochurePage() {
             : "bg-transparent"
         }`}>
           <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
-            <div className="flex justify-between items-center h-16 xs:h-20 sm:h-20 md:h-24 lg:h-28 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3">
-              {/* Logo */}
+            <div className="flex justify-between items-start lg:items-center h-auto lg:h-32 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 gap-4 lg:gap-8">
+              {/* Logo - Enlarged and positioned top left */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto pt-2 lg:pt-0"
               >
-                <div className="relative w-28 h-20 xs:w-32 xs:h-24 sm:w-44 sm:h-32 md:w-56 md:h-40 lg:w-72 lg:h-56 xl:w-96 xl:h-72">
+                <div className="relative w-32 h-24 xs:w-40 xs:h-28 sm:w-56 sm:h-40 md:w-72 md:h-52 lg:w-96 lg:h-64 xl:w-[28rem] xl:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Trinity Heritage Healthcare Clinic"
@@ -163,11 +163,45 @@ export default function BrochurePage() {
                 </div>
               </button>
 
+              {/* Desktop Navigation - In same row as logo */}
+              <div className="hidden lg:flex flex-1 items-center justify-end gap-6 xl:gap-8 h-full pt-4">
+                <div className="flex items-center gap-1 xl:gap-2">
+                  {[
+                    { id: "home", label: "Home", href: null },
+                    { id: "about", label: "About", href: null },
+                    { id: "team", label: "Team", href: null },
+                    { id: "gallery", label: "Gallery", href: "/gallery" },
+                    { id: "location", label: "Contact", href: "/location" },
+                    { id: "wellness", label: "Wellness", href: "/wellness" },
+                    { id: "contact", label: "Forms", href: "/contact" }
+                  ].map((link) => (
+                    <div key={link.id} className="flex items-center">
+                      {link.href ? (
+                        <Link
+                          href={link.href}
+                          className="text-xs xl:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 xl:px-3 py-1"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                      ) : (
+                        <button
+                          onClick={() => scrollToSection(link.id)}
+                          className="text-xs xl:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 xl:px-3 py-1"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-1 rounded-lg hover:bg-primary/10 transition-colors"
+                className="lg:hidden p-1 rounded-lg hover:bg-primary/10 transition-colors ml-auto mt-2"
               >
                 {mobileMenuOpen ? (
                   <X size={24} className="text-primary" />
