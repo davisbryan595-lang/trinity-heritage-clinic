@@ -479,23 +479,26 @@ export default function BrochurePage() {
               </div>
 
               {/* Bottom Section - Two Columns */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-32 xs:mt-36 sm:mt-40 pt-12 xs:pt-16 sm:pt-20 border-t border-border">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-8 xs:mt-10 sm:mt-12 pt-6 xs:pt-8 sm:pt-10">
                 {/* Left Column - Education */}
                 <div>
                   <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
                     Education
                   </h4>
+                  <p className="text-base xs:text-lg sm:text-lg font-semibold text-foreground mb-6">
+                    Dr. Nwiloh is affiliated with the following hospitals:
+                  </p>
                   <ul className="space-y-6 xs:space-y-7 sm:space-y-8">
                     <li className="flex gap-4 xs:gap-5 sm:gap-6">
                       <span className="text-2xl xs:text-3xl sm:text-3xl font-bold" style={{ color: '#8B4789' }}>•</span>
                       <span className="text-base xs:text-lg sm:text-lg font-semibold text-foreground">
-                        Board Certified in Internal Medicine by the American Board of Internal Medicine
+                        The Hospitals of Providence East Campus
                       </span>
                     </li>
                     <li className="flex gap-4 xs:gap-5 sm:gap-6">
                       <span className="text-2xl xs:text-3xl sm:text-3xl font-bold" style={{ color: '#8B4789' }}>•</span>
                       <span className="text-base xs:text-lg sm:text-lg font-semibold text-foreground">
-                        Board Certified in Occupational and Environmental Medicine (OEM)
+                        Del Sol Medical Center
                       </span>
                     </li>
                   </ul>
