@@ -203,104 +203,84 @@ export default function LocationPage() {
               </div>
             </div>
 
-            {/* Right Column - Contact Details */}
-            <div className="space-y-4">
-              {/* Phone Card */}
-              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <p className="font-semibold text-foreground mb-2">Phone</p>
-                      <a
-                        href="tel:915-300-2276"
-                        className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
-                      >
-                        915.300.2276
-                      </a>
+            {/* Right Column - Contact Details in Single Container */}
+            <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+              <CardContent className="p-6 space-y-6">
+                {/* Phone */}
+                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                  <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground mb-2">Phone</p>
+                    <a
+                      href="tel:915-300-2276"
+                      className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
+                    >
+                      915.300.2276
+                    </a>
+                  </div>
+                </div>
+
+                {/* Fax */}
+                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                  <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground mb-2">Fax</p>
+                    <p className="text-muted-foreground font-semibold text-lg">866-222-5219</p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                  <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground mb-2">Email</p>
+                    <a
+                      href="mailto:Trinityheritageclinic@gmail.com"
+                      className="text-primary hover:text-primary/80 transition-colors break-all"
+                    >
+                      Trinityheritageclinic@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Hours of Operation */}
+                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                  <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
+                    <div className="text-muted-foreground space-y-2">
+                      <p className="font-medium">Monday - Friday</p>
+                      <p>8:30 AM - 5:30 PM</p>
+                      <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
 
-              {/* Fax Card */}
-              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <p className="font-semibold text-foreground mb-2">Fax</p>
-                      <p className="text-muted-foreground font-semibold text-lg">866-222-5219</p>
-                    </div>
+                {/* Weekend Hours */}
+                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                  <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-semibold text-accent mb-2">Weekend Hours</p>
+                    <p className="text-muted-foreground font-medium">Saturday & Sunday: Closed</p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
 
-              {/* Email Card */}
-              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <p className="font-semibold text-foreground mb-2">Email</p>
-                      <a
-                        href="mailto:Trinityheritageclinic@gmail.com"
-                        className="text-primary hover:text-primary/80 transition-colors break-all"
-                      >
-                        Trinityheritageclinic@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Hours of Operation Card */}
-              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
-                      <div className="text-muted-foreground space-y-2">
-                        <p className="font-medium">Monday - Friday</p>
-                        <p>8:30 AM - 5:30 PM</p>
-                        <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Weekend Closed Card */}
-              <Card className="border-2 border-accent/30 shadow-lg bg-accent/5">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <p className="font-semibold text-accent mb-2">Weekend Hours</p>
-                      <p className="text-muted-foreground font-medium">Saturday & Sunday: Closed</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* After Hours Banner */}
-              <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
-                <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
-                    <p className="mb-3 text-sm">For urgent medical matters, call:</p>
+                {/* After Hours & Weekend */}
+                <div className="flex items-start gap-4 pt-2 bg-accent/10 p-4 rounded-lg border border-accent/20">
+                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <h4 className="font-bold text-lg text-accent mb-2">After Hours & Weekend</h4>
+                    <p className="mb-3 text-sm text-foreground">For urgent medical matters, call:</p>
                     <a
                       href="tel:817-966-3989"
-                      className="text-2xl font-bold hover:underline"
+                      className="text-xl font-bold text-accent hover:underline"
                     >
                       817.966.3989
                     </a>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
