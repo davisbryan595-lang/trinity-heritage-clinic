@@ -87,43 +87,6 @@ export default function BrochurePage() {
             : "bg-transparent"
         }`}
       >
-        {/* Top Navigation Row */}
-        <div className={`border-b transition-all duration-300 relative z-20 ${isScrolled ? "border-border" : "border-transparent"}`}>
-          <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1 flex-nowrap">
-              {[
-                { id: "home", label: "Home", href: null },
-                { id: "about", label: "About", href: null },
-                { id: "team", label: "Team", href: null },
-                { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Contact", href: "/location" },
-                { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "contact", label: "Forms", href: "/contact" }
-              ].map((link, index) => (
-                <div key={link.id} className="flex items-center">
-                  {link.href ? (
-                    <Link
-                      href={link.href}
-                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-1.5 xs:px-2 py-1"
-                    >
-                      {link.label}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                    </Link>
-                  ) : (
-                    <button
-                      onClick={() => scrollToSection(link.id)}
-                      className="text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-1.5 xs:px-2 py-1"
-                    >
-                      {link.label}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                    </button>
-                  )}
-                  {index === 4 && <ServicesDropdown />}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Main Navbar */}
         <div className={`transition-all duration-300 relative z-10 ${
@@ -132,13 +95,13 @@ export default function BrochurePage() {
             : "bg-transparent"
         }`}>
           <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
-            <div className="flex justify-between items-center h-16 xs:h-20 sm:h-20 md:h-24 lg:h-28 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3">
-              {/* Logo */}
+            <div className="flex justify-between items-start lg:items-center h-auto lg:h-32 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 gap-4 lg:gap-8">
+              {/* Logo - Enlarged and positioned top left */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto pt-2 lg:pt-0"
               >
-                <div className="relative w-28 h-20 xs:w-32 xs:h-24 sm:w-44 sm:h-32 md:w-56 md:h-40 lg:w-72 lg:h-56 xl:w-96 xl:h-72">
+                <div className="relative w-32 h-24 xs:w-40 xs:h-28 sm:w-56 sm:h-40 md:w-72 md:h-52 lg:w-96 lg:h-64 xl:w-[28rem] xl:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Trinity Heritage Healthcare Clinic"
@@ -163,11 +126,45 @@ export default function BrochurePage() {
                 </div>
               </button>
 
+              {/* Desktop Navigation - In same row as logo */}
+              <div className="hidden lg:flex flex-1 items-center justify-end gap-6 xl:gap-8 h-full pt-4">
+                <div className="flex items-center gap-1 xl:gap-2">
+                  {[
+                    { id: "home", label: "Home", href: null },
+                    { id: "about", label: "About", href: null },
+                    { id: "team", label: "Team", href: null },
+                    { id: "gallery", label: "Gallery", href: "/gallery" },
+                    { id: "location", label: "Contact", href: "/location" },
+                    { id: "wellness", label: "Wellness", href: "/wellness" },
+                    { id: "contact", label: "Forms", href: "/contact" }
+                  ].map((link) => (
+                    <div key={link.id} className="flex items-center">
+                      {link.href ? (
+                        <Link
+                          href={link.href}
+                          className="text-xs xl:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 xl:px-3 py-1"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                      ) : (
+                        <button
+                          onClick={() => scrollToSection(link.id)}
+                          className="text-xs xl:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 xl:px-3 py-1"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-1 rounded-lg hover:bg-primary/10 transition-colors"
+                className="lg:hidden p-1 rounded-lg hover:bg-primary/10 transition-colors ml-auto mt-2"
               >
                 {mobileMenuOpen ? (
                   <X size={24} className="text-primary" />
@@ -179,11 +176,11 @@ export default function BrochurePage() {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-              <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
+              <div className="lg:hidden py-4 space-y-1 animate-fadeInUp border-t border-border">
                 {[
                   { id: "home", label: "Home", href: null },
-                  { id: "about", label: "About Us", href: null },
-                  { id: "team", label: "Our Team", href: null },
+                  { id: "about", label: "About", href: null },
+                  { id: "team", label: "Team", href: null },
                   { id: "gallery", label: "Gallery", href: "/gallery" },
                   { id: "location", label: "Contact", href: "/location" },
                   { id: "wellness", label: "Wellness", href: "/wellness" },
@@ -193,7 +190,7 @@ export default function BrochurePage() {
                     <Link
                       key={link.id}
                       href={link.href}
-                      className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                      className="block w-full text-left px-4 py-2 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all text-sm"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.label}
@@ -201,8 +198,11 @@ export default function BrochurePage() {
                   ) : (
                     <button
                       key={link.id}
-                      onClick={() => scrollToSection(link.id)}
-                      className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                      onClick={() => {
+                        scrollToSection(link.id)
+                        setMobileMenuOpen(false)
+                      }}
+                      className="block w-full text-left px-4 py-2 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all text-sm"
                     >
                       {link.label}
                     </button>
@@ -218,7 +218,7 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative w-full min-h-screen flex items-end justify-center pt-12 xs:pt-14 sm:pt-16 md:pt-20 lg:pt-28 xl:pt-32 pb-16 xs:pb-20 sm:pb-24 md:pb-28 lg:pb-32 overflow-hidden"
+            className="relative w-full min-h-screen flex items-end justify-center pt-32 xs:pt-40 sm:pt-48 md:pt-56 lg:pt-80 xl:pt-96 pb-16 xs:pb-20 sm:pb-24 md:pb-28 lg:pb-32 overflow-hidden"
             style={{
               backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fe956acbb04e54fb896c83542bdb88b2d%2F8b288272e0db48dd9890547636226cd8?format=webp&width=800)',
               backgroundSize: 'cover',
