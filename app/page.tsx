@@ -254,7 +254,7 @@ export default function BrochurePage() {
                 <div className="flex flex-col md:flex-row gap-3 xs:gap-3 sm:gap-4 md:gap-4 lg:gap-6 px-2 items-center justify-center">
                   <a href="tel:915-300-2276" className="w-full md:w-auto">
                     <Button
-                      className="text-white text-xs sm:text-sm md:text-base px-4 xs:px-5 sm:px-8 py-2.5 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full rounded-lg"
+                      className="text-white text-sm sm:text-base md:text-lg px-4 xs:px-5 sm:px-8 py-2.5 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full rounded-lg"
                       style={{ backgroundColor: '#6b3fa0', borderColor: '#6b3fa0' }}
                     >
                       <Phone className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1.5 xs:mr-2" />
@@ -262,7 +262,7 @@ export default function BrochurePage() {
                       <span className="hidden sm:inline ml-2 xs:ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
-                  <p className="text-foreground text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                  <p className="text-foreground text-sm sm:text-base md:text-lg font-semibold whitespace-nowrap" style={{ color: '#6b3fa0' }}>
                     to learn how we can help you
                   </p>
                 </div>
