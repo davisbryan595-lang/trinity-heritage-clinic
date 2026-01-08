@@ -132,7 +132,7 @@ export default function WelcomeModal() {
             </a>
             <DialogClose asChild>
               <Button
-                onClick={handleClose}
+                onClick={() => handleClose(false)}
                 variant="outline"
                 className="flex-1 border-2 border-primary text-primary hover:bg-primary/5 text-base h-12 font-semibold rounded-lg"
               >
