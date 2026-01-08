@@ -547,7 +547,7 @@ export default function BrochurePage() {
                 <div className="lg:col-span-2 flex items-center justify-center">
                   <div className="relative w-full max-w-sm">
                     <div
-                      className="relative w-full aspect-square rounded-lg overflow-hidden"
+                      className="relative w-full aspect-[3/4] rounded-lg overflow-hidden"
                       style={{ border: '10px solid #8B4789' }}
                     >
                       <Image
