@@ -44,7 +44,7 @@ export default function PatientFormsPage() {
               <div className="relative w-64 h-32">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -55,7 +55,7 @@ export default function PatientFormsPage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
@@ -68,10 +68,9 @@ export default function PatientFormsPage() {
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -118,11 +117,10 @@ export default function PatientFormsPage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -146,7 +144,7 @@ export default function PatientFormsPage() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
+      <section className="relative pt-16 sm:pt-20 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 bg-gradient-to-r from-primary/20 to-accent/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-4">
@@ -253,7 +251,7 @@ export default function PatientFormsPage() {
             <Card className="p-8 border-2 border-primary/40 hover:border-accent/60 transition-colors bg-white shadow-md">
               <h3 className="font-bold text-primary mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5 text-accent" />
-                Contact Us
+                Contact
               </h3>
               <div className="space-y-4">
                 <div>

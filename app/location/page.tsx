@@ -55,7 +55,7 @@ export default function LocationPage() {
               <div className="relative w-40 h-16">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -82,7 +82,7 @@ export default function LocationPage() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link href="/location" className="text-xs lg:text-sm font-semibold text-primary font-bold transition-colors relative group">
-                Location
+                Contact
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
               </Link>
               <ServicesDropdown />
@@ -90,7 +90,7 @@ export default function LocationPage() {
                 Wellness
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <Link href="/patient-forms" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
+              <Link href="/contact" className="text-xs lg:text-sm font-semibold text-foreground hover:text-primary transition-colors relative group">
                 Forms
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
@@ -130,7 +130,7 @@ export default function LocationPage() {
                 Gallery
               </Link>
               <Link href="/location" className="block px-4 py-2 text-primary font-bold hover:bg-primary/10 rounded">
-                Location
+                Contact
               </Link>
               <Link href="/services" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Services
@@ -138,8 +138,8 @@ export default function LocationPage() {
               <Link href="/wellness" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
                 Wellness
               </Link>
-              <Link href="/patient-forms" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
-                Patient Forms
+              <Link href="/contact" className="block px-4 py-2 text-foreground hover:bg-primary/10 rounded font-semibold transition-colors">
+                Forms
               </Link>
               <a href="tel:915-300-2276" className="block">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold animate-rotating-glow border-2 border-accent">
@@ -153,7 +153,7 @@ export default function LocationPage() {
       </nav>
 
       {/* Hero Section */}
-      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
+      <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--tertiary)' }}>
             Our Location
@@ -171,75 +171,115 @@ export default function LocationPage() {
         <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
-            {/* Map */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938!5e0!3m2!1sen!2sus!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              ></iframe>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 relative z-20">
+            {/* Left Column - Clinic Image */}
+            <div>
+              <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20 aspect-square">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=800"
+                  alt="Trinity Heritage Healthcare Clinic - Internal Medicine Clinic Location"
+                  fill
+                  className="object-contain hover:scale-105 transition-transform duration-300 bg-white"
+                  priority
+                />
+              </div>
+              <p className="mt-6 sm:mt-8 text-center text-lg sm:text-xl font-semibold text-foreground" style={{ color: 'var(--tertiary)' }}>
+                Conveniently Located at Shons on the Loop – Just 3 Blocks from Providence Hospital East Campus
+              </p>
             </div>
 
-            {/* Location Details */}
+            {/* Right Column - Map and Contact Details */}
             <div className="space-y-6">
-              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: 'var(--tertiary)' }}>Contact Information</h3>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">Address</p>
-                        <a
-                          href="https://maps.google.com/?q=2204+Joe+Battle+Blvd+Ste+D204+El+Paso+TX+79938"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          2204 Joe Battle Blvd, STE D204
-                          <br />
-                          El Paso, TX 79938
-                        </a>
-                      </div>
-                    </div>
+              {/* Map with Red Marker */}
+              <div className="relative h-[400px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5046662988556!2d-106.41!3d31.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75ca17cffffff%3A0x123456789!2s2204%20Joe%20Battle%20Blvd%2C%20Suite%20D204%2C%20El%20Paso%2C%20TX%2079938!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  className="grayscale hover:grayscale-0 transition-all duration-300"
+                ></iframe>
+              </div>
 
+              {/* Contact Information Cards */}
+              <div className="space-y-4">
+                {/* Phone Card */}
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">Phone</p>
+                      <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-2">Phone</p>
                         <a
                           href="tel:915-300-2276"
-                          className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
+                          className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
                         >
                           915.300.2276
                         </a>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
 
+                {/* Fax Card */}
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">Fax</p>
-                        <p className="text-muted-foreground">866-222-5219</p>
+                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-2">Fax</p>
+                        <p className="text-muted-foreground font-semibold text-lg">866-222-5219</p>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
 
+                {/* Email Card */}
+                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-2">Office Hours</p>
-                        <div className="text-muted-foreground space-y-1">
-                          <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
-                          <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
-                          <p>Saturday - Sunday: Closed</p>
-                        </div>
+                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-2">Email</p>
+                        <a
+                          href="mailto:Trinityheritageclinic@gmail.com"
+                          className="text-primary hover:text-primary/80 transition-colors break-all"
+                        >
+                          Trinityheritageclinic@gmail.com
+                        </a>
                       </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Hours of Operation Card */}
+              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
+                      <div className="text-muted-foreground space-y-2">
+                        <p className="font-medium">Monday - Friday</p>
+                        <p>8:30 AM - 5:30 PM</p>
+                        <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Weekend Closed Card */}
+              <Card className="border-2 border-accent/30 shadow-lg bg-accent/5">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-accent mb-2">Weekend Hours</p>
+                      <p className="text-muted-foreground font-medium">Saturday & Sunday: Closed</p>
                     </div>
                   </div>
                 </CardContent>
@@ -248,10 +288,10 @@ export default function LocationPage() {
               {/* After Hours Banner */}
               <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
                 <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
+                  <Phone className="w-6 h-6 flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
-                    <p className="mb-3">For urgent medical matters, call:</p>
+                    <p className="mb-3 text-sm">For urgent medical matters, call:</p>
                     <a
                       href="tel:817-966-3989"
                       className="text-2xl font-bold hover:underline"
@@ -274,7 +314,7 @@ export default function LocationPage() {
               <div className="relative w-40 h-16 mb-4">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain"
                 />
@@ -298,7 +338,7 @@ export default function LocationPage() {
           </div>
           <div className="border-t border-border pt-8">
             <p className="text-center text-foreground text-sm font-medium">
-              © 2024 Heritage Healthcare Clinic. All rights reserved.
+              © 2024 Trinity Heritage Healthcare Clinic. All rights reserved.
             </p>
           </div>
         </div>

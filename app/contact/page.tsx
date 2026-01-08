@@ -97,7 +97,7 @@ export default function ContactPage() {
               <div className="relative w-64 h-24 sm:w-80 sm:h-32 lg:w-96 lg:h-40">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
@@ -121,10 +121,9 @@ export default function ContactPage() {
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -171,11 +170,10 @@ export default function ContactPage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -200,7 +198,7 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 md:pt-28 lg:pt-32 pb-12 sm:pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
         {/* Geometric Background */}
         <GeometricBackground variant="diamonds" className="opacity-10" opacity={1} animated={true} />
 
@@ -228,10 +226,6 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1 space-y-6">
-              <div className="mb-8">
-                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Contact Information</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-              </div>
 
               {/* New Patient Form Card */}
               <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/15 via-accent/8 to-transparent hover:shadow-lg hover:scale-105 transform">
@@ -261,44 +255,66 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              {/* Address Card */}
-              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-primary/20 rounded-lg">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
-                    <p className="text-foreground text-sm leading-relaxed">
-                      2204 Joe Battle Blvd, STE D204<br />
-                      El Paso, TX 79938
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Hours Card */}
-              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-accent/15 rounded-lg">
-                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
-                    <div className="space-y-2">
-                      <div>
-                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
-                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
-                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
+              {/* How to Submit Your Forms Card */}
+              <Card className="p-5 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/10 to-transparent">
+                <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2 text-sm">
+                  <Clock className="w-4 h-4 text-accent flex-shrink-0" />
+                  How to Submit Your Forms
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        1
                       </div>
-                      <div>
-                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
-                        <span className="text-foreground text-sm">Closed</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Download & Print</p>
+                      <p className="text-xs text-muted-foreground">
+                        Click the download button above
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        2
                       </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Complete at Home</p>
+                      <p className="text-xs text-muted-foreground">
+                        Fill out before your appointment
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        3
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Bring or Fax</p>
+                      <p className="text-xs text-muted-foreground">
+                        866-222-5219
+                      </p>
                     </div>
                   </div>
                 </div>
               </Card>
+
+              {/* Your Privacy Matters Card */}
+              <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg flex gap-3">
+                <AlertCircle className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-blue-900 mb-1 text-xs">Your Privacy Matters</p>
+                  <p className="text-xs text-blue-800 leading-relaxed">
+                    Your health information is handled securely per HIPAA. We do not store your data in any online system.
+                  </p>
+                </div>
+              </div>
+
 
               {/* Phone Card */}
               <Card className="p-6 border-2 border-tertiary/40 hover:border-tertiary/80 transition-all duration-300 bg-gradient-to-br from-tertiary/10 to-primary/5 hover:shadow-lg hover:scale-105 transform">
