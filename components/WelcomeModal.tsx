@@ -65,7 +65,7 @@ export default function WelcomeModal() {
         >
           {/* Logo & Header */}
           <div className="flex flex-col items-center mb-6">
-            <div className="relative" style={{ width: '100px', height: '100px', marginBottom: '16px' }}>
+            <div className="relative" style={{ width: '200px', height: '200px', marginBottom: '16px' }}>
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                 alt="Trinity Heritage Clinic Logo"
