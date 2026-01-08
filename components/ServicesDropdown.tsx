@@ -49,7 +49,7 @@ export function ServicesDropdown() {
       {/* Dropdown Panel */}
       {isOpen && (
         <div
-          className="absolute top-full left-0 mt-2 bg-white border border-border rounded-lg shadow-xl p-4 min-w-[320px] animate-fadeInUp z-40"
+          className="absolute top-full left-0 mt-0 bg-white border border-border rounded-lg shadow-xl p-4 min-w-[320px] animate-fadeInUp z-40 pt-3"
           onMouseEnter={() => !isMobile && setIsOpen(true)}
           onMouseLeave={() => !isMobile && setIsOpen(false)}
         >
