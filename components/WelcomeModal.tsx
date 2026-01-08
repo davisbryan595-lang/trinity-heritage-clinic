@@ -214,12 +214,15 @@ export default function WelcomeModal() {
               className="flex-1 min-w-0"
             >
               <Button
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg h-11"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg h-11 text-sm"
                 style={{
-                  fontSize: 'clamp(13px, 2vw, 14px)',
+                  fontSize: '13px',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
                 }}
               >
-                Schedule Your Appointment - 915.300.2276
+                Schedule Your Appointment
               </Button>
             </a>
             <DialogClose asChild>
