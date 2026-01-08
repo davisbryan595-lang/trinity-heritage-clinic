@@ -134,9 +134,9 @@ export default function BrochurePage() {
               {/* Logo */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-full sm:w-auto"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto"
               >
-                <div className="relative w-48 h-20 xs:w-56 xs:h-24 sm:w-72 sm:h-32 md:w-96 md:h-40 lg:w-[480px] lg:h-56 xl:w-[576px] xl:h-72">
+                <div className="relative w-28 h-20 xs:w-32 xs:h-24 sm:w-44 sm:h-32 md:w-56 md:h-40 lg:w-72 lg:h-56 xl:w-96 xl:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Trinity Heritage Healthcare Clinic"
