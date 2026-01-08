@@ -234,8 +234,15 @@ export default function BrochurePage() {
               >
                 {/* Main Heading with two-color design */}
                 <div className="mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8">
-                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 text-center whitespace-nowrap" style={{ transform: 'scale(0.98)' }}>
-                    <span className="text-primary">Internal Medicine, Family Practice Clinic</span>
+                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 whitespace-nowrap" style={{ transform: 'scale(0.98)', display: 'flex', flexDirection: 'column' }}>
+                    <span className="text-primary" style={{ marginRight: 'auto', fontFamily: 'Montserrat, sans-serif', textAlign: 'left' }}>
+                      <h2>
+                        <strong>
+                          <span className="ql-cursor">﻿</span>
+                        </strong>
+                        Internal Medicine, Family Practice Clinic
+                      </h2>
+                    </span>
                   </h1>
                   <p className="font-serif text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 xs:mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
                     &
