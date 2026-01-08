@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogClose, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { Info, X } from 'lucide-react'
+import { Info } from 'lucide-react'
 
 export default function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false)
