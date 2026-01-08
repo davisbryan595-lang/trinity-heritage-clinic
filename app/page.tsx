@@ -589,9 +589,9 @@ export default function BrochurePage() {
               </div>
 
               {/* Bottom Section - Professional Organizations */}
-              <div className="mt-8 xs:mt-10 sm:mt-12 pt-6 xs:pt-8 sm:pt-10">
-                <div>
-                  <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12 text-center">
+              <div className="mt-8 xs:mt-10 sm:mt-12 pt-6 xs:pt-8 sm:pt-10 flex justify-center">
+                <div className="text-center">
+                  <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
                     Professional Organizations
                   </h4>
                   <div className="flex flex-col items-center gap-8 xs:gap-10 sm:gap-12">
