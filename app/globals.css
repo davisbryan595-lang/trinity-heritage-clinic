@@ -4,62 +4,62 @@
 
 :root {
   /* Trinity Heritage Clinic - Occupational Medicine Brochure Theme */
-  /* Deep Green Primary | Purple Accent | Vibrant Green Highlight | Light Gray Background | White */
-  --background: #F0F4F8;
+  /* Bright Lime Green Primary | Purple Accent | Light Green Highlight | White Background | Dark Text */
+  --background: #ffffff;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #006D5B;
-  /* Deep Green - professional, trustworthy */
-  --primary-foreground: #ffffff;
-  --secondary: #F0F4F8;
-  /* Light Gray background */
+  --primary: #8cc73f;
+  /* Bright Lime Green - vibrant and energetic */
+  --primary-foreground: #1a1a1a;
+  --secondary: #f8faf5;
+  /* Very light green-tinted background */
   --secondary-foreground: #1a1a1a;
-  --muted: #e8ecf1;
-  --muted-foreground: #64748b;
-  --accent: #6B4C9A;
+  --muted: #e8f0d8;
+  --muted-foreground: #4a5a3a;
+  --accent: #6e388e;
   /* Purple accent */
   --accent-foreground: #ffffff;
-  --tertiary: #8cc73f;
-  /* Vibrant Green highlight */
+  --tertiary: #a8d94f;
+  /* Light Green highlight - even brighter */
   --tertiary-foreground: #1a1a1a;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #d1d5db;
   --input: #ffffff;
-  --ring: #006D5B;
-  --chart-1: #006D5B;
-  --chart-2: #6B4C9A;
-  --chart-3: #8cc73f;
-  --chart-4: #8b5cf6;
-  --chart-5: #14b8a6;
+  --ring: #6ba842;
+  --chart-1: #6ba842;
+  --chart-2: #6e388e;
+  --chart-3: #87be52;
+  --chart-4: #a678d9;
+  --chart-5: #52c452;
   --radius: 0.5rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1a1a;
-  --sidebar-primary: #006D5B;
+  --sidebar-primary: #6ba842;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #6B4C9A;
+  --sidebar-accent: #6e388e;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #d1d5db;
-  --sidebar-ring: #006D5B;
+  --sidebar-ring: #6ba842;
 }
 
 .dark {
-  --background: #0f1419;
-  --foreground: #F0F4F8;
-  --card: #1a2129;
-  --card-foreground: #F0F4F8;
-  --popover: #1a2129;
-  --popover-foreground: #F0F4F8;
-  --primary: #10b981;
-  --primary-foreground: #ffffff;
-  --secondary: #1e293b;
-  --secondary-foreground: #F0F4F8;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #8b5cf6;
+  --background: #f5fdf0;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #8cc73f;
+  --primary-foreground: #1a1a1a;
+  --secondary: #f8faf5;
+  --secondary-foreground: #1a1a1a;
+  --muted: #e8f0d8;
+  --muted-foreground: #4a5a3a;
+  --accent: #6e388e;
   --accent-foreground: #ffffff;
   --tertiary: #a8d94f;
   --tertiary-foreground: #1a1a1a;
@@ -67,20 +67,20 @@
   --destructive-foreground: #fecaca;
   --border: #334155;
   --input: #1a2129;
-  --ring: #10b981;
-  --chart-1: #10b981;
-  --chart-2: #8b5cf6;
+  --ring: #7fbe3f;
+  --chart-1: #7fbe3f;
+  --chart-2: #a678d9;
   --chart-3: #a8d94f;
-  --chart-4: #a78bfa;
-  --chart-5: #2dd4bf;
+  --chart-4: #b88ce6;
+  --chart-5: #6dd66d;
   --sidebar: #1a2129;
   --sidebar-foreground: #F0F4F8;
-  --sidebar-primary: #10b981;
+  --sidebar-primary: #7fbe3f;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #8b5cf6;
+  --sidebar-accent: #a678d9;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #334155;
-  --sidebar-ring: #10b981;
+  --sidebar-ring: #7fbe3f;
 }
 
 @theme inline {
@@ -160,10 +160,10 @@
 
 @keyframes diamond-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 109, 91, 0.3);
+    box-shadow: 0 0 20px rgba(107, 168, 66, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(0, 109, 91, 0.6);
+    box-shadow: 0 0 40px rgba(107, 168, 66, 0.6);
   }
 }
 
@@ -232,19 +232,19 @@ html {
   left: 0;
   width: 0%;
   height: 4px;
-  background: linear-gradient(to right, #006D5B, #6B4C9A, #8cc73f);
+  background: linear-gradient(to right, #6ba842, #6e388e, #87be52);
   z-index: 9999;
   transition: width 0.1s ease-out;
 }
 
 /* Diamond glow effect */
 .diamond-glow {
-  box-shadow: 0 0 30px rgba(0, 109, 91, 0.3);
+  box-shadow: 0 0 30px rgba(107, 168, 66, 0.3);
   transition: box-shadow 0.3s ease;
 }
 
 .diamond-glow:hover {
-  box-shadow: 0 0 50px rgba(0, 109, 91, 0.5);
+  box-shadow: 0 0 50px rgba(107, 168, 66, 0.5);
 }
 
 /* Tertiary green accent utilities */
@@ -257,11 +257,11 @@ html {
 }
 
 .bg-tertiary\/10 {
-  background-color: rgba(140, 199, 63, 0.1);
+  background-color: rgba(135, 190, 82, 0.1);
 }
 
 .bg-tertiary\/20 {
-  background-color: rgba(140, 199, 63, 0.2);
+  background-color: rgba(135, 190, 82, 0.2);
 }
 
 .border-tertiary {
@@ -269,7 +269,7 @@ html {
 }
 
 .border-tertiary\/20 {
-  border-color: rgba(140, 199, 63, 0.2);
+  border-color: rgba(135, 190, 82, 0.2);
 }
 
 /* Enhanced animations for shape dividers and geometric patterns */
@@ -329,33 +329,33 @@ html {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 109, 91, 0.2);
+    box-shadow: 0 0 20px rgba(52, 121, 66, 0.2);
   }
   50% {
-    box-shadow: 0 0 40px rgba(107, 76, 154, 0.3);
+    box-shadow: 0 0 40px rgba(110, 56, 142, 0.3);
   }
 }
 
 @keyframes rotating-border-glow {
   0% {
-    box-shadow: 0 0 25px rgba(0, 109, 91, 0.4), inset 0 0 25px rgba(0, 109, 91, 0.1);
-    border-color: rgba(0, 109, 91, 0.6);
+    box-shadow: 0 0 25px rgba(52, 121, 66, 0.4), inset 0 0 25px rgba(52, 121, 66, 0.1);
+    border-color: rgba(52, 121, 66, 0.6);
   }
   25% {
-    box-shadow: 0 0 30px rgba(107, 76, 154, 0.3), inset 0 0 30px rgba(107, 76, 154, 0.1);
-    border-color: rgba(107, 76, 154, 0.5);
+    box-shadow: 0 0 30px rgba(110, 56, 142, 0.3), inset 0 0 30px rgba(110, 56, 142, 0.1);
+    border-color: rgba(110, 56, 142, 0.5);
   }
   50% {
-    box-shadow: 0 0 25px rgba(0, 109, 91, 0.4), inset 0 0 25px rgba(0, 109, 91, 0.1);
-    border-color: rgba(0, 109, 91, 0.6);
+    box-shadow: 0 0 25px rgba(52, 121, 66, 0.4), inset 0 0 25px rgba(52, 121, 66, 0.1);
+    border-color: rgba(52, 121, 66, 0.6);
   }
   75% {
-    box-shadow: 0 0 30px rgba(107, 76, 154, 0.3), inset 0 0 30px rgba(107, 76, 154, 0.1);
-    border-color: rgba(107, 76, 154, 0.5);
+    box-shadow: 0 0 30px rgba(110, 56, 142, 0.3), inset 0 0 30px rgba(110, 56, 142, 0.1);
+    border-color: rgba(110, 56, 142, 0.5);
   }
   100% {
-    box-shadow: 0 0 25px rgba(0, 109, 91, 0.4), inset 0 0 25px rgba(0, 109, 91, 0.1);
-    border-color: rgba(0, 109, 91, 0.6);
+    box-shadow: 0 0 25px rgba(52, 121, 66, 0.4), inset 0 0 25px rgba(52, 121, 66, 0.1);
+    border-color: rgba(52, 121, 66, 0.6);
   }
 }
 
@@ -367,6 +367,15 @@ html {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes logo-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(107, 168, 66, 0.3), 0 0 40px rgba(107, 168, 66, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(107, 168, 66, 0.5), 0 0 60px rgba(107, 168, 66, 0.2);
   }
 }
 
@@ -399,12 +408,31 @@ html {
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
+.animate-logo-glow {
+  animation: logo-glow 3s ease-in-out infinite;
+}
+
 .animate-slide-up {
   animation: slide-up 0.8s ease-out;
 }
 
 .animate-rotating-glow {
   animation: rotating-border-glow 4s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
 }
 
 /* Opacity utilities */
@@ -463,7 +491,7 @@ html {
 
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 109, 91, 0.2);
+  box-shadow: 0 20px 40px rgba(107, 168, 66, 0.2);
 }
 
 /* Hero section animations */
@@ -478,11 +506,11 @@ html {
 
 /* Enhanced gradient backgrounds */
 .gradient-primary-accent {
-  background: linear-gradient(135deg, #006D5B 0%, #6B4C9A 100%);
+  background: linear-gradient(135deg, #6ba842 0%, #6e388e 100%);
 }
 
 .gradient-accent-primary {
-  background: linear-gradient(135deg, #6B4C9A 0%, #006D5B 100%);
+  background: linear-gradient(135deg, #6e388e 0%, #6ba842 100%);
 }
 
 /* Image hover effects */

@@ -40,12 +40,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-48 h-20">
+            <div className="relative w-48 h-20 animate-logo-glow rounded-lg" style={{ boxShadow: '0 0 20px rgba(107, 168, 66, 0.3)' }}>
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                 alt="Trinity Heritage Clinic"
                 fill
-                className="object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
+                className="object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110 filter brightness-110"
                 priority
                 onError={(e) => {
                   e.currentTarget.style.display = 'none'
@@ -127,7 +127,7 @@ export default function Navbar() {
                   className="w-full border-2 border-accent text-accent hover:bg-accent hover:text-white"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call (915) 300-2276
+                  Call 915.300.2276
                 </Button>
               </a>
               <Link href="/contact" className="block" onClick={() => setIsOpen(false)}>
