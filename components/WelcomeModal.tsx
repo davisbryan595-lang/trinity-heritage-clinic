@@ -32,10 +32,12 @@ export default function WelcomeModal() {
     }
   }, [])
 
-  const handleClose = () => {
-    setIsOpen(false)
-    setShowBadge(true)
-    document.body.style.overflow = 'auto'
+  const handleClose = (newOpen: boolean) => {
+    if (!newOpen) {
+      setIsOpen(false)
+      setShowBadge(true)
+      document.body.style.overflow = 'auto'
+    }
   }
 
   const handleBadgeClick = () => {
