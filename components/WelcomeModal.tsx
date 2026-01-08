@@ -54,7 +54,7 @@ export default function WelcomeModal() {
       {/* Welcome Modal */}
       <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent
-          className="max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl p-8 sm:p-10 border-2 border-primary/20 shadow-2xl animate-in fade-in zoom-in-95 duration-500"
+          className="max-w-3xl w-[95vw] rounded-2xl p-6 sm:p-8 border-2 border-primary/20 shadow-2xl animate-in fade-in zoom-in-95 duration-500"
           showCloseButton={true}
         >
           {/* Logo & Header */}
