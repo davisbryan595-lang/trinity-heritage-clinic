@@ -129,7 +129,7 @@ export default function BrochurePage() {
             ? "bg-white"
             : "bg-transparent"
         }`}>
-          <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
             <div className="flex justify-between items-center h-16 xs:h-20 sm:h-20 md:h-24 lg:h-28 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3">
               {/* Logo */}
               <button
