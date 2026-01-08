@@ -176,11 +176,11 @@ export default function BrochurePage() {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-              <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
+              <div className="lg:hidden py-4 space-y-1 animate-fadeInUp border-t border-border">
                 {[
                   { id: "home", label: "Home", href: null },
-                  { id: "about", label: "About Us", href: null },
-                  { id: "team", label: "Our Team", href: null },
+                  { id: "about", label: "About", href: null },
+                  { id: "team", label: "Team", href: null },
                   { id: "gallery", label: "Gallery", href: "/gallery" },
                   { id: "location", label: "Contact", href: "/location" },
                   { id: "wellness", label: "Wellness", href: "/wellness" },
@@ -190,7 +190,7 @@ export default function BrochurePage() {
                     <Link
                       key={link.id}
                       href={link.href}
-                      className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                      className="block w-full text-left px-4 py-2 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all text-sm"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.label}
@@ -198,8 +198,11 @@ export default function BrochurePage() {
                   ) : (
                     <button
                       key={link.id}
-                      onClick={() => scrollToSection(link.id)}
-                      className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                      onClick={() => {
+                        scrollToSection(link.id)
+                        setMobileMenuOpen(false)
+                      }}
+                      className="block w-full text-left px-4 py-2 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all text-sm"
                     >
                       {link.label}
                     </button>
