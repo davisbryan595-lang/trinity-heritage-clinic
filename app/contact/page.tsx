@@ -115,7 +115,7 @@ export default function ContactPage() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-2 items-center flex-wrap justify-center">
+            <div className="hidden lg:flex gap-2 items-center justify-center flex-nowrap">
               {[
                 { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About", href: "/#about" },
