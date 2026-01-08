@@ -510,7 +510,7 @@ export default function BrochurePage() {
                     {/* AMA Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23663399' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='24' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAMA%3C/text%3E%3C/svg%3E"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2F85e427bbd18b45ab83decf2502141030?format=webp&width=800"
                         alt="AMA - American Medical Association"
                         width={128}
                         height={128}
@@ -520,7 +520,7 @@ export default function BrochurePage() {
                     {/* ACP Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2320A39F' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='20' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EACP%3C/text%3E%3C/svg%3E"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2Fd21c32e6a8e54e9a9d430b276289a447?format=webp&width=800"
                         alt="ACP - American College of Physicians"
                         width={128}
                         height={128}
@@ -530,7 +530,7 @@ export default function BrochurePage() {
                     {/* ACOEM Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234A90E2' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='16' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EACOEM%3C/text%3E%3C/svg%3E"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2F89fa29494b9846a4bf7864d577d97f1b?format=webp&width=800"
                         alt="ACOEM - American College of Occupational and Environmental Medicine"
                         width={128}
                         height={128}
