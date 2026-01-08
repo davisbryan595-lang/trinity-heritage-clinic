@@ -226,7 +226,7 @@ export default function BrochurePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20"></div>
 
-            <div className="w-full max-w-4xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 text-center py-5 xs:py-6 sm:py-8 md:py-10 lg:py-12 backdrop-blur-lg bg-white/5 border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32">
+            <div className="w-full max-w-4xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10 text-center py-3 xs:py-3 sm:py-4 md:py-6 lg:py-8 backdrop-blur-lg bg-white/3 border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32">
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
