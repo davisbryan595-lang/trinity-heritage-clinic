@@ -220,7 +220,7 @@ export default function BrochurePage() {
             id="home"
             className="relative w-full min-h-screen flex items-end justify-center pt-12 xs:pt-14 sm:pt-16 md:pt-20 lg:pt-28 xl:pt-32 pb-16 xs:pb-20 sm:pb-24 md:pb-28 lg:pb-32 overflow-hidden"
             style={{
-              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F959b62684289453ea6d1d4bb1b10c27a%2F132c4f4fe04b42b99f017c1cad2c9964?format=webp&width=800)',
+              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fe956acbb04e54fb896c83542bdb88b2d%2F8b288272e0db48dd9890547636226cd8?format=webp&width=800)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed'
