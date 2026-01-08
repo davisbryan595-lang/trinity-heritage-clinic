@@ -119,13 +119,13 @@ export default function WelcomeModal() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 mt-5 pt-4 border-t border-border">
+          <div className="flex flex-col sm:flex-row gap-1.5 mt-3 pt-3 border-t border-border">
             <a
               href="tel:915-300-2276"
               className="flex-1"
             >
               <Button
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-sm sm:text-base h-10 sm:h-11 font-semibold rounded-lg"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-xs sm:text-sm h-9 sm:h-10 font-semibold rounded-lg"
               >
                 Schedule Your Appointment - 915.300.2276
               </Button>
@@ -134,7 +134,7 @@ export default function WelcomeModal() {
               <Button
                 onClick={() => handleClose(false)}
                 variant="outline"
-                className="flex-1 border-2 border-primary text-primary hover:bg-primary/5 text-sm sm:text-base h-10 sm:h-11 font-semibold rounded-lg"
+                className="flex-1 border-2 border-primary text-primary hover:bg-primary/5 text-xs sm:text-sm h-9 sm:h-10 font-semibold rounded-lg"
               >
                 Continue Browsing
               </Button>
