@@ -86,7 +86,7 @@ export default function BrochurePage() {
         }`}
       >
         {/* Top Navigation Row */}
-        <div className={`border-b transition-all duration-300 ${isScrolled ? "border-border" : "border-transparent"}`}>
+        <div className={`border-b transition-all duration-300 relative z-20 ${isScrolled ? "border-border" : "border-transparent"}`}>
           <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
             <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1">
               {[
@@ -124,19 +124,19 @@ export default function BrochurePage() {
         </div>
 
         {/* Main Navbar */}
-        <div className={`transition-all duration-300 ${
+        <div className={`transition-all duration-300 relative z-10 ${
           isScrolled
             ? "bg-white"
             : "bg-transparent"
         }`}>
-          <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
             <div className="flex justify-between items-center h-16 xs:h-20 sm:h-20 md:h-24 lg:h-28 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3">
               {/* Logo */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-full sm:w-auto"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto"
               >
-                <div className="relative w-48 h-20 xs:w-56 xs:h-24 sm:w-72 sm:h-32 md:w-96 md:h-40 lg:w-[480px] lg:h-56 xl:w-[576px] xl:h-72">
+                <div className="relative w-28 h-20 xs:w-32 xs:h-24 sm:w-44 sm:h-32 md:w-56 md:h-40 lg:w-72 lg:h-56 xl:w-96 xl:h-72">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                     alt="Trinity Heritage Healthcare Clinic"
@@ -296,7 +296,7 @@ export default function BrochurePage() {
                     Our Pledge
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
-                    Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
+                    Trinity Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
                   </p>
                   <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
                     Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
@@ -304,7 +304,7 @@ export default function BrochurePage() {
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-4 xs:p-5 sm:p-6 animate-rotating-glow">
-                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-sm xs:text-base sm:text-lg">Why Choose Heritage Healthcare Clinic?</h4>
+                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-sm xs:text-base sm:text-lg">Why Choose Trinity Heritage Healthcare Clinic?</h4>
                   <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />

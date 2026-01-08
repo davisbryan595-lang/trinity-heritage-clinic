@@ -199,7 +199,7 @@ export default function WellnessPage() {
                   Health & Safety Consultation
                 </h2>
                 <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                  At Heritage Healthcare Clinic, we believe that prevention is the best approach. Our comprehensive health and safety consultation programs are designed to identify occupational health risks and keep your employees healthy and productive.
+                  At Trinity Heritage Healthcare Clinic, we believe that prevention is the best approach. Our comprehensive health and safety consultation programs are designed to identify occupational health risks and keep your employees healthy and productive.
                 </p>
               </div>
 
