@@ -90,7 +90,7 @@ export default function BrochurePage() {
         {/* Top Navigation Row */}
         <div className={`border-b transition-all duration-300 relative z-20 ${isScrolled ? "border-border" : "border-transparent"}`}>
           <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1">
+            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1 flex-nowrap">
               {[
                 { id: "home", label: "Home", href: null },
                 { id: "about", label: "About", href: null },
@@ -436,12 +436,12 @@ export default function BrochurePage() {
                 {/* Left Column - Photo (40%) */}
                 <div className="lg:col-span-2 flex items-center justify-center">
                   <div className="relative w-full max-w-sm">
-                    <div 
+                    <div
                       className="relative w-full aspect-square rounded-lg overflow-hidden"
                       style={{ border: '10px solid #8B4789' }}
                     >
                       <Image
-                        src="/professional-male-physician-dr-victor-nwiloh-heads.jpg"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2Faef421c9420b48d1a111b122c7a0a1bc?format=webp&width=800"
                         alt="Dr. Victor Nwiloh, MD"
                         fill
                         className="object-cover"
@@ -510,7 +510,7 @@ export default function BrochurePage() {
                     {/* AMA Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23663399' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='24' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAMA%3C/text%3E%3C/svg%3E"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2F85e427bbd18b45ab83decf2502141030?format=webp&width=800"
                         alt="AMA - American Medical Association"
                         width={128}
                         height={128}
@@ -520,7 +520,7 @@ export default function BrochurePage() {
                     {/* ACP Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2320A39F' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='20' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EACP%3C/text%3E%3C/svg%3E"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2Fd21c32e6a8e54e9a9d430b276289a447?format=webp&width=800"
                         alt="ACP - American College of Physicians"
                         width={128}
                         height={128}
@@ -530,7 +530,7 @@ export default function BrochurePage() {
                     {/* ACOEM Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
-                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234A90E2' width='100' height='100'/%3E%3Ctext x='50' y='55' font-size='16' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EACOEM%3C/text%3E%3C/svg%3E"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2F89fa29494b9846a4bf7864d577d97f1b?format=webp&width=800"
                         alt="ACOEM - American College of Occupational and Environmental Medicine"
                         width={128}
                         height={128}
