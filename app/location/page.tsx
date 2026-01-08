@@ -169,24 +169,7 @@ export default function LocationPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 relative z-20 items-center">
-            {/* Left Column - Clinic Image */}
-            <div className="flex flex-col items-center justify-center">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-                <Image
-                  src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=1000"
-                  alt="Trinity Heritage Healthcare Clinic - Internal Medicine Clinic Location"
-                  width={700}
-                  height={600}
-                  className="w-full h-auto hover:scale-105 transition-transform duration-300"
-                  priority
-                />
-              </div>
-              <p className="mt-6 sm:mt-8 text-center text-lg sm:text-xl font-semibold text-foreground" style={{ color: 'var(--tertiary)' }}>
-                Conveniently Located at Shons on the Loop – Just 3 Blocks from Providence Hospital East Campus
-              </p>
-            </div>
-
-            {/* Right Column - Map and Contact Details */}
+            {/* Left Column - Map and Clinic Image */}
             <div className="space-y-6">
               {/* Map with Red Marker */}
               <div className="relative h-[400px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
@@ -201,57 +184,72 @@ export default function LocationPage() {
                 ></iframe>
               </div>
 
-              {/* Contact Information Cards */}
-              <div className="space-y-4">
-                {/* Phone Card */}
-                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <p className="font-semibold text-foreground mb-2">Phone</p>
-                        <a
-                          href="tel:915-300-2276"
-                          className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
-                        >
-                          915.300.2276
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Fax Card */}
-                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <p className="font-semibold text-foreground mb-2">Fax</p>
-                        <p className="text-muted-foreground font-semibold text-lg">866-222-5219</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Email Card */}
-                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <p className="font-semibold text-foreground mb-2">Email</p>
-                        <a
-                          href="mailto:Trinityheritageclinic@gmail.com"
-                          className="text-primary hover:text-primary/80 transition-colors break-all"
-                        >
-                          Trinityheritageclinic@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+              {/* Clinic Image */}
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=1000"
+                  alt="Trinity Heritage Healthcare Clinic - Internal Medicine Clinic Location"
+                  width={700}
+                  height={600}
+                  className="w-full h-auto hover:scale-105 transition-transform duration-300"
+                  priority
+                />
               </div>
+              <p className="text-center text-lg sm:text-xl font-semibold text-foreground" style={{ color: 'var(--tertiary)' }}>
+                Conveniently Located at Shons on the Loop – Just 3 Blocks from Providence Hospital East Campus
+              </p>
+            </div>
+
+            {/* Right Column - Contact Details */}
+            <div className="space-y-4">
+              {/* Phone Card */}
+              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-foreground mb-2">Phone</p>
+                      <a
+                        href="tel:915-300-2276"
+                        className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
+                      >
+                        915.300.2276
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Fax Card */}
+              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-foreground mb-2">Fax</p>
+                      <p className="text-muted-foreground font-semibold text-lg">866-222-5219</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Email Card */}
+              <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-foreground mb-2">Email</p>
+                      <a
+                        href="mailto:Trinityheritageclinic@gmail.com"
+                        className="text-primary hover:text-primary/80 transition-colors break-all"
+                      >
+                        Trinityheritageclinic@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Hours of Operation Card */}
               <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
