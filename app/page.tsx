@@ -90,7 +90,7 @@ export default function BrochurePage() {
         {/* Top Navigation Row */}
         <div className={`border-b transition-all duration-300 relative z-20 ${isScrolled ? "border-border" : "border-transparent"}`}>
           <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
-            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1">
+            <div className="hidden lg:flex justify-center items-center h-10 xs:h-11 sm:h-12 lg:h-12 gap-0.5 xl:gap-1 flex-nowrap">
               {[
                 { id: "home", label: "Home", href: null },
                 { id: "about", label: "About", href: null },
