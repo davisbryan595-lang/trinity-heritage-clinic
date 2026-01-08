@@ -352,9 +352,6 @@ export default function BrochurePage() {
               <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
                 Our Dedicated Healthcare Team
               </h2>
-              <p className="text-xs xs:text-sm sm:text-sm md:text-lg lg:text-xl text-foreground max-w-4xl mx-auto font-medium px-2">
-                Experienced professionals certified in specialties and licensed without restrictions
-              </p>
             </div>
 
             {/* Team Background Image */}
@@ -385,18 +382,6 @@ export default function BrochurePage() {
                   icon: HeartPulse,
                   title: "Certified Nurse Practitioner",
                   specialty: "Advanced Practice Nursing",
-                  color: "text-accent"
-                },
-                {
-                  icon: Stethoscope,
-                  title: "Licensed Nurse",
-                  specialty: "Registered Nursing Care",
-                  color: "text-primary"
-                },
-                {
-                  icon: Users,
-                  title: "Certified Psychologist",
-                  specialty: "Occupational Health Psychology",
                   color: "text-accent"
                 },
                 {
