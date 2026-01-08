@@ -436,12 +436,12 @@ export default function BrochurePage() {
                 {/* Left Column - Photo (40%) */}
                 <div className="lg:col-span-2 flex items-center justify-center">
                   <div className="relative w-full max-w-sm">
-                    <div 
+                    <div
                       className="relative w-full aspect-square rounded-lg overflow-hidden"
                       style={{ border: '10px solid #8B4789' }}
                     >
                       <Image
-                        src="/professional-male-physician-dr-victor-nwiloh-heads.jpg"
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2Faef421c9420b48d1a111b122c7a0a1bc?format=webp&width=800"
                         alt="Dr. Victor Nwiloh, MD"
                         fill
                         className="object-cover"
