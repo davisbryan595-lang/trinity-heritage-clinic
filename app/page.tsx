@@ -594,7 +594,7 @@ export default function BrochurePage() {
                   <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12 text-center">
                     Professional Organizations
                   </h4>
-                  <div className="flex flex-col items-start lg:items-end gap-8 xs:gap-10 sm:gap-12">
+                  <div className="flex flex-col items-center gap-8 xs:gap-10 sm:gap-12">
                     {/* AMA Logo */}
                     <div className="w-24 xs:w-28 sm:w-32">
                       <Image
