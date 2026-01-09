@@ -170,7 +170,7 @@ export default function LocationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Top - Clinic Image - Full Width and Centered */}
           <div className="mb-8 sm:mb-10 md:mb-12 max-w-5xl mx-auto">
-            <p className="text-center text-lg sm:text-xl font-semibold text-foreground mb-4" style={{ color: 'var(--tertiary)' }}>
+            <p className="text-center text-lg sm:text-xl font-semibold text-foreground mb-4 whitespace-nowrap overflow-x-auto" style={{ color: 'var(--tertiary)' }}>
               Conveniently Located in East El Paso, Texas – Just a few blocks from The Hospitals of Providence East Campus
             </p>
             <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
