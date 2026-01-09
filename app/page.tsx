@@ -290,7 +290,7 @@ export default function BrochurePage() {
           <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-10 xs:mb-12 sm:mb-16">
               <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
-                About Trinity Heritage Healthcare Clinic
+                About Trinity Healthcare Clinic
               </h2>
               <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Comprehensive healthcare for your professional and personal wellness
@@ -378,7 +378,7 @@ export default function BrochurePage() {
 
                 {/* Hospital Affiliations Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-3 xs:mb-3 sm:mb-4 font-serif" style={{ color: '#6b3fa0' }}>
                     Always Accepting New Patients
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium whitespace-normal">
