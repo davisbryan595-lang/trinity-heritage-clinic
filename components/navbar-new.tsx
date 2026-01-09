@@ -36,9 +36,9 @@ export default function Navbar() {
           : "glass"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* Logo */}
+      <div className="w-full">
+        <div className="flex justify-between items-center h-24 px-4 sm:px-6 lg:px-8">
+          {/* Logo - no padding on left */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-48 h-20 animate-logo-glow rounded-lg" style={{ boxShadow: '0 0 20px rgba(107, 168, 66, 0.3)' }}>
               <Image
