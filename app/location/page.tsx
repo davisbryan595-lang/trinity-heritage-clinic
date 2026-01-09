@@ -262,14 +262,14 @@ export default function LocationPage() {
                 </div>
 
                 {/* After Hours & Weekend */}
-                <div className="flex items-start gap-3 pt-2 bg-accent/10 p-4 rounded-lg border border-accent/20">
-                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 pt-2 bg-accent/10 p-3 rounded-lg border border-accent/20">
+                  <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
-                    <h4 className="font-bold text-lg text-accent mb-2">After Hours & Weekend</h4>
-                    <p className="mb-3 text-sm text-foreground">For urgent medical matters, call:</p>
+                    <p className="font-semibold text-sm text-accent mb-1">After Hours & Weekend</p>
+                    <p className="text-xs text-foreground mb-1">For urgent medical matters, call:</p>
                     <a
                       href="tel:817-966-3989"
-                      className="text-xl font-bold text-accent hover:underline"
+                      className="text-sm font-semibold text-accent hover:underline"
                     >
                       817.966.3989
                     </a>
