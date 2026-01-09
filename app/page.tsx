@@ -94,12 +94,12 @@ export default function BrochurePage() {
             ? "bg-white"
             : "bg-transparent"
         }`}>
-          <div className="max-w-7xl mx-auto px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
-            <div className="flex justify-between items-start lg:items-center h-auto lg:h-32 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 gap-4 lg:gap-8">
-              {/* Logo - Enlarged and positioned top left */}
+          <div className="w-full">
+            <div className="flex justify-between items-start lg:items-center h-auto lg:h-32 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 gap-4 lg:gap-8 px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
+              {/* Logo - Enlarged and positioned top left with zero left padding */}
               <button
                 onClick={() => scrollToSection("home")}
-                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto pt-2 lg:pt-0"
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto pt-2 lg:pt-0 -ml-1 xs:-ml-2 sm:-ml-3 md:-ml-4 lg:-ml-6"
               >
                 <div className="relative w-32 h-24 xs:w-40 xs:h-28 sm:w-56 sm:h-40 md:w-72 md:h-52 lg:w-96 lg:h-64 xl:w-[28rem] xl:h-72">
                   <Image
