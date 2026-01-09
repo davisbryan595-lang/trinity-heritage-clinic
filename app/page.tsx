@@ -376,32 +376,11 @@ export default function BrochurePage() {
                   </Card>
                 </div>
 
-                {/* Hospital Affiliations Section */}
+                {/* Patient Welcome Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
-                    Always Accepting New Patients
-                  </h3>
-                  <Card className="border-2 border-accent/20 shadow-lg bg-gradient-to-br from-accent/5 to-white">
-                    <CardContent className="p-4 xs:p-4 sm:p-5">
-                      <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground font-medium mb-4 xs:mb-5 sm:mb-5">
-                        Dr. Nwiloh is affiliated with the following hospitals:
-                      </p>
-                      <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3 text-foreground mb-4 xs:mb-5 sm:mb-5">
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
-                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                          <span>The Hospitals of Providence East Campus</span>
-                        </li>
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
-                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                          <span>Del Sol Medical Center</span>
-                        </li>
-                      </ul>
-                      <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium">
-                        Visit us and let's talk about you and your well-being because we…
-                        <span className="block font-semibold text-primary mt-2">CHERISH YOUR HEALTH!</span>
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium">
+                    Visit us and let's talk about you and your well-being because we… <span className="font-semibold text-primary">CHERISH YOUR HEALTH!</span>
+                  </p>
                 </div>
 
                 <div>
