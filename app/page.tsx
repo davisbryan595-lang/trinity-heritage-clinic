@@ -376,11 +376,18 @@ export default function BrochurePage() {
                   </Card>
                 </div>
 
-                {/* Patient Welcome Section */}
+                {/* Hospital Affiliations Section */}
                 <div>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium">
-                    Visit us and let's talk about you and your well-being because we… <span className="font-semibold text-primary">CHERISH YOUR HEALTH!</span>
-                  </p>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Always Accepting New Patients
+                  </h3>
+                  <Card className="border-2 border-accent/20 shadow-lg bg-gradient-to-br from-accent/5 to-white">
+                    <CardContent className="p-4 xs:p-4 sm:p-5">
+                      <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium whitespace-normal">
+                        Visit us and let's talk about you and your well-being because we… <span className="font-semibold text-primary">CHERISH YOUR HEALTH!</span>
+                      </p>
+                    </CardContent>
+                  </Card>
                 </div>
 
                 <div>
