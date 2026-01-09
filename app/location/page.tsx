@@ -218,7 +218,7 @@ export default function LocationPage() {
                 </div>
 
                 {/* Fax */}
-                <div className="flex items-start gap-3 pb-2">
+                <div className="flex items-start gap-3 pb-1">
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-2">Fax</p>
