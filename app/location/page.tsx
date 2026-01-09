@@ -180,9 +180,6 @@ export default function LocationPage() {
                 priority
               />
             </div>
-            <p className="text-center text-lg sm:text-xl font-semibold text-foreground mt-3" style={{ color: 'var(--tertiary)' }}>
-              Conveniently Located at Shons on the Loop – Just 3 Blocks from Providence Hospital East Campus
-            </p>
           </div>
 
           {/* Bottom - Map and Contact Details Side by Side */}
