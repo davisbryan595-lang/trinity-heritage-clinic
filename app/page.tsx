@@ -302,17 +302,11 @@ export default function BrochurePage() {
               <div className="space-y-6 xs:space-y-6 sm:space-y-8">
                 {/* Welcome Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
-                    Welcome!
-                  </h3>
                   <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
                     Trinity Heritage clinic also known as Heritage Healthcare clinic is a family-oriented clinic that was established 12 years ago to provide excellent comprehensive medical care to adults and children.
                   </p>
                   <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
                     We are focused on health promotion and disease prevention. Providing education and support services to help our patients make plans and decisions that promote wellness and healthy living.
-                  </p>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground font-semibold italic">
-                    … Cherish your health!
                   </p>
                 </div>
 
