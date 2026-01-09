@@ -155,9 +155,9 @@ export default function LocationPage() {
       {/* Hero Section */}
       <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-            Conveniently Located in East of El Paso, Texas
-          </p>
+          <h2 className="text-3xl sm:text-4xl text-primary max-w-3xl mx-auto font-bold">
+            Conveniently Located in East El Paso, Texas – Just a few blocks from The Hospitals of Providence East Campus
+          </h2>
         </div>
       </div>
 
@@ -170,9 +170,6 @@ export default function LocationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Top - Clinic Image - Full Width and Centered */}
           <div className="mb-8 sm:mb-10 md:mb-12 max-w-5xl mx-auto">
-            <p className="text-center text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-foreground mb-4 whitespace-nowrap" style={{ color: 'var(--tertiary)' }}>
-              Conveniently Located in East El Paso, Texas – Just a few blocks from The Hospitals of Providence East Campus
-            </p>
             <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2F52da5d68f89948b9bbd69807a376ed7b%2F60cc38c4ac85450b82cb9d77954d2c0e?format=webp&width=1000"
