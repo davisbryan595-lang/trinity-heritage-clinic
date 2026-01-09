@@ -233,7 +233,7 @@ export default function LocationPage() {
                     <p className="font-semibold text-foreground mb-1">Email</p>
                     <a
                       href="mailto:Trinityheritageclinic@gmail.com"
-                      className="text-primary hover:text-primary/80 transition-colors break-all"
+                      className="text-purple-600 hover:text-purple-700 transition-colors break-all"
                     >
                       Trinityheritageclinic@gmail.com
                     </a>
@@ -285,7 +285,7 @@ export default function LocationPage() {
       {/* Community Health Message */}
       <div className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white flex items-center justify-center">
         <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center" style={{ color: 'var(--tertiary)' }}>
-          Serving to keep the community healthy
+          Serving to keep the EL Paso community healthy
         </p>
       </div>
 
