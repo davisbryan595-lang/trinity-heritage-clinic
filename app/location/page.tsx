@@ -307,6 +307,23 @@ export default function LocationPage() {
         </div>
       </div>
 
+      {/* Why Choose Section */}
+      <section className="w-full bg-white py-12 sm:py-16 md:py-20 px-2 sm:px-4">
+        <div className="w-full">
+          <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6 sm:p-8 md:p-10 animate-rotating-glow">
+            <h3 className="font-semibold text-primary mb-6 text-xl sm:text-2xl font-serif">Why Choose Trinity Heritage Healthcare Clinic?</h3>
+            <div className="text-foreground space-y-4 text-sm sm:text-base md:text-lg">
+              <p className="font-medium">Not only do we have Board-Certified Physicians & Healthcare Professionals</p>
+              <p className="font-medium">We are…Always Friendly. Always Knowledgeable.</p>
+              <p className="font-medium">We provide Comprehensive Internal Medicine and Occupational Medicine Services</p>
+              <p className="font-medium">Offering Integrated Care & Standardized HIPPA compliant Communication</p>
+              <p className="font-medium">Your doctor follows you to the hospital</p>
+              <p className="font-medium italic">We cherish your health!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-muted border-t-4 border-primary py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
