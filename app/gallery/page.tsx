@@ -125,7 +125,7 @@ export default function GalleryPage() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-1 xl:gap-2 items-center flex-wrap justify-center">
+            <div className="hidden lg:flex gap-1 xl:gap-2 items-center justify-center flex-nowrap">
               {[
                 { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About", href: "/#about" },
