@@ -265,13 +265,15 @@ export default function LocationPage() {
                   <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-sm text-accent mb-1">After Hours & Weekend</p>
-                    <p className="text-xs text-foreground mb-1">For urgent medical matters, call:</p>
-                    <a
-                      href="tel:817-966-3989"
-                      className="text-sm font-semibold text-accent hover:underline"
-                    >
-                      817.966.3989
-                    </a>
+                    <div className="flex items-center gap-1">
+                      <p className="text-xs text-foreground">For urgent medical matters, call:</p>
+                      <a
+                        href="tel:817-966-3989"
+                        className="text-sm font-semibold text-accent hover:underline"
+                      >
+                        817.966.3989
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
