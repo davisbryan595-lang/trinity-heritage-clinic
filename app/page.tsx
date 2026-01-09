@@ -289,10 +289,10 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-10 xs:mb-12 sm:mb-16">
-              <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
+              <h2 className="font-serif text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
                 About Trinity Healthcare Clinic
               </h2>
-              <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
+              <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Comprehensive healthcare for your professional and personal wellness
               </p>
             </div>
@@ -302,74 +302,74 @@ export default function BrochurePage() {
               <div className="space-y-6 xs:space-y-6 sm:space-y-8">
                 {/* Welcome Section */}
                 <div>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
                     Trinity Heritage clinic also known as Heritage Healthcare clinic is a family-oriented clinic that was established 12 years ago to provide excellent comprehensive medical care to adults and children.
                   </p>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
                     We are focused on health promotion and disease prevention. Providing education and support services to help our patients make plans and decisions that promote wellness and healthy living.
                   </p>
                 </div>
 
                 {/* Our Belief Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Belief
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed font-medium">
                     We believe in the "art" and "science" of medicine. Our clinical practice styles combine outstanding clinical acumen to serve families in the El Paso metropolis utilizing the latest technology and ancillary services which is supported by evidence-based medicine.
                   </p>
                 </div>
 
                 {/* Our Vision Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Vision
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed font-medium">
                     To be the preferred healthcare provider partners for your quality healthcare service.
                   </p>
                 </div>
 
                 {/* Our Mission Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Mission
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed font-medium">
                     To provide the highest quality of service by transforming the promise of science, technology & medicine into service that promotes, restores, & prolongs life while preventing diseases.
                   </p>
                 </div>
 
                 {/* Our Values Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Values
                   </h3>
                   <Card className="border-2 border-primary/20 shadow-lg bg-white mb-6">
                     <CardContent className="p-4 xs:p-4 sm:p-5">
                       <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3 text-foreground">
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                        <li className="flex items-start gap-3 text-sm xs:text-base sm:text-base md:text-lg font-medium">
                           <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
                           <span>Accountability</span>
                         </li>
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                        <li className="flex items-start gap-3 text-sm xs:text-base sm:text-base md:text-lg font-medium">
                           <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
                           <span>Excellence in service</span>
                         </li>
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                        <li className="flex items-start gap-3 text-sm xs:text-base sm:text-base md:text-lg font-medium">
                           <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
                           <span>Evidence based medicine</span>
                         </li>
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                        <li className="flex items-start gap-3 text-sm xs:text-base sm:text-base md:text-lg font-medium">
                           <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
                           <span>Operational Efficiency</span>
                         </li>
-                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                        <li className="flex items-start gap-3 text-sm xs:text-base sm:text-base md:text-lg font-medium">
                           <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
                           <span>Quality personalized care</span>
                         </li>
                       </ul>
-                      <p className="mt-4 xs:mt-5 sm:mt-5 pt-4 xs:pt-5 sm:pt-5 border-t border-border text-foreground font-semibold text-xs xs:text-sm sm:text-sm md:text-base">
+                      <p className="mt-4 xs:mt-5 sm:mt-5 pt-4 xs:pt-5 sm:pt-5 border-t border-border text-foreground font-semibold text-sm xs:text-base sm:text-base md:text-lg">
                         Our result is maintenance of your good health and prevention of illness and/or disability.
                       </p>
                     </CardContent>
@@ -378,44 +378,44 @@ export default function BrochurePage() {
 
                 {/* Hospital Affiliations Section */}
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-3 xs:mb-3 sm:mb-4 font-serif" style={{ color: '#6b3fa0' }}>
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-3 xs:mb-3 sm:mb-4 font-serif" style={{ color: '#6b3fa0' }}>
                     Always Accepting New Patients
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium whitespace-normal">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg text-foreground leading-relaxed font-medium whitespace-normal">
                     Visit us and let's talk about you and your well-being because we… <span className="font-semibold text-primary">CHERISH YOUR HEALTH!</span>
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
                     Our Pledge
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
                     Trinity Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
                   </p>
-                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                  <p className="text-sm xs:text-base sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed font-medium">
                     Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
                   </p>
                 </div>
 
                 <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-4 xs:p-5 sm:p-6 animate-rotating-glow">
-                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-sm xs:text-base sm:text-lg">Why Choose Trinity Heritage Healthcare Clinic?</h4>
+                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-base xs:text-lg sm:text-xl">Why Choose Trinity Heritage Healthcare Clinic?</h4>
                   <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
+                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Board-Certified Physicians & Healthcare Professionals</span>
+                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Board-Certified Physicians & Healthcare Professionals</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Comprehensive Occupational Medicine Services</span>
+                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Comprehensive Occupational Medicine Services</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Integrated Care & Standardized Communication</span>
+                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Integrated Care & Standardized Communication</span>
                     </li>
                   </ul>
                 </div>
@@ -435,9 +435,9 @@ export default function BrochurePage() {
             <div className="text-center mb-10 xs:mb-12 sm:mb-16">
               <div className="inline-flex items-center gap-2 bg-primary/20 px-3 xs:px-3 sm:px-4 py-1.5 xs:py-1.5 sm:py-2 rounded-full mb-3 xs:mb-3 sm:mb-4">
                 <Users className="w-3 h-3 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-primary" />
-                <span className="text-xs xs:text-xs sm:text-sm font-semibold text-primary">Our Team</span>
+                <span className="text-sm xs:text-sm sm:text-base font-semibold text-primary">Our Team</span>
               </div>
-              <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
+              <h2 className="font-serif text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
                 Our Dedicated Healthcare Team
               </h2>
             </div>
@@ -452,7 +452,7 @@ export default function BrochurePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-transparent to-accent/40"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
+                <p className="text-base xs:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center px-4 drop-shadow-lg">
                   Our Dedicated Healthcare Team
                 </p>
               </div>
@@ -493,11 +493,11 @@ export default function BrochurePage() {
                     <div className="w-12 xs:w-12 sm:w-14 lg:w-16 h-12 xs:h-12 sm:h-14 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2 xs:mb-3 sm:mb-4 lg:mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow flex-shrink-0">
                       <member.icon className={`w-5 xs:w-6 sm:w-7 lg:w-8 h-5 xs:h-6 sm:h-7 lg:h-8 ${member.color} group-hover:text-white`} />
                     </div>
-                    <h3 className="text-xs xs:text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 xs:mb-1 sm:mb-2 font-serif flex-shrink-0">
+                    <h3 className="text-sm xs:text-base sm:text-lg lg:text-xl font-bold text-foreground mb-1 xs:mb-1 sm:mb-2 font-serif flex-shrink-0">
                       {member.title}
                     </h3>
-                    <p className="text-foreground text-xs xs:text-xs sm:text-xs lg:text-sm mb-2 xs:mb-2 sm:mb-3 font-medium flex-shrink-0">{member.specialty}</p>
-                    <p className="text-xs xs:text-xs sm:text-xs lg:text-sm text-foreground italic leading-relaxed font-medium flex-grow">
+                    <p className="text-foreground text-sm xs:text-sm sm:text-base lg:text-base mb-2 xs:mb-2 sm:mb-3 font-medium flex-shrink-0">{member.specialty}</p>
+                    <p className="text-sm xs:text-sm sm:text-base lg:text-base text-foreground italic leading-relaxed font-medium flex-grow">
                       Experienced, well-trained professional certified in specialty and licensed without restrictions
                     </p>
                   </CardContent>
@@ -510,9 +510,9 @@ export default function BrochurePage() {
               <div className="text-center mb-16 xs:mb-20 sm:mb-24">
                 <div className="inline-flex items-center gap-2 px-3 xs:px-4 sm:px-4 py-1.5 xs:py-2 sm:py-2 rounded-full mb-3 xs:mb-3 sm:mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
                   <Award className="w-3 h-3 xs:w-4 xs:h-4 sm:w-4 sm:h-4" />
-                  <span className="text-xs xs:text-xs sm:text-sm font-semibold">Leadership</span>
+                  <span className="text-sm xs:text-sm sm:text-base font-semibold">Leadership</span>
                 </div>
-                <h3 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4">
+                <h3 className="font-serif text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4">
                   Our Medical Leadership
                 </h3>
               </div>
@@ -554,8 +554,8 @@ export default function BrochurePage() {
                 {/* Right Column - Bio (60%) */}
                 <div className="lg:col-span-3 flex items-center justify-center lg:pt-12">
                   <div>
-                    <p 
-                      className="font-serif text-lg xs:text-xl sm:text-2xl md:text-2xl leading-relaxed font-semibold"
+                    <p
+                      className="font-serif text-xl xs:text-2xl sm:text-3xl md:text-3xl leading-relaxed font-semibold"
                       style={{ color: '#4A90E2' }}
                     >
                       Dr. Victor Nwiloh is a board-certified internal medicine and occupational medicine physician with over 25 years of experience in various healthcare settings across the United States as a Primary care physician, Occupational Medicine / Urgent care physician and a Hospitalist.
@@ -567,7 +567,7 @@ export default function BrochurePage() {
               {/* Bottom Section - Professional Organizations */}
               <div className="mt-8 xs:mt-10 sm:mt-12 pt-6 xs:pt-8 sm:pt-10 flex justify-center">
                 <div className="text-center">
-                  <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
+                  <h4 className="font-serif text-3xl xs:text-4xl sm:text-4xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
                     Professional Organizations
                   </h4>
                   <div className="flex flex-col items-center gap-8 xs:gap-10 sm:gap-12">
@@ -616,32 +616,32 @@ export default function BrochurePage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 lg:gap-8">
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                     <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
-                      <h3 className="text-xl xs:text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                      <h3 className="text-2xl xs:text-3xl sm:text-3xl md:text-3xl lg:text-3xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                         Work Site Visits
                       </h3>
-                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-sm xs:text-sm sm:text-base">
+                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-base xs:text-base sm:text-lg">
                         Comprehensive workplace assessments
                       </p>
 
                       <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
-                        <p className="text-foreground text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed font-medium">
+                        <p className="text-foreground text-sm xs:text-base sm:text-base md:text-lg leading-relaxed font-medium">
                           Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
                         </p>
 
                         <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
-                          <h4 className="font-semibold text-foreground text-sm xs:text-sm sm:text-base mb-2 xs:mb-3 sm:mb-3">Benefits Include:</h4>
+                          <h4 className="font-semibold text-foreground text-base xs:text-base sm:text-lg mb-2 xs:mb-3 sm:mb-3">Benefits Include:</h4>
                           <div className="space-y-2">
                             <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
                               <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Identify and abate hazards & exposures</p>
+                              <p className="text-foreground text-sm xs:text-sm sm:text-base font-medium">Identify and abate hazards & exposures</p>
                             </div>
                             <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
                               <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Familiarize healthcare provider with work environment</p>
+                              <p className="text-foreground text-sm xs:text-sm sm:text-base font-medium">Familiarize healthcare provider with work environment</p>
                             </div>
                             <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
                               <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Improved occupational health & safety planning</p>
+                              <p className="text-foreground text-sm xs:text-sm sm:text-base font-medium">Improved occupational health & safety planning</p>
                             </div>
                           </div>
                         </div>
@@ -651,32 +651,32 @@ export default function BrochurePage() {
 
                   <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
                     <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
-                      <h3 className="text-xl xs:text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                      <h3 className="text-2xl xs:text-3xl sm:text-3xl md:text-3xl lg:text-3xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                         Travel Medicine
                       </h3>
-                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-sm xs:text-sm sm:text-base">
+                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-base xs:text-base sm:text-lg">
                         Health & wellness for business travelers
                       </p>
 
                       <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
-                        <p className="text-foreground text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed font-medium">
+                        <p className="text-foreground text-sm xs:text-base sm:text-base md:text-lg leading-relaxed font-medium">
                           HHC offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
                         </p>
 
                         <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
-                          <h4 className="font-semibold text-foreground text-sm xs:text-sm sm:text-base mb-2 xs:mb-3 sm:mb-3">Services Include:</h4>
+                          <h4 className="font-semibold text-foreground text-base xs:text-base sm:text-lg mb-2 xs:mb-3 sm:mb-3">Services Include:</h4>
                           <div className="space-y-2">
                             <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
                               <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Individualized travel health assessment</p>
+                              <p className="text-foreground text-sm xs:text-sm sm:text-base font-medium">Individualized travel health assessment</p>
                             </div>
                             <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
                               <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Travel-specific vaccinations</p>
+                              <p className="text-foreground text-sm xs:text-sm sm:text-base font-medium">Travel-specific vaccinations</p>
                             </div>
                             <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
                               <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Country-specific medical guidance</p>
+                              <p className="text-foreground text-sm xs:text-sm sm:text-base font-medium">Country-specific medical guidance</p>
                             </div>
                           </div>
                         </div>
@@ -696,10 +696,10 @@ export default function BrochurePage() {
 
           <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 xs:mb-14 sm:mb-16">
-              <h2 className="font-serif text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-3 xs:mb-3 sm:mb-4" style={{ color: 'var(--tertiary)' }}>
+              <h2 className="font-serif text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-3 xs:mb-3 sm:mb-4" style={{ color: 'var(--tertiary)' }}>
                 Learn More About Our Services
               </h2>
-              <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
+              <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-2xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Explore our comprehensive offerings designed to keep your workforce healthy
               </p>
             </div>
@@ -712,13 +712,13 @@ export default function BrochurePage() {
                     <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
                       <Briefcase className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Our Services
                     </h3>
-                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-base xs:text-base sm:text-lg flex-grow">
                       From physical exams to diagnostic testing and injury treatment, discover our full range of occupational health services.
                     </p>
-                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-base xs:text-base sm:text-lg">
                       Learn More <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
                     </div>
                   </CardContent>
@@ -732,13 +732,13 @@ export default function BrochurePage() {
                     <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
                       <MapPin className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Our Location
                     </h3>
-                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-base xs:text-base sm:text-lg flex-grow">
                       Conveniently located in El Paso, Texas. Get directions, hours, and contact information.
                     </p>
-                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-base xs:text-base sm:text-lg">
                       Visit <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
                     </div>
                   </CardContent>
@@ -752,13 +752,13 @@ export default function BrochurePage() {
                     <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
                       <HeartPulse className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                    <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
                       Wellness & Prevention
                     </h3>
-                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-base xs:text-base sm:text-lg flex-grow">
                       Proactive health programs including wellness consultations, health fairs, and safety training.
                     </p>
-                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-base xs:text-base sm:text-lg">
                       Explore <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
                     </div>
                   </CardContent>
@@ -795,7 +795,7 @@ export default function BrochurePage() {
             {/* Contact */}
             <div className="text-center xs:text-center sm:text-left">
               <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-xs xs:text-xs sm:text-sm md:text-base">Contact</h4>
-              <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2 text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
+              <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2 text-sm xs:text-sm sm:text-sm md:text-base text-foreground font-medium">
                 <p>2204 Joe Battle Blvd, STE D204</p>
                 <p>El Paso, TX 79938</p>
                 <p className="pt-0.5 xs:pt-1 sm:pt-1 sm:pt-2">
@@ -807,7 +807,7 @@ export default function BrochurePage() {
 
             {/* Quick Links */}
             <div className="text-center xs:text-center sm:text-left">
-              <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-xs xs:text-xs sm:text-sm md:text-base">Quick Links</h4>
+              <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-sm xs:text-sm sm:text-base md:text-lg">Quick Links</h4>
               <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2">
                 {[
                 { id: "home", label: "Home", href: "/" },
@@ -823,7 +823,7 @@ export default function BrochurePage() {
                   <Link
                     key={link.id}
                     href={link.href}
-                    className="block text-xs xs:text-xs sm:text-xs md:text-sm text-foreground hover:text-primary transition-colors font-medium"
+                    className="block text-sm xs:text-sm sm:text-base md:text-base text-foreground hover:text-primary transition-colors font-medium"
                   >
                     {link.label}
                   </Link>
@@ -831,7 +831,7 @@ export default function BrochurePage() {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="block text-xs xs:text-xs sm:text-xs md:text-sm text-foreground hover:text-primary transition-colors font-medium"
+                    className="block text-sm xs:text-sm sm:text-base md:text-base text-foreground hover:text-primary transition-colors font-medium"
                   >
                     {link.label}
                   </button>
@@ -841,9 +841,9 @@ export default function BrochurePage() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-5 xs:pt-6 sm:pt-6 sm:pt-8 text-center text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
+          <div className="border-t border-border pt-5 xs:pt-6 sm:pt-6 sm:pt-8 text-center text-sm xs:text-sm sm:text-base md:text-base text-foreground font-medium">
             <p>&copy; {new Date().getFullYear()} Trinity Heritage Healthcare Clinic. All rights reserved.</p>
-            <p className="mt-1 xs:mt-2 sm:mt-2 italic font-serif text-primary text-xs xs:text-xs sm:text-xs md:text-sm">
+            <p className="mt-1 xs:mt-2 sm:mt-2 italic font-serif text-primary text-sm xs:text-sm sm:text-base md:text-base">
               2204 Joe Battle Blvd, STE D204 El Paso, TX 79938 | 915.300.2276
             </p>
           </div>
