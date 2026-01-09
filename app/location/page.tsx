@@ -207,7 +207,7 @@ export default function LocationPage() {
                 <div className="flex items-start gap-3 pb-1">
                   <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
-                    <p className="font-semibold text-foreground mb-2">Phone</p>
+                    <p className="font-semibold text-foreground mb-1">Phone</p>
                     <a
                       href="tel:915-300-2276"
                       className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg"
