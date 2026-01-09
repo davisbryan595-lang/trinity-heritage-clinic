@@ -261,7 +261,7 @@ export default function LocationPage() {
                 </div>
 
                 {/* After Hours & Weekend */}
-                <div className="flex items-start gap-3 pt-1 bg-accent/10 p-3 rounded-lg border border-accent/20">
+                <div className="flex items-start gap-3 pt-1 bg-accent/10 p-2 rounded-lg border border-accent/20">
                   <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-sm text-accent mb-1">After Hours & Weekend</p>
