@@ -201,7 +201,7 @@ export default function LocationPage() {
             </div>
 
             {/* Right Column - Contact Details in Single Container */}
-            <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
+            <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow h-[400px] sm:h-[450px] lg:h-[500px] overflow-y-auto">
               <CardContent className="p-6 space-y-3">
                 {/* Phone */}
                 <div className="flex items-start gap-3 pb-2">
