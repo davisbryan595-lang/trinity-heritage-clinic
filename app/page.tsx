@@ -377,27 +377,6 @@ export default function BrochurePage() {
                   </p>
                 </div>
 
-                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-4 xs:p-5 sm:p-6 animate-rotating-glow">
-                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-base xs:text-lg sm:text-xl">Why Choose Trinity Heritage Healthcare Clinic?</h4>
-                  <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Board-Certified Physicians & Healthcare Professionals</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Comprehensive Occupational Medicine Services</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base md:text-lg text-foreground font-medium">Integrated Care & Standardized Communication</span>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
