@@ -36,10 +36,10 @@ export default function Navbar() {
           : "glass"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+      <div className="w-full">
+        <div className="flex items-center h-24">
+          {/* Logo - zero padding from left */}
+          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
             <div className="relative w-48 h-20 animate-logo-glow rounded-lg" style={{ boxShadow: '0 0 20px rgba(107, 168, 66, 0.3)' }}>
               <Image
                 src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
@@ -60,8 +60,8 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex gap-8 items-center">
+          {/* Desktop Menu - Centered */}
+          <div className="hidden lg:flex flex-1 justify-center gap-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -75,7 +75,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex gap-3 items-center">
+          <div className="hidden lg:flex gap-3 items-center px-4 sm:px-6 lg:px-8 flex-shrink-0">
             <a href="tel:915-300-2276">
               <Button
                 variant="outline"
@@ -96,7 +96,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-primary/20 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-primary/20 transition-colors ml-auto mr-4 sm:mr-6 lg:mr-8 flex-shrink-0"
             aria-label="Toggle menu"
           >
             {isOpen ? (
