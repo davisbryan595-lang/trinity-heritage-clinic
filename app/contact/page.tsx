@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText, Menu, X } from "lucide-react"
+import { MapPin, Phone, Clock, AlertCircle, CheckCircle, Download, FileText, Menu, X, Mail } from "lucide-react"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
 import { ServicesDropdown } from "@/components/ServicesDropdown"
 
@@ -23,6 +23,8 @@ export default function ContactPage() {
     phone: "",
     subject: "",
     message: "",
+    availability1: "",
+    availability2: "",
   })
 
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "", availability1: "", availability2: "" })
         setTimeout(() => setSubmitStatus('idle'), 5000)
       } else {
         setSubmitStatus('error')
@@ -95,7 +97,7 @@ export default function ContactPage() {
               <div className="relative w-64 h-24 sm:w-80 sm:h-32 lg:w-96 lg:h-40">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -106,23 +108,22 @@ export default function ContactPage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-2 items-center flex-wrap justify-center">
+            <div className="hidden lg:flex gap-2 items-center justify-center flex-nowrap">
               {[
                 { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -169,11 +170,10 @@ export default function ContactPage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -198,7 +198,7 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 md:pt-28 lg:pt-32 pb-12 sm:pb-16 md:pb-20 bg-gradient-to-br from-primary/15 via-background to-accent/10 overflow-hidden">
         {/* Geometric Background */}
         <GeometricBackground variant="diamonds" className="opacity-10" opacity={1} animated={true} />
 
@@ -206,12 +206,12 @@ export default function ContactPage() {
         <GeometricAccent className="absolute top-10 right-20 opacity-20 animate-diamond-float" />
         <GeometricAccent className="absolute -bottom-10 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-4">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 drop-shadow-lg">Contact Us</h1>
-            <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-medium leading-relaxed">
-              Get in touch with Heritage Healthcare Clinic. We're here to help and look forward to hearing from you.
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 drop-shadow-lg italic">Always Accepting New Patients...</span>
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 drop-shadow-lg">Contact Us Today</h1>
+            </div>
             <div className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-tertiary rounded-full mx-auto"></div>
           </div>
         </div>
@@ -226,26 +226,6 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1 space-y-6">
-              <div className="mb-8">
-                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Contact Information</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-              </div>
-
-              {/* Address Card */}
-              <Card className="p-6 border-2 border-primary/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-primary/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
-                <div className="flex gap-4">
-                  <div className="p-3 bg-primary/20 rounded-lg">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-primary mb-2">Our Location</h3>
-                    <p className="text-foreground text-sm leading-relaxed">
-                      2204 Joe Battle Blvd, STE D204<br />
-                      El Paso, TX 79938
-                    </p>
-                  </div>
-                </div>
-              </Card>
 
               {/* New Patient Form Card */}
               <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/15 via-accent/8 to-transparent hover:shadow-lg hover:scale-105 transform">
@@ -259,8 +239,8 @@ export default function ContactPage() {
                       Download and complete your paperwork at home to save time at your appointment.
                     </p>
                     <a
-                      href="/forms/Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
-                      download="Heritage-Healthcare-Clinic-New-Patient-Paperwork.pdf"
+                      href="/forms/AllForms.pdf"
+                      download="AllForms.pdf"
                       className="inline-block"
                     >
                       <Button
@@ -274,6 +254,67 @@ export default function ContactPage() {
                   </div>
                 </div>
               </Card>
+
+              {/* How to Submit Your Forms Card */}
+              <Card className="p-5 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/10 to-transparent">
+                <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2 text-sm">
+                  <Clock className="w-4 h-4 text-accent flex-shrink-0" />
+                  How to Submit Your Forms
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        1
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Download & Print</p>
+                      <p className="text-xs text-muted-foreground">
+                        Click the download button above
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        2
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Complete at Home</p>
+                      <p className="text-xs text-muted-foreground">
+                        Fill out before your appointment
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-accent text-white font-bold text-xs">
+                        3
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-xs mb-0.5">Bring or Fax</p>
+                      <p className="text-xs text-muted-foreground">
+                        866-222-5219
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Your Privacy Matters Card */}
+              <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg flex gap-3">
+                <AlertCircle className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-blue-900 mb-1 text-xs">Your Privacy Matters</p>
+                  <p className="text-xs text-blue-800 leading-relaxed">
+                    Your health information is handled securely per HIPAA. We do not store your data in any online system.
+                  </p>
+                </div>
+              </div>
+
 
               {/* Phone Card */}
               <Card className="p-6 border-2 border-tertiary/40 hover:border-tertiary/80 transition-all duration-300 bg-gradient-to-br from-tertiary/10 to-primary/5 hover:shadow-lg hover:scale-105 transform">
@@ -305,35 +346,20 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              {/* Hours Card */}
-              <Card className="p-6 border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-gradient-to-br from-accent/8 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
+              {/* Email Card */}
+              <Card className="p-6 border-2 border-accent/40 hover:border-accent/80 transition-all duration-300 bg-gradient-to-br from-accent/10 to-tertiary/5 hover:shadow-lg hover:scale-105 transform">
                 <div className="flex gap-4">
-                  <div className="p-3 bg-accent/15 rounded-lg">
-                    <Clock className="w-6 h-6 text-accent flex-shrink-0" />
+                  <div className="p-3 bg-accent/20 rounded-lg">
+                    <Mail className="w-6 h-6 text-accent flex-shrink-0" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-foreground mb-3">Office Hours</h3>
-                    <div className="space-y-2">
-                      <div>
-                        <span className="block font-semibold text-primary text-sm">Monday - Friday</span>
-                        <span className="text-foreground text-sm">8:30 AM - 5:30 PM</span><br />
-                        <span className="text-xs text-muted-foreground">(Closed 12:00 PM - 1:00 PM)</span>
-                      </div>
-                      <div>
-                        <span className="block font-semibold text-primary text-sm mt-2">Saturday - Sunday</span>
-                        <span className="text-foreground text-sm">Closed</span>
-                      </div>
-                    </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">Email</h3>
+                    <a href="mailto:Trinityheritageclinic@gmail.com" className="text-accent hover:text-accent/80 font-bold text-sm block transition-colors">
+                      Trinityheritageclinic@gmail.com
+                    </a>
                   </div>
                 </div>
               </Card>
-
-              {/* Tagline */}
-              <div className="bg-gradient-to-br from-tertiary/20 via-accent/10 to-primary/10 p-6 rounded-lg border-2 border-tertiary/30 mt-8 shadow-md">
-                <p className="font-serif text-lg font-semibold text-primary italic leading-relaxed">
-                  "Always Friendly. Always Knowledgeable."
-                </p>
-              </div>
             </div>
 
             {/* Contact Form */}
@@ -397,7 +423,7 @@ export default function ContactPage() {
                   {/* Subject Field */}
                   <div>
                     <Label htmlFor="subject" className="text-sm font-semibold text-primary mb-2 block">
-                      Subject <span className="text-muted-foreground text-xs">(optional)</span>
+                      Purpose of Contacting Us <span className="text-muted-foreground text-xs">(optional)</span>
                     </Label>
                     <Input
                       id="subject"
@@ -425,6 +451,42 @@ export default function ContactPage() {
                       rows={5}
                       className="w-full resize-none bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
                     />
+                  </div>
+
+                  {/* Availability Section */}
+                  <div className="pt-4 border-t border-primary/20">
+                    <h3 className="text-sm font-semibold text-primary mb-4">Appointment Availability <span className="text-muted-foreground text-xs">(optional)</span></h3>
+                    <p className="text-sm text-muted-foreground mb-4">Please provide two suitable times when you're available for an appointment. We'll confirm which time works best.</p>
+
+                    {/* First Availability */}
+                    <div>
+                      <Label htmlFor="availability1" className="text-sm font-semibold text-primary mb-2 block">
+                        First Available Time
+                      </Label>
+                      <Input
+                        id="availability1"
+                        name="availability1"
+                        type="datetime-local"
+                        value={formData.availability1}
+                        onChange={handleChange}
+                        className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
+                      />
+                    </div>
+
+                    {/* Second Availability */}
+                    <div className="mt-4">
+                      <Label htmlFor="availability2" className="text-sm font-semibold text-primary mb-2 block">
+                        Second Available Time
+                      </Label>
+                      <Input
+                        id="availability2"
+                        name="availability2"
+                        type="datetime-local"
+                        value={formData.availability2}
+                        onChange={handleChange}
+                        className="w-full bg-white/90 border-2 border-primary/40 text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/30 hover:bg-white transition-colors hover:border-primary/60"
+                      />
+                    </div>
                   </div>
 
                   {/* Status Messages */}
@@ -465,6 +527,13 @@ export default function ContactPage() {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Bottom Tagline */}
+        <div className="mt-16 pt-8 border-t border-accent/30 text-center">
+          <p className="font-serif text-2xl md:text-3xl font-bold text-green-700 whitespace-nowrap">
+            Visit us today, walk-ins are always welcome!
+          </p>
         </div>
       </section>
     </div>

@@ -65,7 +65,7 @@ export default function AboutPage() {
               <div className="relative w-80 h-32 sm:w-[416px] sm:h-40 lg:w-[512px] lg:h-64">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -76,7 +76,7 @@ export default function AboutPage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
                 { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Contact", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -313,6 +313,127 @@ export default function AboutPage() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </section>
+
+        {/* Mission, Vision & Values Section */}
+        <section className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-background via-primary/5 to-background overflow-hidden">
+          {/* Floating Geometric Accents */}
+          <GeometricAccent className="absolute top-10 right-10 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-32 left-20 opacity-8" style={{ animationDelay: "1.5s" }} />
+
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Welcome Section */}
+            <div className="mb-12 sm:mb-16">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+                Welcome!
+              </h3>
+              <div className="space-y-6 text-foreground leading-relaxed text-sm sm:text-base md:text-lg font-medium">
+                <p>
+                  Trinity Heritage clinic also known as Heritage Healthcare clinic is a family-oriented clinic that was established 12 years ago to provide excellent comprehensive medical care to adults and children.
+                </p>
+                <p>
+                  We are focused on health promotion and disease prevention. Providing education and support services to help our patients make plans and decisions that promote wellness and healthy living.
+                </p>
+                <p className="font-semibold text-primary italic">
+                  … Cherish your health!
+                </p>
+              </div>
+            </div>
+
+            {/* Our Belief Section */}
+            <div className="mb-12 sm:mb-16">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+                Our Belief
+              </h3>
+              <p className="text-foreground leading-relaxed text-sm sm:text-base md:text-lg font-medium">
+                We believe in the "art" and "science" of medicine. Our clinical practice styles combine outstanding clinical acumen to serve families in the El Paso metropolis utilizing the latest technology and ancillary services which is supported by evidence-based medicine.
+              </p>
+            </div>
+
+            {/* Our Vision Section */}
+            <div className="mb-12 sm:mb-16">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+                Our Vision
+              </h3>
+              <p className="text-foreground leading-relaxed text-sm sm:text-base md:text-lg font-medium">
+                To be the preferred healthcare provider partners for your quality healthcare service.
+              </p>
+            </div>
+
+            {/* Our Mission Section */}
+            <div className="mb-12 sm:mb-16">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+                Our Mission
+              </h3>
+              <p className="text-foreground leading-relaxed text-sm sm:text-base md:text-lg font-medium">
+                To provide the highest quality of service by transforming the promise of science, technology & medicine into service that promotes, restores, & prolongs life while preventing diseases.
+              </p>
+            </div>
+
+            {/* Our Values Section */}
+            <div className="mb-12 sm:mb-16">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+                Our Values
+              </h3>
+              <Card className="border-2 border-primary/20 shadow-lg bg-white">
+                <CardContent className="p-6 sm:p-8">
+                  <ul className="space-y-4 text-foreground text-sm sm:text-base md:text-lg font-medium">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Accountability</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Excellence in service</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Evidence based medicine</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Operational Efficiency</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Quality personalized care</span>
+                    </li>
+                  </ul>
+                  <p className="mt-6 pt-6 border-t border-border text-foreground font-semibold">
+                    Our result is maintenance of your good health and prevention of illness and/or disability.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Hospital Affiliations Section */}
+            <div className="mb-12 sm:mb-16">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+                Always Accepting New Patients
+              </h3>
+              <Card className="border-2 border-accent/20 shadow-lg bg-gradient-to-br from-accent/5 to-white">
+                <CardContent className="p-6 sm:p-8">
+                  <p className="text-foreground text-sm sm:text-base md:text-lg font-medium mb-6">
+                    Dr. Nwiloh is affiliated with the following hospitals:
+                  </p>
+                  <ul className="space-y-3 text-foreground text-sm sm:text-base md:text-lg font-medium mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>The Hospitals of Providence East Campus</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Del Sol Medical Center</span>
+                    </li>
+                  </ul>
+                  <p className="text-foreground leading-relaxed text-sm sm:text-base md:text-lg font-medium">
+                    Visit us and let's talk about you and your well-being because we…
+                    <span className="block font-semibold text-primary mt-2">CHERISH YOUR HEALTH!</span>
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 

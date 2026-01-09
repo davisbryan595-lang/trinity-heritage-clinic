@@ -107,7 +107,7 @@ export default function GalleryPage() {
               <div className="relative w-80 h-32 sm:w-[416px] sm:h-40 lg:w-[512px] lg:h-64">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Heritage Healthcare Clinic"
+                  alt="Trinity Heritage Healthcare Clinic"
                   fill
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
@@ -118,23 +118,22 @@ export default function GalleryPage() {
                   }}
                 />
                 <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Heritage Healthcare</span>
+                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
                   <span className="text-sm text-accent font-semibold">Clinic</span>
                 </div>
               </div>
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-1 xl:gap-2 items-center flex-wrap justify-center">
+            <div className="hidden lg:flex gap-1 xl:gap-2 items-center justify-center flex-nowrap">
               {[
                 { id: "home", label: "Home", href: "/" },
                 { id: "about", label: "About", href: "/#about" },
                 { id: "team", label: "Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -181,11 +180,10 @@ export default function GalleryPage() {
                 { id: "about", label: "About Us", href: "/#about" },
                 { id: "team", label: "Our Team", href: "/#team" },
                 { id: "gallery", label: "Gallery", href: "/gallery" },
-                { id: "location", label: "Location", href: "/location" },
+                { id: "location", label: "Contact", href: "/location" },
                 { id: "services", label: "Services", href: "/services" },
                 { id: "wellness", label: "Wellness", href: "/wellness" },
-                { id: "patient-forms", label: "Patient Forms", href: "/patient-forms" },
-                { id: "contact", label: "Contact Us", href: "/contact" }
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
                 <Link
                   key={link.id}
@@ -211,7 +209,7 @@ export default function GalleryPage() {
 
       <div className="overflow-hidden">
         {/* Hero Section */}
-        <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
+        <section className="relative pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-12 md:pb-16 lg:pb-20 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="organic" className="opacity-15" opacity={1} />
 
