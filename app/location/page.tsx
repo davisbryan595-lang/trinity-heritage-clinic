@@ -204,7 +204,7 @@ export default function LocationPage() {
             <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow h-[400px] sm:h-[450px] lg:h-[500px]">
               <CardContent className="p-4 space-y-2">
                 {/* Phone */}
-                <div className="flex items-start gap-3 pb-2">
+                <div className="flex items-start gap-3 pb-1">
                   <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-2">Phone</p>
