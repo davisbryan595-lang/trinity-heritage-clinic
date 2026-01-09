@@ -230,7 +230,7 @@ export default function LocationPage() {
                 <div className="flex items-start gap-3 pb-1">
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
-                    <p className="font-semibold text-foreground mb-2">Email</p>
+                    <p className="font-semibold text-foreground mb-1">Email</p>
                     <a
                       href="mailto:Trinityheritageclinic@gmail.com"
                       className="text-primary hover:text-primary/80 transition-colors break-all"
