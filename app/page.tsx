@@ -126,8 +126,8 @@ export default function BrochurePage() {
                 </div>
               </button>
 
-              {/* Desktop Navigation - In same row as logo */}
-              <div className="hidden lg:flex flex-1 items-center justify-end gap-6 xl:gap-8 h-full pt-4">
+              {/* Desktop Navigation - Centered */}
+              <div className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-8 h-full pt-4">
                 <div className="flex items-center gap-1 xl:gap-2">
                   {[
                     { id: "home", label: "Home", href: null },
