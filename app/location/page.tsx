@@ -253,7 +253,7 @@ export default function LocationPage() {
                 </div>
 
                 {/* Weekend Hours */}
-                <div className="flex items-start gap-3 pb-2">
+                <div className="flex items-start gap-3 pb-1">
                   <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-accent mb-2">Weekends: Closed</p>
