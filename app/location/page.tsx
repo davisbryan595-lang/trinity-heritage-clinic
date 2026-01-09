@@ -241,7 +241,7 @@ export default function LocationPage() {
                 </div>
 
                 {/* Hours of Operation */}
-                <div className="flex items-start gap-3 pb-2">
+                <div className="flex items-start gap-3 pb-1">
                   <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
