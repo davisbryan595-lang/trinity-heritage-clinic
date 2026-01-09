@@ -247,8 +247,7 @@ export default function LocationPage() {
                     <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
                     <div className="text-muted-foreground space-y-2">
                       <p className="font-medium">Monday - Friday</p>
-                      <p>8:30 AM - 5:30 PM</p>
-                      <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
+                      <p>8:30 AM - 5:30 PM <span className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</span></p>
                     </div>
                   </div>
                 </div>
