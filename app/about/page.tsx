@@ -409,7 +409,7 @@ export default function AboutPage() {
 
             {/* Hospital Affiliations Section */}
             <div className="mb-12 sm:mb-16">
-              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold mb-6" style={{ color: '#6b3fa0' }}>
                 Always Accepting New Patients
               </h3>
               <Card className="border-2 border-accent/20 shadow-lg bg-gradient-to-br from-accent/5 to-white">
