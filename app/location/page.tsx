@@ -299,6 +299,13 @@ export default function LocationPage() {
         </div>
       </section>
 
+      {/* Community Health Message */}
+      <div className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white flex items-center justify-center">
+        <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center" style={{ color: 'var(--tertiary)' }}>
+          Serving to keep the EL Paso community healthy
+        </p>
+      </div>
+
       {/* Footer */}
       <footer className="bg-muted border-t-4 border-primary py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
