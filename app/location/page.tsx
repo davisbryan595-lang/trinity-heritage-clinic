@@ -256,8 +256,7 @@ export default function LocationPage() {
                 <div className="flex items-start gap-3 pb-2">
                   <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
-                    <p className="font-semibold text-accent mb-2">Weekend Hours</p>
-                    <p className="text-muted-foreground font-medium">Saturday & Sunday: Closed</p>
+                    <p className="font-semibold text-accent mb-2">Weekends: Closed</p>
                   </div>
                 </div>
 
