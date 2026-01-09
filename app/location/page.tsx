@@ -202,9 +202,9 @@ export default function LocationPage() {
 
             {/* Right Column - Contact Details in Single Container */}
             <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-              <CardContent className="p-6 space-y-6">
+              <CardContent className="p-6 space-y-3">
                 {/* Phone */}
-                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                <div className="flex items-start gap-3 pb-2">
                   <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-2">Phone</p>
@@ -218,7 +218,7 @@ export default function LocationPage() {
                 </div>
 
                 {/* Fax */}
-                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                <div className="flex items-start gap-3 pb-2">
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-2">Fax</p>
@@ -227,7 +227,7 @@ export default function LocationPage() {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                <div className="flex items-start gap-3 pb-2">
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-2">Email</p>
@@ -241,20 +241,19 @@ export default function LocationPage() {
                 </div>
 
                 {/* Hours of Operation */}
-                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                <div className="flex items-start gap-3 pb-2">
                   <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground mb-3">Hours of Operation</p>
                     <div className="text-muted-foreground space-y-2">
                       <p className="font-medium">Monday - Friday</p>
-                      <p>8:30 AM - 5:30 PM</p>
-                      <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
+                      <p>8:30 AM - 5:30 PM <span className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</span></p>
                     </div>
                   </div>
                 </div>
 
                 {/* Weekend Hours */}
-                <div className="flex items-start gap-4 pb-4 border-b border-border">
+                <div className="flex items-start gap-3 pb-2">
                   <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="font-semibold text-accent mb-2">Weekend Hours</p>
@@ -263,14 +262,14 @@ export default function LocationPage() {
                 </div>
 
                 {/* After Hours & Weekend */}
-                <div className="flex items-start gap-4 pt-2 bg-accent/10 p-4 rounded-lg border border-accent/20">
-                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 pt-2 bg-accent/10 p-3 rounded-lg border border-accent/20">
+                  <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
-                    <h4 className="font-bold text-lg text-accent mb-2">After Hours & Weekend</h4>
-                    <p className="mb-3 text-sm text-foreground">For urgent medical matters, call:</p>
+                    <p className="font-semibold text-sm text-accent mb-1">After Hours & Weekend</p>
+                    <p className="text-xs text-foreground mb-1">For urgent medical matters, call:</p>
                     <a
                       href="tel:817-966-3989"
-                      className="text-xl font-bold text-accent hover:underline"
+                      className="text-sm font-semibold text-accent hover:underline"
                     >
                       817.966.3989
                     </a>
