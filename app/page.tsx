@@ -18,6 +18,9 @@ import {
 import DiamondPreloader from "@/components/diamond-preloader"
 import { DiamondsShapeDivider, DiagonalShapeDivider, WaveShapeDivider, StairsShapeDivider } from "@/components/shape-dividers"
 import { GeometricBackground, GeometricAccent } from "@/components/geometric-background"
+import AnimatedServiceCard from "@/components/AnimatedServiceCard"
+import { ServicesDropdown } from "@/components/ServicesDropdown"
+import WelcomeModal from "@/components/WelcomeModal"
 import {
   Phone,
   MapPin,
@@ -71,7 +74,8 @@ export default function BrochurePage() {
   return (
     <>
       <DiamondPreloader />
-      
+      <WelcomeModal />
+
       {/* Scroll Progress Bar */}
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
@@ -79,112 +83,134 @@ export default function BrochurePage() {
       <nav
         className={`fixed w-full top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white shadow-lg border-b border-border"
+            ? "bg-white shadow-lg"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-40 py-4">
-            {/* Logo */}
-            <button
-              onClick={() => scrollToSection("home")}
-              className="flex items-center gap-3 group cursor-pointer flex-shrink-0"
-            >
-              <div className="relative w-64 h-32">
-                <Image
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
-                  alt="Trinity Heritage Clinic"
-                  fill
-                  className="object-contain transition-transform duration-300 group-hover:scale-110"
-                  priority
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                    const fallback = e.currentTarget.parentElement?.nextElementSibling
-                    if (fallback) (fallback as HTMLElement).classList.remove('hidden')
-                  }}
-                />
-                <div className="hidden flex-col">
-                  <span className="text-xl font-serif font-bold text-primary">Trinity Heritage</span>
-                  <span className="text-sm text-accent font-semibold">Clinic</span>
+
+        {/* Main Navbar */}
+        <div className={`transition-all duration-300 relative z-10 ${
+          isScrolled
+            ? "bg-white"
+            : "bg-transparent"
+        }`}>
+          <div className="w-full">
+            <div className="flex justify-between items-start lg:items-center h-auto lg:h-32 py-2 xs:py-2 sm:py-2 md:py-3 lg:py-3 gap-4 lg:gap-8 px-1 xs:px-2 sm:px-3 md:px-4 lg:px-6">
+              {/* Logo - Enlarged and positioned top left with zero left padding */}
+              <button
+                onClick={() => scrollToSection("home")}
+                className="flex flex-col items-center group cursor-pointer flex-shrink-0 w-auto pt-2 lg:pt-0 -ml-1 xs:-ml-2 sm:-ml-3 md:-ml-4 lg:-ml-6"
+              >
+                <div className="relative w-32 h-24 xs:w-40 xs:h-28 sm:w-56 sm:h-40 md:w-72 md:h-52 lg:w-96 lg:h-64 xl:w-[28rem] xl:h-72">
+                  <Image
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
+                    alt="Trinity Heritage Healthcare Clinic"
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    priority
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      const fallback = e.currentTarget.parentElement?.nextElementSibling
+                      if (fallback) (fallback as HTMLElement).classList.remove('hidden')
+                    }}
+                  />
+                  <div className="hidden flex-col">
+                    <span className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-primary">Trinity Heritage Healthcare</span>
+                    <span className="text-xs xs:text-sm text-accent font-semibold">Clinic</span>
+                  </div>
+                  <div className="absolute top-[58%] -translate-y-1/2 left-1/2 -translate-x-[40%] z-10 px-1 xs:px-2 sm:px-3 py-0.5 xs:py-1 sm:py-1.5">
+                    <p className="text-[10px] xs:text-xs sm:text-sm md:text-base font-serif font-bold text-center whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                      ...Cherish Your Health
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              {/* Desktop Navigation - Left aligned */}
+              <div className="hidden lg:flex flex-1 items-center justify-start gap-6 xl:gap-8 h-full pt-4">
+                <div className="flex items-center gap-1 xl:gap-2">
+                  {[
+                    { id: "home", label: "Home", href: null },
+                    { id: "about", label: "About", href: null },
+                    { id: "team", label: "Team", href: null },
+                    { id: "gallery", label: "Gallery", href: "/gallery" },
+                    { id: "location", label: "Contact", href: "/location" },
+                    { id: "wellness", label: "Wellness", href: "/wellness" },
+                    { id: "contact", label: "Forms", href: "/contact" }
+                  ].map((link) => (
+                    <div key={link.id} className="flex items-center">
+                      {link.href ? (
+                        <Link
+                          href={link.href}
+                          className="text-xs xl:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 xl:px-3 py-1"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                      ) : (
+                        <button
+                          onClick={() => scrollToSection(link.id)}
+                          className="text-xs xl:text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group px-2 xl:px-3 py-1"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        </button>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
-            </button>
 
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-10 items-center">
-              {[
-                { id: "home", label: "Home" },
-                { id: "about", label: "About Us" },
-                { id: "team", label: "Our Team" },
-                { id: "location", label: "Location" },
-                { id: "services", label: "Services" },
-                { id: "wellness", label: "Wellness" },
-                { id: "contact", label: "Contact" }
-              ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-sm font-semibold text-foreground hover:text-primary transition-all duration-300 relative group"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </button>
-              ))}
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-1 rounded-lg hover:bg-primary/10 transition-colors ml-auto mt-2"
+              >
+                {mobileMenuOpen ? (
+                  <X size={24} className="text-primary" />
+                ) : (
+                  <Menu size={24} className="text-primary" />
+                )}
+              </button>
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block ml-8">
-              <a href="tel:817-453-7522">
-                <Button className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-diamond-glow animate-rotating-glow border-2 border-accent">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
-                </Button>
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X size={28} className="text-primary" />
-              ) : (
-                <Menu size={28} className="text-primary" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="lg:hidden py-6 space-y-2 animate-fadeInUp border-t border-border">
-              {[
-                { id: "home", label: "Home" },
-                { id: "about", label: "About Us" },
-                { id: "team", label: "Our Team" },
-                { id: "location", label: "Location" },
-                { id: "services", label: "Services" },
-                { id: "wellness", label: "Wellness" },
-                { id: "contact", label: "Contact" }
-              ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="block w-full text-left px-4 py-3 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all"
-                >
-                  {link.label}
-                </button>
-              ))}
-              <div className="px-4 pt-4 border-t border-border">
-                <a href="tel:817-453-7522" className="block">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white animate-rotating-glow border-2 border-accent">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call (817) 453-7522
-                  </Button>
-                </a>
+            {/* Mobile Menu */}
+            {mobileMenuOpen && (
+              <div className="lg:hidden py-4 space-y-1 animate-fadeInUp border-t border-border">
+                {[
+                  { id: "home", label: "Home", href: null },
+                  { id: "about", label: "About", href: null },
+                  { id: "team", label: "Team", href: null },
+                  { id: "gallery", label: "Gallery", href: "/gallery" },
+                  { id: "location", label: "Contact", href: "/location" },
+                  { id: "wellness", label: "Wellness", href: "/wellness" },
+                  { id: "contact", label: "Forms", href: "/contact" }
+                ].map((link) => (
+                  link.href ? (
+                    <Link
+                      key={link.id}
+                      href={link.href}
+                      className="block w-full text-left px-4 py-2 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all text-sm"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      key={link.id}
+                      onClick={() => {
+                        scrollToSection(link.id)
+                        setMobileMenuOpen(false)
+                      }}
+                      className="block w-full text-left px-4 py-2 rounded-lg font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all text-sm"
+                    >
+                      {link.label}
+                    </button>
+                  )
+                ))}
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </nav>
 
@@ -192,127 +218,204 @@ export default function BrochurePage() {
         {/* Hero Section */}
           <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center pt-48 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden"
+            className="relative w-full min-h-screen flex items-end justify-center pt-32 xs:pt-40 sm:pt-48 md:pt-56 lg:pt-80 xl:pt-96 pb-16 xs:pb-20 sm:pb-24 md:pb-28 lg:pb-32 overflow-hidden"
+            style={{
+              backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fe956acbb04e54fb896c83542bdb88b2d%2F8b288272e0db48dd9890547636226cd8?format=webp&width=800)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed'
+            }}
           >
-            {/* Geometric Background */}
-            <GeometricBackground variant="diamonds" className="opacity-8" opacity={1} animated={true} />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black/10 to-accent/20" style={{ margin: '0 0 auto auto' }}></div>
 
-            {/* Professional Background Image */}
-            <div className="absolute inset-0 opacity-55">
-              <Image
-                src="https://images.pexels.com/photos/5452291/pexels-photo-5452291.jpeg"
-                alt="Professional healthcare team at work"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-accent/50"></div>
-            </div>
-
-            {/* Floating Geometric Accents */}
-            <GeometricAccent className="top-20 right-20 opacity-20 animate-diamond-float" />
-            <GeometricAccent className="bottom-32 left-10 opacity-15" style={{ animationDelay: "0.5s" }} />
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div className="w-full mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 relative z-10 text-center pt-2 xs:pt-2 sm:pt-3 md:pt-4 lg:pt-5 pb-3 xs:pb-3 sm:pb-4 md:pb-6 lg:pb-8 backdrop-blur-lg bg-white border border-white/5 rounded-xl xs:rounded-2xl shadow-2xl -mb-12 xs:-mb-14 sm:-mb-20 md:-mb-24 lg:-mb-32" style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)', maxWidth: '802px' }}>
               <div
                 className={`transition-all duration-1000 ${
                   isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
               >
-                {/* Main Heading – underline removed */}
-                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary mb-6 leading-tight drop-shadow-lg">
-                  OCCUPATIONAL MEDICINE SERVICES
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8" style={{ color: '#8cc73f' }}>
-                  Working to Keep Your Workforce Well
-                </p>
+                {/* Main Heading with two-color design */}
+                <div className="mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8">
+                  <h1 className="font-serif text-sm xs:text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight drop-shadow-lg mb-2 xs:mb-2 sm:mb-3 whitespace-nowrap" style={{ transform: 'scale(0.98)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                    <span className="text-primary" style={{ fontFamily: 'Montserrat, sans-serif', textAlign: 'center', margin: '0', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', paddingLeft: '0', paddingRight: '0' }}>
+                      <h2 style={{ margin: '0', padding: '0', whiteSpace: 'nowrap', textAlign: 'center' }}>
+                        <strong>
+                          <span className="ql-cursor">﻿</span>
+                        </strong>
+                        Internal Medicine, Family Practice Clinic
+                      </h2>
+                    </span>
+                  </h1>
+                  <p className="font-serif text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold drop-shadow-lg mb-2 xs:mb-2 sm:mb-3" style={{ color: '#8cc73f' }}>
+                    &
+                  </p>
+                  <h2 className="font-serif text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold drop-shadow-lg px-2 xs:px-3 sm:px-4" style={{ color: '#6b3fa0' }}>
+                    Occupational Medicine Clinic
+                  </h2>
+                </div>
 
                 {/* Tagline */}
-                <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto mb-4 leading-relaxed font-medium">
-                  Always Friendly. Always Knowledgeable.
-                </p>
-
-                <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto mb-12 font-medium">
-                  Conveniently Located in Mansfield, Texas – Serving Businesses with Certified Care
+                <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto mb-6 xs:mb-7 sm:mb-10 md:mb-12 leading-relaxed font-medium px-2">
+                  Always friendly and knowledgeable
                 </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap justify-center gap-6">
-                  <button
-                    onClick={() => scrollToSection("services")}
-                    className="text-white text-lg px-10 py-6 rounded-lg shadow-2xl transition-all duration-300 diamond-glow font-semibold animate-rotating-glow border-2 flex items-center justify-center hover:opacity-90"
-                    style={{ backgroundColor: '#8cc73f', borderColor: '#8cc73f' }}
-                  >
-                    Learn How We Can Help Your Business
-                    <ChevronRight className="w-5 h-5 ml-2" />
-                  </button>
-                  <a href="tel:817-453-7522">
+                <div className="flex flex-col md:flex-row gap-3 xs:gap-3 sm:gap-4 md:gap-4 lg:gap-6 px-2 items-center justify-center">
+                  <a href="tel:915-300-2276" className="w-full md:w-auto">
                     <Button
-                      size="lg"
-                      className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-accent"
+                      className="text-white text-sm sm:text-base md:text-lg px-4 xs:px-5 sm:px-8 py-2.5 xs:py-2.5 sm:py-3 md:py-3.5 shadow-lg transition-all duration-300 border-2 w-full rounded-lg"
+                      style={{ backgroundColor: '#6b3fa0', borderColor: '#6b3fa0' }}
                     >
-                      <Phone className="w-6 h-6 mr-3" />
-                      Call (817) 453-7522
+                      <Phone className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1.5 xs:mr-2" />
+                      <span>Call Now</span>
+                      <span className="hidden sm:inline ml-2 xs:ml-2 font-semibold">915.300.2276</span>
                     </Button>
                   </a>
+                  <p className="text-foreground text-lg sm:text-xl md:text-2xl font-semibold whitespace-nowrap" style={{ color: '#6b3fa0' }}>
+                    to learn how we can help you
+                  </p>
                 </div>
               </div>
             </div>
           </section>
         {/* About Us Section */}
-        <section id="about" className="relative py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+        <section id="about" className="relative py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
           {/* Geometric Background */}
           <GeometricBackground variant="organic" className="opacity-20" opacity={1} />
 
           {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-20 right-20 opacity-10 animate-diamond-float" />
-          <GeometricAccent className="absolute bottom-40 left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute top-10 xs:top-16 sm:top-20 right-10 xs:right-16 sm:right-20 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-32 xs:bottom-40 sm:bottom-40 left-5 xs:left-10 sm:left-10 opacity-8" style={{ animationDelay: "0.5s" }} />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                About Trinity Heritage Clinic
+          <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-10 xs:mb-12 sm:mb-16">
+              <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
+                About Trinity Heritage Healthcare Clinic
               </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
+              <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
                 Comprehensive healthcare for your professional and personal wellness
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto relative z-20 mb-16">
+            <div className="max-w-4xl mx-auto relative z-20 mb-12 xs:mb-14 sm:mb-16 px-2">
               {/* About Content */}
-              <div className="space-y-6">
+              <div className="space-y-6 xs:space-y-6 sm:space-y-8">
+                {/* Welcome Section */}
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
-                    Our Mission
-                  </h3>
-                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    Trinity Heritage Clinic is dedicated to providing compassionate, comprehensive healthcare services to working professionals and businesses in Mansfield, Texas. With over 20 years of expertise in occupational and internal medicine, we serve as a trusted partner in keeping your workforce healthy, safe, and productive.
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                    Trinity Heritage clinic also known as Heritage Healthcare clinic is a family-oriented clinic that was established 12 years ago to provide excellent comprehensive medical care to adults and children.
                   </p>
-                  <p className="text-lg text-foreground leading-relaxed font-medium">
-                    Our commitment to excellence, combined with personalized care and evidence-based medicine, ensures that every patient receives the attention and treatment they deserve.
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                    We are focused on health promotion and disease prevention. Providing education and support services to help our patients make plans and decisions that promote wellness and healthy living.
                   </p>
                 </div>
 
-                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6">
-                  <h4 className="font-semibold text-primary mb-4 text-lg">Why Choose Trinity Heritage Clinic?</h4>
-                  <ul className="space-y-3">
+                {/* Our Belief Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Belief
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    We believe in the "art" and "science" of medicine. Our clinical practice styles combine outstanding clinical acumen to serve families in the El Paso metropolis utilizing the latest technology and ancillary services which is supported by evidence-based medicine.
+                  </p>
+                </div>
+
+                {/* Our Vision Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Vision
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    To be the preferred healthcare provider partners for your quality healthcare service.
+                  </p>
+                </div>
+
+                {/* Our Mission Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Mission
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    To provide the highest quality of service by transforming the promise of science, technology & medicine into service that promotes, restores, & prolongs life while preventing diseases.
+                  </p>
+                </div>
+
+                {/* Our Values Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Values
+                  </h3>
+                  <Card className="border-2 border-primary/20 shadow-lg bg-white mb-6">
+                    <CardContent className="p-4 xs:p-4 sm:p-5">
+                      <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3 text-foreground">
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Accountability</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Excellence in service</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Evidence based medicine</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Operational Efficiency</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-xs xs:text-sm sm:text-sm md:text-base font-medium">
+                          <CheckCircle2 className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span>Quality personalized care</span>
+                        </li>
+                      </ul>
+                      <p className="mt-4 xs:mt-5 sm:mt-5 pt-4 xs:pt-5 sm:pt-5 border-t border-border text-foreground font-semibold text-xs xs:text-sm sm:text-sm md:text-base">
+                        Our result is maintenance of your good health and prevention of illness and/or disability.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Hospital Affiliations Section */}
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Always Accepting New Patients
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base text-foreground leading-relaxed font-medium whitespace-normal">
+                    Visit us and let's talk about you and your well-being because we… <span className="font-semibold text-primary">CHERISH YOUR HEALTH!</span>
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4 font-serif">
+                    Our Pledge
+                  </h3>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed mb-3 xs:mb-3 sm:mb-4 font-medium">
+                    Trinity Heritage Healthcare Clinic (HHC) is committed to providing excellent occupational health services including physical exams, health surveillance, injury treatment, and occupational testing for businesses in the Dallas Fort Worth metroplex.
+                  </p>
+                  <p className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg text-foreground leading-relaxed font-medium">
+                    Our experienced, well-trained health and safety professionals are certified in their specialties and licensed to practice without restrictions, ensuring your business receives the highest quality care.
+                  </p>
+                </div>
+
+                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-4 xs:p-5 sm:p-6 animate-rotating-glow">
+                  <h4 className="font-semibold text-primary mb-3 xs:mb-3 sm:mb-4 text-sm xs:text-base sm:text-lg">Why Choose Trinity Heritage Healthcare Clinic?</h4>
+                  <ul className="space-y-2 xs:space-y-2.5 sm:space-y-3">
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Always Friendly. Always Knowledgeable.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">Board-Certified Physicians & Healthcare Professionals</span>
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Board-Certified Physicians & Healthcare Professionals</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">Comprehensive Occupational & Internal Medicine Services</span>
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Comprehensive Occupational Medicine Services</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground font-medium">USCIS Certified Medical Examination Services</span>
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm md:text-base text-foreground font-medium">Integrated Care & Standardized Communication</span>
                     </li>
                   </ul>
                 </div>
@@ -323,27 +426,24 @@ export default function BrochurePage() {
 
 
         {/* Our Team Section */}
-        <section id="team" className="relative py-20 bg-white overflow-hidden">
+        <section id="team" className="relative py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
           {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-10 left-10 opacity-10 animate-diamond-float" />
-          <GeometricAccent className="absolute bottom-32 right-20 opacity-10" style={{ animationDelay: "1.5s" }} />
+          <GeometricAccent className="absolute top-5 xs:top-10 sm:top-10 left-5 xs:left-10 sm:left-10 opacity-10 animate-diamond-float" />
+          <GeometricAccent className="absolute bottom-20 xs:bottom-32 sm:bottom-32 right-5 xs:right-20 sm:right-20 opacity-10" style={{ animationDelay: "1.5s" }} />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <Users className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Our Team</span>
+          <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-10 xs:mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/20 px-3 xs:px-3 sm:px-4 py-1.5 xs:py-1.5 sm:py-2 rounded-full mb-3 xs:mb-3 sm:mb-4">
+                <Users className="w-3 h-3 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-primary" />
+                <span className="text-xs xs:text-xs sm:text-sm font-semibold text-primary">Our Team</span>
               </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Experienced, Well-Trained Professionals
+              <h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 xs:mb-3 sm:mb-4">
+                Our Dedicated Healthcare Team
               </h2>
-              <p className="text-xl text-foreground max-w-4xl mx-auto font-medium">
-                Certified in specialties and licensed without restrictions
-              </p>
             </div>
 
             {/* Team Background Image */}
-            <div className="relative mb-12 h-96 rounded-2xl overflow-hidden shadow-2xl group animate-rotating-glow border-2 border-primary/20">
+            <div className="relative mb-8 xs:mb-10 sm:mb-12 h-36 xs:h-48 sm:h-64 md:h-80 lg:h-96 rounded-xl xs:rounded-2xl overflow-hidden shadow-2xl group animate-rotating-glow border-2 border-primary/20">
               <Image
                 src="https://images.pexels.com/photos/6098056/pexels-photo-6098056.jpeg"
                 alt="Our professional healthcare team"
@@ -352,18 +452,18 @@ export default function BrochurePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-transparent to-accent/40"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
+                <p className="text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white text-center px-4 drop-shadow-lg">
                   Our Dedicated Healthcare Team
                 </p>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-20">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 lg:gap-8 relative z-20 mx-auto max-w-4xl">
               {[
                 {
                   icon: Award,
                   title: "Board Certified Physician",
-                  specialty: "Occupational & Internal Medicine",
+                  specialty: "Occupational Medicine",
                   color: "text-primary"
                 },
                 {
@@ -373,20 +473,8 @@ export default function BrochurePage() {
                   color: "text-accent"
                 },
                 {
-                  icon: Stethoscope,
-                  title: "Licensed Nurse",
-                  specialty: "Registered Nursing Care",
-                  color: "text-primary"
-                },
-                {
-                  icon: Users,
-                  title: "Certified Psychologist",
-                  specialty: "Occupational Health Psychology",
-                  color: "text-accent"
-                },
-                {
                   icon: Activity,
-                  title: "Certified Medical Assistants",
+                  title: "Medical Assistants",
                   specialty: "Clinical Support Services",
                   color: "text-primary"
                 },
@@ -399,17 +487,17 @@ export default function BrochurePage() {
               ].map((member, idx) => (
                 <Card
                   key={idx}
-                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white animate-rotating-glow"
+                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary bg-white animate-rotating-glow h-full"
                 >
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow">
-                      <member.icon className={`w-8 h-8 ${member.color} group-hover:text-white`} />
+                  <CardContent className="p-3 xs:p-4 sm:p-6 lg:p-8 text-center flex flex-col h-full">
+                    <div className="w-12 xs:w-12 sm:w-14 lg:w-16 h-12 xs:h-12 sm:h-14 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2 xs:mb-3 sm:mb-4 lg:mb-6 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all duration-300 diamond-glow flex-shrink-0">
+                      <member.icon className={`w-5 xs:w-6 sm:w-7 lg:w-8 h-5 xs:h-6 sm:h-7 lg:h-8 ${member.color} group-hover:text-white`} />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2 font-serif">
+                    <h3 className="text-xs xs:text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 xs:mb-1 sm:mb-2 font-serif flex-shrink-0">
                       {member.title}
                     </h3>
-                    <p className="text-foreground text-sm mb-3 font-medium">{member.specialty}</p>
-                    <p className="text-sm text-foreground italic leading-relaxed font-medium">
+                    <p className="text-foreground text-xs xs:text-xs sm:text-xs lg:text-sm mb-2 xs:mb-2 sm:mb-3 font-medium flex-shrink-0">{member.specialty}</p>
+                    <p className="text-xs xs:text-xs sm:text-xs lg:text-sm text-foreground italic leading-relaxed font-medium flex-grow">
                       Experienced, well-trained professional certified in specialty and licensed without restrictions
                     </p>
                   </CardContent>
@@ -417,529 +505,265 @@ export default function BrochurePage() {
               ))}
             </div>
 
-            {/* Founder & Leadership Section */}
-            <div className="mt-20 pt-16 border-t border-border">
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
-                  <Award className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Our Founder</span>
+            {/* Our Medical Leadership Section */}
+            <div className="mt-16 xs:mt-18 sm:mt-20 pt-16 xs:pt-20 sm:pt-24 px-2">
+              <div className="text-center mb-16 xs:mb-20 sm:mb-24">
+                <div className="inline-flex items-center gap-2 px-3 xs:px-4 sm:px-4 py-1.5 xs:py-2 sm:py-2 rounded-full mb-3 xs:mb-3 sm:mb-4" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a' }}>
+                  <Award className="w-3 h-3 xs:w-4 xs:h-4 sm:w-4 sm:h-4" />
+                  <span className="text-xs xs:text-xs sm:text-sm font-semibold">Leadership</span>
                 </div>
-                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-                  Meet Our Founder & Medical Director
+                <h3 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4">
+                  Our Medical Leadership
                 </h3>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
-                {/* Founder Image */}
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-accent/20">
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets%2F373e0b424ecc4cb281370906bc1721ca%2F8a6862c6f8a44dfdb1ab0d7815299ea9?format=webp&width=800"
-                    alt="Founder and Medical Director of Trinity Heritage Clinic"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+              {/* Top Section - Two Columns */}
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 mb-16 xs:mb-20 sm:mb-24">
+                {/* Left Column - Photo (40%) */}
+                <div className="lg:col-span-2 flex items-center justify-center">
+                  <div className="relative w-full max-w-sm">
+                    <div
+                      className="relative w-full aspect-[3/4] rounded-lg overflow-hidden"
+                      style={{ border: '10px solid #8B4789' }}
+                    >
+                      <Image
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2Faef421c9420b48d1a111b122c7a0a1bc?format=webp&width=800"
+                        alt="Dr. Victor Nwiloh, MD"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    {/* Lime Green Banner Overlay */}
+                    <div className="absolute -bottom-24 left-0 right-0 bg-lime-green p-5 xs:p-6 sm:p-6 mx-4 rounded-lg shadow-lg" style={{ backgroundColor: '#CDDC39' }}>
+                      <h3 className="font-serif font-bold text-lg xs:text-xl sm:text-2xl" style={{ color: '#8B4789' }}>
+                        Dr. Victor Nwiloh
+                      </h3>
+                      <p className="font-bold text-sm xs:text-base" style={{ color: '#8B4789' }}>
+                        Internal Medicine Clinic
+                      </p>
+                      <p className="text-xs xs:text-sm font-medium" style={{ color: '#8B4789' }}>
+                        Board Certified In Internal Medicine
+                      </p>
+                      <p className="text-xs xs:text-sm font-medium" style={{ color: '#8B4789' }}>
+                        Board Certified In Occupational Medicine
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Founder Info */}
-                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                  <CardContent className="p-10">
-                    <h3 className="text-3xl font-bold font-serif mb-2" style={{ color: '#8cc73f' }}>
-                      Dr. Victor Nwiloh
-                    </h3>
-                    <p className="text-xl font-semibold text-primary mb-6">
-                      Founder & Medical Director
+                {/* Right Column - Bio (60%) */}
+                <div className="lg:col-span-3 flex items-center justify-center lg:pt-12">
+                  <div>
+                    <p 
+                      className="font-serif text-lg xs:text-xl sm:text-2xl md:text-2xl leading-relaxed font-semibold"
+                      style={{ color: '#4A90E2' }}
+                    >
+                      Dr. Victor Nwiloh is a board-certified internal medicine and occupational medicine physician with over 25 years of experience in various healthcare settings across the United States as a Primary care physician, Occupational Medicine / Urgent care physician and a Hospitalist.
                     </p>
-
-                    <div className="space-y-4 mb-8">
-                      <p className="text-lg text-foreground leading-relaxed">
-                        With over 20 years of experience in occupational medicine and internal medicine, Dr. Victor Nwiloh founded Trinity Heritage Clinic with a mission to provide compassionate, comprehensive healthcare to working professionals.
-                      </p>
-
-                      <div className="space-y-3 border-t border-border pt-6">
-                        <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
-                          <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                          <div>
-                            <p className="font-semibold text-foreground">Board Certified</p>
-                            <p className="text-sm text-foreground font-medium">American Board of Occupational & Internal Medicine</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                          <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                          <div>
-                            <p className="font-semibold text-foreground">Licensed Professional</p>
-                            <p className="text-sm text-foreground font-medium">State of Texas Medical License #TX-12345</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5">
-                          <Stethoscope className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                          <div>
-                            <p className="font-semibold text-foreground">Specialized Training</p>
-                            <p className="text-sm text-foreground font-medium">Fellow of American College of Occupational Medicine</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="text-muted-foreground italic text-sm leading-relaxed">
-                      "My passion has always been to create a healthcare environment where working professionals receive the specialized care they deserve, combined with the personal attention that makes all the difference."
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Immigration Medical Services Card */}
-              <div className="mt-12">
-                <div className="text-center mb-12">
-                  <h3 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-                    Immigration Medical Services
-                  </h3>
+                  </div>
                 </div>
-                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
-                  <CardContent className="p-10">
-                    <div className="inline-flex items-center gap-2 bg-accent/20 px-3 py-1 rounded-full mb-6">
-                      <Shield className="w-4 h-4 text-accent" />
-                      <span className="text-sm font-semibold text-accent">USCIS Authorized</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>
-                      USCIS Certified Civil Surgeon
-                    </h3>
-                    <p className="font-semibold mb-6" style={{ color: '#8cc73f' }}>
-                      Comprehensive Immigration Medical Services
-                    </p>
-
-                    <div className="space-y-4 mb-8">
-                      <p className="text-foreground leading-relaxed font-medium">
-                        Our physician is USCIS certified and authorized to conduct medical examinations with a designation as a civil surgeon by the United States Citizenship and Immigration Services.
-                      </p>
-
-                      <div className="space-y-3 border-t border-border pt-6">
-                        <h4 className="font-semibold text-foreground mb-3">Migration Medical Services Include:</h4>
-                        <div className="space-y-2">
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">USCIS I-693 Forms</p>
-                              <p className="text-xs text-foreground font-medium">Certified and sealed envelope</p>
-                            </div>
-                          </div>
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">Complete Medical Examination</p>
-                              <p className="text-xs text-foreground font-medium">Physical exam, vaccinations, TB & blood tests</p>
-                            </div>
-                          </div>
-                          <div className="flex items-start gap-3 p-3 rounded-lg bg-accent/5">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-semibold text-foreground text-sm">Expert Medical Questions</p>
-                              <p className="text-xs text-foreground font-medium">For non-medical immigration inquiries, consult an immigration attorney</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
-                      <p className="text-foreground text-sm font-medium">
-                        📋 Learn more at <a href="https://www.uscis.gov/i-693" target="_blank" rel="noopener noreferrer" className="text-accent font-bold hover:underline">https://www.uscis.gov/i-693</a>
-                      </p>
-                      <p className="text-foreground text-sm font-medium mt-2">
-                        💬 Call today for pricing. Additional fees apply for vaccine administration.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Shape Divider */}
-        <WaveShapeDivider color="accent" className="h-40 -mb-1" flip={true} />
-
-        {/* Location Section */}
-        <section id="location" className="relative py-20 bg-secondary overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="triangles" className="opacity-40" opacity={1} />
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-32 left-20 opacity-12" style={{ animationDelay: "0.8s" }} />
-          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.2s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Our Location</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Conveniently Located in Mansfield, Texas
-              </h2>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-start relative z-20">
-              {/* Map Placeholder */}
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-                {/* ← REPLACE WITH BROCHURE MAP #3: /images/location-map.jpg */}
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.7!2d-97.1!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063!5e0!3m2!1sen!2sus!4v1234567890"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  className="grayscale hover:grayscale-0 transition-all duration-300"
-                ></iframe>
               </div>
 
-              {/* Location Details */}
-              <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Contact Information</h3>
-                    
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-1">Address</p>
-                          <a
-                            href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            1475 Heritage Pkwy Ste 225
-                            <br />
-                            Mansfield, TX 76063
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-1">Phone</p>
-                          <a
-                            href="tel:817-453-7522"
-                            className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
-                          >
-                            (817) 453-7522
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-1">Fax</p>
-                          <p className="text-muted-foreground">1-866-665-6659</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-foreground mb-2">Office Hours</p>
-                          <div className="text-muted-foreground space-y-1">
-                            <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
-                            <p className="text-sm italic">(Closed for lunch 12:00 PM - 1:00 PM)</p>
-                            <p>Saturday - Sunday: Closed</p>
-                          </div>
-                        </div>
-                      </div>
+              {/* Bottom Section - Professional Organizations */}
+              <div className="mt-8 xs:mt-10 sm:mt-12 pt-6 xs:pt-8 sm:pt-10 flex justify-center">
+                <div className="text-center">
+                  <h4 className="font-serif text-2xl xs:text-3xl sm:text-3xl font-bold text-foreground mb-8 xs:mb-10 sm:mb-12">
+                    Professional Organizations
+                  </h4>
+                  <div className="flex flex-col items-center gap-8 xs:gap-10 sm:gap-12">
+                    {/* AMA Logo */}
+                    <div className="w-24 xs:w-28 sm:w-32">
+                      <Image
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2F85e427bbd18b45ab83decf2502141030?format=webp&width=800"
+                        alt="AMA - American Medical Association"
+                        width={128}
+                        height={128}
+                        className="w-full h-auto"
+                      />
                     </div>
-                  </CardContent>
-                </Card>
-
-                {/* After Hours Banner */}
-                <div className="bg-accent text-white rounded-2xl p-6 shadow-xl animate-rotating-glow border-2 border-accent">
-                  <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">After Hours & Weekend</h4>
-                      <p className="mb-3">For urgent medical matters, call:</p>
-                      <a
-                        href="tel:817-966-3989"
-                        className="text-2xl font-bold hover:underline"
-                      >
-                        (817) 966-3989
-                      </a>
+                    {/* ACP Logo */}
+                    <div className="w-24 xs:w-28 sm:w-32">
+                      <Image
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2Fd21c32e6a8e54e9a9d430b276289a447?format=webp&width=800"
+                        alt="ACP - American College of Physicians"
+                        width={128}
+                        height={128}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    {/* ACOEM Logo */}
+                    <div className="w-24 xs:w-28 sm:w-32">
+                      <Image
+                        src="https://cdn.builder.io/api/v1/image/assets%2F047d1840961a481cb83b4782a1b2b517%2F89fa29494b9846a4bf7864d577d97f1b?format=webp&width=800"
+                        alt="ACOEM - American College of Occupational and Environmental Medicine"
+                        width={128}
+                        height={128}
+                        className="w-full h-auto"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Shape Divider */}
-        <DiagonalShapeDivider color="primary" className="h-20 -mb-1" flip={true} />
-
-        {/* Services Section */}
-        <section id="services" className="relative py-20 bg-white overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-20 right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
-          <GeometricAccent className="absolute bottom-40 left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full mb-4 border-2 border-accent shadow-lg" style={{ backgroundColor: '#6B4C9A', color: '#ffffff' }}>
-                <Briefcase className="w-5 h-5" />
-                <span className="text-sm font-bold">Our Services</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
-                Comprehensive Occupational Health Services
-              </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Keeping your workforce healthy, safe, and productive
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-20 lg:grid-cols-4">
-              {[
-                {
-                  icon: Briefcase,
-                  title: "Occupational Medicine",
-                  items: [
-                    "Pre-Employment Physical Exams",
-                    "DOT Physicals & Drug Testing",
-                    "Work Injury Care & Management",
-                    "Drug & Alcohol Screening",
-                    "Respirator Fit Testing",
-                    "OSHA Compliance Services"
-                  ],
-                  color: "primary"
-                },
-                {
-                  icon: HeartPulse,
-                  title: "Internal Medicine",
-                  items: [
-                    "Preventive Care & Wellness",
-                    "Chronic Condition Management",
-                    "Annual Physical Exams",
-                    "Diabetes & Hypertension Care",
-                    "Acute Illness Treatment",
-                    "Health Risk Assessments"
-                  ],
-                  color: "accent"
-                },
-                {
-                  icon: Activity,
-                  title: "Wellness Programs",
-                  items: [
-                    "Employee Health Screenings",
-                    "Workplace Safety Training",
-                    "Health & Wellness Education",
-                    "Ergonomic Assessments",
-                    "Immunization Programs",
-                    "Corporate Wellness Plans"
-                  ],
-                  color: "primary"
-                },
-                {
-                  icon: Shield,
-                  title: "Migration Service",
-                  items: [
-                    "USCIS I-693 Medical Examination",
-                    "Certified & Sealed Envelope",
-                    "Patient Copy I-693 Forms",
-                    "Physical Examination",
-                    "Vaccination Status Verification",
-                    "TB Testing & Blood Tests"
-                  ],
-                  color: "accent"
-                }
-              ].map((service, idx) => (
-                <Card
-                  key={idx}
-                  className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 ${
-                    service.color === "primary" ? "border-primary/20 hover:border-primary" : "border-accent/20 hover:border-accent"
-                  } bg-white animate-rotating-glow`}
-                >
-                  <CardContent className="p-8">
-                    <div
-                      className={`w-16 h-16 rounded-2xl ${
-                        service.color === "primary" ? "bg-primary/10" : "bg-accent/10"
-                      } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform diamond-glow`}
-                    >
-                      <service.icon
-                        className={`w-8 h-8 ${
-                          service.color === "primary" ? "text-primary" : "text-accent"
-                        }`}
-                      />
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-6 font-serif">
-                      {service.title}
-                    </h3>
-                    <ul className="space-y-3 mb-6">
-                      {service.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                            service.color === "primary" ? "text-primary" : "text-accent"
-                          }`} />
-                          <span className="text-muted-foreground text-sm">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <button
-                      onClick={() => scrollToSection("contact")}
-                      className={`w-full ${
-                        service.color === "primary"
-                          ? "bg-primary hover:bg-primary/90"
-                          : "bg-accent hover:bg-accent/90"
-                      } text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-xl`}
-                    >
-                      Inquire Now
-                      <ChevronRight className="w-4 h-4 inline ml-2" />
-                    </button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* CTA Banner */}
-            <div className="bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-12 text-center shadow-2xl animate-rotating-glow border-2 border-white/20">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-6 font-serif">
-                Ready to Keep Your Workforce Well?
-              </h3>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                To learn more about how we can help your business, call us today
-              </p>
-              <a href="tel:817-453-7522">
-                <Button
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-7 shadow-xl hover:scale-105 transition-all duration-300 animate-rotating-glow border-2 border-white font-semibold"
-                >
-                  <Phone className="w-6 h-6 mr-3" />
-                  (817) 453-7522
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Shape Divider */}
-        <StairsShapeDivider color="accent" className="h-32 -mb-1" />
-
-        {/* Wellness & Prevention Section */}
-        <section id="wellness" className="relative py-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="grid" className="opacity-15" opacity={1} />
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="absolute top-32 left-20 opacity-10" style={{ animationDelay: "1s" }} />
-          <GeometricAccent className="absolute bottom-20 right-32 opacity-10 scale-110" style={{ animationDelay: "1.5s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-3 rounded-full mb-4 border-2 shadow-lg" style={{ backgroundColor: '#8cc73f', color: '#1a1a1a', borderColor: '#8cc73f' }}>
-                <HeartPulse className="w-5 h-5" />
-                <span className="text-sm font-bold">Wellness & Prevention</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#8cc73f' }}>
-                Proactive Health & Prevention
-              </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Keeping your workforce healthy starts with prevention and continuous wellness monitoring
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-20 mb-16">
-              {/* Wellness Image */}
-              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-rotating-glow border-2 border-primary/20">
-                <Image
-                  src="https://images.pexels.com/photos/287237/pexels-photo-287237.jpeg"
-                  alt="Modern healthcare clinic facility with advanced wellness technology"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30"></div>
-              </div>
-
-              {/* Wellness Content */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 font-serif" style={{ color: '#8cc73f' }}>
-                    Comprehensive Preventive Care
+              {/* Work Site Visits & Travel Medicine */}
+              <div className="mt-12 xs:mt-12 sm:mt-14">
+                <div className="text-center mb-10 xs:mb-12 sm:mb-12">
+                  <h3 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-primary mb-3 xs:mb-3 sm:mb-4">
+                    Specialized Occupational Services
                   </h3>
-                  <p className="text-lg text-foreground leading-relaxed mb-4 font-medium">
-                    At Trinity Heritage Clinic, we believe that prevention is the best medicine. Our comprehensive preventive care programs are designed to identify health risks early and keep your employees healthy and productive.
-                  </p>
                 </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-6 sm:gap-8 lg:gap-8">
+                  <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                    <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
+                      <h3 className="text-xl xs:text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                        Work Site Visits
+                      </h3>
+                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-sm xs:text-sm sm:text-base">
+                        Comprehensive workplace assessments
+                      </p>
 
-                <div className="space-y-4">
-                  {[
-                    {
-                      icon: Activity,
-                      title: "Health Screenings",
-                      description: "Regular health assessments and risk evaluations"
-                    },
-                    {
-                      icon: Briefcase,
-                      title: "Workplace Wellness",
-                      description: "Customized corporate wellness programs"
-                    },
-                    {
-                      icon: Users,
-                      title: "Group Education",
-                      description: "Health education and training sessions"
-                    },
-                    {
-                      icon: HeartPulse,
-                      title: "Chronic Care Management",
-                      description: "Ongoing support for managing health conditions"
-                    }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-primary/20 shadow-sm">
-                      <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-5 h-5" />
+                      <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
+                        <p className="text-foreground text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed font-medium">
+                          Work site visits are available upon request by employers and provide an opportunity to identify and abate potential/actual hazards and exposures at the work site.
+                        </p>
+
+                        <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
+                          <h4 className="font-semibold text-foreground text-sm xs:text-sm sm:text-base mb-2 xs:mb-3 sm:mb-3">Benefits Include:</h4>
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Identify and abate hazards & exposures</p>
+                            </div>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Familiarize healthcare provider with work environment</p>
+                            </div>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Improved occupational health & safety planning</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                        <p className="text-sm text-foreground font-medium">{item.description}</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white">
+                    <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-10">
+                      <h3 className="text-xl xs:text-2xl sm:text-2xl md:text-2xl lg:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                        Travel Medicine
+                      </h3>
+                      <p className="font-semibold mb-4 xs:mb-5 sm:mb-6 text-foreground text-sm xs:text-sm sm:text-base">
+                        Health & wellness for business travelers
+                      </p>
+
+                      <div className="space-y-4 xs:space-y-4 sm:space-y-4 mb-6 xs:mb-8 sm:mb-8">
+                        <p className="text-foreground text-xs xs:text-sm sm:text-sm md:text-base leading-relaxed font-medium">
+                          HHC offers focused physical exams and travel-related vaccinations and prophylactic medications/treatments intended to keep your employees healthy while on business travel.
+                        </p>
+
+                        <div className="space-y-2 xs:space-y-3 sm:space-y-3 border-t border-border pt-4 xs:pt-6 sm:pt-6">
+                          <h4 className="font-semibold text-foreground text-sm xs:text-sm sm:text-base mb-2 xs:mb-3 sm:mb-3">Services Include:</h4>
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Individualized travel health assessment</p>
+                            </div>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Travel-specific vaccinations</p>
+                            </div>
+                            <div className="flex items-start gap-2 xs:gap-3 sm:gap-3 p-2 xs:p-3 sm:p-3 rounded-lg bg-accent/5">
+                              <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                              <p className="text-foreground text-xs xs:text-xs sm:text-sm font-medium">Country-specific medical guidance</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
+        </section>
 
-            {/* Wellness Stats */}
-            <div className="grid md:grid-cols-3 gap-8 relative z-20 mb-12">
-              {[
-                {
-                  number: "20+",
-                  label: "Years of Excellence",
-                  icon: Award
-                },
-                {
-                  number: "2,500+",
-                  label: "Employees Served",
-                  icon: Users
-                },
-                {
-                  number: "98%",
-                  label: "Satisfaction Rate",
-                  icon: CheckCircle2
-                }
-              ].map((stat, idx) => (
-                <Card key={idx} className="text-center border-2 border-primary/20 animate-rotating-glow bg-white shadow-md">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: '#8cc73f20' }}>
-                      <stat.icon className="w-8 h-8" style={{ color: '#8cc73f' }} />
+        {/* Featured Sections Teaser */}
+        <section className="relative py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
+          <GeometricBackground variant="grid" className="opacity-30" opacity={1} />
+          <GeometricAccent className="absolute top-10 xs:top-16 sm:top-20 right-5 xs:right-10 sm:right-10 opacity-15" style={{ animationDelay: "0.5s" }} />
+          <GeometricAccent className="absolute bottom-20 xs:bottom-40 sm:bottom-40 left-16 xs:left-32 sm:left-32 opacity-10 scale-90" style={{ animationDelay: "2s" }} />
+
+          <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 xs:mb-14 sm:mb-16">
+              <h2 className="font-serif text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-3 xs:mb-3 sm:mb-4" style={{ color: 'var(--tertiary)' }}>
+                Learn More About Our Services
+              </h2>
+              <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-xl text-foreground max-w-3xl mx-auto font-medium px-2">
+                Explore our comprehensive offerings designed to keep your workforce healthy
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xs:gap-6 sm:gap-8 lg:gap-8 relative z-20">
+              {/* Services Card */}
+              <Link href="/services">
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
+                      <Briefcase className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <p className="text-4xl font-bold mb-2 font-serif" style={{ color: '#8cc73f' }}>{stat.number}</p>
-                    <p className="text-foreground font-semibold">{stat.label}</p>
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                      Our Services
+                    </h3>
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
+                      From physical exams to diagnostic testing and injury treatment, discover our full range of occupational health services.
+                    </p>
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                      Learn More <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
+                    </div>
                   </CardContent>
                 </Card>
-              ))}
+              </Link>
+
+              {/* Location Card */}
+              <Link href="/location">
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
+                      <MapPin className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                      Our Location
+                    </h3>
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
+                      Conveniently located in El Paso, Texas. Get directions, hours, and contact information.
+                    </p>
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                      Visit <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Wellness Card */}
+              <Link href="/wellness">
+                <Card className="border-2 border-accent/20 shadow-2xl animate-rotating-glow bg-white cursor-pointer hover:shadow-3xl transition-all duration-300 h-full">
+                  <CardContent className="p-5 xs:p-6 sm:p-8 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-lg bg-primary text-white mb-3 xs:mb-3 sm:mb-4">
+                      <HeartPulse className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold mb-2 xs:mb-2 sm:mb-2 font-serif" style={{ color: 'var(--tertiary)' }}>
+                      Wellness & Prevention
+                    </h3>
+                    <p className="text-foreground mb-4 xs:mb-5 sm:mb-6 font-medium text-sm xs:text-sm sm:text-base flex-grow">
+                      Proactive health programs including wellness consultations, health fairs, and safety training.
+                    </p>
+                    <div className="flex items-center text-primary font-semibold hover:gap-2 transition-all text-sm xs:text-sm sm:text-base">
+                      Explore <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 ml-2" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </section>
@@ -947,217 +771,15 @@ export default function BrochurePage() {
         {/* Shape Divider */}
         <DiagonalShapeDivider color="accent" className="h-24 -mb-1" flip={true} />
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20 bg-secondary relative overflow-hidden">
-          {/* Geometric Background */}
-          <GeometricBackground variant="organic" className="opacity-40" opacity={1} />
-
-          {/* Professional Background Image */}
-          <div className="absolute inset-0 opacity-08">
-            <Image
-              src="https://images.pexels.com/photos/8376177/pexels-photo-8376177.jpeg"
-              alt="Healthcare consultation"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-accent/50"></div>
-          </div>
-
-          {/* Floating Geometric Accents */}
-          <GeometricAccent className="top-40 right-32 opacity-20" style={{ animationDelay: "0.3s" }} />
-          <GeometricAccent className="bottom-20 left-20 opacity-15 scale-125" style={{ animationDelay: "1s" }} />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-4">
-                <Phone className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Contact Us</span>
-              </div>
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Get Started with Trinity Heritage Clinic
-              </h2>
-              <p className="text-xl text-foreground max-w-3xl mx-auto font-medium">
-                Reach out today to learn how we can serve your business
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 relative z-20">
-              {/* Contact Form */}
-              <Card className="border-2 border-primary/20 shadow-2xl animate-rotating-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 font-serif" style={{ color: '#8cc73f' }}>Send Us a Message</h3>
-                  <form className="space-y-6">
-                    <div>
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        placeholder="John Smith"
-                        className="mt-2"
-                        required
-                      />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="phone">Phone *</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="(817) 555-1234"
-                          className="mt-2"
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="email">Email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="john@company.com"
-                          className="mt-2"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="service">Service Interest</Label>
-                      <Select>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="occupational">Occupational Medicine</SelectItem>
-                          <SelectItem value="internal">Internal Medicine</SelectItem>
-                          <SelectItem value="wellness">Wellness Programs</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell us about your needs..."
-                        rows={5}
-                        className="mt-2"
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-rotating-glow border-2 border-primary"
-                    >
-                      Send Message
-                      <ChevronRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-
-              {/* Contact Cards */}
-              <div className="space-y-6">
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">Call Us</h4>
-                        <a
-                          href="tel:817-453-7522"
-                          className="text-2xl font-bold text-primary hover:underline block mb-2"
-                        >
-                          (817) 453-7522
-                        </a>
-                        <p className="text-sm text-foreground font-medium">Mon-Fri: 8:30 AM - 5:30 PM</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6 text-accent" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">After Hours</h4>
-                        <a
-                          href="tel:817-966-3989"
-                          className="text-2xl font-bold text-accent hover:underline block mb-2"
-                        >
-                          (817) 966-3989
-                        </a>
-                        <p className="text-sm text-foreground font-medium">For urgent matters only</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">Fax</h4>
-                        <p className="text-xl font-bold text-primary">1-866-665-6659</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-shadow animate-rotating-glow">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg text-foreground mb-2">Visit Us</h4>
-                        <a
-                          href="https://maps.google.com/?q=1475+Heritage+Pkwy+Ste+225+Mansfield+TX+76063"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline"
-                        >
-                          1475 Heritage Pkwy Ste 225
-                          <br />
-                          Mansfield, TX 76063
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            {/* Final CTA */}
-            <div className="mt-16 text-center">
-              <p className="text-2xl font-serif font-bold text-primary mb-4">
-                Working to Keep Your Workforce Well
-              </p>
-              <p className="text-lg text-foreground font-medium">
-                To learn more, call us today: <a href="tel:817-453-7522" className="text-primary font-bold hover:underline">(817) 453-7522</a>
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
 
       {/* Footer */}
-      <footer className="bg-muted border-t-4 border-primary py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12 mb-8">
+      <footer className="bg-muted border-t-4 border-primary py-8 xs:py-9 sm:py-10 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 xs:gap-6 sm:gap-6 md:gap-8 lg:gap-12 mb-6 xs:mb-7 sm:mb-8">
             {/* Clinic Info */}
-            <div>
-              <div className="relative w-full h-24 mb-4">
+            <div className="text-center xs:text-center sm:text-left">
+              <div className="relative w-full h-14 xs:h-16 sm:h-16 md:h-20 mb-2 xs:mb-3 sm:mb-4">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fefb70fbe8215494ca4994b20ea3d9f15%2F033a274fe2ba432ea7e74904be703d80?format=webp&width=800"
                   alt="Trinity Heritage Clinic"
@@ -1165,56 +787,64 @@ export default function BrochurePage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-foreground mb-4 italic font-medium">
+              <p className="text-xs xs:text-xs sm:text-sm text-foreground mb-2 xs:mb-3 sm:mb-4 italic font-medium">
                 "Working to Keep Your Workforce Well"
               </p>
             </div>
 
             {/* Contact */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-foreground font-medium">
-                <p>1475 Heritage Pkwy Ste 225</p>
-                <p>Mansfield, TX 76063</p>
-                <p className="pt-2">
-                  Phone: <a href="tel:817-453-7522" className="text-primary hover:underline font-semibold">(817) 453-7522</a>
+            <div className="text-center xs:text-center sm:text-left">
+              <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-xs xs:text-xs sm:text-sm md:text-base">Contact</h4>
+              <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2 text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
+                <p>2204 Joe Battle Blvd, STE D204</p>
+                <p>El Paso, TX 79938</p>
+                <p className="pt-0.5 xs:pt-1 sm:pt-1 sm:pt-2">
+                  Phone: <a href="tel:915-300-2276" className="text-primary hover:underline font-semibold">915.300.2276</a>
                 </p>
-                <p>Fax: 1-866-665-6659</p>
-                <p>
-                  After Hours: <a href="tel:817-966-3989" className="text-accent hover:underline font-semibold">(817) 966-3989</a>
-                </p>
+                <p>Fax: 866-222-5219</p>
               </div>
             </div>
 
             {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-              <div className="space-y-2">
+            <div className="text-center xs:text-center sm:text-left">
+              <h4 className="font-semibold text-foreground mb-2 xs:mb-3 sm:mb-4 text-xs xs:text-xs sm:text-sm md:text-base">Quick Links</h4>
+              <div className="space-y-0.5 xs:space-y-1 sm:space-y-1 sm:space-y-2">
                 {[
-                { id: "home", label: "Home" },
-                { id: "about", label: "About Us" },
-                { id: "team", label: "Our Team" },
-                { id: "location", label: "Location" },
-                { id: "services", label: "Services" },
-                { id: "wellness", label: "Wellness" },
-                { id: "contact", label: "Contact" }
+                { id: "home", label: "Home", href: "/" },
+                { id: "about", label: "About Us", href: "/#about" },
+                { id: "team", label: "Our Team", href: "/#team" },
+                { id: "gallery", label: "Gallery", href: "/gallery" },
+                { id: "location", label: "Contact", href: "/location" },
+                { id: "services", label: "Services", href: "/services" },
+                { id: "wellness", label: "Wellness", href: "/wellness" },
+                { id: "contact", label: "Forms", href: "/contact" }
               ].map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="block text-sm text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {link.label}
-                </button>
+                link.href ? (
+                  <Link
+                    key={link.id}
+                    href={link.href}
+                    className="block text-xs xs:text-xs sm:text-xs md:text-sm text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="block text-xs xs:text-xs sm:text-xs md:text-sm text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.label}
+                  </button>
+                )
               ))}
               </div>
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 text-center text-sm text-foreground font-medium">
-            <p>&copy; {new Date().getFullYear()} Trinity Heritage Clinic. All rights reserved.</p>
-            <p className="mt-2 italic font-serif text-primary">
-              To learn more, call us today: (817) 453-7522
+          <div className="border-t border-border pt-5 xs:pt-6 sm:pt-6 sm:pt-8 text-center text-xs xs:text-xs sm:text-xs md:text-sm text-foreground font-medium">
+            <p>&copy; {new Date().getFullYear()} Trinity Heritage Healthcare Clinic. All rights reserved.</p>
+            <p className="mt-1 xs:mt-2 sm:mt-2 italic font-serif text-primary text-xs xs:text-xs sm:text-xs md:text-sm">
+              2204 Joe Battle Blvd, STE D204 El Paso, TX 79938 | 915.300.2276
             </p>
           </div>
         </div>
