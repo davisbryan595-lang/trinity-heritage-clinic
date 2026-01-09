@@ -153,9 +153,9 @@ export default function LocationPage() {
       </nav>
 
       {/* Hero Section */}
-      <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl text-primary max-w-3xl mx-auto font-bold">
+      <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-4 sm:pb-6 md:pb-8 bg-gradient-to-b from-primary/10 to-white">
+        <div className="text-center">
+          <h2 className="text-sm sm:text-base md:text-lg text-primary font-bold whitespace-nowrap overflow-hidden">
             Conveniently Located in East El Paso, Texas – Just a few blocks from The Hospitals of Providence East Campus
           </h2>
         </div>
